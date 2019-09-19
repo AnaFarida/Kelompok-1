@@ -1,5 +1,5 @@
 <html>
-<head> KELOMPOK 1 </head> 
+<head> <title>KELOMPOK 1 </title></head> 
 <body>
     <?php
     echo "Hello World <br>";
