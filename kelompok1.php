@@ -6,6 +6,7 @@
     echo "Nama Anggota : "
     echo "Bagus Duwi Prasetiyo"
     echo "Febiola Putri Yunita"
+    echo "Agung Joyo Prassetyo"
     ?>
 </body>
 </html>
