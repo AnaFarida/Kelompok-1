@@ -1,0 +1,40 @@
+
+    body{
+        width : 95%;
+        margin: 0px auto;
+    }
+
+    .paragraf{
+        background-color: burlywood;
+        border: 1px solid pink;
+        margin-bottom: 10px;
+    }
+
+    .table, .hyperlink, .form, .image{
+        /* background-color: blue; */
+        width: 100%;
+        margin: 10px 40%;
+        margin-bottom: 30px;
+    }
+
+    .list{
+        background-color: burlywood;
+        border: 1px solid black;
+        margin: 20px auto;
+    }
+
+    #id{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: royalblue;
+    }
+    .class{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: violet;
+    }
+
+    
