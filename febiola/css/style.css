@@ -1,19 +1,19 @@
 
     body{
-        width : 95%;
-        margin: 0px auto;
+        width : 70%;
+        margin: 10px auto;
     }
 
     .paragraf{
         background-color: burlywood;
         border: 1px solid pink;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
 
     .table, .hyperlink, .form, .image{
         /* background-color: blue; */
         width: 100%;
-        margin: 10px 40%;
+        margin: 25px 40%;
         margin-bottom: 30px;
     }
 
