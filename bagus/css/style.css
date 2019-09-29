@@ -8,6 +8,7 @@
         background-color: lightgreen;
         border: 1px solid red;
         margin-bottom: 10px;
+        border-radius: 10px;
     }
 
     .table, .hyperlink, .form, .image{
