@@ -16,6 +16,6 @@
     <h2 style="color: blue"> Nama Saya : AHMAD FADHIEL</h2>
     <h3>Politeknik Negeri Jember</h3>
 
-    <?php echo "HELLO PHP"; ?>
+    <?php echo "Hello,welcome to php"; ?>
 </body>
 </html>
