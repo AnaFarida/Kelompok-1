@@ -15,5 +15,7 @@
     <h1 style="color: red"> Selamat belajar HTML</h1>
     <h2 style="color: blue"> Nama Saya : Bagus Duwi Prasetiyo</h2>
     <h3>Politeknik Negeri Jember</h3>
+
+    <?php echo "Halo, ini adalah php"; ?>
 </body>
 </html>
