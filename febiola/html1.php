@@ -9,7 +9,7 @@
     <h2 style ="color:blue">NAMA SAYA : FEBIOLA PUTRI YUNITA </h2>
     <h3> POLITEKNIK NEGERI JEMBER </h3>
     <?php 
-    echo "hellow"
+    echo "hellow";
     ?>
 </body>
 </html>
