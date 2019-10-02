@@ -7,7 +7,7 @@
     <title>Halo HTML</title>
     <style>
     body{
-        background-color: lightblue;
+        background-color;
     }
     </style>
 </head>
