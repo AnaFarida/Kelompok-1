@@ -1,21 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halo HTML</title>
-    <style>
-    body{
-        background-color;
-    }
-    </style>
+<title>Page Title</title>
+<style type="text/css">
+body { background-color:silver; }
+</style>
 </head>
 <body>
-    <h1 style="color: red"> Selamat belajar HTML</h1>
-    <h2 style="color: blue"> Nama Saya : AHMAD FADHIEL</h2>
-    <h3>Politeknik Negeri Jember</h3>
+    
+    <center><h1 style="color:red">Selamat Belajar HTML</h1></center>
+    <h2 style="color:blue"> Nama : AHMAD FADHIEL</h2>
+    <h3><b>Politeknik Negeri Jember</h3></b>
+    <?php
+    echo "Php sricpt!";
+    ?>
 
-    <?php echo "Hello,welcome to php"; ?>
+    <?php
+    echo "Hello Class </br></br>";
+    $tempat = "di Polije";
+    $Tempat = "di Polije Kampus Dua";
+
+    echo "<h1 style='color:red'> Selamat Belajar HTML ".$tempat."</h1>";
+    Echo "<h2 style='color:blue'> Selamat Belajar HTML</h2>";
+    Echo "<h3>Selamat Belajar HTML ".$Tempat."</h3>";
+    echo $Tempat."</br></br>";
+    echo date("Y/m/d")."</br></br>";
+
+    //Penjumlahan
+    $a = 10; $b = $c = 20; $d = 2;
+    $jumlah = ($a + $b)/$d;
+
+    echo $jumlah."</br></br>";
+
+    for ($x = 0; $x <= 10; $x++) {
+        echo "Tempat Ke - ".$x."<br>";
+    }
+
+    $t = date("H");
+
+    if ($t < "20") {
+        echo "Good morning!";
+    }
+
+    //Konstanta
+    define("Fadhiel", "Welcome To Politeknik Negeri Jember!");
+    echo "</br></br>".fadhiel;
+
+    //Fungsi
+    function fadhiel(){
+        echo "</br></br>".fadhiel." Dua";
+    }
+
+    fadhiel();
+
+?>
+
 </body>
 </html>
