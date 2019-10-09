@@ -4,14 +4,15 @@
 <title>Page Title</title>
 </head>
 <body>
-
+  
+  \\\\\\\\\\\\\\\\\\\\\\
     <h1 style="color:red">Selamat Belajar HTML</h1>
     <h2 style="color:blue">Ana Farida</h2>
     <h3>Politekinik Negeri Jember</h3>
     <?php 
     echo "Hallowww Kelas </br></br>";
     echo "Selamat Pagi!!!! Kita akan belajar PHP biar gak dibaperin";
-    $tempat = " di Politeknik Negeri Jember";
+        $tempat = " di Politeknik Negeri Jember";
         $Tempat = " di Politeknik Negeri Jember Dua Kampus Bondowoso";
         $TempaT = " di Politeknik Negeri Jember";
 
