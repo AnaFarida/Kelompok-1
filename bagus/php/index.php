@@ -81,5 +81,24 @@ echo 'hasil pembagian : ' . pembagian(100,5);
 <h1>Penanganan Form</h1>
 untuk penanganan form, untuk Get Klik <a href="getPost.php"> disini</a><br>
 untuk Post klik <a href="getPost2.php">disini</a>
+
+<br><br>
+
+<h1>Penggunaan Include dan Require pada PHP</h1>
+
+<!-- include (jika program salah, maka di abaikan) -->
+<!-- jika menggunakan _once maka akan dieksekusi sekali saja -->
+
+<?php include('include.php'); ?>
+<?php include_once('include.php'); ?>
+
+<!-- require(jika program salah, maka akan error) -->
+<br>
+<?php require('require.php'); ?>
+
+
+
+
+<br><br><br>
 </body>
 </html>
