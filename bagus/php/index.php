@@ -5,7 +5,7 @@
 	<title>Latihan</title>
 	<style>
 		body{
-			background-color: lightblue;
+			background-image: url(../img/trees.png);
 		}
 	</style>
 </head>
@@ -79,17 +79,7 @@ echo 'hasil pembagian : ' . pembagian(100,5);
 ?>
 
 <h1>Penanganan Form</h1>
-untuk penangannan form, klik
-<a href="getPost.php">disini</a>
-
+untuk penanganan form, untuk Get Klik <a href="getPost.php"> disini</a><br>
+untuk Post klik <a href="getPost2.php">disini</a>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
