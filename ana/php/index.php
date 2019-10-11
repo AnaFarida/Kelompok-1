@@ -2,6 +2,11 @@
 <html>
 <head>
 	<title>Latihan</title>
+	<style>
+		body{
+			background-color: lightblue;
+		}	
+	</style>
 </head>
 <body>
 	<h1>Array</h1>
@@ -62,7 +67,9 @@ function pembagian($angka, $angka1){
 
 echo 'hasil pembagian :'. pembagian(50,5);
 ?>
-
+<h1>Penanganan Form</h1>
+untuk penanganan form, klik
+<a href="getPost.php"> disini </a>
 
 </body>
 </html>
