@@ -12,18 +12,18 @@
 	<form method="GET" action="get.php">
 		<tr>	
 			<td>
-				<label for="username">Username</label>	
+				<label for="nama">nama</label>	
 			</td>
 			<td>
-				<input type="text" name="username" id="username" placeholder="username" autofocus required>
+				<input type="text" name="nama" id="nama" placeholder="nama" autofocus required>
 			</td>
 		</tr>
 		<tr>	
 			<td>
-				<label for="password">Password</label>	
+				<label for="Nim">Nim</label>	
 			</td>
 			<td>
-				<input type="text" name="password	" id="password" placeholder="password" autofocus required>
+				<input type="text" name="Nim" id="Nim" placeholder="Nim" autofocus required>
 			</td>
 		</tr>
 		<tr>

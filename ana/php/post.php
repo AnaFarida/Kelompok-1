@@ -1,6 +1,6 @@
 <?php 
 $hakakses = $_POST['hakakses'];
-$keterangan =$_POST['keterangan']
+$keterangan =$_POST['keterangan'];
  
  echo "hakakses :". $hakakses;
  echo "<br>";
