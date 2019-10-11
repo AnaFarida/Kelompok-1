@@ -8,7 +8,8 @@
     <title>LATIHAN</title>
     <style>
     body{
-        background-image: url(../img/FEBI.jpg)
+        background-image: url(../img/FEBI.jpg);
+        /* background-repeat: no-repeat; */
     }
 
     </style>
@@ -64,6 +65,7 @@ echo 'hasil pembagian:'. pembagian (4.34,5);
 <h1>penanganan form</h1>
 untuk penanganan form, klik
 <a href="getPost.php">disini</a>
+
 
 </body>
 </html>

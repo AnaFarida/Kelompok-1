@@ -23,8 +23,8 @@ echo "alamat:". $alamat;
                     <label for="jeniskelamin">jeniskelamin:</label>
                 </td>
                 <td>
-                    <input type="radio" name ="jeniskelamin" id= "pria"  autofocus required > <label for="pria">pria</label>
-                    <input type="radio" name ="jeniskelamin" id= "wanita"  autofocus required ><label for="wanita">wanita</label>
+                    <input type="radio" name ="jeniskelamin" id= "pria" autofocus required value="pria"><label for="pria">pria</label>
+                    <input type="radio" name ="jeniskelamin" id= "wanita"  autofocus required value="wanita"><label for="wanita">wanita</label>
                 </td>
             </tr>
            <tr>
@@ -32,7 +32,7 @@ echo "alamat:". $alamat;
                     <label for="motivasi">motivasi:</label>
                 </td>
                 <td>
-                  <textarea name="motivasi" id="motivasi" cols="30" rows="5" autofocus required ></textarea>
+                  <textarea name="motivasi" id="motivasi" cols="30" rows="5" autofocus required></textarea>
                 </td>
             </tr>
             <tr>

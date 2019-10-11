@@ -2,7 +2,11 @@
 
 $jeniskelamin = $_POST['jeniskelamin'];
 $motivasi = $_POST['motivasi'];
-echo " jeniskelamin:". $jesikelamin;
+
+// if(isset($_POST['jeniskelamin']==)){
+
+// }
+echo " jeniskelamin:". $jeniskelamin;
 echo "<br>";
 echo "motivasi:". $motivasi;
 ?> 
