@@ -35,7 +35,7 @@ echo "alamat:". $alamat;
                   <textarea name="motivasi" id="motivasi" cols="30" rows="5" autofocus required></textarea>
                 </td>
             </tr>
-            <tr>
+             <tr>
                 <td colspan ="2"><center>
                     <button type ="submit" name ="submit">kirim!</button>
                 </center>
