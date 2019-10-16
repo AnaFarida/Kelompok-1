@@ -25,7 +25,7 @@ $table_login = query('SELECT * FROM table_login');
 			<td><?= $log['username']; ?></td>
 			<td><?= $log['password']; ?></td>
 		
-			<td><img src="img/Ana.jpg"<?= $log['gambar']; ?>" alt="<?= $log['gambar']; ?>" width="50"></td>
+			<td><img src="img/Ana.jpg"<?= $log['gambar']; ?>" alt="<?= $log['gambar']; ?>" width="100"></td>
 		</tr>	
 	
 
