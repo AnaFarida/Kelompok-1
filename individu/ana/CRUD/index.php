@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>CRUD</title>
 </head>
 <body>
 
-	<h2>CRUD DATA MAHASISWA - WWW.MALASNGODING.COM</h2>
+	<h2>CRUD</h2>
 	<br/>
 	<a href="tambah.php">+ TAMBAH MAHASISWA</a>
 	<br/>
