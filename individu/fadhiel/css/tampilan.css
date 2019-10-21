@@ -1,0 +1,38 @@
+body{
+    width : 95%;
+    margin: 0px auto;
+}
+
+.paragraf{
+    background-color: red;
+    border: 1px solid yellow;
+    margin-bottom: 10px;
+}
+
+.table, .hyperlink, .form, .image{
+    /* background-color: blue; */
+    width: 100%;
+    margin: 10px 40%;
+    margin-bottom: 30px;
+}
+
+.list{
+    background-color: green;
+    border: 1px solid blueviolet;
+    margin: 20px auto;
+}
+
+#id{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: blue;
+}
+.class{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: orange (136, 102, 9);
+}
+

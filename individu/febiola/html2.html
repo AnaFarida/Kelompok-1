@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html 2</title>
+
+    <!-- untuk menghubungkan file css -->
+    <link rel="stylesheet" href="css/style.css">
+    <?php echo '<?xml version="1.0" encoding="IUTF-8"?>'; ?>
+</head>
+<body>
+        
+ <div class="paragraf">
+        <!-- penulisan paragraf menggunakan tag p -->
+
+    <p>
+        <!-- isi paragraf -->
+        <h1>Paragraf</h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate animi nihil vel, asperiores sequi fuga porro dignissimos possimus quae soluta earum consectetur quidem dolores, corrupti perspiciatis exercitationem vitae iusto, impedit at provident perferendis. Deserunt facere aperiam impedit, accusantium voluptas enim consequatur atque, assumenda officiis maiores adipisci vitae ipsum excepturi quidem possimus similique reprehenderit nam quaerat! Perspiciatis in maiores sit deserunt aperiam reprehenderit pariatur sapiente fugiat eum recusandae rerum veniam fugit blanditiis ipsa, beatae ut tempore quidem ex possimus ab, at quaerat non! Beatae iusto dolores quia eligendi facilis commodi animi, quam nam excepturi esse at nostrum assumenda, dolore quos sed.
+    </p>
+
+    <!-- untuk mengatur jenis paragraf -->
+ 
+    <p align="left"> 
+        <!-- paragraf dengan rata kiri -->
+        <h2>paragraf dengan rata kiri</h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum perspiciatis, nostrum at odit voluptatum reprehenderit illo cum quod ab hic quas velit omnis maxime quibusdam officia. Voluptatem beatae sequi iste.
+    </p>
+
+    <p align="right">
+        <!-- paragraf dengan rata kanan -->
+        <h2>paragraf dengan rata kanan</h2>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae qui tempora laboriosam velit aut labore excepturi, perspiciatis dolor necessitatibus odio similique iusto eum recusandae natus molestiae rerum aliquid nihil.
+    </p>
+
+    <p align="center">
+        <!-- paragraf dengan rata tengah -->
+        <h2>paragraf dengan rata tengah</h2>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae qui tempora laboriosam velit aut labore excepturi, perspiciatis dolor necessitatibus odio similique iusto eum recusandae natus molestiae rerum aliquid nihil.
+     </p>
+    
+    <p align="justivy">
+        <!-- paragraf dengan rata kanan kiri atau justivy -->
+        <h2>paragraf dengan rata kanan kiri atau justivy</h2>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, omnis velit? Non eligendi culpa omnis corporis magnam animi fugit nostrum ratione doloremque officiis rerum, dolore in, fuga accusantium veritatis fugiat?
+    </p>
+
+    <!-- tag br untuk menambah baris baru, atau satu buah enter -->
+    <br>
+ </div>
+
+ 
+ <div class="table">
+<h2>Membuat tabel pada HTML</h2>
+
+    <!-- membuat tabel menggunakan tag table dengan atribut border/bingkai cellspacing untuk
+    jarak antar cell dan cellpadding untuk jarak ke frame -->
+
+    <table border="2" cellspacing="1" cellpadding=5>
+        <!-- tag tr untuk baris baru, dan isinya menggunakan tag td -->
+        <tr>
+            <td colspan="4" style="text-align: center "> tabel data diri </td>
+        </tr>
+        <tr>
+                <td>nomor</td>
+                <td>nama</td>
+                <td>tb</td>
+                <td>bb</td>
+        </tr>
+        <tr>
+                <td>1.</td>
+                <td>bagus</td>
+                <td>176 cm</td>
+                <td>90 kg</td>
+        </tr>
+        <tr>
+                <td>2.</td>
+                <td>febiola</td>
+                <td>176 cm </td>
+                <td>57 kg</td>
+        </tr>
+        <tr>
+                <td>3. </td>
+                <td>ana comel</td>
+                <td>170 cm</td>
+                <td>60 cm</td>
+        </tr>
+        <tr>
+                <td>4.</td>
+                <td>fadil</td>
+                <td>160 cm</td>
+                <td>45 kg</td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="hyperlink">
+        <h2>Hyperlink pada HTML</h2>
+        <!-- untuk membuat hyperlink menggunakan tag a + href= "tujuan"-->
+        klik untuk html <a href="html1.html">www.repairme</a>
+
+    </div>
+
+    <div class="list">
+        <h2>membuat list pada HTML</h2>
+        <!-- ol terurut -->
+        <!-- ul bebas -->
+        <!-- dl seperti definisi-->
+
+        <h2>list terurut</h2>
+
+        <ol type="1">
+            <li>banyuwangi</li>
+            <li>bondowoso</li>
+            <li>situbondo</li>
+        <ol>
+        <br><br>
+        <h2>list tidak terurut</h2>
+        <ul>
+            <li>banyuwangi</li>
+            <li>bondowoso</li>
+            <li>situbondo</li>
+        </ul>
+        <!-- <dl>
+                <li>banyuwangi</li>
+                <li>bondowoso</li>
+                <li>situbondo</li>
+        </dl> -->
+    </div>
+
+    <div class="form">
+        <form>
+            <h2>Form</h2>
+            <!-- menampilkan value pada tag input-->
+            <!--  ket : jika ingin memberi hak akses read only maka tambah perintah readonly -->
+            <table border="1" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td>Nama : </td>
+                    <td><input type="text" value="febiola"></td>
+                </tr>
+                <tr>
+                    <td>readonly : </td>
+                    <td><input type="text" value="hayo apa" readonly></td>
+                </tr>
+                <!-- attribut disable -->
+                <tr>
+                    <td>disable : </td>
+                    <td><input type="text" value="hayo apa" disabled></td>
+                 </tr>
+                 <!-- attribut size -->
+                 <tr>
+                    <td>size : </td>
+                    <td><input type="text" value="hayo apa" size="30"></td>
+                </tr>
+                <!-- attribut maxlength -->
+                <tr>
+                        <td>maxlength : </td>
+                        <td><input type="text" value="lebar 30" maxlength="30"></td>
+                </tr>
+                <!-- list minmax -->
+                <tr>
+                    <td>list</td>
+                    <td><input type="date" min="22-05-2000"></td>
+                    <td><input type="date" max="22-05-3000"></td>
+                </tr>
+        </table>
+        </form>
+    </div>
+
+<div class="image">
+<!-- untuk menampilkan gambar menggunakan tag img -->
+<h2>Menampilkan Gambar</h2>
+<img src="img/FEBI.jpg">
+</div>
+
+<!-- dalam penggunaan id / class, keduanya merupakan identitas -->
+<!-- id lebih berat daripada class -->
+<left><h2>Penggunaan id dan class</h2></left>
+<div id="id">menggunakan id</div>
+<div class="class">menggunakan class</div>
+
+
+
+</div>
+</body>
+</html> 
