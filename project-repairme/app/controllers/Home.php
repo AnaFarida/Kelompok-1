@@ -1,4 +1,3 @@
-
 <?php 
 
 //ini adalah file child(anak) dari core/Controller
