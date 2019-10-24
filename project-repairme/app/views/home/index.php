@@ -40,7 +40,6 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-lead-in"style="color:black">selamat datang di repairme.com</div>
-        
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">perbaiki barang!!!</a>
       </div>
     </div>
