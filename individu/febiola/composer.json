@@ -1,0 +1,14 @@
+{
+    "name": "febiola/febiola-composer",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Febiola Putri Yunita",
+            "email": "febiolaputri01@gmail.com"
+        }
+    ],
+    "require": {
+        "setasign/fpdf": "1.8.1"
+    }
+}
