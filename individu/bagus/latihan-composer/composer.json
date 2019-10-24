@@ -1,0 +1,14 @@
+{
+    "name": "latihan-composer/bgs-composer",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "BagusDuwiPrasetiyo",
+            "email": "bagusduwi9@gmail.com"
+        }
+    ],
+    "require": {
+        "setasign/fpdf": "1.8.1"
+    }
+}
