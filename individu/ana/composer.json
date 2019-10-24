@@ -1,0 +1,8 @@
+{
+    "name": "ana/library.php",
+    "description": "tugascomposer",
+    "type": "library",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.9"
+    }
+}
