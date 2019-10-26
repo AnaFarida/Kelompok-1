@@ -1,5 +1,9 @@
 <div class="container">
 	
+	<!-- button registrasi -->
+
+	<button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">Sign Up Mitra</button>
+
 	<div class="mitra">
 		<?php foreach($data['mitra'] as $mitra): ?>
 		<ul>

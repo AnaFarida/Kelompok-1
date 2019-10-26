@@ -8,4 +8,5 @@ class Mitra extends Controller{
 		$this->view('mitra/index', $data);
 		$this->view('templates/footer');
 	}
+
 }
