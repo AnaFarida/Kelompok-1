@@ -10,4 +10,9 @@ class Mitra_model{
 	public function getAllMitra(){
 		return $this->db->query("SELECT * FROM tb_mitra");
 	}
+	
+	public function inputMitra($data){
+		$nama = $data['nama'];
+		return $this->db->data("INSERT INTO tb_mitra VALUES (NULL,'$nama',NULL,NULL,NULL,NULL,NULL)");
+	}
 }
