@@ -1,5 +1,5 @@
 <div class="container">
-<form action="<?=BASEURL;?>/mitra/registrasi/insertMitra" method="post">   
+<form action="<?=BASEURL;?>/mitra/insertMitra" method="post">   
 <table>
 <tr>
 <td><label for="idmitra" >Id</label></td>
@@ -10,24 +10,25 @@
 <td><input type="text" name="nama" id="nama"></td>
 </tr>
 <tr>
-<td><label for="notlp" >no telpon</label></td>
-<td><input type="text" name="notlp" id="notlp"></td>
+<td><label for="no_telpon" >no telpon</label></td>
+<td><input type="text" name="no_telpon" id="no_telpon"></td>
 </tr>
 <tr>
 <td><label for="alamat" >Alamat</label></td>
 <td><input type="text" name="alamat" id="alamat"></td>
 </tr>
 <tr>
-<td><label for="buktipem" >Bukti pembayaran</label></td>
-<td><input type="text" name="buktipem" id="buktipem"></td>
+<td><label for="bukti_pembayaran" >Bukti pembayaran</label></td>
+<td><input type="file" name="bukti_pembayaran" id="bukti_pembayaran"></td>
+<td><input type="submit" value="Upload"></td>
 </tr>
 <tr>
-<td><label for="fotoktp" >foto ktp anda</label></td>
-<td><input type="text" name="fotoktp" id="fotoktp"></td>
+<td><label for="foto_ktp" >foto ktp anda</label></td>
+<td><input type="text" name="foto_ktp" id="foto_ktp"></td>
 </tr>
 <tr>
-<td><label for="fotousaha" >foto usaha </label></td>
-<td><input type="text" name="fotousaha" id="fotousaha"></td>
+<td><label for="foto_usaha" >foto usaha </label></td>
+<td><input type="text" name="foto_usaha" id="foto_usaha"></td>
 </tr>
 <tr>
 <td><label for="username" >Username</label></td>

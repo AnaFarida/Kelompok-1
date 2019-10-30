@@ -14,7 +14,7 @@ class Mitra extends Controller{
 	$this->view('mitra/registrasi', $data);
 	$this->view('templates/footer');
    }
-   public function insertMitra(){
+  public function insertMitra(){
 	if($this->model('Mitra_model')->inputMitra($_POST)>0){
 	header ('Location: '.BASEURL.'/registrasi');
 		echo "sukses";
@@ -23,4 +23,14 @@ class Mitra extends Controller{
 		echo "gagal";
 	}
    }
+   public function upload(){
+	if ($this-> model('Mitra_model')->uploadmitra($_POST)>0){
+	header ('Location: '.BASEURL.'registrasi');
+		echo "upload sukses";
+	}else {
+		header ('Location: '.BASEURL);
+		echo"upload gagal ";
+	}
+   }
+   
 }
