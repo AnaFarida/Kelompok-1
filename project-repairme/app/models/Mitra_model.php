@@ -13,6 +13,9 @@ class Mitra_model{
 	
 	public function inputMitra($data){
 		$nama = $data['nama'];
-		return $this->db->data("INSERT INTO tb_mitra VALUES (NULL,'$nama',NULL,NULL,NULL,NULL,NULL)");
+		$username = $data['username'];
+		$pass = $data['password'];
+		$out = $this->db->data("INSERT INTO tb_mitra VALUES (NULL,'$username','$nama','$pass',NULL,'s','s','sdf','sgfas')");
+		return $out;
 	}
 }
