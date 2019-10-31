@@ -12,10 +12,23 @@ class Mitra_model{
 	}
 	
 	public function inputMitra($data){
+		$id_mita = $data['id_mitra'];
 		$nama = $data['nama'];
+
+		$no_telpon= $data['no_telpon'];
+		$alamat = $data['alamat'];
+		$bukti_pembayaran = $data['bukti_pembayaran'];
+		$foto_ktp = $data['foto_ktp'];
+		$foto_usaha = $data['foto_usaha'];
 		$username = $data['username'];
-		$pass = $data['password'];
-		$out = $this->db->data("INSERT INTO tb_mitra VALUES (NULL,'$username','$nama','$pass',NULL,'s','s','sdf','sgfas')");
-		return $out;
+		$password = $data['password'];
+		return $this->db->data("INSERT INTO tb_mitra VALUES (NULL,'$nama','$no_telpon','$alamat','$bukti_pembayaran','$foto_ktp','$foto_usaha','$username','$password')");
 	}
+	//public function uploadmitra(){
+		//$tmp_file = $_FILES['bukti_pembayaran']['tmp_name'];
+
+	
+
+		
+	//}
 }
