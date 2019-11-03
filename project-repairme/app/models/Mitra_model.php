@@ -11,23 +11,36 @@ class Mitra_model{
 		return $this->db->query("SELECT * FROM tb_mitra");
 	}
 	
+	
+	public function getAllPengguna(){
+		return $this->db->query("SELECT * FROM tb_user");
+	}
+
+	public function inputPengguna($dat){
+		$username = $dat['username'];
+		$password = $dat['password'];
+
+		return $this->db->dat("INSERT INTO tb_user VALUES ('$username', '$password')");
+	}
 	public function inputMitra($data){
-		$id_mita = $data['id_mitra'];
+		$idmtr1 = rand(1 , 100). $data['id_mitra'];
+		$idjns = (02) . $data[id_jenis];
+		$id_mitra = "mitra" . $idmtr ;
+		$id_jenis = $idjns;
+		$id_user = $data['id_user'];
 		$nama = $data['nama'];
-		$no_telpon= $data['no_telpon'];
+		$nama_usaha = $data['nama_usaha'];
+		$email = $data['email'];
 		$alamat = $data['alamat'];
-		$bukti_pembayaran = $data['bukti_pembayaran'];
+		$no_telpon= $data['no_telpon'];
 		$foto_ktp = $data['foto_ktp'];
 		$foto_usaha = $data['foto_usaha'];
-		$username = $data['username'];
-		$password = $data['password'];
-		return $this->db->data("INSERT INTO tb_mitra VALUES (NULL,'$nama','$no_telpon','$alamat','$bukti_pembayaran','$foto_ktp','$foto_usaha','$username','$password')");
+		$foto_transaksi =$data['foto_transaksi'];
+		
+		return $this->db->data("INSERT INTO tb_mitra VALUES ('$id_mitra','$id_jenis','$id_user','$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','$foto_usaha','$foto_transaksi')");
 	}
-	//public function uploadmitra(){
-		//$tmp_file = $_FILES['bukti_pembayaran']['tmp_name'];
-
 	
 
 		
-	//}
+	
 }
