@@ -24,13 +24,14 @@ class Mitra_model{
 	}
 	public function inputMitra($data){
 		$idmtr1 = rand(1 , 100). $data['id_mitra'];
-		$idjns = (02) . $data[id_jenis];
+		$idjns = (2) . $data[id_jenis];
 		$id_mitra = "mitra" . $idmtr ;
 		$id_jenis = $idjns;
 		$id_user = $data['id_user'];
 		$nama = $data['nama'];
 		$nama_usaha = $data['nama_usaha'];
 		$email = $data['email'];
+		$no_telpon= $data['no_telpon'];
 		$alamat = $data['alamat'];
 		$no_telpon= $data['no_telpon'];
 		$foto_ktp = $data['foto_ktp'];

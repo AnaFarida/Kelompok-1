@@ -23,11 +23,11 @@
 </tr>
 <tr>
 <td><label for="foto_ktp" >foto ktp anda</label></td>
-<td><input type="text" name="foto_ktp" id="foto_ktp"></td>
+<td><input type="file" name="foto_ktp" id="foto_ktp"></td>
 </tr>
 <tr>
 <td><label for="foto_usaha" >foto usaha </label></td>
-<td><input type="text" name="foto_usaha" id="foto_usaha"></td>
+<td><input type="file" name="foto_usaha" id="foto_usaha"></td>
 </tr>
 <tr>
 <td><label for="foto_transaksi" >Bukti pembayaran</label></td>

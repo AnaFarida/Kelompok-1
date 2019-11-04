@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 class Mitra extends Controller{
 	public function index(){
 		$data['judul'] = 'Daftar Mitra';
@@ -8,15 +7,28 @@ class Mitra extends Controller{
 		$this->view('mitra/index', $data);
 		$this->view('templates/footer');
 	}
-	public function idmitra(){
-	}
-
-   public function registrasi(){
+public function registrasi(){
 	$data['judul'] = 'Registrasi';
 	$this->view('templates/header',$data);
 	$this->view('mitra/registrasi', $data);
 	$this->view('templates/footer');
-   }
+}
+// public function insertMitra(){
+		
+// 		if ($this->model('Mitra_model')->inputMitra($_POST) > 0) {
+// 			//Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+
+// 			header('Location: '.BASEURL.'/mitra');
+// 			exit;
+// 		}else{
+// 			//Flasher::setFlash(' gagal', 'ditambahkan', 'danger');
+// 			echo "gagal";
+// 			header('Location: '.BASEURL.'/mitra');
+// 			exit;
+// 		}
+// 		}
+// 	}
+ //  }
   public function insertMitra(){
 	if($this->model('Mitra_model')->inputMitra($_POST)>0){
 	header ('Location: '.BASEURL.'/registrasi');
