@@ -16,32 +16,48 @@ class Mitra_model{
 		return $this->db->query("SELECT * FROM tb_user");
 	}
 
-	public function inputPengguna($dat){
-		$username = $dat['username'];
-		$password = $dat['password'];
-
-		return $this->db->dat("INSERT INTO tb_user VALUES ('$username', '$password')");
-	}
-	public function inputMitra($data){
-		$idmtr1 = rand(1 , 100). $data['id_mitra'];
-		$idjns = (2) . $data[id_jenis];
-		$id_mitra = "mitra" . $idmtr ;
-		$id_jenis = $idjns;
-		$id_user = $data['id_user'];
+	public function inputMitra($data,$gambar){
+		$id_mitra = rand(1000 , 5000);
+		$id_jenis = 2;
 		$nama = $data['nama'];
 		$nama_usaha = $data['nama_usaha'];
 		$email = $data['email'];
 		$no_telpon= $data['no_telpon'];
 		$alamat = $data['alamat'];
 		$no_telpon= $data['no_telpon'];
-		$foto_ktp = $data['foto_ktp'];
-		$foto_usaha = $data['foto_usaha'];
-		$foto_transaksi =$data['foto_transaksi'];
 		
-		return $this->db->data("INSERT INTO tb_mitra VALUES ('$id_mitra','$id_jenis','$id_user','$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','$foto_usaha','$foto_transaksi')");
+
+		//untuk user 
+
+		$id_user  = rand(5000,10000);
+		$username = $data['username'];
+		$password = $data['password'];
+
+		//untuk upload gambar
+
+		$imgKtp = $gambar['gambar1'];	
+		$img1 = catchImage($imgKtp);
+		
+
+		
+
+		$this->db->data("INSERT INTO tb_user VALUES ('$id_user','$username', '$password')");
+
+		return $this->db->data("INSERT INTO tb_mitra VALUES ('$id_mitra','$id_jenis','$id_user','$nama','$nama_usaha','$email','$alamat','$no_telpon','$img1','a','a')");
 	}
 	
+	public function catchImage($img){
+		$namaFileParam = $_FILES[$img]['name'];
+		$ukuranFileParam = $_FILES[$img]['size'];
+		$errorParam = $_FILES[$img]['error'];
+		$tmpNameParam = $_FILES[$img]['tmp_name'];
 
+		$gambar = $this->db->upload($namaFileParam,$ukuranFileParam,$errorParam,$tmpNameParam);
+		if ($gambar == false) {
+			return false;
+		}
+		
+	}
 		
 	
 }

@@ -29,4 +29,60 @@ class Database{
 	return  mysqli_affected_rows($conn);
 
 	}
+
+	function upload($namaFileParam,$ukuranFileParam,$errorParam,$tmpNameParam){
+
+		//menangkap data
+
+		$namaFile = $namaFileParam;
+		$ukuranFile = $ukuranFileParam;
+		$error = $errorParam;
+		$tmpName = $tmpNameParam;
+	
+		//jika gambar tidak di upload
+	
+		if($error === 4){
+			echo "<script>alert('Masukkan Gambar!!');</script>";
+			return false;
+		}
+	
+		//jika yg di upload bukan gambar
+	
+		$valid = ['jpg', 'jpeg', 'png'];
+	
+		//explode untuk mengubah string menjadi array(memecah)
+		// '.' yang mau di pecah selanjutnya
+		$ekstensiGambar = explode('.', $namaFile);
+		//mengambil array yang paling akhir (end)
+		//menjadikan huruf kecil semua (strtolower())
+		$ekstensiGambar = strtolower(end($ekstensiGambar));
+	
+		if(!in_array($ekstensiGambar, $valid)){
+			echo "<script>alert('yang anda Upload bukan Gambar!');</script>";
+			return false;
+		}
+	
+		//cek ukurannya terlalu besar
+	
+		if ($ukuranFile > 1000000) {
+			echo "<script>
+						alert('Gambar terlalu besar!');
+				</script>";
+			return false;
+		}
+	
+		//membuat nama file baru
+	
+		$namaFileBaru = uniqid().'.'.$ekstensiGambar;
+	
+		//jika lolos dari seleksi
+	
+		move_uploaded_file($tmpName, 'img/'.$namaFileBaru);
+	
+		return $namaFileBaru;
+	
+	
+	}
+	
+
 }

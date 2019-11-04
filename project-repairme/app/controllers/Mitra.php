@@ -30,14 +30,16 @@ public function registrasi(){
 // 	}
  //  }
   public function insertMitra(){
-	if($this->model('Mitra_model')->inputMitra($_POST)>0){
-	header ('Location: '.BASEURL.'/registrasi');
-		echo "sukses";
+	if($this->model('Mitra_model')->inputMitra($_POST, $_FILES) > 0){
+		header ('Location: '.BASEURL.'/berhasil');
+		exit;
 	}else {
-		header ('Location: '.BASEURL);
-		echo "gagal";
+		header ('Location: '.BASEURL.'/gagal');
+		exit;
 	}
    }
+
+
 
   
 

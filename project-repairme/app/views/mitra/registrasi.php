@@ -22,16 +22,16 @@
 <td><input type="text" name="no_telpon" id="no_telpon"></td>
 </tr>
 <tr>
-<td><label for="foto_ktp" >foto ktp anda</label></td>
-<td><input type="file" name="foto_ktp" id="foto_ktp"></td>
+<td><label for="gambar1" >foto ktp anda</label></td>
+<td><input type="file" name="gambar1" id="gambar1"></td>
 </tr>
 <tr>
-<td><label for="foto_usaha" >foto usaha </label></td>
-<td><input type="file" name="foto_usaha" id="foto_usaha"></td>
+<td><label for="gambar2" >foto usaha </label></td>
+<td><input type="file" name="gambar2" id="gambar2"></td>
 </tr>
 <tr>
-<td><label for="foto_transaksi" >Bukti pembayaran</label></td>
-<td><input type="file" name="foto_transaksi" id="foto_transaksi"></td>
+<td><label for="gambar3" >Bukti pembayaran</label></td>
+<td><input type="file" name="gambar3" id="gambar3"></td>
 </tr>
 <tr>
 <td><label for="username" >username</label></td>
