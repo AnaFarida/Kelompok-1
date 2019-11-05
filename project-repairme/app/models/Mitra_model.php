@@ -16,7 +16,7 @@ class Mitra_model{
 		return $this->db->query("SELECT * FROM tb_user");
 	}
 
-	public function inputMitra($data,$gambar){
+	public function inputMitra($data,$file){
 		$id_mitra = rand(1000 , 5000);
 		$id_jenis = 2;
 		$nama = $data['nama'];
@@ -35,7 +35,7 @@ class Mitra_model{
 
 		//untuk upload gambar
 
-		$imgKtp = $gambar['gambar1'];	
+		$imgKtp = $file['gambar1'];	
 		$img1 = catchImage($imgKtp);
 		
 
