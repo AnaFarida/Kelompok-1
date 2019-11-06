@@ -13,23 +13,7 @@ public function registrasi(){
 	$this->view('mitra/registrasi', $data);
 	$this->view('templates/footer');
 }
-// public function insertMitra(){
-		
-// 		if ($this->model('Mitra_model')->inputMitra($_POST) > 0) {
-// 			//Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-
-// 			header('Location: '.BASEURL.'/mitra');
-// 			exit;
-// 		}else{
-// 			//Flasher::setFlash(' gagal', 'ditambahkan', 'danger');
-// 			echo "gagal";
-// 			header('Location: '.BASEURL.'/mitra');
-// 			exit;
-// 		}
-// 		}
-// 	}
- //  }
-  public function insertMitra(){
+public function insertMitra(){
 	if($this->model('Mitra_model')->inputMitra($_POST)>0){
 	header ('Location: '.BASEURL.'/registrasi');
 		echo "sukses";
@@ -37,10 +21,5 @@ public function registrasi(){
 		header ('Location: '.BASEURL);
 		echo "gagal";
 	}
-   }
-
-  
-
-   
-   
+}
 }
