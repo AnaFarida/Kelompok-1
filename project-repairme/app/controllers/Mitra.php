@@ -14,12 +14,12 @@ public function registrasi(){
 	$this->view('templates/footer');
 }
 public function insertMitra(){
-	if($this->model('Mitra_model')->inputMitra($_POST)>0){
-	header ('Location: '.BASEURL.'/registrasi');
-		echo "sukses";
+	if($this->model('Mitra_model')->inputMitra($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/registrasi');
+		exit;
 	}else {
 		header ('Location: '.BASEURL);
-		echo "gagal";
+		exit();
 	}
 }
 }
