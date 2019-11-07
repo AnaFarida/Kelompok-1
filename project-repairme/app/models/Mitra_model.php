@@ -11,6 +11,9 @@ class Mitra_model{
 		return $this->db->query("SELECT * FROM tb_mitra");
 	}
 	
+	public function getDetail($id){
+		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = ".$id);
+	}
 	
 	public function getAllPengguna(){
 		return $this->db->query("SELECT * FROM tb_user");
@@ -45,8 +48,6 @@ class Mitra_model{
 
 		return $return;
 	}
-	
-
 		
 	
 }

@@ -22,4 +22,21 @@ public function insertMitra(){
 		exit();
 	}
 }
+
+public function detailMitra($id){
+	$data['judul'] = 'Detail Mitra';
+	$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+	$this->view('templates/header', $data);
+	$this->view('mitra/detailMitra', $data);
+	$this->view('templates/footer');
+
+}
+
+public function delete(){
+
+}
+
+public function ubah(){
+	
+}
 }
