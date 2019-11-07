@@ -1,7 +1,7 @@
  <div class="container">
         <div class="col-md-4 col-md-offset-4">
-          <form class="form-signin" action="<?= BASEURL; ?>/controller/login" method="post">
-            <h2 class="form-signin-heading">Please sign in</h2>
+          <form class="form-signin" action="<?= BASEURL; ?>/login/proses" method="post">
+            <h2 class="form-signin-heading">Log in</h2>
             <label for="username" class="sr-only">Username</label>
             <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
             <label for="password" class="sr-only">Password</label>
