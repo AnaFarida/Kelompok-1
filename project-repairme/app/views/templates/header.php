@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Halaman <?= $data['judul']; ?></title>
 	<link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
+   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
 <body>
 

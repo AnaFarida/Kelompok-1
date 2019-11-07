@@ -12,7 +12,7 @@ class Mitra_model{
 	}
 	
 	public function getDetail($id){
-		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = $id");
+		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = ".$id);
 	}
 	
 	public function getAllPengguna(){
@@ -21,9 +21,10 @@ class Mitra_model{
 
 	public function inputMitra($data){
 		
-		$id_mitra = "mitra" . rand(1000,5000);
 		$id_jenis = 2;
-		$id_user = "user" . rand(6000,10000);
+		
+		
+		
 		$nama = $data['nama'];
 		$nama_usaha = $data['nama_usaha'];
 		$email = $data['email'];
@@ -40,9 +41,21 @@ class Mitra_model{
 			$return = false;
 			exit;
 		}else{
-		$this->db->data("INSERT INTO tb_user VALUES ('$id_user','$username','$password')");
 
-		$this->db->data("INSERT INTO tb_mitra VALUES ('$id_mitra','$id_jenis','$id_user','$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','$foto_usaha','$foto_transaksi')");
+		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
+
+		foreach ($preIdUser as $key) {
+			$rows = $key['id_user'];
+		}
+
+		$readyUser = $rows + 10;
+
+		$this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')");
+
+
+		$this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','$foto_usaha','$foto_transaksi')");
+
+
 		$return = 2;
 		}
 
