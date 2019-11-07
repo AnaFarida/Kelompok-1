@@ -1,5 +1,5 @@
 <div class="container">
-	<form action="<?=BASEURL;?>/mitra/insertMitra" method="post" enctype="multipart/form-data">
+	<form action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data">
 		<table>
 			<tr>
 				<td><label for="nama" >Nama mitra</label></td>

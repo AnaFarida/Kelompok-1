@@ -73,7 +73,7 @@ class Database{
 
 	//jika lolos dari seleksi
 
-		move_uploaded_file($tmpName, 'img/'.$namaFileBaru);
+		move_uploaded_file($tmpName, 'img/mitra/'.$namaFileBaru);
 		return $namaFileBaru;
 	}
 }

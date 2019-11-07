@@ -31,17 +31,19 @@ class Mitra_model{
 		$password = $data['password2'];
 
 		$foto_ktp = $this->db->upload('foto_ktp');
-		if($foto_ktp == false){
-			$ret = false;
+		$foto_usaha = $this->db->upload('foto_usaha');
+		$foto_transaksi = $this->db->upload('foto_transaksi');
+		if($foto_ktp && $foto_usaha && $foto_transaksi == false){
+			$return = false;
 			exit;
 		}else{
 		$this->db->data("INSERT INTO tb_user VALUES ('$id_user','$username','$password')");
 
-		$this->db->data("INSERT INTO tb_mitra VALUES ('$id_mitra','$id_jenis','$id_user','$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','s','s')");
-		$ret = 2;
+		$this->db->data("INSERT INTO tb_mitra VALUES ('$id_mitra','$id_jenis','$id_user','$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','$foto_usaha','$foto_transaksi')");
+		$return = 2;
 		}
 
-		return $ret;
+		return $return;
 	}
 	
 
