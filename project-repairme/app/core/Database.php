@@ -18,6 +18,7 @@ class Database{
 		}
 		return $rows;
 	}
+	
 	public function data($query){
 		$conn = $this->conn;
 		mysqli_query($conn, $query);

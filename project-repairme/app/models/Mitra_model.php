@@ -12,7 +12,7 @@ class Mitra_model{
 	}
 	
 	public function getDetail($id){
-		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = ".$id);
+		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = $id");
 	}
 	
 	public function getAllPengguna(){
@@ -49,5 +49,7 @@ class Mitra_model{
 		return $return;
 	}
 		
-	
+	public function deleteMitra($id){
+		return $this->db->data("DELETE FROM `tb_mitra` WHERE id_mitra = ". $id);
+	}
 }
