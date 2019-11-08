@@ -48,7 +48,7 @@ class Mitra_model{
 			$rows = $key['id_user'];
 		}
 
-		$readyUser = $rows + 10;
+		$readyUser = $rows + 1;
 
 		$this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')");
 
@@ -63,6 +63,19 @@ class Mitra_model{
 	}
 		
 	public function deleteMitra($id){
-		return $this->db->data("DELETE FROM `tb_mitra` WHERE id_mitra = ". $id);
+		
+		$preIdMitra = $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = " . $id);
+		
+		 foreach ($preIdMitra as $key) {
+		 	$rows = $key['id_user'];
+		 }
+
+		 $delUsr = $this->db->data("DELETE FROM `tb_user` WHERE id_user = ".$rows);
+		 $delMitra = $this->db->data("DELETE FROM `tb_mitra` WHERE id_mitra = ". $id);
+
+		
+		
+		
+		return $delUsr && $delMitra;
 	}
 }

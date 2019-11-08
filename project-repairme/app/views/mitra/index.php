@@ -8,9 +8,9 @@
 			<?php foreach($data['mitra'] as $mitra) :?>
 			<ul class="list-group">
 				<li class="list-group-item" >
-					<?= $mitra['nama']; ?>
+					<?= $mitra['nama_usaha']; ?>
 					<a href="<?= BASEURL; ?>/mitra/delete/<?= $mitra['id_mitra']; ?>" class="badge badge-danger float-right ml-1">Hapus</a>
-					<a href="<?= BASEURL; ?>/mitra/ubah/<?= $mitra['id_mitra']; ?>" class="badge badge-success float-right ml-1 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mitra['id']; ?>">Ubah</a>
+					<a href="<?= BASEURL; ?>/mitra/ubah/<?= $mitra['id_mitra']; ?>/<?= $mitra['id_user']; ?>" class="badge badge-success float-right ml-1 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mitra['id']; ?>">Ubah</a>
 					<a href="<?= BASEURL; ?>/mitra/detailMitra/<?= $mitra['id_mitra']; ?>" class="badge badge-primary float-right ml-1">Detail</a>
 					
 				</li>
