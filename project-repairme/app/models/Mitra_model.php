@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 
 class Mitra_model{
 	private $db;
@@ -16,7 +16,7 @@ class Mitra_model{
 		return $this->db->query("SELECT * FROM tb_user");
 	}
 
-	public function inputMitra($data,$gambar){
+	public function inputMitra(){
 		$id_mitra = rand(1000 , 5000);
 		$id_jenis = 2;
 		$nama = $data['nama'];

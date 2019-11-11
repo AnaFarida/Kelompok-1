@@ -30,7 +30,7 @@ class Database{
 
 	}
 
-	function upload($namaFileParam,$ukuranFileParam,$errorParam,$tmpNameParam){
+	  function upload($namaFileParam,$ukuranFileParam,$errorParam,$tmpNameParam){
 
 		//menangkap data
 
