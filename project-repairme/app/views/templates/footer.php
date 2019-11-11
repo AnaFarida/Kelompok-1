@@ -3,5 +3,6 @@
 <script src="<?= BASEURL; ?>/js/script.js"></script>
 
 <script src="<?= BASEURL; ?>/js/petaLokasi.js"></script>
+
 </body>
 </html>
