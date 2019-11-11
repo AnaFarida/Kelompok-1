@@ -8,7 +8,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
 
-      //untuk halaman
+      <!-- //untuk halaman -->
 
       <title>Halaman <?= $data['judul']; ?></title>
       <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
@@ -40,7 +40,7 @@
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/mitra">Mitra</a>
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/LokasiPerbaikan">Perbaikan</a>
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/login">Login</a>
-                  
+                  <a class="nav-item nav-link" href="<?= BASEURL; ?>/admin">admin</a>
                </div>
             </div>
          </div>
