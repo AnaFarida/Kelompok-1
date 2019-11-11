@@ -13,36 +13,39 @@ public function registrasi(){
 	$this->view('mitra/registrasi', $data);
 	$this->view('templates/footer');
 }
-// public function insertMitra(){
-		
-// 		if ($this->model('Mitra_model')->inputMitra($_POST) > 0) {
-// 			//Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-
-// 			header('Location: '.BASEURL.'/mitra');
-// 			exit;
-// 		}else{
-// 			//Flasher::setFlash(' gagal', 'ditambahkan', 'danger');
-// 			echo "gagal";
-// 			header('Location: '.BASEURL.'/mitra');
-// 			exit;
-// 		}
-// 		}
-// 	}
- //  }
-  public function insertMitra(){
-	if($this->model('Mitra_model')->inputMitra($_POST, $_FILES) > 0){
-		header ('Location: '.BASEURL.'/berhasil');
+public function insertMitra(){
+	if($this->model('Mitra_model')->inputMitra($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/');
+	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 		exit;
 	}else {
-		header ('Location: '.BASEURL.'/gagal');
-		exit;
+	header ('Location: '.BASEURL);
+	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
 	}
-   }
+}
 
+public function detailMitra($id){
+	$data['judul'] = 'Detail Mitra';
+	$data['mitra'] = $this->model('Mitra_model')->getDetail($id);
+	$this->view('templates/header', $data);
+	$this->view('mitra/detailMitra', $data);
+	$this->view('templates/footer');
 
+}
 
-  
-
-   
-   
+	public function delete($id){
+		if ($this->model('Mitra_model')->deleteMitra($id) > 0) {
+			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/mitra/');
+			exit;
+		}else{
+			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/mitra/');
+			exit;
+		}
+	}
+public function ubah(){
+	
+}
 }
