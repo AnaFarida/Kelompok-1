@@ -1,11 +1,10 @@
 
-
 <div class="container">
 	<form action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data">
 		<table>
 			<tr>
 				<td><label for="nama" >Nama mitra</label></td>
-				<td><input type="text" name="nama" id="nama"></td>
+				<td><input type="text" name="nama" id="nama" required></td>
 			</tr>
 			<tr>
 				<td><label for="nama_usaha" >nama usaha</label></td>
@@ -48,7 +47,7 @@
 				<td><input type="password" name="password2" id="password2"></td>
 			</tr>
 			<tr>
-				<td><button type="submit">registrasi</button></td></tr>
+				<td><button type="submit" id="submit">registrasi</button></td></tr>
 			</table>
 		</form>
 	</div>

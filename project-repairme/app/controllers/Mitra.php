@@ -14,7 +14,10 @@ public function registrasi(){
 	$this->view('templates/footer');
 }
 public function insertMitra(){
-	if($this->model('Mitra_model')->inputMitra($_POST) > 0){
+	if ($_POST['password'] != $_POST['password2']) {
+		header ('Location: '.BASEURL.'/mitra/');
+	}else{
+		if($this->model('Mitra_model')->inputMitra($_POST) > 0){
 	header ('Location: '.BASEURL.'/mitra/');
 	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 		exit;
@@ -23,6 +26,9 @@ public function insertMitra(){
 	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}
+	}
+
+	
 }
 
 public function detailMitra($id){
