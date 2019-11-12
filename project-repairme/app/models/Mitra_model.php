@@ -77,4 +77,14 @@ class Mitra_model{
 		
 		return $delUsr && $delMitra;
 	}
+
+	public function ubahMitra($id){
+		$uMitra = $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = " . $id);
+		 foreach ($uMitra as $key2){
+			 $rows = $key2 ['id_user'];
+		 }
+		  
+
+
+	}
 }

@@ -41,6 +41,7 @@
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/LokasiPerbaikan">Perbaikan</a>
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/login">Login</a>
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/admin">admin</a>
+                  <a class="nav-item nav-link" href="<?= BASEURL; ?>/pelanggan">pelanggan</a>
                </div>
             </div>
          </div>
