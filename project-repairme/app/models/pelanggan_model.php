@@ -42,9 +42,11 @@ class pelanggan_model{
 
 
 		$ret = 3;
+
+		return $ret;
 		}
 
-	
+
     }
 
 
