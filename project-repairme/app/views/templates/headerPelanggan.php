@@ -1,34 +1,26 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
- 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= BASEURL;?>/adminSources/assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="<?= BASEURL;?>/adminSources/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?= BASEURL;?>/adminSources/assets/libs/css/style.css">
-    <link rel="stylesheet" href="<?= BASEURL;?>/adminSources/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <style>
-    html,
-    body {
-        height: 100%;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
 
-    body {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: center;
-        align-items: center;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-    </style>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="regPelSources/documentation/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="regPelSources/assets/vendor/nouislider/nouislider.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="regPelSources/assets/libs/css/style.css">
 </head>
-<!-- ============================================================== -->
-<!-- signup form  -->
-<!-- ============================================================== -->
-
 <body>
+    <!-- JS -->
+    <script src="regPelSources/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="regPelSources/assets/vendor/nouislider/nouislider.min.js"></script>
+    <script src="regPelSources/assets/vendor/wnumb/wNumb.js"></script>
+    <script src="regPelSources/assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="regPelSources/assets/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="regPelSources/assets/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

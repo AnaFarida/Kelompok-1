@@ -1,56 +1,56 @@
 
-    <!-- ============================================================== -->
-    <!-- signup form  -->
-    <!-- ============================================================== -->
-    <form class="splash-container">
-    <form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="mb-1">Registrations Form</h3>
-                <p>Please enter your user information.</p>
-            </div>
-            <div class="card-body">
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Nama" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="E-mail" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="No telpon" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Alamat" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Username" autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" id="pass1" type="password" required="" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" required="" placeholder="Confirm">
-                </div>
-                <div class="form-group pt-2">
-                    <button class="btn btn-block btn-primary" type="submit">Register My Account</button>
-                </div>
-                <div class="form-group">
-                    <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a></span>
-                    </label>
-                </div>
-                <div class="form-group row pt-0">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
-                        <button class="btn btn-block btn-social btn-facebook " type="button">Facebook</button>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <button class="btn  btn-block btn-social btn-twitter" type="button">Twitter</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer bg-white">
-                <p>Already member? <a href="#" class="text-secondary">Login Here.</a></p>
+
+    <div class="main">
+
+<div class="container">
+    <div class="signup-content">
+        <div class="signup-img">
+            <img src="images/form-img.jpg" alt="">
+            <div class="signup-img-content">
+                <h2>Register now </h2>
+                <p>while seats are available !</p>
             </div>
         </div>
-    </form>
-</form>
+        <div class="signup-form">
+        <form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="form-input">
+                            <label for="nama" class="required">Nama</label>
+                            <input type="text" name="nama" id="nama" />
+                        </div>
+                        <div class="form-input">
+                            <label for="email" class="required">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="form-input">
+                            <label for="no_tlp" class="required">No telepon</label>
+                            <input type="text" name="no_tlp" id="no_tlp" />
+                        </div>
+                        <div class="form-input">
+                            <label for="alamat" class="required">Alamat</label>
+                            <input type="text" name="alamat" id="alamat" />
+                        </div>
+                        <div class="form-input">
+                            <label for="username" class="required">Username</label>
+                            <input type="text" name="username" id="username" />
+                        </div>
+                        <div class="form-input">
+                            <label for="password" class="required">password</label>
+                            <input type="password" name="password" id="password" />
+                        </div>
+                        <div class="form-input">
+                            <label for="confir" class="required">konfirmasi</label>
+                            <input type="password" name="confir" id="confir" />
+                        </div>
+                <div class="form-submit">
+                    <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                    <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+

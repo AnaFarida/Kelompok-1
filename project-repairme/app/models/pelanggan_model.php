@@ -22,7 +22,7 @@ class pelanggan_model{
 		
 		$nama = $data['nama'];
 		$email = $data['email'];
-		$no_telpon= $data['no_telpon'];
+		$no_tlp= $data['no_tlp'];
 		$alamat = $data['alamat'];
 		$username = $data['username'];
 		$password = $data['password2'];
@@ -38,7 +38,7 @@ class pelanggan_model{
 		$this->db->data("INSERT INTO tb_user VALUES ($reUser,'$username','$password')");
 
 
-		$this->db->data("INSERT INTO tb_pelanggan VALUES ( NULL,'$id_jenis',$reUser,'$nama','$email','$no_telpon','$alamat')");
+		$this->db->data("INSERT INTO tb_pelanggan VALUES ( NULL,'$id_jenis',$reUser,'$nama','$email','$no_tlp','$alamat')");
 
 
 		$ret = 3;
