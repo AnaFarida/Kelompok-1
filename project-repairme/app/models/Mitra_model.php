@@ -3,6 +3,8 @@
 class Mitra_model{
 	private $db;
 
+
+
 	function __construct(){
 		$this->db = new Database;
 	}
@@ -20,9 +22,15 @@ class Mitra_model{
 	}
 
 	public function inputMitra($data){
+		$foto_ktp = $this->db->upload('foto_ktp');
+		$foto_usaha = $this->db->upload('foto_usaha');
+		$foto_transaksi = $this->db->upload('foto_transaksi');
+
 		$id_jenis = 2;
 		
-		
+		//deklarasikan conn karena variabelnya dibutuhkan
+
+		$conn = mysqli_connect( 'localhost', 'root', '', 'repairme');
 		
 		$nama = $data['nama'];
 		$nama_usaha = $data['nama_usaha'];
@@ -30,16 +38,25 @@ class Mitra_model{
 		$no_telpon= $data['no_telpon'];
 		$alamat = $data['alamat'];
 		$no_telpon= $data['no_telpon'];
-		$username = $data['username'];
-		$password = $data['password2'];
 
-		$foto_ktp = $this->db->upload('foto_ktp');
-		$foto_usaha = $this->db->upload('foto_usaha');
-		$foto_transaksi = $this->db->upload('foto_transaksi');
-		if($foto_ktp && $foto_usaha && $foto_transaksi == false){
-			$return = false;
-			exit;
-		}else{
+		//validasi username dan password
+
+		$username = strtolower(stripslashes($data['username']));
+		$password = mysqli_real_escape_string($conn, $data['password']);
+		$password2 = mysqli_real_escape_string($conn, $data['password2']);
+
+		if ($password != $password2) {
+			echo "<script>alert('Password Tidak sama');</script>";
+			return false;
+		}
+		$password = password_hash($password, PASSWORD_DEFAULT);
+		$cekUsername = $this->db->query("SELECT * FROM tb_user");
+		foreach ($cekUsername as $key) {
+			if ($key['username'] == $username
+			) {
+				return false;
+			}
+		}
 
 		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
 
@@ -49,16 +66,9 @@ class Mitra_model{
 
 		$readyUser = $rows + 1;
 
-		$this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')");
-
-
+		$input = $this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')") &&
 		$this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','$foto_usaha','$foto_transaksi')");
-
-
-		$return = 2;
-		}
-
-		return $return;
+		return $input;
 	}
 		
 	public function deleteMitra($id){
