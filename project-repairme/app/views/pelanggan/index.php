@@ -8,8 +8,8 @@
 			<?php foreach($data['pelanggan'] as $pelanggan) :?>
 			<ul class="list-group">
 				<li class="list-group-item" >
-					<?= $mitra['nama']; ?>
-					<a href="<?= BASEURL; ?>/pelanggan/delete/<?= $mitra['id_pelanggan']; ?>" class="badge badge-danger float-right ml-1">Hapus</a>
+					<?= $pelanggan['nama']; ?>
+					<a href="<?= BASEURL; ?>/pelanggan/delete/<?= $pelanggan['id_pelanggan']; ?>" class="badge badge-danger float-right ml-1">Hapus</a>
 					
 				</li>
 			</ul>

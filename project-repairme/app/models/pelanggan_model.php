@@ -25,7 +25,7 @@ class pelanggan_model{
 		$no_tlp= $data['no_tlp'];
 		$alamat = $data['alamat'];
 		$username = $data['username'];
-		$password = $data['password2'];
+		$password = $data['confir'];
 
 		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
 
@@ -38,7 +38,7 @@ class pelanggan_model{
 		$this->db->data("INSERT INTO tb_user VALUES ($reUser,'$username','$password')");
 
 
-		$this->db->data("INSERT INTO tb_pelanggan VALUES ( NULL,'$id_jenis',$reUser,'$nama','$email','$no_tlp','$alamat')");
+		$this->db->data("INSERT INTO tb_pelanggan (id_pelanggan,id_jenis,id_user,nama,email,no_tlp,alamat) VALUES ( NULL,'$id_jenis',$reUser,'$nama','$email','$no_tlp','$alamat')");
 
 
 		$ret = 3;
@@ -46,7 +46,25 @@ class pelanggan_model{
 		return $ret;
 		}
 
+		public function deletepelanggan($id){
+		
+			$preIdpelanggan = $this->db->query("SELECT * FROM tb_pelanggan WHERE id_pelanggan = " . $id);
+			
+			 foreach ($preIdpelanggan as $key) {
+				 $rows = $key['id_user'];
+			 }
+	
+			 $delUsr = $this->db->data("DELETE FROM `tb_user` WHERE id_user = ".$rows);
+			 $delpelanggan = $this->db->data("DELETE FROM tb_pelanggan WHERE id_pelanggan ='$id'");
+	
+			
+			
+			
+			return $delUsr && $delpelanggan;
+		}
 
-    }
+
+	}
+	
 
 
