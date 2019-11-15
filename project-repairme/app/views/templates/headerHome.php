@@ -1,6 +1,58 @@
-<div id="preloder">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopGym | Fitness HTML Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="<?= BASEURL; ?>/Homesource/assets/libs/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/Homesource/assets/libs/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/Homesource/assets/libs/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/Homesource/assets/libs/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/Homesource/assets/libs/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/Homesource/assets/libs/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/Homesource/assets/libs/css/style.css" type="text/css" >
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
         <div class="loader"></div>
     </div>
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main-menu">
+                        <div class="logo">
+                            <a href="<?= BASEURL; ?>/views/home/index.php">
+                                <img src="<?= BASEURL; ?>/Homesource/assets/image/logo.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="mobile-menu">
+                            <ul>
+                                <li><a href="<?= BASEURL; ?>/views/home/index.php">Home</a></li>
+                                <li><a href="/Homesource/document/about-us.html">About us</a></li>
+                                <li><a href="/Homesource/document/classes.html">Classes</a></li>
+                                <li><a href="/Homesource/document/elements.html">Instructors</a></li>
+                                <li><a href="/Homesource/document/blog.html">News</a></li>
+                                <li><a href="/Homesource/document/contact.html">Contact</a></li>
+                                <li class="search-btn search-trigger"><i class="fa fa-search"></i></li>
+                            </ul>
+                        </nav>
+                        <div id="mobile-menu-wrap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
     <!-- Search Bar Begin -->
     <section class="search-bar-wrap">
         <span class="search-close"><i class="fa fa-close"></i></span>
@@ -33,17 +85,17 @@
     <!-- Hero Slider Section Begin -->
     <section class="hero-slider">
         <div class="slide-items owl-carousel">
-            <div class="single-slide set-bg active" data-setbg="image/bg.jpg">
+            <div class="single-slide set-bg active" data-setbg="/Homesource/assets/image/bg.jpg">
                 <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i class="fa fa-play"></i></a>
                 <h1>Be Fit.Top Gym</h1>
                 <a href="#" class="primary-btn">Read More</a>
             </div>
-            <div class="single-slide set-bg" data-setbg="image/bg-2.jpg">
+            <div class="single-slide set-bg" data-setbg="Homesource/assets/image/bg-2.jpg">
                 <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i class="fa fa-play"></i></a>
                 <h1>Be Fit.Top Trainer</h1>
                 <a href="#" class="primary-btn">Read More</a>
             </div>
-            <div class="single-slide set-bg" data-setbg="image/bg-3.jpg">
+            <div class="single-slide set-bg" data-setbg="Homesource/assets/image/bg-3.jpg">
                 <a href="https://www.youtube.com/watch?v=SEVuD_djKrU" class="play-btn pop-up"><i class="fa fa-play"></i></a>
                 <h1>Be Fit.Top Body</h1>
                 <a href="#" class="primary-btn">Read More</a>
@@ -58,7 +110,7 @@
                 <div class="col-md-4">
                     <div class="single-features">
                         <div class="features-img">
-                            <img src="<?= BASEURL; ?>/Homesource/assets/image/features/feature-1.jpg" alt="">
+                            <img src="<?= BASEURL; ?>/Homesource/assets/image//features/feature-1.jpg" alt="">
                         </div>
                         <div class="feature-text">
                             <div class="feature-icon">
@@ -158,7 +210,7 @@
     </section>
     <!-- Services Section End -->
     <!-- Trainer Section Begin -->
-    <section class="trainer-section set-bg" data-setbg="image/trainer-bg.jpg">
+    <section class="trainer-section set-bg" data-setbg="/Homesource/assets/image/trainer-bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -234,7 +286,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="membership-card set-bg" data-setbg="image/m-card.jpg">
+                    <div class="membership-card set-bg" data-setbg="/Homesource/assets/image/img/m-card.jpg">
                         <div class="membership-details">
                             <div class="up-title">
                                 <span>Next</span>
@@ -247,7 +299,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
-                    <div class="member-sign-up set-bg" data-setbg="image/signup-bg.jpg">
+                    <div class="member-sign-up set-bg" data-setbg="/Homesource/assets/image/signup-bg.jpg">
                         <div class="up-title">
                             <span>New</span>
                             <h5>Personal Trainer</h5>
@@ -265,7 +317,7 @@
     </section>
     <!-- Upcoming Event End -->
     <!-- Footer Section Begin -->
-    <footer class="footer-section set-bg" data-setbg="image/footer-bg.jpg">
+    <footer class="footer-section set-bg" data-setbg="/Homesource/assets/image/footer-bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -308,3 +360,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 </div>
             </div>
         </div>
+    </footer>
+    <!-- Footer Section End -->
