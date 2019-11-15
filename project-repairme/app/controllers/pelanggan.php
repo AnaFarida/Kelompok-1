@@ -14,7 +14,7 @@ public function registrasi(){
 }
 public function insertpelanggan(){
 
-	if ($_POST['password'] != $_POST['password2']) {
+	if ($_POST['password'] != $_POST['confir']) {
 		header ('Location: '.BASEURL.'/pelanggan/');
 	}else{
 		if($this->model('pelanggan_model')->inputpelanggan($_POST) > 0){
@@ -28,6 +28,8 @@ public function insertpelanggan(){
 	}
 	}
 	}
+
+	
 
 	
 }

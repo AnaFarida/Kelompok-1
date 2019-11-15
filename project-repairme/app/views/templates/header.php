@@ -41,8 +41,9 @@
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/mitra">Mitra</a>
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/LokasiPerbaikan">Perbaikan</a>
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/login">Login</a>
-                  <a class="nav-item nav-link" href="<?= BASEURL; ?>/admin">admin</a>
-                  <a class="nav-item nav-link" href="<?= BASEURL; ?>/pelanggan">pelanggan</a>
+                  <a class="nav-item nav-link" href="<?= BASEURL; ?>/admin">Admin</a>
+                  <a class="nav-item nav-link" href="<?= BASEURL; ?>/pelanggan">Pelanggan</a>
+                  <a class="nav-item nav-link" href="<?= BASEURL; ?>/kategori">Kategori</a>
                </div>
             </div>
          </div>
