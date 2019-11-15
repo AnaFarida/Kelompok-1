@@ -37,7 +37,7 @@
 			<figure class="logo animated fadeInDown delay-07s">
 				<a href="#"><img src="<?= BASEURL; ?>/homeSources/assets/images/logo_Repairme.jpeg" alt=""></a>
 			</figure>
-			<h1 class="animated fadeInDown delay-07s">Welcome To Knight Studios</h1>
+			<h1 class="animated fadeInDown delay-07s"> Welcome To Knight Studios </h1>
 			<ul class="we-create animated fadeInUp delay-1s">
 				<li>We are a digital agency that loves crafting beautiful websites.</li>
 			</ul>
