@@ -8,10 +8,10 @@ class Mitra extends Controller{
 		$this->view('templates/footer');
 	}
 public function registrasi(){
-	$data['judul'] = 'Registrasi';
-	$this->view('templates/header',$data);
-	$this->view('mitra/registrasi', $data);
-	$this->view('templates/footer');
+	//$data['judul'] = 'Registrasi';
+	$this->view('templates/headerReg');
+	$this->view('mitra/regis');
+	$this->view('templates/footerReg');
 }
 public function insertMitra(){
 	if($this->model('Mitra_model')->inputMitra($_POST) > 0){

@@ -23,6 +23,12 @@
       <script src="<?= BASEURL; ?>/js/Control.Coordinates.js"></script>
       <script src="<?= BASEURL; ?>/js/petaLokasi.js"></script>
       <link rel="stylesheet" href="<?= BASEURL; ?>/css/petaLokasi.css">
+      <script src="<?= BASEURL; ?>/js/jquery-3.4.1.js"></script>
+      <style>
+         .modal-backdrop{
+            background-color: rgba(0,0,0,.0001) !important;
+         }
+      </style>
 
    </head>
    <body>
@@ -44,9 +50,31 @@
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/admin">Admin</a>
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/pelanggan">Pelanggan</a>
                   <a class="nav-item nav-link" href="<?= BASEURL; ?>/kategori">Kategori</a>
-               </div>
+                  <a class="nav-item nav-link mdl-opn" href="<?= BASEURL; ?>/home/registrasi" data-toggle="modal" data-target="#formModal">registrasi</a>
             </div>
          </div>
       </nav>
+
+   <!-- Modal -->
+   <div class="modal fade hide" id="formModal" tabindex="-1" role="dialog" aria-labelledby="judulModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="judulModal">Pilih Jenis Registrasi</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               
+               <!-- isi dari class modal -->
+               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary">Gabung Menjadi Pelanggan</a>
+               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary">Gabung Menjadi Mitra</a>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 
 
