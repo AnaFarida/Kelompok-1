@@ -9,6 +9,8 @@
   //  zoom: 10
 //});
 
+
+
 var map = L.map('map').setView([-7.91346, 113.82145], 13);
 
 // L.control.scale().addTo(map);
@@ -29,6 +31,18 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       results.addLayer(L.marker(data.results[i].latlng));
     }
   });
-
 setTimeout(function(){$('.pointer').fadeOut('slow');},3400);
+
+var c = new L.Control.Coordinates();
+    c.addTo(map);
+
+    function onMapClick(e) {
+      c.setCoordinates(e);
+    console.log(e);  
+    }
+
+    map.on('click', onMapClick);
+
 </script>
+
+

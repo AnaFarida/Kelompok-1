@@ -12,16 +12,17 @@
 
       <title>Halaman <?= $data['judul']; ?></title>
       <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
-      <link rel="stylesheet" href="<?= BASEURL; ?>/css/petaLokasi.css">
-  
+      
+
       <!-- untuk leafletjs -->
       <link rel="stylesheet" href="<?= BASEURL; ?>/css/leaflet.css" />
       <script src="<?= BASEURL; ?>/js/leaflet.js"></script>
       <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
       <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.js"></script>
       <link rel="stylesheet" type="text/css" href="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
-  
-  
+      <script src="<?= BASEURL; ?>/js/Control.Coordinates.js"></script>
+      <script src="<?= BASEURL; ?>/js/petaLokasi.js"></script>
+      <link rel="stylesheet" href="<?= BASEURL; ?>/css/petaLokasi.css">
 
    </head>
    <body>
