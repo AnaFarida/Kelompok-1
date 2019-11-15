@@ -15,6 +15,14 @@
         <link rel="stylesheet" href="<?= BASEURL; ?>/adminSources/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
         <link rel="stylesheet" href="<?= BASEURL; ?>/adminSources/assets/vendor/charts/c3charts/c3.css">
         <link rel="stylesheet" href="<?= BASEURL; ?>/adminSources/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+
+        
+
+        <!-- untuk leafletjs -->
+        <link rel="stylesheet" href="<?= BASEURL; ?>/css/leaflet.css" />
+        <script src="<?= BASEURL; ?>/js/leaflet.js"></script>
+        <link rel="stylesheet" href="<?= BASEURL; ?>/css/petaLokasi.css">
+
         <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
     </head>
     <body>
@@ -391,11 +399,10 @@
                     <div id="submenu-9" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/map-google.html">Google Maps</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/admin/petaLokasi">Pengaturan Lokasi</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/map-vector.html">Vector Maps</a>
-                            </li>
+                        
+                            
                         </ul>
                     </div>
                 </li>

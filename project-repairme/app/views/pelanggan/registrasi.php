@@ -4,13 +4,17 @@
 
 <div class="container">
     <div class="signup-content">
+
         <div class="signup-img">
-            <img src="images/form-img.jpg" alt="">
+            <img src="<?= BASEURL ; ?> /regPelSources/assets/images/form-img.jpg" alt="">
             <div class="signup-img-content">
                 <h2>Register now </h2>
                 <p>while seats are available !</p>
             </div>
         </div>
+        <table border="0" cellpadding="50" cellspacing="1">
+    <tr>
+        <td>
         <div class="signup-form">
         <form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST" enctype="multipart/form-data">
                 <div class="form-row">
@@ -44,11 +48,14 @@
                             <input type="password" name="confir" id="confir" />
                         </div>
                 <div class="form-submit">
-                    <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
-                    <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                    <input type="submit" value="Registrasi" class="submit" id="submit" name="submit" />
                 </div>
             </form>
+
         </div>
+        </td>
+    </tr>
+</table>
     </div>
 </div>
 

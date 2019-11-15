@@ -16,4 +16,10 @@ class Admin extends Controller{
 		$this->view('admin/dataMitra', $data);
 		$this->view('templates/footerAdmin');
 	}
+
+	public function petaLokasi(){
+		$this->view('templates/headerAdmin');
+		$this->view('admin/ControlMaps');
+		$this->view('templates/footerAdmin');
+	}
 }
