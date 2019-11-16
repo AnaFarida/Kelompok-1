@@ -58,7 +58,6 @@ L.Control.Coordinates = L.Control.extend({
 	{
 		this._lat = L.DomUtil.create('span', 'leaflet-control-coordinates-lat' , container),
 		this._lng = L.DomUtil.create('span', 'leaflet-control-coordinates-lng' , container);
-
 		return container;
 	},
 
