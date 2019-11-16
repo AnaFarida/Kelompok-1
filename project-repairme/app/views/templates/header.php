@@ -30,6 +30,10 @@
          }
       </style>
 
+      <!-- untuk form regitrasi -->
+      
+
+
    </head>
    <body>
       <nav class="navbar navbar-expand-lg    navbar-light bg-light">
@@ -68,8 +72,19 @@
             <div class="modal-body">
                
                <!-- isi dari class modal -->
-               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary">Gabung Menjadi Pelanggan</a>
-               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary">Gabung Menjadi Mitra</a>
+               <a href="<?= BASEURL; ?>/pelanggan/registrasi" class="btn btn-primary">Gabung Menjadi Pelanggan</a>
+              
+               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary tombol-mitra"">Gabung Menjadi Mitra</a>
+               
+
+               <script>
+                   $(document).ready(function(){
+                     $('.tombol-mitra').on('click',function(){
+                        alert('oya')
+                     });
+                   });
+               </script>
+
                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
          </div>
