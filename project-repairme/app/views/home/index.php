@@ -1,43 +1,11 @@
-<!doctype html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, maximum-scale=1">
-
-	<title>Homepage</title>
-	<link rel="icon" href="<?= BASEURL; ?>/homeSources/favicon.png" type="image/png">
-	<link rel="shortcut icon" href="<?= BASEURL; ?>/homeSources/favicon.ico" type="img/x-icon">
-
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
-
-	<link href="<?= BASEURL; ?>/homeSources/assets/libs/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="<?= BASEURL; ?>/homeSources/assets/libs/css/style.css" rel="stylesheet" type="text/css">
-	<link href="<?= BASEURL; ?>/homeSources/assets/libs/css/font-awesome.css" rel="stylesheet" type="text/css">
-	<link href="<?= BASEURL; ?>/homeSources/assets/libs/css/responsive.css" rel="stylesheet" type="text/css">
-	<link href="<?= BASEURL; ?>/homeSources/assets/libs/css/magnific-popup.css" rel="stylesheet" type="text/css">
-	<link href="<?= BASEURL; ?>/homeSources/assets/libs/css/animate.css" rel="stylesheet" type="text/css">
-
-	
-
-	<!-- =======================================================
-    Theme Name: Knight
-    Theme URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-	======================================================= -->
-
-</head>
-
 <body>
 	<header class="header" id="header">
 		<!--header-start-->
 		<div class="container">
 			<figure class="logo animated fadeInDown delay-07s">
-				<a href="#"><img src="<?= BASEURL; ?>/homeSources/assets/images/logo_Repairme.jpeg" alt=""></a>
+				<a href="#"><img src="<?= BASEURL; ?>img/logo.png" alt=""></a>
 			</figure>
-			<h1 class="animated fadeInDown delay-07s"> Welcome To Knight Studios </h1>
+			<h1 class="animated fadeInDown delay-07s">Welcome To Knight Studios</h1>
 			<ul class="we-create animated fadeInUp delay-1s">
 				<li>We are a digital agency that loves crafting beautiful websites.</li>
 			</ul>
@@ -53,7 +21,7 @@
 				<li><a href="#header">Home</a></li>
 				<li><a href="#service">Services</a></li>
 				<li><a href="#Portfolio">Portfolio</a></li>
-				<li class="small-logo"><a href="#header"><img src="<?= BASEURL; ?>/homeSources/assets/images/small-logo.png" alt=""></a></li>
+				<li class="small-logo"><a href="#header"><img src="img/small-logo.png" alt=""></a></li>
 				<li><a href="#client">Clients</a></li>
 				<li><a href="#team">Team</a></li>
 				<li><a href="#contact">Contact</a></li>
@@ -110,11 +78,12 @@
 					</div>
 				</div>
 				<figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
-					<img src="homeSources/assets/images/macbook-pro.png" alt="">
+					<img src="img/macbook-pro.png" alt="">
 				</figure>
+
 			</div>
 		</div>
-</section>
+	</section>
 	<!--main-section-end-->
 
 
@@ -123,7 +92,7 @@
 		<div class="container">
 			<div class="row">
 				<figure class="col-lg-5 col-sm-4 wow fadeInLeft">
-					<img src="homeSources/assets/images/iphone.png" alt="">
+					<img src="img/iphone.png" alt="">
 				</figure>
 				<div class="col-lg-7 col-sm-8 featured-work">
 					<h2>featured work</h2>
@@ -131,7 +100,7 @@
 					<div class="featured-box">
 						<div class="featured-box-col1 wow fadeInRight delay-02s">
 							<i class="fa fa-magic"></i>
-						</div>
+				</div>
 						<div class="featured-box-col2 wow fadeInRight delay-02s">
 							<h3>magic of theme development</h3>
 							<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
@@ -182,32 +151,32 @@
 		</div>
 		<div class="portfolioContainer wow fadeInUp delay-04s">
 			<div class=" Portfolio-box printdesign">
-				<a href="<?= BASEURL; ?>/homeSources/assets/images/Portfolio-pic1.jpg"><img src="homeSources/assets/images/Portfolio-pic1.jpg" alt=""></a>
+				<a href="<?= BASEURL; ?>img/Portfolio-pic1.jpg"><img src="img/Portfolio-pic1.jpg" alt=""></a>
 				<h3>Foto Album</h3>
 				<p>Print Design</p>
 			</div>
 			<div class="Portfolio-box webdesign">
-				<a href="<?= BASEURL; ?>/homeSources/assets/images/Portfolio-pic2.jpg"><img src="homeSources/assets/images/Portfolio-pic2.jpg" alt=""></a>
+				<a href="<?= BASEURL; ?>img/Portfolio-pic2.jpg"><img src="img/Portfolio-pic2.jpg" alt=""></a>
 				<h3>Luca Theme</h3>
 				<p>Web Design</p>
 			</div>
 			<div class=" Portfolio-box branding">
-				<a href="<?= BASEURL; ?>/homeSources/assets/images/Portfolio-pic3.jpg"><img src="homeSources/assets/images/Portfolio-pic3.jpg" alt=""></a>
+				<a href="<?= BASEURL; ?>img/img/Portfolio-pic3.jpg"><img src="img/Portfolio-pic3.jpg" alt=""></a>
 				<h3>Uni Sans</h3>
 				<p>Branding</p>
 			</div>
 			<div class=" Portfolio-box photography">
-				<a href="<?= BASEURL; ?>/homeSources/assets/images/Portfolio-pic4.jpg"><img src="homeSources/assets/images/Portfolio-pic4.jpg" alt=""></a>
+				<a href="<?= BASEURL; ?>img/img/Portfolio-pic4.jpg"><img src="img/Portfolio-pic4.jpg" alt=""></a>
 				<h3>Vinyl Record</h3>
 				<p>Photography</p>
 			</div>
 			<div class=" Portfolio-box branding">
-				<a href="<?= BASEURL; ?>/homeSources/assets/images/Portfolio-pic5.jpg"><img src="homeSources/assets/images/Portfolio-pic5.jpg" alt=""></a>
+				<a href="<?= BASEURL; ?>img/img/Portfolio-pic5.jpg"><img src="img/Portfolio-pic5.jpg" alt=""></a>
 				<h3>Hipster</h3>
 				<p>Branding</p>
 			</div>
 			<div class=" Portfolio-box photography">
-				<a href="<?= BASEURL; ?>/homeSources/assets/images/Portfolio-pic6.jpg"><img src="homeSources/assets/images/Portfolio-pic6.jpg" alt=""></a>
+				<a href="<?= BASEURL; ?>img/img/Portfolio-pic6.jpg"><img src="img/Portfolio-pic6.jpg" alt=""></a>
 				<h3>Windmills</h3>
 				<p>Photography</p>
 			</div>
@@ -227,7 +196,7 @@
 			</div>
 			<ul class="client wow fadeIn delay-05s">
 				<li><a href="#">
-            	<img src="homeSources/assets/images/client-pic1.jpg" alt="">
+            	<img src="img/client-pic1.jpg" alt="">
                 <h3>James Bond</h3>
                 <span>License To Drink Inc.</span>
             </a></li>
@@ -239,11 +208,11 @@
 		<!--c-logo-part-start-->
 		<div class="container">
 			<ul>
-				<li><a href="#"><img src="homeSources/assets/images/c-liogo1.png" alt=""></a></li>
-				<li><a href="#"><img src="homeSources/assets/images/c-liogo2.png" alt=""></a></li>
-				<li><a href="#"><img src="homeSources/assets/images/c-liogo3.png" alt=""></a></li>
-				<li><a href="#"><img src="homeSources/assets/images/c-liogo4.png" alt=""></a></li>
-				<li><a href="#"><img src="homeSources/assets/images/c-liogo5.png" alt=""></a></li>
+				<li><a href="#"><img src="img/c-liogo1.png" alt=""></a></li>
+				<li><a href="#"><img src="img/c-liogo2.png" alt=""></a></li>
+				<li><a href="#"><img src="img/c-liogo3.png" alt=""></a></li>
+				<li><a href="#"><img src="img/c-liogo4.png" alt=""></a></li>
+				<li><a href="#"><img src="img/c-liogo5.png" alt=""></a></li>
 			</ul>
 		</div>
 	</div>
@@ -257,7 +226,7 @@
 				<div class="team-leader-box">
 					<div class="team-leader wow fadeInDown delay-03s">
 						<div class="team-leader-shadow"><a href="#"></a></div>
-						<img src="homeSources/assets/images/team-leader-pic1.jpg" alt="">
+						<img src="img/team-leader-pic1.jpg" alt="">
 						<ul>
 							<li><a href="#" class="fa fa-twitter"></a></li>
 							<li><a href="#" class="fa fa-facebook"></a></li>
@@ -272,7 +241,7 @@
 				<div class="team-leader-box">
 					<div class="team-leader  wow fadeInDown delay-06s">
 						<div class="team-leader-shadow"><a href="#"></a></div>
-						<img src="homeSources/assets/images/team-leader-pic2.jpg" alt="">
+						<img src="img/team-leader-pic2.jpg" alt="">
 						<ul>
 							<li><a href="#" class="fa fa-twitter"></a></li>
 							<li><a href="#" class="fa fa-facebook"></a></li>
@@ -287,7 +256,7 @@
 				<div class="team-leader-box">
 					<div class="team-leader wow fadeInDown delay-09s">
 						<div class="team-leader-shadow"><a href="#"></a></div>
-						<img src="homeSources/assets/images/team-leader-pic3.jpg" alt="">
+						<img src="img/team-leader-pic3.jpg" alt="">
 						<ul>
 							<li><a href="#" class="fa fa-twitter"></a></li>
 							<li><a href="#" class="fa fa-facebook"></a></li>
@@ -374,7 +343,7 @@
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<div class="footer-logo"><a href="#"><img src="homeSources/assets/images/logo_Repairme.png" alt=""></a></div>
+			<div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
 			<span class="copyright">&copy; Knight Theme. All Rights Reserved</span>
 			<div class="credits">
 				<!--
@@ -383,7 +352,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Knight
         -->
-				Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+				Designed by <a href="<?= BASEURL; ?>img/https://bootstrapmade.com/">BootstrapMade</a>
 			</div>
 		</div>
 	</footer>
