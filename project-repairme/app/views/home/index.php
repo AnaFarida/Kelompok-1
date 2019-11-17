@@ -374,7 +374,7 @@
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<div class="footer-logo"><a href="#"><img src="homeSources/assets/images/footer-logo.png" alt=""></a></div>
+			<div class="footer-logo"><a href="#"><img src="homeSources/assets/images/logo_Repairme.png" alt=""></a></div>
 			<span class="copyright">&copy; Knight Theme. All Rights Reserved</span>
 			<div class="credits">
 				<!--
