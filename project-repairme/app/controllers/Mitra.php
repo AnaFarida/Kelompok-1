@@ -19,7 +19,7 @@ public function insertMitra(){
 	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 		exit();
 	}else {
-	header ('Location: '.BASEURL);
+	header ('Location: '.BASEURL.'/mitra/');
 	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}

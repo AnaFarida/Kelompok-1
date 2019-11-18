@@ -1,8 +1,8 @@
+
 <div class="container">
   
   <!-- button registrasi -->
   <a class="btn btn-primary" href="<?= BASEURL; ?>/mitra/registrasi" role="button">Daftar Mitra</a>
-	
 	<div class="listMitra">
 		<h3>Daftar Mitra Bergabung</h3>
 			<?php foreach($data['mitra'] as $mitra) :?>
@@ -17,7 +17,9 @@
 			</ul>
 			<?php endforeach; ?>
 	</div>
-
+<form action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data">
+          <button type="submit" id="submit">haha</button>
+          </form>
 
 </div>
 </div>

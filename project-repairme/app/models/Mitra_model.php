@@ -24,7 +24,6 @@ class Mitra_model{
 	public function inputMitra($data){
 		$foto_ktp = $this->db->upload('foto_ktp');
 		$foto_usaha = $this->db->upload('foto_usaha');
-		$foto_transaksi = $this->db->upload('foto_transaksi');
 
 		$id_jenis = 2;
 		
@@ -43,12 +42,7 @@ class Mitra_model{
 
 		$username = strtolower(stripslashes($data['username']));
 		$password = mysqli_real_escape_string($conn, $data['password']);
-		$password2 = mysqli_real_escape_string($conn, $data['password2']);
-
-		if ($password != $password2) {
-			echo "<script>alert('Password Tidak sama');</script>";
-			return false;
-		}
+		
 		$password = password_hash($password, PASSWORD_DEFAULT);
 		$cekUsername = $this->db->query("SELECT * FROM tb_user");
 		foreach ($cekUsername as $key) {
@@ -67,7 +61,7 @@ class Mitra_model{
 		$readyUser = $rows + 1;
 
 		$input = $this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')") &&
-		$this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','$foto_usaha','$foto_transaksi')");
+		$this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$nama','$nama_usaha','$email','$alamat','$no_telpon','$foto_ktp','$foto_usaha','')");
 		return $input;
 	}
 		

@@ -4,7 +4,7 @@
 		<table>
 			<tr>
 				<td><label for="nama" >Nama mitra</label></td>
-				<td><input type="text" name="nama" id="nama" required></td>
+				<td><input type="text" name="nama" id="nama"></td>
 			</tr>
 			<tr>
 				<td><label for="nama_usaha" >nama usaha</label></td>

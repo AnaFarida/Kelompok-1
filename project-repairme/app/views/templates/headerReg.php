@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<title>headerREG</title>
 		<!-- untuk form regitrasi -->
+		<link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
+		<link rel="stylesheet" href="<?= BASEURL; ?>/css/reset-min.css">
 		<link rel="stylesheet" href="<?= BASEURL; ?>/css/mstepper.css">
 		<link rel="stylesheet" href="<?= BASEURL; ?>/mstepper.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -18,10 +20,13 @@
         <script src="<?= BASEURL; ?>/js/leaflet.js"></script>
         <link rel="stylesheet" href="<?= BASEURL; ?>/css/petaLokasi.css">
         <script src="<?= BASEURL; ?>/js/Control.Coordinates.js"></script>
-
+		<script src="<?= BASEURL; ?>/js/bootstrap.js"></script>
+		
 		<style>
 		
 		}
+		
+
 		.btn,
 		.btn-large,
 		.btn-small,
@@ -32,19 +37,25 @@
 		.card:hover {
 		box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.18);
 		}
+		
+		.kelassemu{
+			padding-right: 25%;
+			
+			width: 100%;
+		}
 		.card {
-		position: absolute;
-		left: 20%;
-		right: 20%;
+			/*background-color: black;*/
+		width: 100%;
 		border-radius: 15px;
 		box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.15);
 		}
-
+		
 		#map{
-			width: 400px;
+			width: 100%;
 			height: 400px;
 			display: inline-block;
 		}
 		</style>
+
 	</head>
 	<body>
