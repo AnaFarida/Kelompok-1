@@ -1,14 +1,13 @@
 
-
 		<div class="wrapper">
 			<div class="image-holder">
-				<img src="<?= BASEURL; ?>/regiscoba/images/repairmeStiker.jpg" alt="" >
+				<img src="<?=BASEURL;?>/regiscoba/assets/images/repairmeStiker.jpg" alt="" >
 			</div>
 			<div class="form-inner">
 				<form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST" enctype="multipart/form-data">
 					<div class="form-header">
 						<h3>Sign up</h3>
-						<img src="images/sign-up.png" alt="" class="sign-up-icon">
+						<img src="<?=BASEURL;?>/regiscoba/assets/images/sign-up.png" alt="" class="sign-up-icon">
 					</div>
 					<div class="form-group">
 						<label for="nama">Nama:</label>
@@ -40,7 +39,4 @@
 			</div>
 			
 		</div>
-		<script src="<?= BASEURL; ?>/regiscoba/assets/libs/js/jquery-3.3.1.min.js"></script>
-		<script src="<?= BASEURL; ?>/regiscoba/assets/libs/js/jquery.form-validator.min.js"></script>
-		<script src="<?= BASEURL; ?>/regiscoba/assets/libs/js/main.js"></script>
 		

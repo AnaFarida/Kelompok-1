@@ -8,11 +8,7 @@
 
 		<!-- MATERIAL DESIGN ICONIC FONT -->
 		<link rel="stylesheet" href="<?= BASEURL; ?>/regiscoba/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-		
-		<!-- STYLE CSS -->
-		<link rel="stylesheet" href="<?= BASEURL; ?>/regiscoba/assets/libs/css/style.css">
-
-		
+		<link rel="stylesheet" href="<?= BASEURL; ?>/regiscoba/assets/libs/css/style.css">	
 	</head>
 
 	<body>
