@@ -11,11 +11,11 @@ class Kategori_model{
 		return $this->db->query("SELECT * FROM tb_kategori");
 	}
 	
-	//public function getDetail($id){
-	//	return $this->db->query("SELECT * FROM tb_kategori WHERE id_kategori = ".$id);
-	//}
+	public function getDetail($id){
+		return $this->db->query("SELECT * FROM tb_kategori WHERE id_kategori = ".$id);
+	}
 			
-		$nama = $data['kategori'];
+		$kategori = $data['kategori'];
 		$merk = $data['merk'];
 		$tipe = $data['tipe'];
 

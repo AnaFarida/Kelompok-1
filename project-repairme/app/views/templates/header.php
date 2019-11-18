@@ -27,12 +27,13 @@
       <link rel="shortcut icon" href="<?= BASEURL; ?>/favicon.ico" type="img/x-icon">
       <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
-<!-- 
-      <link href="<?= BASEURL; ?>/css/style.css" rel="stylesheet" type="text/css">
-      <link href="<?= BASEURL; ?>/css/font-awesome.css" rel="stylesheet" type="text/css">
-      <link href="<?= BASEURL; ?>/css/responsive.css" rel="stylesheet" type="text/css">
-      <link href="<?= BASEURL; ?>/css/magnific-popup.css" rel="stylesheet" type="text/css">
-      <link href="<?= BASEURL; ?>/css/animate.css" rel="stylesheet" type="text/css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+      <link href="<?= BASEURL; ?>/css/homecss/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="<?= BASEURL; ?>/css/homecss/style.css" rel="stylesheet" type="text/css">
+      <link href="<?= BASEURL; ?>/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+      <link href="<?= BASEURL; ?>/css/homecss/responsive.css" rel="stylesheet" type="text/css">
+      <link href="<?= BASEURL; ?>/css/homecss/magnific-popup.css" rel="stylesheet" type="text/css">
+      <link href="<?= BASEURL; ?>/css/homecss/animate.css" rel="stylesheet" type="text/css">
 
 
       <style>
@@ -85,7 +86,7 @@
                <!-- isi dari class modal -->
                <a href="<?= BASEURL; ?>/pelanggan/registrasi" class="btn btn-primary">Gabung Menjadi Pelanggan</a>
               
-               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary tombol-mitra"">Gabung Menjadi Mitra</a>
+               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary tombol-mitra">Gabung Menjadi Mitra</a>
                
 
                <script>

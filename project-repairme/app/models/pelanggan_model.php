@@ -25,7 +25,7 @@ class pelanggan_model{
 		$no_tlp= $data['no_tlp'];
 		$alamat = $data['alamat'];
 		$username = $data['username'];
-		$password = $data['confir'];
+		$password = $data['password1'];
 
 		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
 
@@ -35,15 +35,11 @@ class pelanggan_model{
 
 		$reUser = $rows + 1;
 
-		$this->db->data("INSERT INTO tb_user VALUES ($reUser,'$username','$password')");
-
-
+		$input=$this->db->data("INSERT INTO tb_user VALUES ($reUser,'$username','$password')")&&
 		$this->db->data("INSERT INTO tb_pelanggan (id_pelanggan,id_jenis,id_user,nama,email,no_tlp,alamat) VALUES ( NULL,'$id_jenis',$reUser,'$nama','$email','$no_tlp','$alamat')");
 
 
-		$ret = 3;
-
-		return $ret;
+		return $input;
 		}
 
 		public function deletepelanggan($id){

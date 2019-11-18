@@ -4,13 +4,13 @@ class Pelanggan extends Controller{
 		$data['judul'] = 'Daftar pelanggan';
 		$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
 		$this->view('templates/header',$data);
-		$this->view('pelanggan/index', $data);
+	 	$this->view('pelanggan/index', $data);
 		$this->view('templates/footer');
 	}
 public function registrasi(){
-	$this->view('templates/headerPelanggan');
-	$this->view('pelanggan/registrasi');
-	$this->view('templates/footerPelanggan');
+	$this->view('templates/headerRegpel');
+	$this->view('pelanggan/regpel');
+	$this->view('templates/footerRegpel');
 }
 public function insertpelanggan(){
 
