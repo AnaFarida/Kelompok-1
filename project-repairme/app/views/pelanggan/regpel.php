@@ -2,7 +2,7 @@
 
 		<div class="wrapper">
 			<div class="image-holder">
-				<img src="/assets/images/repairmeStiker.jpg" alt="">
+				<img src="<?= BASEURL; ?>/regiscoba/images/repairmeStiker.jpg" alt="" >
 			</div>
 			<div class="form-inner">
 				<form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST" enctype="multipart/form-data">
@@ -30,30 +30,17 @@
 						<label for="username">Username:</label>
 						<input type="text" name="username" id="username"class="form-control" data-validation="length alphanumeric" data-validation-length="3-12">
 					</div>
-					
 					<div class="form-group" >
-						<label for="password">Password:</label>
-						<input type="password" name="password" id="password" class="form-control" data-validation="length" data-validation-length="min8">
+						<label for="password1">Password:</label>
+						<input type="password" name="password1" id="password1" class="form-control" data-validation="length" data-validation-length="min8">
 					</div>
-					<button>create my account</button>
-					<div class="socials">
-						<p>Sign up with social platforms</p>
-						<a href="" class="socials-icon">
-							<i class="zmdi zmdi-facebook"></i>
-						</a>
-						<a href="" class="socials-icon">
-							<i class="zmdi zmdi-instagram"></i>
-						</a>
-						<a href="" class="socials-icon">
-							<i class="zmdi zmdi-twitter"></i>
-						</a>
-						<a href="" class="socials-icon">
-							<i class="zmdi zmdi-tumblr"></i>
-						</a>
-					</div>
+					<button type="submit" id="submit">create my account</button>
+					
 				</form>
 			</div>
 			
 		</div>
-		
+		<script src="<?= BASEURL; ?>/regiscoba/assets/libs/js/jquery-3.3.1.min.js"></script>
+		<script src="<?= BASEURL; ?>/regiscoba/assets/libs/js/jquery.form-validator.min.js"></script>
+		<script src="<?= BASEURL; ?>/regiscoba/assets/libs/js/main.js"></script>
 		

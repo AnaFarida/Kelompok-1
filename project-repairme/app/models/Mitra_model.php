@@ -41,7 +41,7 @@ class Mitra_model{
 		//validasi username dan password
 
 		$username = strtolower(stripslashes($data['username']));
-		$password = mysqli_real_escape_string($conn, $data['password']);
+		$password = mysqli_real_escape_string($conn, $data['password1']);
 		
 		$password = password_hash($password, PASSWORD_DEFAULT);
 		$cekUsername = $this->db->query("SELECT * FROM tb_user");
