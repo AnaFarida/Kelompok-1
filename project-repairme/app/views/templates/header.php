@@ -87,7 +87,7 @@
                <!-- isi dari class modal -->
                <a href="<?= BASEURL; ?>/pelanggan/registrasi" class="btn btn-primary">Gabung Menjadi Pelanggan</a>
               
-               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary tombol-mitra"">Gabung Menjadi Mitra</a>
+               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary tombol-mitra">Gabung Menjadi Mitra</a>
                
 
                <script>

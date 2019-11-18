@@ -8,9 +8,9 @@ class Pelanggan extends Controller{
 		$this->view('templates/footer');
 	}
 public function registrasi(){
-	$this->view('templates/headerPelanggan');
-	$this->view('pelanggan/registrasi');
-	$this->view('templates/footerPelanggan');
+	$this->view('templates/headerRegpel');
+	$this->view('pelanggan/regpel');
+	$this->view('templates/footerRegpel');
 }
 public function insertpelanggan(){
 
