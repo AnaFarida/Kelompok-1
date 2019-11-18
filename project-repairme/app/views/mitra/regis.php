@@ -1,16 +1,14 @@
-
-
-
-<div class="section grey lighten-5">
+<div ng-app="myApp" ng-controller="myController"> 
+  <div class="section grey lighten-5">
   <div class="row kelassemu">
     <div class="col xl4 l6 m10 s12 offset-xl4 offset-l3 offset-m1">
       <h3 class="light center-align blue-text" id="tester">Sign up form</h3>
       <div class="card">
         <div class="card-content">
-          <form action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data">
+          <form action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data" name="formMitra">
             
-            <ul class="stepper">
-              <li class="step active">
+            <ul class="stepper linear">
+              <li class="step active step1M">
                 <div class="step-title waves-effect waves-dark">Data Diri dan Usaha</div>
                 <div class="step-content">
                   
@@ -19,11 +17,13 @@
                       <input id="nama" name="nama" type="text" class="validate" required autofocus>
                       <label for="nama">Nama Lengkap</label>
                       <p class="nama" style="font-size: 12px; color: red;"></p>
-                    </div>
+                    </div>  
                     <div class="input-field col s12">
-                      <input id="nama_usaha" name="nama_usaha" type="text" class="validate" required>
+                      <input id="nama_usaha" name="nama_usaha" type="text" class="validate" ng-model="nama_usaha" required>
+                      
                       <label for="nama_usaha">Nama Usaha</label>
                       <p class="nama_usaha" style="font-size: 12px; color: red;"></p>
+                      
                     </div>
                   </div>
                   
@@ -50,7 +50,7 @@
                     <script>
                     $(document).ready(function(){
                     //validasi nama
-                    
+                    $('.stepMap2').hide();
                     $('#nama').keyup(function() {
                     var value = $( this ).val();
                     
@@ -79,15 +79,25 @@
                     $('.nama_usaha').text("");
                     }
                     });
+
                     
+
+                    $('.step1').click(function(){
+                      
+                      if ($('.step1M').attr('class') == 'step active step1M feedbacking') {
+                         $('.stepMap2').show();
+                      }
+                    });
                     
                     });
                     </script>
                   </div>
                 </div>
               </li>
+                
 
-              <li class="step stepLokasi">
+              
+              <li class="step active stepMap2">
                 <div class="step-title waves-effect waves-dark">Lokasi Tempat Usaha</div>
                 <div class="step-content">
                   <div class="row">
@@ -95,55 +105,44 @@
                       <div class="mapLokasi">
                         <div id="map">
                         <script>
-                            var map = L.map('map').setView([-7.91346, 113.82145], 13);
+
+
+                            var map = L.map('map').setView([-7.91346, 113.82145], 18);
                             L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                             }).addTo(map);
-                            var c = new L.Control.Coordinates();
-                            c.addTo(map);
-
-
-
-                            var ambilLokasi;
-                            var lokasiLat;
-                            var lokasiLong;
-                            function onMapClick(e) {
-                              c.setCoordinates(e); 
-                              ambilLokasi = e;
-                              lokasiLat = ambilLokasi.latlng.lat;
-                              lokasiLong = ambilLokasi.latlng.lng;
-                              
-                            }
-                            var marker;
-                            map.on('click', onMapClick);
-                            $(map).on('click',function(){
-                              $('#lat').attr('value',lokasiLat);
-                              $('#lng').attr('value',lokasiLong);
-                              marker.hide();
-                              marker = new L.marker([lokasiLat, lokasiLong], markerOptions);  
-                              marker.addTo(map);   
-                            });
-                            
-                            // create marker
-
+                           
                             //icon option
 
-                            var iconOptions = {
-                              iconUrl : 'http://localhost/Kelompok-1/project-repairme/public/img/leaflet/marker-icon.png',
-                              iconSize : [25,38]
+                            // var iconOptions = {
+                            //   iconUrl : 'http://localhost/Kelompok-1/project-repairme/public/img/leaflet/marker-icon.png',
+                            //   iconSize : [25,38]
+                            // }
+
+                            // var customIcon = L.icon(iconOptions);
+
+                            // var markerOptions = {
+                            //   title: "myLokasi",
+                            //   clickable: true,
+                            //   dragable: true,
+                            //   icon: customIcon
+                            // }
+                            var popup = L.popup();
+                            var lokasiLat;
+                            var lokasiLong;
+                            var marker = L.marker([-7.91346, 113.82145]).addTo(map);
+                            function onMapClick(e) {
+                              marker.setLatLng(e.latlng);
+                              marker.bindPopup("You clicked the map at " + e.latlng.toString()).openPopup();
+                                lokasiLat = e.latlng.lat;
+                                lokasiLong = e.latlng.lng;
+                                $('#lat').attr('value',lokasiLat);
+                                $('#lng').attr('value',lokasiLong);
                             }
-
-                            var customIcon = L.icon(iconOptions);
-
-                            var markerOptions = {
-                              title: "myLokasi",
-                              clickable: true,
-                              dragable: true,
-                              icon: customIcon
-                            }
-
+                              map.on('click', onMapClick);
                             
                         </script>
+                        
                       </div>
                       </div>
                        <p class="map" style="font-size: 12px; color: red;">Pilih Lokasi Anda Dengan Menekan Area Peta!<p>
@@ -172,6 +171,7 @@
               <li class="step">
                 <div class="step-title waves-effect waves-dark">Unggah Foto KTP dan Tempat Usaha</div>
                 <div class="step-content">
+                 
                   <div class="row">
                     <div class="input-field col s12">
                       <p>foto KTP</p>
@@ -278,7 +278,7 @@
   </div>
 </div>
 
-
+</div>
 <script>
 function anyThing(destroyFeedback) {
 setTimeout(function(){ destroyFeedback(true); }, 1500);
