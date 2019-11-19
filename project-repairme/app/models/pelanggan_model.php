@@ -25,7 +25,7 @@ class pelanggan_model{
 		$no_tlp= $data['no_tlp'];
 		$alamat = $data['alamat'];
 		$username = $data['username'];
-		$password = $data['password1'];
+		$password = $data['password'];
 
 		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
 
@@ -35,9 +35,9 @@ class pelanggan_model{
 
 		$reUser = $rows + 1;
 
-		$input=$this->db->data("INSERT INTO tb_user VALUES ($reUser,'$username','$password')")&&
-		$this->db->data("INSERT INTO tb_pelanggan (id_pelanggan,id_jenis,id_user,nama,email,no_tlp,alamat) VALUES ( NULL,'$id_jenis',$reUser,'$nama','$email','$no_tlp','$alamat')");
-
+		$input = $this->db->data("INSERT INTO tb_user VALUES ($reUser,'$username','$password')") &&
+		$this->db->data("INSERT INTO tb_pelanggan VALUES ( NULL,'$id_jenis',$reUser,'$nama','$email','$no_tlp','$alamat')");
+		
 
 		return $input;
 		}

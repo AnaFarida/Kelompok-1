@@ -24,7 +24,7 @@
       <script src="<?= BASEURL; ?>/js/petaLokasi.js"></script>
       <link rel="stylesheet" href="<?= BASEURL; ?>/css/petaLokasi.css">
       <script src="<?= BASEURL; ?>/js/jquery-3.4.1.js"></script>
-      <link rel="icon" href="<?= BASEURL; ?>/favicon.png" type="image/png">
+      <!-- <link rel="icon" href="<?= BASEURL; ?>/favicon.png" type="image/png">
       <link rel="shortcut icon" href="<?= BASEURL; ?>/favicon.ico" type="img/x-icon">
       <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
@@ -35,7 +35,10 @@
       <link href="<?= BASEURL; ?>/css/homecss/responsive.css" rel="stylesheet" type="text/css">
       <link href="<?= BASEURL; ?>/css/homecss/magnific-popup.css" rel="stylesheet" type="text/css">
       <link href="<?= BASEURL; ?>/css/homecss/animate.css" rel="stylesheet" type="text/css">
+ -->
 
+      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
 
       <style>
          .modal-backdrop{

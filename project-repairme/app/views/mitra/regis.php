@@ -9,7 +9,7 @@
         <div class="card-content">
           <form action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data">
             
-            <ul class="stepper">
+            <ul class="stepper linear">
               <li class="step active">
                 <div class="step-title waves-effect waves-dark">Data Diri dan Usaha</div>
                 <div class="step-content">
