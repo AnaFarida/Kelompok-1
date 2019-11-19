@@ -10,6 +10,5 @@
 <script type="text/javascript" src="<?= BASEURL; ?>/js/jshome/classie.js"></script>
 <script type="text/javascript" src="<?= BASEURL; ?>/js/jshome/magnific-popup.js"></script>
 <script src="<?= BASEURL; ?>/assetshome/contactform/contactform.js"></script>
-
 </body>
 </html>

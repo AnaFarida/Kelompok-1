@@ -1,10 +1,3 @@
-<!doctype html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, maximum-scale=1">
-	<
 	<link rel="icon" href="favicon.png" type="image/png">
 	<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
 
@@ -30,16 +23,7 @@
 	<script type="text/javascript" src="<?= BASEURL; ?>/js/magnific-popup.js"></script>
 	<script src="<?= BASEURL; ?>/contactform/contactform.js"></script>
 
-	<!-- =======================================================
-    Theme Name: Knight
-    Theme URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-	======================================================= -->
 
-</head>
-
-<body>
 	<header class="header" id="header">
 		<!--header-start-->
 		<div class="container">
@@ -498,7 +482,3 @@
 
 		});
 	</script>
-
-</body>
-
-</html>
