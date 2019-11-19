@@ -220,12 +220,15 @@ h1 {
       console.log($('#nama').val()+$('#email').val()+$('#alamat').val()+$('#no_tlp').val()+$('#username').val()+$('#password').val());
       
       });
-      h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'))
+      h1.appendChild(document.createTextNode('Selamat Datang ' + questions[0].value + '!'))
       setTimeout(function() {
         register.parentElement.appendChild(h1)     
         setTimeout(function() {h1.style.opacity = 1}, 50)
         $(document).ready(function(){
+              function submit(){
               $('#formPel').submit();
+              }
+              setTimeout(submit, 4000);
             });
       }, eTime)
       

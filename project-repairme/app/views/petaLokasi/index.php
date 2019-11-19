@@ -22,7 +22,6 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   }).addTo(map);
 
   var searchControl = new L.esri.Controls.Geosearch().addTo(map);
-  var marker = L.marker([-7.91346, 113.82145]).addTo(map);
   var results = new L.LayerGroup().addTo(map);
 
   searchControl.on('results', function(data){
@@ -88,4 +87,12 @@ var c = new L.Control.Coordinates();
 
   mymap.on('click', onMapClick);
 
+<?php foreach ($data['mitra'] as $mitra) : ?>
+
 </script>
+
+<script>
+   var marker = L.marker([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>]).addTo(map);
+</script>
+
+<?php endforeach; ?>
