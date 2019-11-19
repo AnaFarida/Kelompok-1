@@ -30,7 +30,7 @@
                   <div class="row">
                     <div class="input-field col s12">
                       <input id="alamat" name="alamat" type="text" class="validate" required>
-                      <label for="alamat">Alamat Lengkap</label>
+                      <label for="alamat">Alamat Lengkap Tempat Usaha</label>
                       <p class="alamat" style="font-size: 12px; color: red;"></p>
                     </div>
                   </div>
@@ -236,6 +236,7 @@
                     <div class="input-field col s12">
                       <input id="username" name="username" type="text" class="validate" required>
                       <label for="username">Username</label>
+                      <p class="username" style="font-size: 12px; color: red;"><p>
                     </div>
                     
                   </div>
@@ -252,6 +253,20 @@
                   <div class="step-actions">
                     <button class="waves-effect waves-dark btn blue next-step">CONTINUE</button>
                     <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+
+                    <script>
+                      $(document).ready(function(){
+                        $('#username').keyup(function(){
+                          var val = $(this).val().length;
+                          var a = $(this).val();
+                          $('.username').text(a.toLowerCase());
+                          if (val == 0) {
+                            alert('oke');
+                          }
+                        })
+                      });
+                    </script>
+
                   </div>
                 </div>
               </li>

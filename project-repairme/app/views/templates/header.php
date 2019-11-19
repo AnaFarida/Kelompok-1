@@ -22,7 +22,7 @@
       <script src="<?= BASEURL; ?>/js/petaLokasi.js"></script>
       <link rel="stylesheet" href="<?= BASEURL; ?>/css/petaLokasi.css">
       <script src="<?= BASEURL; ?>/js/jquery-3.4.1.js"></script>
-
+<!-- 
       <link rel="icon" href="<?= BASEURL; ?>/favicon.png" type="image/png">
       <link rel="shortcut icon" href="<?= BASEURL; ?>/favicon.ico" type="img/x-icon">
       <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -35,7 +35,7 @@
       <link href="<?= BASEURL; ?>/css/homecss/magnific-popup.css" rel="stylesheet" type="text/css">
       <link href="<?= BASEURL; ?>/css/homecss/animate.css" rel="stylesheet" type="text/css">
 
-
+ -->
       <style>
          .modal-backdrop{
             background-color: rgba(0,0,0,.0001) !important;
