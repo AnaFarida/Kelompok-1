@@ -124,21 +124,18 @@ h1 {
       <label id="inputLabel"></label>
       <div id="inputProgress"></div>
       <form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST" id="formPel" >
-      <input type="text" id="nama" name="name" hidden>
-      <input type="email" id="email" name="email" hidden>
-      <input type="text" id="alamat" name="alamat" hidden>
-      <input type="text" id="no_tlp" name="no_tlp" hidden>
-      <input type="text" id="username" name="username" hidden>
-      <input type="password" id="password" name="password" hidden>
-      <input type="submit" value="submit" id="submit" hidden>
+      <input type="text" id="nama" name="nama" hidden >
+      <input type="email" id="email" name="email" hidden >
+      <input type="text" id="alamat" name="alamat" hidden >
+      <input type="text" id="no_tlp" name="no_tlp" hidden >
+      <input type="text" id="username" name="username" hidden >
+      <input type="password" id="password" name="password" hidden >
       </form>
     </div>
 
   </div>
 
-
   <script>
-
   var questions = [
     {question:"masukkan nama lengkap anda !"},
     {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
@@ -219,16 +216,21 @@ h1 {
       $('#no_tlp').attr('value',q4);
       $('#username').attr('value',q5);
       $('#password').attr('value',q6);
-      console.log($('#nama').val()+$('#email').val()+$('#alamat').val()+$('#no_tlp').val()+$('#username').val()+$('#password').val());
 
-      $('#formPel').submit();
+      console.log($('#nama').val()+$('#email').val()+$('#alamat').val()+$('#no_tlp').val()+$('#username').val()+$('#password').val());
+      
       });
       h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'))
       setTimeout(function() {
         register.parentElement.appendChild(h1)     
         setTimeout(function() {h1.style.opacity = 1}, 50)
-       
+        $(document).ready(function(){
+              $('#formPel').submit();
+            });
       }, eTime)
+      
+
+      
       
     }
   

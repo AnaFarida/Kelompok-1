@@ -16,6 +16,7 @@
 				</li>
 			</ul>
 			<?php endforeach; ?>
+			
 	</div>
 <form action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data">
           <button type="submit" id="submit">haha</button>

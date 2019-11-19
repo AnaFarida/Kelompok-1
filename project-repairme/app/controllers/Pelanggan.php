@@ -15,13 +15,25 @@ public function registrasi(){
 public function insertpelanggan(){
 
 	if($this->model('pelanggan_model')->inputpelanggan($_POST) > 0){
-		header ('Location: '.BASEURL.'/pelanggan/');
+		// header ('Location: '.BASEURL.'/pelanggan/');
 		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 			exit();
 		}else {
-		header ('Location: '.BASEURL.'/pelanggan/');
+		// header ('Location: '.BASEURL.'/pelanggan/');
 		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 			exit();
 		}
 }
+
+public function delete($id){
+		if ($this->model('pelanggan_model')->deletepelanggan($id) > 0) {
+			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/pelanggan/');
+			exit;
+		}else{
+			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/mitra/');
+			exit;
+		}
+	}
 }
