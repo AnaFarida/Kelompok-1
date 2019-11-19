@@ -15,7 +15,7 @@ public function registrasi(){
 public function insertpelanggan(){
 
 	if($this->model('pelanggan_model')->inputpelanggan($_POST) > 0){
-		// header ('Location: '.BASEURL.'/pelanggan/');
+		header ('Location: '.BASEURL.'/pelanggan/');
 		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 			exit();
 		}else {
