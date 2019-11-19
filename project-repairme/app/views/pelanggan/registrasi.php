@@ -119,11 +119,11 @@ h1 {
     <i id="progressButton" class="ion-android-arrow-forward next"></i>
     
     <div id="inputContainer">
-      <form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST" id="formPel" >
+      
       <input id="inputField" required autofocus />
       <label id="inputLabel"></label>
       <div id="inputProgress"></div>
-
+      <form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST" id="formPel" >
       <input type="text" id="nama" name="name" hidden>
       <input type="email" id="email" name="email" hidden>
       <input type="text" id="alamat" name="alamat" hidden>
@@ -205,6 +205,8 @@ h1 {
       
       // add the h1 at the end with the welcome text
       var h1 = document.createElement('h1')
+      
+      $(document).ready(function(){
       var q1 = questions[0].value;
       var q2 = questions[1].value;
       var q3 = questions[2].value;
@@ -218,11 +220,14 @@ h1 {
       $('#username').attr('value',q5);
       $('#password').attr('value',q6);
       console.log($('#nama').val()+$('#email').val()+$('#alamat').val()+$('#no_tlp').val()+$('#username').val()+$('#password').val());
+
+      $('#formPel').submit();
+      });
       h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'))
       setTimeout(function() {
         register.parentElement.appendChild(h1)     
         setTimeout(function() {h1.style.opacity = 1}, 50)
-        $('#formPel').submit();
+       
       }, eTime)
       
     }
