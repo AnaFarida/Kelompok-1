@@ -13,7 +13,7 @@
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
 		            <h1 class="mb-3">RepairMe</h1>
-		            <h2>More than a hotel... an experience</h2>
+		            <h2>Tempat Perbaikan HandPhone dan Laptop Terpercaya</h2>
 	            </div>
 	          </div>
 	        </div>
@@ -26,8 +26,8 @@
 	          <div class="row no-gutters slider-text align-items-center">
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
-		            <h1 class="mb-3">Experience Epic Beauty</h1>
-		            <h2>RepairMe Hotel &amp; Resort</h2>
+		            <h1 class="mb-3">RepairMe</h1>
+		            <h2>Tempat Pelayanan Jasa Perbaikan HandPhone Dan Laptop</h2>
 	            </div>
 	          </div>
 	        </div>
@@ -45,7 +45,7 @@
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-				    					<label for="#">Check-in Date</label>
+				    					<label for="#">Tanggal Bergabung</label>
 				    					<input type="text" class="form-control checkin_date" placeholder="Check-in date">
 			    					</div>
 			    				</div>
@@ -156,8 +156,8 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Welcome to RepairMe Hotel</span>
-            <h2 class="mb-4">A New Vision of Luxury Hotel</h2>
+          	<span class="subheading">Selamat Datang di RepairMe</span>
+            <h2 class="mb-4">Tempat Perbaikan HandPhone Dan Laptop</h2>
           </div>
         </div>  
         <div class="row d-flex">
@@ -169,7 +169,7 @@
               	</div>
               </div>
               <div class="media-body">
-                <h3 class="heading mb-3">Friendly Service</h3>
+                <h3 class="heading mb-3">Perbaiki Sekarang</h3>
               </div>
             </div>      
           </div>
@@ -193,7 +193,7 @@
               	</div>
               </div>
               <div class="media-body">
-                <h3 class="heading mb-3">Transfer Services</h3>
+                <h3 class="heading mb-3">Pembayaran</h3>
               </div>
             </div>      
           </div>
@@ -205,7 +205,7 @@
               	</div>
               </div>
               <div class="media-body">
-                <h3 class="heading mb-3">Suits &amp; SPA</h3>
+                <h3 class="heading mb-3">Petunjuk</h3>
               </div>
             </div>      
           </div>
@@ -685,19 +685,19 @@
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">Career</a></li>
                 <li><a href="#" class="py-2 d-block">About Us</a></li>
-                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                <li><a href="#" class="py-2 d-block">Contact</a></li>
                 <li><a href="#" class="py-2 d-block">Services</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Hubungi kami!?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+089756435678</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">RepairMe@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -707,7 +707,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  RepairMe;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
