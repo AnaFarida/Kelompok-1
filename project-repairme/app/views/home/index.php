@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Roxandrea - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -30,19 +31,19 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.php">Roxandrea</a>
+	      <a class="navbar-brand" href="#">Roxandrea</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/documents/rooms.php" class="nav-link">Rooms</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/documents/restaurant.html" class="nav-link">Restaurant</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/documents/about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/documents/blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/documents/contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/rooms.html" class="nav-link">Rooms</a></li>
+	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/restaurant.html" class="nav-link">Restaurant</a></li>
+	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/contact.html" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -287,7 +288,7 @@
     				<div class="room-wrap">
     					<div class="img d-flex align-items-center" style="background-image: url(<?= BASEURL; ?>/homeSources/images/bg_3.jpg);">
     						<div class="text text-center px-4 py-4">
-    							<h2>Welcome to <a href="index.php">Roxandrea</a> Hotel</h2>
+    							<h2>Welcome to <a href="index.html">Roxandrea</a> Hotel</h2>
     							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
     						</div>
     					</div>
@@ -301,7 +302,7 @@
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
     							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms.html">Suite Room</a></h3>
-	    						<p class="pt-1"><a href="room-single.php" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
     					</div>
     				</div>
@@ -315,20 +316,20 @@
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
     							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms.html">Family Room</a></h3>
-	    						<p class="pt-1"><a href="room-single.php" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
     					</div>
     				</div>
     			</div>
     			<div class="col-lg-6">
     				<div class="room-wrap d-md-flex">
-    					<a href="#" class="img order-md-last" style="background-image: url(images/room-3.jpg);"></a>
+    					<a href="#" class="img order-md-last" style="background-image: url(<?= BASEURL; ?>/homeSources/images/room-3.jpg);"></a>
     					<div class="half right-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
     							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
-	    						<h3 class="mb-3"><a href="rooms.php">Deluxe Room</a></h3>
-	    						<p class="pt-1"><a href="room-single.php" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+	    						<h3 class="mb-3"><a href="rooms.html">Deluxe Room</a></h3>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
     					</div>
     				</div>
@@ -342,7 +343,7 @@
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
     							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms.html">Luxury Room</a></h3>
-	    						<p class="pt-1"><a href="room-single.php" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
     					</div>
     				</div>
@@ -354,8 +355,8 @@
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
     							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
-	    						<h3 class="mb-3"><a href="rooms.php">Superior Room</a></h3>
-	    						<p class="pt-1"><a href="room-single.php" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+	    						<h3 class="mb-3"><a href="rooms.html">Superior Room</a></h3>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
     					</div>
     				</div>
@@ -517,7 +518,7 @@
 	        		</div>
         		</div>
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(<?= BASEURL; ?>/homeSources/documents/images/menu-3.jpg);"></div>
+        			<div class="img order-md-last" style="background-image: url(<?= BASEURL; ?>/homeSources/images/menu-3.jpg);"></div>
         			<div class="desc pr-3 text-md-right">
 	        			<div class="d-md-flex text align-items-center">
 	        				<h3 class="order-md-last heading-left"><span>Grilled Beef with potatoes</span></h3>
@@ -608,7 +609,7 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="<?= BASEURL; ?>/homeSources/documents/blog-single.html" class="block-20" style="background-image: url('<?= BASEURL; ?>/homeSources/documents/images/image_1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('<?= BASEURL; ?>/homeSources/images/image_1.jpg');">
               </a>
               <div class="text mt-3 text-center">
               	<div class="meta mb-2">
@@ -623,7 +624,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="<?= BASEURL; ?>/homeSources/documents/blog-single.html" class="block-20" style="background-image: url('<?= BASEURL; ?>/homeSources/images/image_2.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('<?= BASEURL; ?>/homeSources/images/image_2.jpg');">
               </a>
               <div class="text mt-3 text-center">
               	<div class="meta mb-2">
@@ -638,7 +639,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="<?= BASEURL; ?>/homeSources/documents/blog-single.html" class="block-20" style="background-image: url('<?= BASEURL; ?>/homeSources/images/image_3.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('<?= BASEURL; ?>/homeSources/images/image_3.jpg');">
               </a>
               <div class="text mt-3 text-center">
               	<div class="meta mb-2">
@@ -660,12 +661,12 @@
         <div class="row no-gutters justify-content-center pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
           	<span class="subheading">Photos</span>
-  	          <h2><span>Instagram</span></h2>
+            <h2><span>Instagram</span></h2>
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col-sm-12 col-md ftco-animate">
-            <a href="<?= BASEURL; ?>/homeSources/images/insta-1.jpg" class="insta-img image-popup" style="background-image: url(/homeSources/images/insta-1.jpg);">
+            <a href="<?= BASEURL; ?>/homeSources/images/insta-1.jpg" class="insta-img image-popup" style="background-image: url(<?= BASEURL; ?>/homeSources/images/insta-1.jpg);">
               <div class="icon d-flex justify-content-center">
                 <span class="icon-instagram align-self-center"></span>
               </div>
@@ -782,9 +783,9 @@
   <script src="<?= BASEURL; ?>/homeSources/js/jquery.animateNumber.min.js"></script>
   <script src="<?= BASEURL; ?>/homeSources/js/jquery.mb.YTPlayer.min.js"></script>
   <script src="<?= BASEURL; ?>/homeSources/js/bootstrap-datepicker.js"></script>
-  <!-- // <script src="js/jquery.timepicker.min.js"></script> -->
+  <!-- // <script src="<?= BASEURL; ?>/homeSources/js/jquery.timepicker.min.js"></script> -->
   <script src="<?= BASEURL; ?>/homeSources/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="<?= BASEURL; ?>/homeSources/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="<?= BASEURL; ?>/homeSources/js/google-map.js"></script>
   <script src="<?= BASEURL; ?>/homeSources/js/main.js"></script>
     
