@@ -1,54 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Roxandrea - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/animate.css">
-    
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/magnific-popup.css">
-
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/aos.css">
-
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/ionicons.min.css">
-
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/flaticon.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/icomoon.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/style.css">
-  </head>
-  <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="#">Roxandrea</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/rooms.html" class="nav-link">Rooms</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/restaurant.html" class="nav-link">Restaurant</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
 		<div class="hero">
 			<div class="container-wrap d-flex justify-content-end align-items-end">
 				<a href="https://www.youtube.com/watch?v=ism1XqnZJEg" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
@@ -62,7 +12,7 @@
 	          <div class="row no-gutters slider-text align-items-center">
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
-		            <h1 class="mb-3">Roxandrea</h1>
+		            <h1 class="mb-3">RepairMe</h1>
 		            <h2>More than a hotel... an experience</h2>
 	            </div>
 	          </div>
@@ -77,7 +27,7 @@
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
 		            <h1 class="mb-3">Experience Epic Beauty</h1>
-		            <h2>Roxandrea Hotel &amp; Resort</h2>
+		            <h2>RepairMe Hotel &amp; Resort</h2>
 	            </div>
 	          </div>
 	        </div>
@@ -206,7 +156,7 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Welcome to Roxandrea Hotel</span>
+          	<span class="subheading">Welcome to RepairMe Hotel</span>
             <h2 class="mb-4">A New Vision of Luxury Hotel</h2>
           </div>
         </div>  
@@ -279,7 +229,7 @@
     	<div class="container-fluid px-0">
     		<div class="row no-gutters justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Roxandrea Rooms</span>
+          	<span class="subheading">RepairMe Rooms</span>
             <h2 class="mb-4">Hotel Master's Rooms</h2>
           </div>
         </div>  
@@ -288,7 +238,7 @@
     				<div class="room-wrap">
     					<div class="img d-flex align-items-center" style="background-image: url(<?= BASEURL; ?>/homeSources/images/bg_3.jpg);">
     						<div class="text text-center px-4 py-4">
-    							<h2>Welcome to <a href="index.html">Roxandrea</a> Hotel</h2>
+    							<h2>Welcome to <a href="index.html">RepairMe</a> Hotel</h2>
     							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
     						</div>
     					</div>
@@ -709,7 +659,7 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Roxandrea</h2>
+              <h2 class="ftco-heading-2">RepairMe</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -768,26 +718,3 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/popper.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/bootstrap.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.easing.1.3.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.waypoints.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.stellar.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/owl.carousel.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/aos.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.animateNumber.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.mb.YTPlayer.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/bootstrap-datepicker.js"></script>
-  <!-- // <script src="<?= BASEURL; ?>/homeSources/js/jquery.timepicker.min.js"></script> -->
-  <script src="<?= BASEURL; ?>/homeSources/js/scrollax.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/google-map.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/main.js"></script>
-    
-  </body>
-</html>
