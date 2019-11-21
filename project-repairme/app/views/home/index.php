@@ -40,6 +40,7 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/rooms.html" class="nav-link">Rooms</a></li>
+	           <li class="nav-item"><a href="<?= BASEURL; ?>/lokasiPerbaikan" class="nav-link">Pelanggan</a></li>
 	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/restaurant.html" class="nav-link">Restaurant</a></li>
 	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/blog.html" class="nav-link">Blog</a></li>
