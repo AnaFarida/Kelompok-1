@@ -6,28 +6,28 @@
 				</a>
 			</div>
 	    <section class="home-slider owl-carousel">
-	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/bg_1.jpg);">
+	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/laptop4.jpg);">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row no-gutters slider-text align-items-center">
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
-		            <h1 class="mb-3">RepairMe</h1>
-		            <h2>Tempat Perbaikan HandPhone dan Laptop Terpercaya</h2>
+		            <h1 class="mb-3">REPAIRME</h1>
+		            <!--<h2>Tempat Perbaikan HandPhone dan Laptop Terpercaya</h2>-->
 	            </div>
 	          </div>
 	        </div>
 	        </div>
 	      </div>
 
-	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/bg_2.jpg);">
+	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/laptop5.jpg);">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row no-gutters slider-text align-items-center">
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
-		            <h1 class="mb-3">RepairMe</h1>
-		            <h2>Tempat Pelayanan Jasa Perbaikan HandPhone Dan Laptop</h2>
+		            <h1 class="mb-3">REPAIRME</h1>
+		            <h2>Jasa Perbaikan HandPhone Dan Laptop Terpercaya</h2>
 	            </div>
 	          </div>
 	        </div>
@@ -45,53 +45,50 @@
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-				    					<label for="#">Tanggal Bergabung</label>
-				    					<input type="text" class="form-control checkin_date" placeholder="Check-in date">
+				    					<label for="#">KATEGORI</label>
+				    					<!--<input type="text" class="form-control checkin_date" placeholder="Check-in date">-->
 			    					</div>
 			    				</div>
 	        			</div>
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-				    					<label for="#">Check-out Date</label>
-				    					<input type="text" class="form-control checkout_date" placeholder="Check-out date">
+				    					<label for="#">MERK</label>
+				    					<!--<input type="text" class="form-control checkout_date" placeholder="Check-out date">-->
 			    					</div>
 			    				</div>
 	        			</div>
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-			      					<label for="#">Room</label>
+			      					<label for="#">TIPE</label>
 			      					<div class="form-field">
 			        					<div class="select-wrap">
 			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 			                    <select name="" id="" class="form-control">
-			                    	<option value="">Suite</option>
-			                      <option value="">Family Room</option>
-			                      <option value="">Deluxe Room</option>
-			                      <option value="">Classic Room</option>
-			                      <option value="">Superior Room</option>
-			                      <option value="">Luxury Room</option>
+			                    	<option value="">Tipe</option>
+			                      <option value="">Tipe A</option>
+			                      <option value="">Tipe B</option>
+			                      <option value="">Tipe C</option>
+			                      <option value="">Tipe D</option>
+			                      <option value="">Tipe E</option>
 			                    </select>
 			                  </div>
 				              </div>
-				            </div>
+				            </div> 
 		              </div>
 	        			</div>
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-			      					<label for="#">Guests</label>
+			      					<label for="#">Paket Promo</label>
 			      					<div class="form-field">
 			        					<div class="select-wrap">
 			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 			                    <select name="" id="" class="form-control">
-			                    	<option value="">1 Adult</option>
-			                      <option value="">2 Adult</option>
-			                      <option value="">3 Adult</option>
-			                      <option value="">4 Adult</option>
-			                      <option value="">5 Adult</option>
-			                      <option value="">6 Adult</option>
+			                    	<option value="">Paket 1</option>
+			                      <option value="">Paket 2</option>
+			                      <option value="">Paket 3</option>
 			                    </select>
 			                  </div>
 				              </div>
@@ -111,7 +108,7 @@
     </section>
 
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-wrap">
+		<!--<section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-wrap">
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-md-3">
@@ -150,14 +147,14 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 
 		<section class="ftco-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
           	<span class="subheading">Selamat Datang di RepairMe</span>
-            <h2 class="mb-4">Tempat Perbaikan HandPhone Dan Laptop</h2>
+            <h2 class="mb-4">Tempat Perbaikan HandPhone Dan Laptop Terpercaya</h2>
           </div>
         </div>  
         <div class="row d-flex">
@@ -225,12 +222,12 @@
       </div>
     </section>
 
-    <section class="ftco-section bg-light ftco-room">
+    <!--<section class="ftco-section bg-light ftco-room">
     	<div class="container-fluid px-0">
     		<div class="row no-gutters justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">RepairMe Rooms</span>
-            <h2 class="mb-4">Hotel Master's Rooms</h2>
+          	<span class="subheading">RepairMe</span>
+            <h2 class="mb-4">RepairMe Master's</h2>
           </div>
         </div>  
     		<div class="row no-gutters">
@@ -320,8 +317,8 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Testimony</span>
-            <h2 class="mb-4">Our Happy Guest Says</h2>
+          	<span class="subheading">MAKER</span>
+            <h2 class="mb-4">WEB</h2>
           </div>
         </div>  
         <div class="row justify-content-center">
@@ -339,8 +336,8 @@
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
+		                    <p class="name">Bagus Dwi Prasetiyo</p>
+		                    <span class="position">Maker</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -354,8 +351,8 @@
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
+		                    <p class="name">Febiola Putri Yunita</p>
+		                    <span class="position">Maker</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -369,8 +366,23 @@
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
+		                    <p class="name">Ana Farida</p>
+		                    <span class="position">Maker</span>
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="item">
+		                <div class="testimony-wrap py-4 pb-5">
+		                  <div class="user-img mb-4" style="background-image: url(<?= BASEURL; ?>/homeSources/images/person_1.jpg)">
+		                    <span class="quote d-flex align-items-center justify-content-center">
+		                      <i class="icon-quote-left"></i>
+		                    </span>
+		                  </div>
+		                  <div class="text text-center">
+		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		                    <p class="name">Agung Joyo Prassetyo</p>
+		                    <span class="position">Maker</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -385,22 +397,7 @@
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
-		                  </div>
-		                </div>
-		              </div>
-		              <div class="item">
-		                <div class="testimony-wrap py-4 pb-5">
-		                  <div class="user-img mb-4" style="background-image: url(<?= BASEURL; ?>/homeSources/images/person_1.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
-		                    </span>
-		                  </div>
-		                  <div class="text text-center">
-		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
+		                    <span class="position">Maker</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -422,7 +419,7 @@
 								<div class="row justify-content-start d-flex align-items-end height-text ">
 									<div class="col-md-8">
 										<div class="text">
-											<h1>We're Most Recommended Hotel</h1>
+											<h1>We're Most RepairMe.com</h1>
 										</div>
 									</div>
 								</div>
@@ -431,9 +428,9 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		
-		<section class="ftco-section ftco-menu" style="background-image: url(<?= BASEURL; ?>/homeSources/images/restaurant-pattern.jpg);">
+		<!--<section class="ftco-section ftco-menu" style="background-image: url(<?= BASEURL; ?>/homeSources/images/restaurant-pattern.jpg);">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -545,10 +542,10 @@
         	</div>
         </div>
 			</div>
-		</section>
+		</section>-->
 
 
-    <section class="ftco-section">
+    <!--<section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -604,14 +601,14 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <section class="instagram">
       <div class="container-fluid">
         <div class="row no-gutters justify-content-center pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Photos</span>
-            <h2><span>Instagram</span></h2>
+          	<span class="subheading">PHOTOS</span>
+            <h2><span>Mitra Bergabung</span></h2>
           </div>
         </div>
         <div class="row no-gutters">
@@ -622,13 +619,13 @@
               </div>
             </a>
           </div>
-          <div class="col-sm-12 col-md ftco-animate">
+         <!-- <div class="col-sm-12 col-md ftco-animate">
             <a href="<?= BASEURL; ?>/homeSources/images/insta-2.jpg" class="insta-img image-popup" style="background-image: url(<?= BASEURL; ?>/homeSources/images/insta-2.jpg);">
               <div class="icon d-flex justify-content-center">
                 <span class="icon-instagram align-self-center"></span>
               </div>
             </a>
-          </div>
+          </div>-->
           <div class="col-sm-12 col-md ftco-animate">
             <a href="<?= BASEURL; ?>/homeSources/images/insta-3.jpg" class="insta-img image-popup" style="background-image: url(<?= BASEURL; ?>/homeSources/images/insta-3.jpg);">
               <div class="icon d-flex justify-content-center">
@@ -660,7 +657,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">RepairMe</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>Jasa Perbaikan HandPhone dan Laptop Terpercaya</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -668,7 +665,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md">
+         <!-- <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Useful Links</h2>
               <ul class="list-unstyled">
@@ -678,25 +675,25 @@
                 <li><a href="#" class="py-2 d-block">Gift Card</a></li>
               </ul>
             </div>
-          </div>
+          </div>-->
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Privacy</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Career</a></li>
-                <li><a href="#" class="py-2 d-block">About Us</a></li>
+                <!--<li><a href="#" class="py-2 d-block">Career</a></li>
+                <li><a href="#" class="py-2 d-block">About Us</a></li>-->
                 <li><a href="#" class="py-2 d-block">Contact</a></li>
-                <li><a href="#" class="py-2 d-block">Services</a></li>
+                <li><a href="#" class="py-2 d-block">Tentang Kami</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Hubungi kami!?</h2>
+            	<h2 class="ftco-heading-2">Hubungi kami</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+089756435678</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Jl. Raya Situbondo, Blindungan, Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68211</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+0000000</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">RepairMe@gmail.com</span></a></li>
 	              </ul>
 	            </div>
@@ -707,7 +704,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  RepairMe;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  RepairMe <script>document.write(new Date().getFullYear());</script> <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">RepairMe.com</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
