@@ -111,18 +111,23 @@ h1 {
   border-color: #ff2d26;
 }
 </style>
+
 <div id="progress"></div>
 
 <div class="center">
+
   <div id="register">
 
     <i id="progressButton" class="ion-android-arrow-forward next"></i>
-    
+    <p class="input" style="font-size: 12px; color: red;"></p>
     <div id="inputContainer">
       
       <input id="inputField" required autofocus />
+      
       <label id="inputLabel"></label>
+
       <div id="inputProgress"></div>
+      
       <form action="<?=BASEURL;?>/pelanggan/insertpelanggan" method="POST" id="formPel" >
       <input type="text" id="nama" name="nama" hidden >
       <input type="email" id="email" name="email" hidden >
@@ -136,31 +141,17 @@ h1 {
   </div>
 
   <script>
+
+
   var questions = [
-    {question:"masukkan nama lengkap anda !"},
+    {question:"masukkan nama lengkap anda !", pattern: /^[A-Za-z]+$/},
     {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
     {question:"masukkan no telepon anda !"},
     {question:"masukkan alamat anda !"},
     {question:"username "},
-    {question:"password ", type: "password"}
+    {question:"password ", type: "password", pattern: /^.{8,}$/}
   ]
   
-  /**********
-  
-    !!!!!
-    New Version: https://codepen.io/arcs/pen/rYXrNQ
-    !!!!!
-    
-    Credits for the design go to XavierCoulombeM
-    https://dribbble.com/shots/2510592-Simple-register-form
-    
-    This Pen uses no libraries except fonts and should 
-    work on all modern browsers
-    
-    The answers are stored in the `questions` array
-    with the key `value`. 
-  
-   **********/
   
   ;(function(){
   
@@ -192,6 +183,16 @@ h1 {
       showCurrent()
     }
     
+      $(document).ready(function(){
+      $('.next').on('click',function(){
+        if (!inputField.value.match(questions[0].pattern)){
+          $('.input').text('Pastikan Nama tidak memuat angka atau simbol!');  
+         wrong();
+         
+       }
+      });
+    });
+
     // when all the questions have been answered
     function done() {
       

@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Roxandrea - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
-
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/animate.css">
-    
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/magnific-popup.css">
-
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/aos.css">
-
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/ionicons.min.css">
-
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/flaticon.css">
+ <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/flaticon.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/icomoon.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/homeSources/css/style.css">
   </head>
@@ -50,6 +25,8 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
+=======
+>>>>>>> c3ec686bb22bbf38783fec66feace176ef705df8
 		<div class="hero">
 			<div class="container-wrap d-flex justify-content-end align-items-end">
 				<a href="https://www.youtube.com/watch?v=ism1XqnZJEg" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
@@ -57,28 +34,28 @@
 				</a>
 			</div>
 	    <section class="home-slider owl-carousel">
-	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/bg_1.jpg);">
+	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/laptop4.jpg);">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row no-gutters slider-text align-items-center">
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
-		            <h1 class="mb-3">Roxandrea</h1>
-		            <h2>More than a hotel... an experience</h2>
+		            <h1 class="mb-3">REPAIRME</h1>
+		            <!--<h2>Tempat Perbaikan HandPhone dan Laptop Terpercaya</h2>-->
 	            </div>
 	          </div>
 	        </div>
 	        </div>
 	      </div>
 
-	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/bg_2.jpg);">
+	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/laptop5.jpg);">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row no-gutters slider-text align-items-center">
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
-		            <h1 class="mb-3">Experience Epic Beauty</h1>
-		            <h2>Roxandrea Hotel &amp; Resort</h2>
+		            <h1 class="mb-3">REPAIRME</h1>
+		            <h2>Jasa Perbaikan HandPhone Dan Laptop Terpercaya</h2>
 	            </div>
 	          </div>
 	        </div>
@@ -96,53 +73,50 @@
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-				    					<label for="#">Check-in Date</label>
-				    					<input type="text" class="form-control checkin_date" placeholder="Check-in date">
+				    					<label for="#">KATEGORI</label>
+				    					<!--<input type="text" class="form-control checkin_date" placeholder="Check-in date">-->
 			    					</div>
 			    				</div>
 	        			</div>
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-				    					<label for="#">Check-out Date</label>
-				    					<input type="text" class="form-control checkout_date" placeholder="Check-out date">
+				    					<label for="#">MERK</label>
+				    					<!--<input type="text" class="form-control checkout_date" placeholder="Check-out date">-->
 			    					</div>
 			    				</div>
 	        			</div>
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-			      					<label for="#">Room</label>
+			      					<label for="#">TIPE</label>
 			      					<div class="form-field">
 			        					<div class="select-wrap">
 			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 			                    <select name="" id="" class="form-control">
-			                    	<option value="">Suite</option>
-			                      <option value="">Family Room</option>
-			                      <option value="">Deluxe Room</option>
-			                      <option value="">Classic Room</option>
-			                      <option value="">Superior Room</option>
-			                      <option value="">Luxury Room</option>
+			                    	<option value="">Tipe</option>
+			                      <option value="">Tipe A</option>
+			                      <option value="">Tipe B</option>
+			                      <option value="">Tipe C</option>
+			                      <option value="">Tipe D</option>
+			                      <option value="">Tipe E</option>
 			                    </select>
 			                  </div>
 				              </div>
-				            </div>
+				            </div> 
 		              </div>
 	        			</div>
 	        			<div class="col-md d-flex py-md-4">
 	        				<div class="form-group align-self-stretch d-flex align-items-end">
 	        					<div class="wrap bg-white align-self-stretch py-3 px-4">
-			      					<label for="#">Guests</label>
+			      					<label for="#">Paket Promo</label>
 			      					<div class="form-field">
 			        					<div class="select-wrap">
 			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 			                    <select name="" id="" class="form-control">
-			                    	<option value="">1 Adult</option>
-			                      <option value="">2 Adult</option>
-			                      <option value="">3 Adult</option>
-			                      <option value="">4 Adult</option>
-			                      <option value="">5 Adult</option>
-			                      <option value="">6 Adult</option>
+			                    	<option value="">Paket 1</option>
+			                      <option value="">Paket 2</option>
+			                      <option value="">Paket 3</option>
 			                    </select>
 			                  </div>
 				              </div>
@@ -162,7 +136,7 @@
     </section>
 
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-wrap">
+		<!--<section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-wrap">
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-md-3">
@@ -201,14 +175,14 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 
 		<section class="ftco-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Welcome to Roxandrea Hotel</span>
-            <h2 class="mb-4">A New Vision of Luxury Hotel</h2>
+          	<span class="subheading">Selamat Datang di RepairMe</span>
+            <h2 class="mb-4">Tempat Perbaikan HandPhone Dan Laptop Terpercaya</h2>
           </div>
         </div>  
         <div class="row d-flex">
@@ -220,7 +194,7 @@
               	</div>
               </div>
               <div class="media-body">
-                <h3 class="heading mb-3">Friendly Service</h3>
+                <h3 class="heading mb-3">Perbaiki Sekarang</h3>
               </div>
             </div>      
           </div>
@@ -244,7 +218,7 @@
               	</div>
               </div>
               <div class="media-body">
-                <h3 class="heading mb-3">Transfer Services</h3>
+                <h3 class="heading mb-3">Pembayaran</h3>
               </div>
             </div>      
           </div>
@@ -256,7 +230,7 @@
               	</div>
               </div>
               <div class="media-body">
-                <h3 class="heading mb-3">Suits &amp; SPA</h3>
+                <h3 class="heading mb-3">Petunjuk</h3>
               </div>
             </div>      
           </div>
@@ -276,12 +250,12 @@
       </div>
     </section>
 
-    <section class="ftco-section bg-light ftco-room">
+    <!--<section class="ftco-section bg-light ftco-room">
     	<div class="container-fluid px-0">
     		<div class="row no-gutters justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Roxandrea Rooms</span>
-            <h2 class="mb-4">Hotel Master's Rooms</h2>
+          	<span class="subheading">RepairMe</span>
+            <h2 class="mb-4">RepairMe Master's</h2>
           </div>
         </div>  
     		<div class="row no-gutters">
@@ -289,7 +263,7 @@
     				<div class="room-wrap">
     					<div class="img d-flex align-items-center" style="background-image: url(<?= BASEURL; ?>/homeSources/images/bg_3.jpg);">
     						<div class="text text-center px-4 py-4">
-    							<h2>Welcome to <a href="index.html">Roxandrea</a> Hotel</h2>
+    							<h2>Welcome to <a href="index.html">RepairMe</a> Hotel</h2>
     							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
     						</div>
     					</div>
@@ -371,8 +345,8 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Testimony</span>
-            <h2 class="mb-4">Our Happy Guest Says</h2>
+          	<span class="subheading">MAKER</span>
+            <h2 class="mb-4">WEB</h2>
           </div>
         </div>  
         <div class="row justify-content-center">
@@ -390,8 +364,8 @@
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
+		                    <p class="name">Bagus Dwi Prasetiyo</p>
+		                    <span class="position">Maker</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -405,8 +379,8 @@
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
+		                    <p class="name">Febiola Putri Yunita</p>
+		                    <span class="position">Maker</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -420,8 +394,23 @@
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
+		                    <p class="name">Ana Farida</p>
+		                    <span class="position">Maker</span>
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="item">
+		                <div class="testimony-wrap py-4 pb-5">
+		                  <div class="user-img mb-4" style="background-image: url(<?= BASEURL; ?>/homeSources/images/person_1.jpg)">
+		                    <span class="quote d-flex align-items-center justify-content-center">
+		                      <i class="icon-quote-left"></i>
+		                    </span>
+		                  </div>
+		                  <div class="text text-center">
+		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		                    <p class="name">Agung Joyo Prassetyo</p>
+		                    <span class="position">Maker</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -436,22 +425,7 @@
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
-		                  </div>
-		                </div>
-		              </div>
-		              <div class="item">
-		                <div class="testimony-wrap py-4 pb-5">
-		                  <div class="user-img mb-4" style="background-image: url(<?= BASEURL; ?>/homeSources/images/person_1.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
-		                    </span>
-		                  </div>
-		                  <div class="text text-center">
-		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
-		                    <span class="position">Guests</span>
+		                    <span class="position">Maker</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -473,7 +447,7 @@
 								<div class="row justify-content-start d-flex align-items-end height-text ">
 									<div class="col-md-8">
 										<div class="text">
-											<h1>We're Most Recommended Hotel</h1>
+											<h1>We're Most RepairMe.com</h1>
 										</div>
 									</div>
 								</div>
@@ -482,9 +456,9 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		
-		<section class="ftco-section ftco-menu" style="background-image: url(<?= BASEURL; ?>/homeSources/images/restaurant-pattern.jpg);">
+		<!--<section class="ftco-section ftco-menu" style="background-image: url(<?= BASEURL; ?>/homeSources/images/restaurant-pattern.jpg);">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -596,10 +570,10 @@
         	</div>
         </div>
 			</div>
-		</section>
+		</section>-->
 
 
-    <section class="ftco-section">
+    <!--<section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -655,14 +629,14 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <section class="instagram">
       <div class="container-fluid">
         <div class="row no-gutters justify-content-center pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
-          	<span class="subheading">Photos</span>
-            <h2><span>Instagram</span></h2>
+          	<span class="subheading">PHOTOS</span>
+            <h2><span>Mitra Bergabung</span></h2>
           </div>
         </div>
         <div class="row no-gutters">
@@ -673,13 +647,13 @@
               </div>
             </a>
           </div>
-          <div class="col-sm-12 col-md ftco-animate">
+         <!-- <div class="col-sm-12 col-md ftco-animate">
             <a href="<?= BASEURL; ?>/homeSources/images/insta-2.jpg" class="insta-img image-popup" style="background-image: url(<?= BASEURL; ?>/homeSources/images/insta-2.jpg);">
               <div class="icon d-flex justify-content-center">
                 <span class="icon-instagram align-self-center"></span>
               </div>
             </a>
-          </div>
+          </div>-->
           <div class="col-sm-12 col-md ftco-animate">
             <a href="<?= BASEURL; ?>/homeSources/images/insta-3.jpg" class="insta-img image-popup" style="background-image: url(<?= BASEURL; ?>/homeSources/images/insta-3.jpg);">
               <div class="icon d-flex justify-content-center">
@@ -710,8 +684,8 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Roxandrea</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">RepairMe</h2>
+              <p>Jasa Perbaikan HandPhone dan Laptop Terpercaya</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -719,7 +693,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md">
+         <!-- <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Useful Links</h2>
               <ul class="list-unstyled">
@@ -729,26 +703,26 @@
                 <li><a href="#" class="py-2 d-block">Gift Card</a></li>
               </ul>
             </div>
-          </div>
+          </div>-->
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Privacy</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Career</a></li>
-                <li><a href="#" class="py-2 d-block">About Us</a></li>
-                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
-                <li><a href="#" class="py-2 d-block">Services</a></li>
+                <!--<li><a href="#" class="py-2 d-block">Career</a></li>
+                <li><a href="#" class="py-2 d-block">About Us</a></li>-->
+                <li><a href="#" class="py-2 d-block">Contact</a></li>
+                <li><a href="#" class="py-2 d-block">Tentang Kami</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Hubungi kami</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Jl. Raya Situbondo, Blindungan, Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68211</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+0000000</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">RepairMe@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -758,7 +732,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  RepairMe <script>document.write(new Date().getFullYear());</script> <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">RepairMe.com</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
@@ -769,26 +743,3 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/popper.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/bootstrap.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.easing.1.3.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.waypoints.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.stellar.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/owl.carousel.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/aos.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.animateNumber.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/jquery.mb.YTPlayer.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/bootstrap-datepicker.js"></script>
-  <!-- // <script src="<?= BASEURL; ?>/homeSources/js/jquery.timepicker.min.js"></script> -->
-  <script src="<?= BASEURL; ?>/homeSources/js/scrollax.min.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/google-map.js"></script>
-  <script src="<?= BASEURL; ?>/homeSources/js/main.js"></script>
-    
-  </body>
-</html>
