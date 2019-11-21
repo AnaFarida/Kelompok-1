@@ -10,5 +10,4 @@
       <link rel="stylesheet" type="text/css" href="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
       <script src="<?= BASEURL; ?>/js/Control.Coordinates.js"></script>
       <script src="<?= BASEURL; ?>/js/petaLokasi.js"></script>
-      <link rel="stylesheet" href="<?= BASEURL; ?>/css/petaLokasi.css">
       <script src="<?= BASEURL; ?>/js/jquery-3.4.1.js"></script>

@@ -1,3 +1,21 @@
+
+			</div>
+	    <section class="home-slider owl-carousel">
+	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/laptop4.jpg);">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text align-items-center">
+	          <div class="col-md-8 ftco-animate">
+	          	<div class="text mb-5 pb-5">
+		            <h1 class="mb-3">REPAIRME</h1>
+		            <!--<h2>Tempat Perbaikan HandPhone dan Laptop Terpercaya</h2>-->
+	            </div>
+	          </div>
+	        </div>
+	        </div>
+	      </div>
+
+
  <div class="container">
         <div class="col-md-4 col-md-offset-4">
           <form class="form-signin" action="<?= BASEURL; ?>/models/Login_model.php" method="post">
@@ -14,4 +32,3 @@
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
           </form>
         </div>
-        </div> <!-- /container -->
