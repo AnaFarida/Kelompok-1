@@ -758,3 +758,10 @@
       </div>
     </div>
   </footer><!-- #footer -->
+
+  
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+ 

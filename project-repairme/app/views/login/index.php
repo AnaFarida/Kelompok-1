@@ -1,34 +1,55 @@
 
-			</div>
-	    <section class="home-slider owl-carousel">
-	      <div class="slider-item" style="background-image:url(<?= BASEURL; ?>/homeSources/images/laptop4.jpg);">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row no-gutters slider-text align-items-center">
-	          <div class="col-md-8 ftco-animate">
-	          	<div class="text mb-5 pb-5">
-		            <h1 class="mb-3">REPAIRME</h1>
-		            <!--<h2>Tempat Perbaikan HandPhone dan Laptop Terpercaya</h2>-->
-	            </div>
-	          </div>
-	        </div>
-	        </div>
-	      </div>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="<?= BASEURL; ?>/adminSources/assets/vendor/bootstrap/css/bootstrap.min.css"> -->
+    <link href="<?= BASEURL; ?>/adminSources/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/adminSources/assets/libs/css/style.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/adminSources/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
 
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    </style>
+</head>
 
- <div class="container">
-        <div class="col-md-4 col-md-offset-4">
-          <form class="form-signin" action="<?= BASEURL; ?>/models/Login_model.php" method="post">
-            <h2 class="form-signin-heading">RepairMe</h2>
-            <label for="username" class="sr-only">Username</label>
-            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
-            <label for="password" class="sr-only">Password</label>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me"> Remember me
-              </label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-          </form>
-        </div>
+<body>
+    <!-- ============================================================== -->
+    <!-- login page  -->
+    <!-- ============================================================== -->
+    <div class="splash-container">
+        <div class="card ">
+            <div class="card-header text-center"><a href="<?= BASEURL; ?>/adminSources/index.html"><img class="logo-img" src="<?= BASEURL; ?>/adminSources/assets/images/logo.png" alt="logo"></a><span class="splash-description">Please enter your user information.</span></div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                </form>
+            </div>
+            <div class="card-footer bg-white p-0  ">
+                <div class="card-footer-item card-footer-item-bordered">
+                    <a href="#" class="footer-link">Create An Account</a></div>
+                <div class="card-footer-item card-footer-item-bordered">
+                    <a href="#" class="footer-link">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -2,8 +2,8 @@
 class Login extends Controller{
  
     function index(){
-        $this->view('templates/head');
+        $this->view('templates/header');
         $this->view('login/index');
-        $this->view('templates/foot');
+        $this->view('templates/footer');
     }
 }

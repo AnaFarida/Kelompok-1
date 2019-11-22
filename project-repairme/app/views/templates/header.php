@@ -45,6 +45,7 @@
             <li class="active"><a href="<?= BASEURL; ?>">BERANDA</a></li>
             <li><a href="<?= BASEURL; ?>/LokasiPerbaikan">PERBAIKAN</a></li>
              <li><a href="<?= BASEURL; ?>/admin">ADMIN</a></li>
+             <li><a href="<?= BASEURL; ?>/login">LOGIN</a></li>
             <!-- <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
