@@ -3,9 +3,9 @@ class Pelanggan extends Controller{
 	public function index(){
 		$data['judul'] = 'Daftar pelanggan';
 		$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
-		$this->view('templates/header',$data);
+		$this->view('templates/headerAdmin',$data);
 		$this->view('pelanggan/index', $data);
-		$this->view('templates/footer');
+		$this->view('templates/footerAdmin');
 	}
 public function registrasi(){
 	$this->view('templates/header');
@@ -23,6 +23,15 @@ public function insertpelanggan(){
 		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 			exit();
 		}
+}
+
+public function detailPelanggan($id){
+	$data['judul'] = 'Detail Pelanggan';
+	$data['pelanggan'] = $this->model('Pelanggan_model')->getDetail($id);
+	$this->view('templates/header', $data);
+	$this->view('pelanggan/detailPelanggan', $data);
+	$this->view('templates/footer');
+
 }
 
 public function delete($id){
