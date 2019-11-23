@@ -51,7 +51,7 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#team">Team</a></li> -->
             <li><a href="" data-toggle="modal" data-target="#formModal">REGISTRASI</a></li>
-            <li class="drop-down"><a href="">Drop Down</a>
+            <li class="drop-down"><a href="">ARTIKEL</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="drop-down"><a href="#">Drop Down 2</a>
@@ -68,7 +68,7 @@
             <li><a href="#">Drop Down 5</a></li>
           </ul>
         </li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#contact">KONTAK KAMI</a></li>
       </ul>
       </nav><!-- .main-nav -->
       
