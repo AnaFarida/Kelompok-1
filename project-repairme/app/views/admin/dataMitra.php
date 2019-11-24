@@ -15,8 +15,8 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tables</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Mitra</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Data Mitra</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -39,21 +39,21 @@
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
+                                                <th>Nama</th>
+                                                <th>Nama Usaha</th>
+                                                <th>email</th>
+                                                <!-- <th>no telpon</th> -->
+                                                <th>alamat</th>
                                                 <th>fungsi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                                <td><?= $mitra['nama']; ?></td>
                                                 <td><?= $mitra['nama_usaha']; ?></td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
+                                                <td><?= $mitra['email']; ?></td>
+                                                <!-- <td><?= $mitra['no_telpon']; ?></td> -->
+                                                <td><?= $mitra['alamat']; ?></td>
                                                 <td><a href="<?= BASEURL; ?>/mitra/delete/<?= $mitra['id_mitra']; ?>" class="badge badge-danger float-right ml-1">Hapus</a></td>
                                             </tr>
                                     
