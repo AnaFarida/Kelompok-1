@@ -22,5 +22,11 @@ class Admin extends Controller{
 		$this->view('admin/ControlMaps');
 		$this->view('templates/footerAdmin');
 	}
+
+	public function chart(){
+		$this->view('templates/headerAdmin');
+		$this->view('admin/chart');
+		$this->view('templates/footerAdmin');
+	}
 }
 
