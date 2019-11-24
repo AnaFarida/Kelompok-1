@@ -15,19 +15,21 @@ class Login extends Controller{
     	if (count($ret) == 1) {
             
             if ($ret[0]['id_jenis'] == 2) {
-                // $resPass = password_verify($_POST['password'], $ret[0][''])
-
                 mySession::setSession('true', 'mitra');
                 header('Location:'.BASEURL.'/login/');
             }else if($ret[0]['id_jenis'] == 3) {
-                var_dump($ret[0]['nama']);
-                // mySession::setSession('true', 'pelanggan');
-            }
-            
-    	}else if($ret == false){
-            echo "gagal";
+                mySession::setSession('true', 'pelanggan');
+                header('Location:'.BASEURL.'/login/');            
+            }else if($ret[0]['id_jenis'] == 1){
+                mySession::setSession('true', 'admin', $ret[0]);
+                header('Location:'.BASEURL.'/admin/'); 
+        	}
         }
-    }
+        if ($ret == false){
+            Flasher::setFlash(' Login', 'GAGAl', 'danger'); 
+                header('Location:'.BASEURL.'/login/');
+        }
+}
 
     function logout(){
 
@@ -39,4 +41,5 @@ class Login extends Controller{
     header('Location:'.BASEURL.'/login');
     exit;
     }
+    
 }
