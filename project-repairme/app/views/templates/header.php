@@ -53,19 +53,10 @@
             <li><a href="" data-toggle="modal" data-target="#formModal">REGISTRASI</a></li>
             <li class="drop-down"><a href="">ARTIKEL</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-            <li><a href="#">Drop Down 5</a></li>
+              <li><a href="#">Tutorial</a></li>
+            <li><a href="#">berita</a></li>
+            <li><a href="#">Q&A</a></li>
+           
           </ul>
         </li>
         <li><a href="#contact">KONTAK KAMI</a></li>
