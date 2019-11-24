@@ -41,10 +41,10 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
               <li class="nav-item"><a href="<?= BASEURL; ?>/LokasiPerbaikan" class="nav-link">Perbaikan</a></li>
-              <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/rooms.html" class="nav-link">Login</a></li>
-              <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/restaurant.html" class="nav-link">Registrasi</a></li>
-              <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/about.html" class="nav-link">Admin</a></li>
-              <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/blog.html" class="nav-link">Tentang Kami</a></li>
+              <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/rooms.html" class="nav-link">Rooms</a></li>
+              <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/restaurant.html" class="nav-link">Restaurant</a></li>
+              <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/about.html" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/blog.html" class="nav-link">Blog</a></li>
               <li class="nav-item"><a href="<?= BASEURL; ?>/homeSources/contact.html" class="nav-link">Contact</a></li>
             </ul>
           </div>
