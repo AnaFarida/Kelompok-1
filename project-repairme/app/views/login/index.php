@@ -1,3 +1,4 @@
+ <?php Flasher::flash(); ?>
 <!-- Bootstrap CSS -->
 <link href="<?= BASEURL; ?>/adminSources/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
 <link rel="stylesheet" href="<?= BASEURL; ?>/adminSources/assets/libs/css/style.css">
@@ -19,28 +20,26 @@ padding-bottom: 40px;
 margin-top: 100px;
 }
 </style>
-<!-- ============================================================== -->
-<!-- login page  -->
-<!-- ============================================================== -->
+
 <div class="splash-container">
     <div class="card ">
         <div class="card-header text-center"><a href="<?= BASEURL; ?>/adminSources/index.html"><img class="logo-img" src="<?= BASEURL; ?>/adminSources/assets/images/logo.png" alt="logo"></a><span class="splash-description">Please enter your user information.</span></div>
         <div class="card-body">
-            <form>
+            <form action="<?= BASEURL; ?>/login/checklogin" method="POST">
                 
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off" required>
+                    <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off" required name="username">
                     <p class="nama" style="font-size: 12px; color: red;"></p>
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="password" type="password" placeholder="Password" required>
+                    <input class="form-control form-control-lg" id="password" type="password" placeholder="Password" required name="password">
                 </div>
                 <div class="form-group">
                     <label class="custom-control custom-checkbox">
                         <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" name="login">Sign in</button>
             </form>
         </div>
         <div class="card-footer bg-white p-0  ">
@@ -52,35 +51,3 @@ margin-top: 100px;
             </div>
         </div>
     </div>
-    <script>
-    $(document).ready(function(){
-    });
-    </script>
-    
-    <?php 
-    $items = array();
-        foreach ($data['user'] as $user) {
-            $items[] = $user;
-        }
-        $out = array_values($items);
-        $userJSON = json_encode($out);
-     ?>
-    <script>
-    $(document).ready(function(){
-    let obj = JSON.parse('<?= $userJSON; ?>');
-    for(let i = 0, length1 = obj.length; i < length1; i++){
-        $('#username').on('keyup',function(){
-        if($(this).val() != obj[i].username){
-        $('.nama').text('Username Belum Terdaftar');
-        }   
-        if($(this).val() == obj.username){
-        $('.nama').text('');
-        }
-         }); 
-    }
-    
-    
-    
-   
-    });
-    </script>
