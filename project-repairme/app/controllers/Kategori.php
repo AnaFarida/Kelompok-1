@@ -17,6 +17,7 @@ public function insertbarang(){
 	if($this->model('Kategori_model')->inputbarang($_POST) > 0){
 			header ('Location: '.BASEURL.'/kategori/');
 		
+		header ('Location: '.BASEURL.'/kategori/');
 			exit();
 		}else {
 		//	header ('Location: '.BASEURL.'/kategori/');

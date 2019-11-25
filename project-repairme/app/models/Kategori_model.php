@@ -6,7 +6,10 @@ class Kategori_model{
 	function __construct(){
 		$this->db = new Database;
 	}
-	
+	// public function getAllkategori(){
+	// 	return $this->db->query("SELECT * FROM tb_kategori");
+	// }
+
 	public function getAllmerk(){
 		return $this->db->query("SELECT * FROM tb_merk");
 	}

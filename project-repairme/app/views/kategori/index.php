@@ -8,6 +8,7 @@
       <?php foreach($data['merk'] as $merk) :?>
       <ul class="list-group">
         <li class="list-group-item" >
+          
           <?= $merk['merk']; ?>
           <a href="<?= BASEURL; ?>/Kategori/delete/<?= $merk['id_merk']; ?>" class="badge badge-danger float-right ml-1">Hapus</a>
           

@@ -4,7 +4,15 @@
    <table>
      <tr>
        <td>
-         <label for="merk">merk</label>
+         <label for="merk">Kategori</label>
+         <input type="text" name="merk" id="merk">
+       </td>
+       <td>
+         <label for="merk">Merk</label>
+         <input type="text" name="merk" id="merk">
+       </td>
+       <td>
+         <label for="merk">Tipe</label>
          <input type="text" name="merk" id="merk">
        </td>
        <td>
