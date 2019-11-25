@@ -4,7 +4,7 @@
   <!-- <div id="preloader"></div> -->
 
   <!-- JavaScript Libraries -->
-  <script src="<?= BASEURL; ?>/homes/lib/jquery/jquery.min.js"></script>
+
   <script src="<?= BASEURL; ?>/homes/lib/jquery/jquery-migrate.min.js"></script>
   <script src="<?= BASEURL; ?>/homes/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<?= BASEURL; ?>/homes/lib/easing/easing.min.js"></script>

@@ -30,6 +30,7 @@ html {
   z-index:99999;
 }
 </style>
+<div class="profile"></div>
 <div id="map">
 <div class='pointer'> Click search button</div>
 
@@ -66,7 +67,6 @@ var c = new L.Control.Coordinates();
 </div>
 
 <?php foreach ($data['mitra'] as $mitra) : ?>
-
 <script>
   var popup = L.popup();
    var marker = L.marker([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>]).addTo(map);
@@ -76,7 +76,6 @@ var c = new L.Control.Coordinates();
 <script>
   $(marker).click(function(){
     map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
+    $('#map').attr();
        });
 </script>
-
-<?php endforeach; ?>
