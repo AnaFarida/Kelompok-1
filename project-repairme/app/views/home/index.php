@@ -9,7 +9,7 @@
       </div>
 
       <div class="intro-info">
-        <h2>Kami Memberi<br><span>Solusi</span><br>Untuk Memperbaiki Barang Anda :)</h2>
+        <h2>Kami Memberi<br><span>Solusi</span><br>Untuk Memperbaiki Barang Anda</h2>
         <div>
           <a href="#about" class="btn-get-started scrollto">Mulai PerbaikanMu!</a>
           <a href="#services" class="btn-services scrollto">Promo Perbaikan</a>
@@ -29,8 +29,7 @@
 
         <header class="section-header">
           <h3>Tentang Repairme </h3>
-          <p>RepairMe adalah tempat dan solusi tepat untuk anda mencari perbaikan hp dan laptop anda yang rusak dengan berbagai mintra terpercaya, berkualitas , dan cepat dalam memperbaiki hp dan laptop anda 
-          . repairme menyediakan berbagai promosi pelayanan untuk memuaskan pengunjung kami . Repairme juga merupakan solusi untuk anda yang memiliki usaha dalam bidang perbaikan hp dan laptop dengan berbagai paket pemasangan iklan
+          <p>RepairMe adalah tempat dan solusi tepat untuk anda mencari perbaikan hp dan laptop anda yang rusak dengan berbagai mitra terpercaya, berkualitas, dan cepat dalam memperbaiki hp dan laptop anda. RepairMe menyediakan berbagai promosi pelayanan untuk memuaskan pengunjung kami. RepairMe juga merupakan solusi untuk anda yang memiliki usaha dalam bidang perbaikan hp dan laptop dengan berbagai paket pemasangan iklan
           dan dapatkan pelanggan dengan mudah </p>
         </header>
 
@@ -38,31 +37,31 @@
 
           <div class="col-lg-6 content order-lg-1 order-2">
             <p>
-               Kelebihan dari Repairme berdasarkan testimoni dan pelayanan yang kami berikan untuk mempermudan anda sebagai pelanggan dan mitra kami .
+               Kelebihan dari Repairme berdasarkan testimoni dan pelayanan yang kami berikan untuk mempermudan anda sebagai pelanggan dan mitra kami.
             </p>
 
             <div class="icon-box wow fadeInUp">
               <div class="icon"><i class="fa fa-shopping-bag"></i></div>
               <h4 class="title"><a href="">Tepat Waktu</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <p class="description">Perbaikan Hp anda akan diselesaikan dengan jangka waktu yang sudah ditentukan oleh mitra yang akan memperbaiki kerusakan Hp atau Laptop anda</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-photo"></i></div>
               <h4 class="title"><a href="">Banyak Diskon</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p class="description">Semakin anda memperbaiki Hp atau Laptop anda pada kami, kami akan memberikan diskon pada anda sesuai yang tertera pada web ini</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
               <div class="icon"><i class="fa fa-bar-chart"></i></div>
               <h4 class="title"><a href="">Antar atau jemput </a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <p class="description">Kami juga melayani antar atau jemput barang anda</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
               <div class="icon"><i class="fa fa-bar-chart"></i></div>
               <h4 class="title"><a href="">Mitra Terpercaya  </a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <p class="description">Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepaiRme maka mitra tersebut akan dikeluarkan dan akan dikenakan denda</p>
             </div>
 
           </div>
@@ -77,13 +76,8 @@
             <img src="<?= BASEURL; ?>/homes/img/about-extra-1.svg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
-            <h4>Tata cara perbaikan</h4>
-            <p>
-              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
-            </p>
-            <p>
-              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
-            </p>
+            <h4>Tata Cara Perbaikan</h4>
+            <p>Pelanggan melakukan registasi terlebih dahulu, setelah itu </p>
           </div>
         </div>
 
@@ -93,16 +87,8 @@
           </div>
 
           <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
-            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
-            <p>
-             Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
-            </p>
-            <p>
-              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
-            </p>
-            <p>
-              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
-            </p>
+            <h4>RepairMe</h4>
+            <p>XXXXXXXX</p>
           </div>
           
         </div>
@@ -117,8 +103,8 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Services</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+          <h3>Promo Perbaikan</h3>
+          <p>Promo ini hanya berlaku pada Mitra</p>
         </header>
 
         <div class="row">
@@ -224,22 +210,22 @@
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">274</span>
-            <p>Clients</p>
+            <p>Pelanggan</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">421</span>
-            <p>Projects</p>
+            <p>Project</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">1,364</span>
-            <p>Hours Of Support</p>
+            <p>Dukungan</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">18</span>
-            <p>Hard Workers</p>
+            <p>Pekerja</p>
           </div>
   
         </div>
@@ -254,7 +240,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
+          <h3 class="section-title">Portofolio Kami</h3>
         </header>
 
         <div class="row">
@@ -408,7 +394,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Testimonials</h3>
+          <h3>Testimoni</h3>
         </header>
 
         <div class="row justify-content-center">
@@ -476,7 +462,7 @@
     <section id="team">
       <div class="container">
         <div class="section-header">
-          <h3>Team</h3>
+          <h3>Team RepaiRme</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
         </div>
 
@@ -567,7 +553,7 @@
       <div class="container">
 
         <div class="section-header">
-          <h3>Our CLients</h3>
+          <h3>Client Kami</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
         </div>
 
@@ -649,15 +635,15 @@
             <div class="row">
               <div class="col-md-5 info">
                 <i class="ion-ios-location-outline"></i>
-                <p>A108 Adam Street, NY 535022</p>
+                <p>Jl. Raya Situbondo, Blindungan , Kec. Bondowoso, Kab. Bondowoso, Jawa Timur 68211</p>
               </div>
               <div class="col-md-4 info">
                 <i class="ion-ios-email-outline"></i>
-                <p>info@example.com</p>
+                <p>RepairMe@gmail.com</p>
               </div>
               <div class="col-md-3 info">
                 <i class="ion-ios-telephone-outline"></i>
-                <p>+1 5589 55488 55</p>
+                <p>+6285</p>
               </div>
             </div>
 
@@ -667,11 +653,11 @@
               <form action="" method="post" role="form" class="contactForm">
                 <div class="form-row">
                   <div class="form-group col-lg-6">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Nama Anda" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validation"></div>
                   </div>
                   <div class="form-group col-lg-6">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email Anda" data-rule="email" data-msg="Please enter a valid email" />
                     <div class="validation"></div>
                   </div>
                 </div>
@@ -680,10 +666,10 @@
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Pesan"></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+                <div class="text-center"><button type="submit" title="Send Message">Kirim Pesan</button></div>
               </form>
             </div>
           </div>
@@ -704,29 +690,26 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-info">
-            <h3>NewBiz</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            <h3>RepairMe</h3>
+            <p>RepairMe adalah tempat dan solusi untuk anda mencari perbaikan hp dan laptop yang rusak dengan berbagai mitra terpercaya, berkualitas, dan cepat dalam memperbaiki hp dan laptop.</p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
+              <li><a href="#">Perbaikan</a></li>
               <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Artikel</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
+            <h4>Hubungi Kami</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Jl. Raya Situbondo, Blindungan , Kec. Bondowoso, Kab. Bondowoso, Jawa Timur 68211 <br>
+              <strong>Phone:</strong> +6285<br>
+              <strong>Email:</strong> RepairMe@gmail.com<br>
             </p>
 
             <div class="social-links">
@@ -740,8 +723,13 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <h4>Kelebihan RepairMe:</h4>
+            <ul>
+            <li><a >Tepat Waktu</a></li>
+              <li><a >Banyak diskon</a></li>
+              <li><a >Antar dan Jemput</a></li>
+              <li><a >Mitra Terpercaya</a></li>
+            </ul>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit"  value="Subscribe">
             </form>
@@ -753,7 +741,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>NewBiz</strong>. All Rights Reserved
+        &copy;  <strong>RepairMe</strong>
       </div>
       <div class="credits">
         <!--
@@ -762,7 +750,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
         -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <a href="https://bootstrapmade.com/">2019</a>
       </div>
     </div>
   </footer><!-- #footer -->
