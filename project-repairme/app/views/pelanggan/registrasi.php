@@ -144,7 +144,7 @@ h1 {
 
 
   var questions = [
-    {question:"masukkan nama lengkap anda !", pattern: /^[A-Za-z]+$/},
+    {question:"masukkan nama lengkap anda !", pattern: /^[A-Za-z]+$/ },
     {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
     {question:"masukkan no telepon anda !"},
     {question:"masukkan alamat anda !"},
