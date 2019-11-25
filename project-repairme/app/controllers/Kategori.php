@@ -1,11 +1,11 @@
 <?php
 class Kategori extends Controller{
 	public function index(){
-		$data['judul'] = 'merk';
-		$data['merk'] = $this->model('Kategori_model')->getAllmerk();
-		$this->view('templates/header',$data);
-		$this->view('kategori/index', $data);
-		$this->view('templates/footer');
+		// $data['judul'] = 'merk';
+		// $data['merk'] = $this->model('Kategori_model')->getAllmerk();
+		$this->view('templates/headerAdmin');
+		$this->view('kategori/index');
+		$this->view('templates/footerAdmin');
 	}
 public function tambah(){
 	$this->view('templates/header');
