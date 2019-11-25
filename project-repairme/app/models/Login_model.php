@@ -1,46 +1,40 @@
-<?php
+ <?php 
+
 class Login_model{
     private $db;
-    
+
+
 
     function __construct(){
         $this->db = new Database;
     }
 
-    function proses($data){
-        $username = $data['username'];
-        $password = $data['password'];
-        return $this->db->data("SELECT * FROM tb_user WHERE username = '$username'");
+    public function getAllUser(){
+        return $this->db->query("SELECT * FROM tb_user");
+    }
+    
+    public function checkloginkey($data){
+    	$username = $data['username'];
+    	$password = $data['password'];
 
-    if (mysqli_num_rows($this->db->data($ana)) == 1)
-     {
-        echo "<script>header('Location:BASEURL/home')</script>";
-     }
-     else {
-        echo "<script>header('Location:BASEURL/mitra')</script>";
-     }
+		$getUser = $this->db->query("SELECT * FROM tb_user WHERE username = '$username'");
+        $getPass = $getUser[0]['password'];
+
+        if (password_verify($password, $getPass)) {
+            $getIdUser = $getUser[0]['id_user'];
+            $getJenisMitra = $this->db->query("SELECT * FROM tb_mitra WHERE id_user = '$getIdUser'");
+            $getJenisPelanggan = $this->db->query("SELECT * FROM tb_pelanggan WHERE id_user = '$getIdUser'");
+            if (count($getJenisMitra) == 1) {
+                return $getJenisMitra;
+            }elseif (count($getJenisPelanggan) == 1) {
+                return $getJenisPelanggan;
+            }
+        }else{
+            return false;
+        }
+
+        
+        
 }
+
 }
-        //cek password
-        //$row = mysqli_fetch_assoc($result);
-//         if (password_verify($password, $row['password'])){
-//             //set session
-//             $_SESSION['login'] = true;
-
-//             if (isset($_POST['remember'])) {
-//                 setcookie('login', 'true', time() + 20);
-//             }
-
-//             header("Location: index.php");
-//             exit;
-//         }
-//     }
-
-//     $error = true;
-
-
-// }
-//         }
-        	
-//     }
-// }

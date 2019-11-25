@@ -11,13 +11,13 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">E-commerce Dashboard Template </h2>
+                                <h2 class="pageheader-title">PENGUNJUNG REPAIRME  </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
+                                            <li class="breadcrumb-item active" aria-current="page">PENGUNJUNG REPAIRME</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -33,9 +33,9 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Total Revenue</h5>
+                                        <h5 class="text-muted">JUMLAH PENGUNJUNG</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
+                                            <h1 class="mb-1">200 K </h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                             <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
@@ -47,12 +47,12 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Affiliate Revenue</h5>
+                                        <h5 class="text-muted">JUMLAH MITRA</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
+                                            <h1 class="mb-1">300</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
+                                            
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue2"></div>
@@ -61,12 +61,12 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Refunds</h5>
+                                        <h5 class="text-muted">JUMLAH PELANGGAN</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">0.00</h1>
+                                            <h1 class="mb-1">1200</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-primary font-weight-bold">
-                                            <span>N/A</span>
+                                            
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue3"></div>
@@ -75,12 +75,12 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Avg. Revenue Per User</h5>
+                                        <h5 class="text-muted">TOTAL PENGHASILAN</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$28000</h1>
+                                            <h1 class="mb-1">2 MILIYAR</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
-                                            <span>-2.00%</span>
+                                            <span>+75%</span>
                                         </div>
                                     </div>
                                     <div id="sparkline-revenue4"></div>
@@ -96,7 +96,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Recent Orders</h5>
+                                    <h5 class="card-header">History Transaksi</h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
@@ -185,7 +185,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Customer Acquisition</h5>
+                                    <h5 class="card-header">Testimoni</h5>
                                     <div class="card-body">
                                         <div class="ct-chart ct-golden-section" style="height: 354px;"></div>
                                         <div class="text-center">
@@ -212,7 +212,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header"> Product Category</h5>
+                                    <h5 class="card-header">Kategori Perbaikan</h5>
                                     <div class="card-body">
                                         <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
                                         <div class="text-center m-t-40">
@@ -246,7 +246,7 @@
                                                     <option value="3">Yearly</option>
                                                 </select>
                                             </div> -->
-                                        <h5 class="mb-0"> Product Sales</h5>
+                                        <h5 class="mb-0"> Mitra profil </h5>
                                     </div>
                                     <div class="card-body">
                                         <div class="ct-chart-product ct-golden-section"></div>
@@ -261,15 +261,15 @@
                                 <!-- top perfomimg  -->
                                 <!-- ============================================================== -->
                                 <div class="card">
-                                    <h5 class="card-header">Top Performing Campaigns</h5>
+                                    <h5 class="card-header">Rating Mitra </h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table no-wrap p-table">
                                                 <thead class="bg-light">
                                                     <tr class="border-0">
-                                                        <th class="border-0">Campaign</th>
-                                                        <th class="border-0">Visits</th>
-                                                        <th class="border-0">Revenue</th>
+                                                        <th class="border-0">Nama Mitra </th>
+                                                        <th class="border-0">Orderan</th>
+                                                        <th class="border-0">Selesai</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -326,9 +326,9 @@
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Sales</h5>
+                                        <h5 class="text-muted">Jumlah pendapatan Mitra </h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
+                                            <h1 class="mb-1">$120990878</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                             <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5.86%</span>
@@ -409,7 +409,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Revenue by Category</h5>
+                                    <h5 class="card-header">Kontak Admin</h5>
                                     <div class="card-body">
                                         <div id="c3chart_category" style="height: 420px;"></div>
                                     </div>
@@ -421,7 +421,7 @@
 
                             <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header"> Total Revenue</h5>
+                                    <h5 class="card-header"> Total Pengunjung </h5>
                                     <div class="card-body">
                                         <div id="morris_totalrevenue"></div>
                                     </div>
@@ -437,18 +437,18 @@
                                 <!-- social source  -->
                                 <!-- ============================================================== -->
                                 <div class="card">
-                                    <h5 class="card-header"> Sales By Social Source</h5>
+                                    <h5 class="card-header"> Media sosial Repairme </h5>
                                     <div class="card-body p-0">
                                         <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Facebook</span><span class="social-sales-count text-dark">120 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Facebook</span><span class="social-sales-count text-dark">Repairme</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Twitter</span><span class="social-sales-count text-dark">99 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Twitter</span><span class="social-sales-count text-dark">@repairme_perbaikan</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Instagram</span><span class="social-sales-count text-dark">76 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Instagram</span><span class="social-sales-count text-dark">@repairme_perbaikan</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Pinterest</span><span class="social-sales-count text-dark">56 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Pinterest</span><span class="social-sales-count text-dark">Repairme.com</span>
                                             </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Google Plus</span><span class="social-sales-count text-dark">36 Sales</span>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Google Plus</span><span class="social-sales-count text-dark">Repairme.com</span>
                                             </li>
                                         </ul>
                                     </div>
