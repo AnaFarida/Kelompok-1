@@ -189,7 +189,7 @@
                                 <a class="nav-link" href="<?= BASEURL; ?>/admin/dataMitra">Data Mitra</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="dashboard-sales.html">Pengunjung Repairme</a>
+                                <a class="nav-link"href="<?= BASEURL; ?>/admin/index">Pengunjung Repairme</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Pengaturan</a>
@@ -239,13 +239,13 @@
                     </div>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>GRAFIK </a>
+                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Grafik </a>
                     <div id="submenu-3" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/chart-morris.html">pengunjung</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/admin/chart">Pengunjung</a>
                            
                             </li>
                         </ul>
@@ -253,18 +253,18 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>MITRA</a>
+                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Mitra</a>
                     <div id="submenu-4" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= BASEURL; ?>/admin/dataMitra">Daftar Mitra </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/form-validation.html">Mitra terferivikasi</a>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/form-validation.html">Mitra Terverifikasi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/multiselect.html">Mitra Menunggu verifikasi</a>
-                            </li>
+                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/multiselect.html">Mitra Menunggu Verifikasi</a>
+                            </li> -->
                             <!-- <li class="nav-item">
                                 <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/datepicker.html">Date Picker</a>
                             </li>
@@ -275,11 +275,11 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>PELANGGAN</a>
+                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Pelanggan</a>
                     <div id="submenu-5" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/Pelanggan/index">DATA PELANGGAN</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/Pelanggan/index">Data Pelanggan</a>
                             </li>
                             <!-- <li class="nav-item">
                                 <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/data-tables.html">Data Tables</a>
@@ -291,20 +291,20 @@
                     Features
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i>User aktif & nonaktif</a>
+                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i>User Aktif & Nonaktif</a>
                     <div id="submenu-6" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/blank-page.html">User aktif mitra</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/blank-page.html">User Aktif Mitra</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/blank-page-header.html">User Nonaktif mitra</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/blank-page-header.html">User Nonaktif Mitra</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/login.html">User aktif Pelanggan</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/login.html">User Aktif Pelanggan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/404-page.html">User Nonaktif pelanggan</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/404-page.html">User Nonaktif Pelanggan</a>
                             </li>
                             
                             <!-- </li>
@@ -346,10 +346,10 @@
                                 <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/forgot-password.html">Lupa Password</a>
                                 </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/calendar.html">Calendar</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/calendar.html">Kalender</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/message-chat.html">Message Chat</a>
+                                <a class="nav-link" href="<?= BASEURL; ?>/adminSources/pages/message-chat.html">Pesan</a>
                             </li>
                         </ul>
                     </div>
@@ -396,7 +396,7 @@
                     <div id="submenu-10" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">HP</a>
+                                <a class="nav-link" href="#">Hp</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Laptop</a>
@@ -415,7 +415,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Hp Dan Laptop</a>
+                                <a class="nav-link" href="#">Hp dan Laptop</a>
                             </li>
                         </ul>
                     </div>

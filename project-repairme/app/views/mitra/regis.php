@@ -7,7 +7,7 @@
         <div class="card-content">
           <form action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data" name="formMitra">
             
-            <ul class="stepper linear">
+            <ul class="stepper">
 
               <li class="step active step1M">
                 <div class="step-title waves-effect waves-dark">Data Diri dan Usaha</div>
@@ -81,6 +81,16 @@
                     }
                     });
 
+                    $('#no_telpon').keyup(function(){
+                        var regex = /^[0-9]+$/;
+                        if (regex.test(this.value) !== true) {
+                        this.value = this.value.replace(/[^a-z ]+/, '');
+                        alert('Nomor Telefon anda memuat huruf atau simbol!');
+                        }
+                    });
+                    
+
+
                     
 
                     $('.step1').click(function(){
@@ -113,28 +123,13 @@
                             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                             }).addTo(map);
                            
-                            //icon option
-
-                            // var iconOptions = {
-                            //   iconUrl : 'http://localhost/Kelompok-1/project-repairme/public/img/leaflet/marker-icon.png',
-                            //   iconSize : [25,38]
-                            // }
-
-                            // var customIcon = L.icon(iconOptions);
-
-                            // var markerOptions = {
-                            //   title: "myLokasi",
-                            //   clickable: true,
-                            //   dragable: true,
-                            //   icon: customIcon
-                            // }
                             var popup = L.popup();
                             var lokasiLat;
                             var lokasiLong;
-                            var marker = L.marker([-7.91346, 113.82145]).addTo(map);
+                            var marker = L.marker([-7.91346, 113.82145]).addTo(map).bindPopup("Tekan area peta di titik usaha anda!").openPopup();
                             function onMapClick(e) {
                               marker.setLatLng(e.latlng);
-                              marker.bindPopup("You clicked the map at " + e.latlng.toString()).openPopup();
+                              marker.bindPopup("Lokasi Usaha anda disini : " + e.latlng.toString()).openPopup();
                                 lokasiLat = e.latlng.lat;
                                 lokasiLong = e.latlng.lng;
                                 $('#lat').attr('value',lokasiLat);
@@ -245,10 +240,12 @@
                     <div class="input-field col s12">
                       <input id="password" name="password" type="password" class="validate" required>
                       <label for="password">Password</label>
+                      <p class="password" style="font-size: 12px; color: red;"><p>
                     </div>
                     <div class="input-field col s12">
                       <input id="password2" name="password2" type="password" class="validate" required>
                       <label for="password2">Konfirmasi Password</label>
+                      <p class="password2" style="font-size: 12px; color: red;"><p>
                     </div>
                   </div>
                   <div class="step-actions">
@@ -260,11 +257,24 @@
                         $('#username').keyup(function(){
                           var val = $(this).val().length;
                           var a = $(this).val();
-                          $('.username').text(a.toLowerCase());
-                          if (val == 0) {
-                            alert('oke');
+                          $('.username').text("username anda akan tersimpan sebagai : " + a);
+                        });
+                        $('#password').keyup(function(){
+                        var regex = /^.{8,}$/;
+                        if (regex.test(this.value) !== true) {
+                        $('.password').text("Password Minimal 8 Karaketer");
+                        }else{
+                          $('.password').text("");
+                        }
+                        });
+
+                        $('#password2').keyup(function(){
+                          if ($(this).val() != $('#password').val()) {
+                            $('.password2').text("Password tidak sama!");
+                          }else{
+                            $('.password2').text("");
                           }
-                        })
+                        });
                       });
                     </script>
 

@@ -1,14 +1,5 @@
 <?php 
- 
-class Kategori_model{
-	function tampil_data(){
-		return $this->db->get('kategori');
-	}
- 
-	function input_data($data,$table){
-		$this->db->insert($table,$data);
-	}
-}
+
 class Kategori_model{
 	private $db;
 
@@ -16,41 +7,33 @@ class Kategori_model{
 		$this->db = new Database;
 	}
 	
-	public function getAllkategori(){
-		return $this->db->query("SELECT * FROM tb_kategori");
-	}
 	public function getAllmerk(){
 		return $this->db->query("SELECT * FROM tb_merk");
 	}
-	public function getAlltipe(){
-		return $this->db->query("SELECT * FROM tb_tipe");
-	}
-    public function inputdatabarang($data){
+	// public function getAlltipe(){
+		// return $this->db->query("SELECT * FROM tb_tipe");
+	// }
+    public function inputbarang($data){
 		
-		$kategori = $data['kategori'];
 		$merk = $data['merk'];
-		$tipe = $data['tipe']
+		// $tipe = $data['tipe']
+		$conn = mysqli_connect( 'localhost', 'root', '', 'repairme');
+		$merk = $data['merk'];
 
-
-		$inputbarang = $this->db->data("INSERT INTO tb_kategori VALUES (NULL,'$kategori')") 	&&
-			$this->db->data("INSERT INTO tb_merk VALUES ( NULL,'$merk')")  &&
-			$this->db->data("INSERT INTO tb_tipe VALUES ( NULL,'$tipe',)");
-	
-		return $inputbarang;
+	  $query = $this->db->query("SELECT * FROM tb_merk ORDER BY id_merk ASC");
+	  $barang = $this->db->data("INSERT INTO tb_merk VALUES (NULL, '$id_merk','$merk')");
+		return $query;
 		}
 
-		// public function deletekategori($id){
+		public function deletemerk($id){
 		
-	
-		// 	 $delkategori = $this->db->data("DELETE FROM `tb_kategori` WHERE id_kategori = ".$rows);
-		// 	 $delmerk = $this->db->data("DELETE FROM `tb_merk` WHERE id_merk ='id'");
-		// 	 $deltipe = $this->db->data("DELETE FROM tb_tipe WHERE id_tipe ='$id'");
-	
+	$delmerk = $this->db->data("DELETE FROM tb_merk WHERE id_merk ='$id'");
+			 
 			
 			
 			
-		// 	return $delkategori && $delmerk && $deltipe;
-		// }
+			return $delmerk;
+		}
 
 
 	}
