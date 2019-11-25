@@ -17,12 +17,10 @@ class Kategori_model{
 		
 		$merk = $data['merk'];
 		// $tipe = $data['tipe']
-		$conn = mysqli_connect( 'localhost', 'root', '', 'repairme');
-		$merk = $data['merk'];
 
-	  $query = $this->db->query("SELECT * FROM tb_merk ORDER BY id_merk ASC");
-	  $barang = $this->db->data("INSERT INTO tb_merk VALUES (NULL, '$id_merk','$merk')");
-		return $query;
+	  	$result = $this->db->data("INSERT INTO tb_merk VALUES (NULL,'$merk')");
+	  	return $result;
+		
 		}
 
 		public function deletemerk($id){
