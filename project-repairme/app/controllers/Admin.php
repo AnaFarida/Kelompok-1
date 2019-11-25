@@ -6,6 +6,13 @@ class Admin extends Controller{
 		$this->view('templates/footerAdmin');
 	}
 
+	public function barang(){
+		$this->view('templates/headerAdmin');
+		$this->view('admin/tambahKategori');
+		$this->view('templates/footerAdmin');
+	}
+
+
 	// public function finance(){
 	// 	require '../app/views/admin/dashboard-finance.html';
 	// }
