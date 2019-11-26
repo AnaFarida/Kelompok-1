@@ -67,10 +67,8 @@
     </div>
     </header><!-- #header -->
 
-
-
      <!-- Modal -->
-   <div class="modal fade hide" id="formModal" tabindex="-1" role="dialog" aria-labelledby="judulModal" aria-hidden="true">
+   <div class="modal left fade hide" id="formModal" tabindex="-1" role="dialog" aria-labelledby="judulModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
@@ -101,3 +99,4 @@
       </div>
    </div>
 </div>
+

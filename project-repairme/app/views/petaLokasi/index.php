@@ -4,13 +4,14 @@ html {
   height: 100%;
   font-family:Arial;
 }
-  
+
 #map {
   margin-top: 81px;
   width: 100%;
   height: 90%;
   z-index:100;
 }
+
 #mapSearchContainer{
   position:fixed;
   top:20px;
@@ -29,9 +30,10 @@ html {
   left:60px;
   z-index:99999;
 }
+
 </style>
 <div class="profile"></div>
-<div id="map">
+<div id="map" class="position-relative">
 <div class='pointer'> Click search button</div>
 
 <script>
@@ -62,9 +64,20 @@ var c = new L.Control.Coordinates();
     map.on('click', onMapClick);
 
 </script>
-
-
 </div>
+<div class="fixed-bottom" style="bottom: 10px; right: 5px;">
+  
+<div class="card" style="width: 18rem;" id="horas">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+
 
 <?php foreach ($data['mitra'] as $mitra) : ?>
 <script>
@@ -76,6 +89,9 @@ var c = new L.Control.Coordinates();
 <script>
   $(marker).click(function(){
     map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
-    $('#map').attr();
+    $('.card').addClass('mapres');
        });
 </script>
+
+<?php endforeach; ?>
+

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>BootStrap Modal as Left/Right Sidebar</title>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='css/bootstrap.css'>
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
@@ -12,6 +13,7 @@
 	
 	
 	<div class="text-center">
+		<a href="" data-toggle="modal" data-target="#formModal">REGISTRASI</a>
 		<button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
 			Left Sidebar Modal
 		</button>
@@ -66,7 +68,27 @@
 	<a href="http://www.bootpen.com" target="_blank">Get more code snippets</a>
 </footer>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src='js/bootstrap.js'></script>
 </body>
 </html>
+
+
+   <!-- Modal -->
+   <div class="modal fade hide" id="formModal" tabindex="-1" role="dialog" aria-labelledby="judulModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="judulModal">Pilih Jenis Registrasi</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+              halloooloo
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
