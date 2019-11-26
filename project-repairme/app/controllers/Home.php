@@ -9,8 +9,8 @@ class Home extends Controller{
 		// $data['user'] = $this->model('User_model')->getUser();
 		// //memangil method view dengan parameter $data
 		// //templates/header -> untuk lokasi filenya ada dimana
-		$this->view('templates/header', $data);
-		$this->view('home/index');
-		$this->view('templates/footer');
+		// $this->view('templates/header', $data);
+		$this->view('home/index2');
+		// $this->view('templates/footer');
 	}
 }
