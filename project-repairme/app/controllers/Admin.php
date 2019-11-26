@@ -35,5 +35,41 @@ class Admin extends Controller{
 		$this->view('admin/chart');
 		$this->view('templates/footerAdmin');
 	}
+
+	public function insertkategori(){
+	if($this->model('Admin_model')->inputkategori($_POST) > 0){
+	header ('Location: '.BASEURL.'/admin/');
+	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/admin/');
+	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
+	}
 }
 
+public function insertmerk(){
+	if($this->model('Admin_model')->inputmerk($_POST) > 0){
+	header ('Location: '.BASEURL.'/admin/barang');
+	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/admin/barang');
+	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
+	}
+}
+
+public function inserttipe(){
+	if($this->model('Admin_model')->inputtipe($_POST) > 0){
+	header ('Location: '.BASEURL.'/admin/barang');
+	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/admin/barang');
+	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
+	}
+}
+
+}
