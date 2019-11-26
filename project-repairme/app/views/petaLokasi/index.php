@@ -1,3 +1,9 @@
+<script>
+    $(document).ready(function(){
+    $('.miniProfile').hide();
+  });
+</script>
+
 <style>
   body,
 html {
@@ -34,9 +40,25 @@ html {
 </style>
 <div class="profile"></div>
 <div id="map" class="position-relative">
+  <?php foreach ($data['mitra'] as $mitra) : ?>
+  <div class="fixed-bottom miniProfile"  style="margin-left: 75%;">
+  <div class="card" style="width: 18rem;" id="horas">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title miniProfileTitle">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="<?= BASEURL ?>" class="btn btn-primary" style="color: white;">Pilih Mitra Ini!</a>
+  </div>
+</div>
+</div>
+<?php endforeach; ?>
+
+
 <div class='pointer'> Click search button</div>
 
 <script>
+
+
 var map = L.map('map').setView([-7.91346, 113.82145], 17);
 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -65,17 +87,7 @@ var c = new L.Control.Coordinates();
 
 </script>
 </div>
-<div class="fixed-bottom" style="bottom: 10px; right: 5px;">
-  
-<div class="card" style="width: 18rem;" id="horas">
-  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
+
 
 
 
@@ -90,7 +102,11 @@ var c = new L.Control.Coordinates();
   $(marker).click(function(){
     map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
     $('.card').addClass('mapres');
+      $('.miniProfile').show();
+      $('.miniProfileTitle').text('<?= $mitra['nama_usaha']; ?>');
+
        });
+
 </script>
 
 <?php endforeach; ?>
