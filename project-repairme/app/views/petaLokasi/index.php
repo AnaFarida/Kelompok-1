@@ -1,6 +1,7 @@
 <script>
     $(document).ready(function(){
-    $('.miniProfile').hide();
+    // $('.miniProfile').hide();
+    // alert('oke');
   });
 </script>
 
@@ -12,9 +13,9 @@ html {
 }
 
 #map {
-  margin-top: 81px;
+  margin-top: 60px;
   width: 100%;
-  height: 90%;
+  height: 100%;
   z-index:100;
 }
 
@@ -110,4 +111,3 @@ var c = new L.Control.Coordinates();
 </script>
 
 <?php endforeach; ?>
-

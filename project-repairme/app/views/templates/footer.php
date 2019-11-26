@@ -1,25 +1,19 @@
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
-
-  <!-- JavaScript Libraries -->
-
-  <script src="<?= BASEURL; ?>/homes/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/easing/easing.min.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/mobile-nav/mobile-nav.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/wow/wow.min.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/waypoints/waypoints.min.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/counterup/counterup.min.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="<?= BASEURL; ?>/homes/lib/lightbox/js/lightbox.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="<?= BASEURL; ?>/homes/js/main.js"></script>
-
-</body>
+    <!--  
+    JavaScripts
+    =============================================
+    -->
+    <!-- <script src="<?= BASEURL; ?>/home-master/assets/lib/jquery/dist/jquery.js"></script> -->
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/wow/dist/wow.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/isotope/dist/isotope.pkgd.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/flexslider/jquery.flexslider.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/smoothscroll.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/js/plugins.js"></script>
+    <script src="<?= BASEURL; ?>/home-master/assets/js/main.js"></script>
+  </body>
 </html>
