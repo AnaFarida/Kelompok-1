@@ -1,6 +1,7 @@
 <script>
 $(document).ready(function(){
 $('.miniProfile').hide();
+$('.pilihMitra').hide();
 // alert('oke');
 });
 </script>
@@ -78,8 +79,9 @@ marker.bindPopup('<?= $mitra['nama_usaha']; ?>');
 <script>
 $(marker).click(function(){
 map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
-$('.card').addClass('mapres');
+const idMitra = '<?= $mitra['id_mitra']; ?>'
 $('.miniProfile').show();
+$('.pilihMitra').show();
 $('.tutorial').hide();
 $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
 $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
@@ -111,7 +113,7 @@ $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>
     </div>
   </div>
 </div>
-<div class="row mt-70 miniProfile" style="position: absolute; right: 10px; width: 30%;">
+<div class="row mt-70 miniProfile" style="position: absolute; right: 10px; width: 30%; height: 500px; overflow: auto;">
   <div class="col-sm-12">
     <h4 class="font-alt mb-0 namaMitra">Mitra</h4>
     <hr class="divider-w mt-10 mb-20">
@@ -125,7 +127,6 @@ $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>
       <div class="tab-pane active" id="description">
         <img class="fotoMitra" src="" alt="" width="678px" height="452px">
         <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
-        <button class="btn btn-g btn-round btn-xs" type="submit">Tampilkan Lebih</button>
       </div>
       <div class="tab-pane" id="data-sheet">
         <table class="table table-striped ds-table table-responsive">
@@ -212,7 +213,6 @@ $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>
             </div>
           </div>
           <div class="col-sm-12">
-            <button class="btn btn-round btn-d" type="submit">Submit Review</button>
           </div>
         </div>
       </form>
@@ -221,43 +221,27 @@ $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>
 </div>
 </div>
 </div>
-<?php foreach ($data['mitra'] as $mitra):?>
-
-<?php endforeach; ?>
+<div style="position: absolute; right:30px; bottom: 25px; width: 25%;" class="pilihMitra">
+<button class="btn btn-d btn-round btn-block" type="button">Pilih Mitra</button>
+</div>
 
 <script>
-  $(document).ready(function() {
-    var showChar = 100; 
-    var moretext = "Show more >";
-    var lesstext = "Show less";
-    
+  $(document).ready(function(){
+    $('.pilihMitra').click(function(){
+      $('.miniProfile').hide();
+    })
+  });
+</script>
 
-    $('.more').each(function() {
-        var content = $(this).html();
- 
-        if(content.length > showChar) {
- 
-            var c = content.substr(0, showChar);
-            var h = content.substr(showChar, content.length - showChar);
- 
-            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
- 
-            $(this).html(html);
-        }
- 
-    });
- 
-    $(".morelink").click(function(){
-        if($(this).hasClass("less")) {
-            $(this).removeClass("less");
-            $(this).html(moretext);
-        } else {
-            $(this).addClass("less");
-            $(this).html(lesstext);
-        }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
-    });
-});
-    </script>
+
+<!-- <div class="barang" style="position: absolute; right: 0; top: 20%; width: 250px;">
+                <select class="form-control">
+                  <option selected="selected">Default Sorting</option>
+                  <option>Popular</option>
+                  <option>Latest</option>
+                  <option>Average Price</option>
+                  <option>High Price</option>
+                  <option>Low Price</option>
+                </select>
+</div>
+ -->
