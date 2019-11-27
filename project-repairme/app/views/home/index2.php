@@ -1,8 +1,8 @@
  <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="<?= BASEURL; ?>/home-master/assets/images/section-2.jpg">
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1">We love to create</div>
-            <div class="font-alt mb-40 titan-title-size-3"><span class="rotate">We are contemporary | We are amazing | We are best</span>
+            <div class="font-alt mb-30 titan-title-size-1">RepairMe</div>
+            <div class="font-alt mb-40 titan-title-size-3"><span class="rotate">Jasa Perbaikan Hp dan Laptop | Segera Perbaiki Sekarang | Diskon yang meriah</span>
             </div><a class="btn btn-border-w btn-circle" href="<?= BASEURL; ?>/lokasiPerbaikan">Perbaiki Sekarang!</a>
             <!-- </div><a class="section-scroll btn btn-border-w btn-circle" href="#about">Learn More</a> -->
           </div>
@@ -13,8 +13,8 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2">
-                <h2 class="module-title font-alt">Welcome to Titan</h2>
-                <div class="module-subtitle font-serif large-text">We’re an award winning London based digital agency, lovingly curating pixels for maximum impact. We don’t have a style — we have standards.</div>
+                <h2 class="module-title font-alt">Tentang RepairMe</h2>
+                <div class="module-subtitle font-serif large-text">RepairMe adalah jasa tempat dan solusi untuk anda mencari perbaikan hp atau laptop yang mengalami kerusakan dengan berbagai mitra terpercaya, berkualitas, dan cepat dalam memperbaiki hp atau laptop anda. RepairMe menyediakan berbagai promosi pelayanan untuk memuaskan pengunjung kami. RepairMe juga merupakan solusi untuk anda yang memiliki usaha dalam bidang perbaikan hp dan laptop dengan berbagai paket pemasangan iklan dan mendapatkan pelanggan dengan mudah.</div>
               </div>
             </div>
             <div class="row">
@@ -29,37 +29,37 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Our Services</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                <h2 class="module-title font-alt">Kelebihan RepairMe</h2>
+                <div class="module-subtitle font-serif">Kelebihan dari Repairme berdasarkan testimoni dan pelayanan yang kami berikan untuk mempermudah anda sebagai pelanggan dan mitra kami.</div>
               </div>
             </div>
             <div class="row multi-columns-row">
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-lightbulb"></span></div>
-                  <h3 class="features-title font-alt">Ideas and concepts</h3>
-                  <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                  <h3 class="features-title font-alt">Tepat Waktu</h3>
+                  <p>Perbaikan Hp anda akan diselesaikan dengan jangka waktu yang sudah ditentukan oleh mitra yang akan memperbaiki kerusakan Hp atau Laptop anda.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-bike"></span></div>
-                  <h3 class="features-title font-alt">Optimised for speed</h3>
-                  <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                  <h3 class="features-title font-alt">Antar atau Jemput</h3>
+                  <p>Kami juga melayani antar atau jemput barang anda.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="features-title font-alt">Designs &amp; interfaces</h3>
-                  <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                  <h3 class="features-title font-alt">Banyak Diskon</h3>
+                  <p>Semakin anda memperbaiki Hp atau Laptop anda pada kami, kami akan memberikan diskon pada anda sesuai yang tertera pada web ini.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-gears"></span></div>
-                  <h3 class="features-title font-alt">Highly customizable</h3>
-                  <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
+                  <h3 class="features-title font-alt">Mitra Terpercaya</h3>
+                  <p>Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepaiRme maka mitra tersebut akan dikeluarkan dan akan dikenakan denda.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
@@ -99,8 +99,8 @@
               <div class="col-sm-12">
                 <div class="video-box">
                   <div class="video-box-icon"><a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><span class="icon-video"></span></a></div>
-                  <div class="video-title font-alt">Presentation</div>
-                  <div class="video-subtitle font-alt">Watch the video about our new products</div>
+                  <div class="video-title font-alt">Presentation RepairMe</div>
+                  <div class="video-subtitle font-alt">Tonton VIDEO TENTANG PRODUK BARU KAMI</div>
                 </div>
               </div>
             </div>
@@ -443,16 +443,16 @@
             <div class="row">
               <div class="col-sm-6 col-md-6 col-lg-4 col-lg-offset-2">
                 <div class="callout-text font-alt">
-                  <h3 class="callout-title">Subscribe now</h3>
-                  <p>We will not spam your email.</p>
+                  <h3 class="callout-title">Berlangganan Sekarang</h3>
+                  <p>Kami Tidak AKan SPAM Email Anda.</p>
                 </div>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-4">
                 <div class="callout-btn-box">
                   <form id="subscription-form" role="form" method="post" action="php/subscribe.php">
                     <div class="input-group">
-                      <input class="form-control" type="email" id="semail" name="semail" placeholder="Your Email" data-validation-required-message="Please enter your email address." required="required"/><span class="input-group-btn">
-                        <button class="btn btn-g btn-round" id="subscription-form-submit" type="submit">Submit</button></span>
+                      <input class="form-control" type="email" id="semail" name="semail" placeholder="Email Anda" data-validation-required-message="Please enter your email address." required="required"/><span class="input-group-btn">
+                        <button class="btn btn-g btn-round" id="subscription-form-submit" type="submit">Kirim</button></span>
                     </div>
                   </form>
                   <div class="text-center" id="subscription-response"></div>
@@ -474,20 +474,20 @@
                 <form id="contactForm" role="form" method="post" action="php/contact.php">
                   <div class="form-group">
                     <label class="sr-only" for="name">Name</label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name."/>
+                    <input class="form-control" type="text" id="name" name="name" placeholder="Nama Anda" required="required" data-validation-required-message="Please enter your name."/>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
                     <label class="sr-only" for="email">Email</label>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."/>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Email Anda" required="required" data-validation-required-message="Please enter your email address."/>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="Your Message*" required="required" data-validation-required-message="Please enter your message."></textarea>
+                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="Pesan Anda" required="required" data-validation-required-message="Please enter your message."></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="text-center">
-                    <button class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit">Submit</button>
+                    <button class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit">Kirim</button>
                   </div>
                 </form>
                 <div class="ajax-response font-alt" id="contactFormResponse"></div>
@@ -500,33 +500,32 @@
             <div class="row">
               <div class="col-sm-3">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">About Titan</h5>
-                  <p>The languages only differ in their grammar, their pronunciation and their most common words.</p>
-                  <p>Phone: +1 234 567 89 10</p>Fax: +1 234 567 89 10
-                  <p>Email:<a href="#">somecompany@example.com</a></p>
+                  <h5 class="widget-title font-alt">Tentang RepairMe</h5>
+                  <p>RepairMe adalah tempat dan solusi untuk  mencari perbaikan Hp dan Laptop anda yang mengalami kerusakan dengan berbagai mitra terpercaya.</p>
+                  <p>Phone : +628XXXXXXX</p>
+                  <p>Email :<a href="#"> RepairMe@gmail.com</a></p>
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">Recent Comments</h5>
+                  <h5 class="widget-title font-alt">Kelebihan RepairMe</h5>
                   <ul class="icon-list">
-                    <li>Maria on <a href="#">Designer Desk Essentials</a></li>
-                    <li>John on <a href="#">Realistic Business Card Mockup</a></li>
-                    <li>Andy on <a href="#">Eco bag Mockup</a></li>
-                    <li>Jack on <a href="#">Bottle Mockup</a></li>
-                    <li>Mark on <a href="#">Our trip to the Alps</a></li>
+                    <li>Tepat Waktu</li>
+                    <li>Antar atau Jemput</li>
+                    <li>Banyak Diskon</li>
+                    <li>Mitra Terpercaya</li>
                   </ul>
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">Blog Categories</h5>
+                  <h5 class="widget-title font-alt">Paket Promo</h5>
                   <ul class="icon-list">
-                    <li><a href="#">Photography - 7</a></li>
-                    <li><a href="#">Web Design - 3</a></li>
-                    <li><a href="#">Illustration - 12</a></li>
-                    <li><a href="#">Marketing - 1</a></li>
-                    <li><a href="#">Wordpress - 16</a></li>
+                    <li><a href="#">Paket 1</a></li>
+                    <li><a href="#">Paket 2</a></li>
+                    <li><a href="#">Paket 3</a></li>
+                    <li><a href="#">Paket 4</a></li>
+                    <li><a href="#">Paket 5</a></li>
                   </ul>
                 </div>
               </div>
@@ -559,7 +558,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">TitaN</a>, All Rights Reserved</p>
+                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="index.html">RepairMe</a></p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
