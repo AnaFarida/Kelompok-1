@@ -347,6 +347,7 @@
               <!--                        i.fa.fa-search-->
               <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">Documentation</a>
                 <ul class="dropdown-menu">
+                  <li><a href="<?= BASEURL; ?>/admin">Admin</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/documentation.html#contact">Contact Form</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/documentation.html#reservation">Reservation Form</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/documentation.html#mailchimp">Mailchimp</a></li>

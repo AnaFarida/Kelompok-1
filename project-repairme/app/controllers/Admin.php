@@ -7,8 +7,11 @@ class Admin extends Controller{
 	}
 
 	public function barang(){
+		$data['kategori'] = $this->model('Admin_model')->getAllKategori();
+		//$data['merk'] = $this->model('Admin_model')->getAllMerk();
+		// $data['tipe'] = $this->model('Admin_model')->getAllTipe();
 		$this->view('templates/headerAdmin');
-		$this->view('admin/tambahKategori');
+		$this->view('admin/tambahKategori', $data);
 		$this->view('templates/footerAdmin');
 	}
 

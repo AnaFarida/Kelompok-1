@@ -10,16 +10,20 @@ class Admin_model{
 	}
 
 	public function getAllKategori(){
-		return $this->db->query("SELECT * FROM tb_kategori");
+		$data1 = $this->db->query("SELECT * FROM tb_kategori");
+		$data2 = $this->db->query("SELECT * FROM tb_merk");
+		$data3 = $this->db->query("SELECT * FROM tb_tipe");
+		$result = array('kategori' => $data1, 'merk' => $data2, 'tipe' => $data3);
+		return $result;
 	}
 	
-	public function getAllMerk(){
-		return $this->db->query("SELECT * FROM tb_merk");
-	}
+	// public function getAllMerk(){
+	// 	return $this->db->query("SELECT * FROM tb_merk");
+	// }
 	
-	public function getAlltipe(){
-		return $this->db->query("SELECT * FROM tb_tipe");
-	}
+	// public function getAlltipe(){
+	// 	return $this->db->query("SELECT * FROM tb_tipe");
+	// }
 
 	public function inputkategori($data){
 		
