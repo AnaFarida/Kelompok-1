@@ -1,38 +1,40 @@
 <div class="lokasiMitra mt-80" style="position: absolute; left: 4%;">
-	
-<h4 class="font-alt mb-0">Lokasi mitra</h4>
+  
+  <h4 class="font-alt mb-0">Lokasi mitra</h4>
   <hr class="divider-w mt-10 mb-20" style="width: 120%;">
 </div>
 <div id="map" style="position: absolute;margin-left: 3%; margin-right: 3%; top: 24%; width: 25%; height: 65%; z-index:100; border: solid black 1px;">
-
-<?php foreach ($data['id'] as $mitra):?>
-
-<script>
+  <?php foreach ($data['id'] as $mitra):?>
+  <script>
   var map = L.map('map').setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
   var marker = L.marker([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>]).addTo(map);
-	marker.bindPopup('<?= $mitra['nama_usaha']; ?>').openPopup();
+  marker.bindPopup('<?= $mitra['nama_usaha']; ?>').openPopup();
   </script>
-
-
 </div>
-
 <div class="namaMitra mt-80" style="position: absolute; left: 35%;">
-	<h4 class="font-alt mb-0 namaMitra"><?= $mitra['nama_usaha']; ?></h4>
-    <hr class="divider-w mt-10 mb-20" style="width: 120%;">
+  <h4 class="font-alt mb-0 namaMitra"><?= $mitra['nama_usaha']; ?></h4>
+  <hr class="divider-w mt-10 mb-20" style="width: 120%;">
 </div>
-<?php endforeach; ?>
-<div class="row mt-70 miniProfile" style="position: absolute; left: 33%; top: 12%; width: 30%; height: 50%; overflow: auto;">
-  <div class="col-sm-12">
-    
+
+<div class="row mt-70 miniProfile" style="position: absolute; left: 33%; top: 12%; width: 30%; height: 500px; overflow: auto;">
+    <div class="col-sm-12">
+
     <ul class="nav nav-tabs font-alt" role="tablist">
-      <li><a class="active" href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>Data sheet</a></li>
+      <li class="active"><a href="#description" data-toggle="tab"><span class="icon-tools-2"></span>Deskripsi</a></li>
+      <li><a href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>Data</a></li>
       <li><a href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
     </ul>
+
     <div class="tab-content">
-      <div class="tab-pane active" id="data-sheet">
+      <div class="tab-pane active" id="description">
+        <img class="fotoMitra" src="<?= BASEURL ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt="" width="678px" height="452px">
+<?php endforeach; ?>
+        <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
+      </div>
+      <div class="tab-pane" id="data-sheet">
         <table class="table table-striped ds-table table-responsive">
           <tbody>
             <tr>
@@ -125,3 +127,55 @@
 </div>
 </div>
 </div>
+
+<div class="mt-80" style="position: absolute; left: 68%;">
+  <h4 class="font-alt mb-0 namaMitra">Barang Dan Kerusakan</h4>
+  <hr class="divider-w mt-10 mb-20" style="width: 120%;">
+
+</div>
+
+
+
+<div class="barang et-icons" style="position: absolute; top: 25%; right: 8%; width: 24%;">
+<p>Pilih Barang Yang Ingin Di Perbaiki?</p>
+<span class="box1" style="width: 100%;">
+<span class="icon-laptop" aria-hidden="true" style="width: 47.8%;">
+  <button class="btn btn-block btn-round btn-d tlaptop" type="button" style="margin-top: 3px;">LAPTOP</button></span>
+
+<span class="icon-phone" aria-hidden="true" style="position: absolute; width: 47.8%; border: 0; left: 47.5%; right: -40px;  ">
+  <button class="btn btn-block btn-round btn-d thp" type="button" style="position: absolute; right: -12px; left: 0; margin-top: 3px; width: 108%;">HANDPHONE</button>
+</span>
+ </span>
+
+</div>
+
+  <form class="row detailKerusakan" style="position: absolute; top: 25%; right: 8%; width: 24%;">
+                <select class="form-control" style="margin: 10px;">
+                  <option selected="selected">MERK</option>
+                  <option>A</option>
+                </select>
+                <select class="form-control" style="margin: 10px;">
+                  <option selected="selected">TIPE</option>
+                  <option>A</option>
+                </select>
+                <select class="form-control" style="margin: 10px;">
+                  <option selected="selected">KERUSAKAN</option>
+                  <option>A</option>
+                </select>
+                <button class="btn btn-block btn-round btn-d" type="submit" style="margin: 10px; margin-top: 30px;">KIRIM PERMINTAAN</button>
+</form>
+
+<script>
+  $(document).ready(function(){
+    $('.detailKerusakan').hide();
+    $('.tlaptop').on('click', function(){
+      $('.barang').hide();  
+      $('.detailKerusakan').show();
+    });
+
+    $('.thp').on('click', function(){
+      $('.barang').hide();  
+      $('.detailKerusakan').show();
+    });
+  });
+</script>
