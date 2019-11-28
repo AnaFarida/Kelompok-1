@@ -29,7 +29,7 @@ class Admin_model{
 
 	public function inputmerk($data){
 		
-		$merk = $data['merk'];
+ 		$merk = $data['merk'];
 
 		
 
@@ -46,6 +46,7 @@ class Admin_model{
 		$result = $this->db->data("INSERT INTO tb_tipe VALUES ( NULL,'$tipe')");
 		return $result;
 	}
-		
+
+
 
 }

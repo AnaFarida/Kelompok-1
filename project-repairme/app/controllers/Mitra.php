@@ -7,6 +7,12 @@ class Mitra extends Controller{
 		$this->view('mitra/index', $data);
 		$this->view('templates/footer');
 	}
+
+public function Panel(){
+		$this->view('templates/headerPanel');
+		$this->view('mitra/PanelMitra');
+		$this->view('templates/footerPanel');
+	}
 public function registrasi(){
 	//$data['judul'] = 'Registrasi';
 	// $this->view('templates/headerReg');

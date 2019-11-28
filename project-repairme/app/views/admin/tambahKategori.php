@@ -40,6 +40,7 @@
                                         <td>
                                             
                                             <select name="kategori" id="kategori">
+                                                <option value="">pilih kategori</option>
                                                 <?php foreach ($data['kategori']['kategori'] as $kategori):?>
                                                 <option value=""><?= $kategori['kategori']; ?></option>
                                                 <?php endforeach; ?>
@@ -64,6 +65,7 @@
                                                 <tr>
                                                     <td>
                                                      <select name="merk" id="merk">
+                                                        <option value="">pilih merk</option>
                                                     <?php foreach ($data['kategori']['merk'] as $merk):?>
                                                     <option value=""><?= $merk['merk']; ?></option>
                                                     <?php endforeach; ?>
@@ -92,6 +94,7 @@
                                                 <tr>
                                                     <td>
                                                       <select name="tipe" id="tipe">
+                                                        <option value="">pilih tipe</option>
                                                         <?php foreach ($data['kategori']['tipe'] as $tipe):?>
                                                         <option value=""><?= $tipe['tipe']; ?></option>
                                                         <?php endforeach; ?>
