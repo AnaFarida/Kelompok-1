@@ -1,9 +1,13 @@
 <?php
 class Admin extends Controller{
 	public function index(){
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'admin') {
 		$this->view('templates/headerAdmin');
 		$this->view('admin/index');
 		$this->view('templates/footerAdmin');
+		}else{
+			header('Location:'.BASEURL.'/login');
+		}
 	}
 
 	public function barang(){

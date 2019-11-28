@@ -9,9 +9,11 @@ class Mitra extends Controller{
 	}
 public function registrasi(){
 	//$data['judul'] = 'Registrasi';
-	$this->view('templates/headerReg');
-	$this->view('mitra/regis');
-	$this->view('templates/footerReg');
+	// $this->view('templates/headerReg');
+	$this->view('templates/header');
+	$this->view('mitra/registrasi');
+	$this->view('templates/footer');
+	// $this->view('templates/footerReg');
 }
 public function insertMitra(){
 	// var_dump($_POST);
