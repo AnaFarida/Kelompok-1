@@ -46,7 +46,7 @@ margin-top: 100px;
             <div class="card-footer-item card-footer-item-bordered">
                 <a href="#" class="footer-link">Create An Account</a></div>
                 <div class="card-footer-item card-footer-item-bordered">
-                    <a href="#" class="footer-link">Forgot Password</a>
+                    <a href="<?= BASEURL; ?>/Changepassword/changepassword" class="footer-link">Forgot Password</a>
                 </div>
             </div>
         </div>

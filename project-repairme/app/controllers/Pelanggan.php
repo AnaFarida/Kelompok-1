@@ -7,6 +7,13 @@ class Pelanggan extends Controller{
 		$this->view('pelanggan/index', $data);
 		$this->view('templates/footerAdmin');
 	}
+	public function panel(){
+		$this->view('templates/headerPelanggan');
+		$this->view('pelanggan/PanelPelanggan');
+		$this->view('templates/footerPelanggan');
+	}
+
+
 public function registrasi(){
 	$this->view('templates/header');
 	$this->view('pelanggan/registrasi');
