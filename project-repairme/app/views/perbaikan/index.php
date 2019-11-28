@@ -6,9 +6,6 @@
 $(document).ready(function(){
 $('.miniProfile').hide();
 $('.pilihMitra').hide();
-$('.barang').hide();
-// $('#map').attr('disabled',);
-// $('#map').hide();
 });
 </script>
 
@@ -42,7 +39,7 @@ z-index:99999;
 <div id="map" style="position: absolute;margin-left: 1px; margin-right: 100px; margin-top: 60px; width: 70%; height: 570px; z-index:100; border: solid black 1px;">
   <div class='pointer'> Click search button</div>
   <script>
-  var map = L.map('map').setView([-7.91346, 113.82145], 17);
+  var map = L.map('map').setView([-7.91346, 113.82145] ,17);
   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
@@ -54,6 +51,17 @@ z-index:99999;
   results.addLayer(L.marker(data.results[i].latlng));
   }
   });
+  
+// var hpIcon = L.icon({
+//     iconUrl: '<?= BASEURL; ?>/img/leaflet/mymarker.png',
+//     shadowUrl: '<?= BASEURL; ?>/img/leaflet/shadow.png',
+
+//     iconSize:     [50, 50], 
+//     shadowSize:   [50, 64], 
+//     iconAnchor:   [22, 94], 
+//     shadowAnchor: [4, 62], 
+//     popupAnchor:  [-3, -76] 
+// });
   setTimeout(function(){$('.pointer').fadeOut('slow');},3400);
   var c = new L.Control.Coordinates();
   c.addTo(map);
@@ -78,7 +86,6 @@ $('#id').attr('value', '<?= $mitra['id_mitra']; ?>');
 $('.miniProfile').show();
 $('.pilihMitra').show();
 $('.tutorial').hide();
-$('.barang').hide();
 $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
 $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
 map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
