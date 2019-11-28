@@ -39,7 +39,11 @@
                                     <tr>
                                         <td>
                                             
-                                            <input id="kategori" type="text" name="kategori" data-parsley-trigger="change" placeholder="" autocomplete="off" class="form-control">
+                                            <select name="kategori" id="kategori">
+                                                <?php foreach ($data['kategori']['kategori'] as $kategori):?>
+                                                <option value=""><?= $kategori['kategori']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
                                         </td>
                                         <td>
                                             
@@ -59,9 +63,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        
-                                                        <input id="merk" type="text" name="merk" data-parsley-trigger="change" placeholder="" autocomplete="off" class="form-control">
-                                                    </td>
+                                                     <select name="merk" id="merk">
+                                                    <?php foreach ($data['kategori']['merk'] as $merk):?>
+                                                    <option value=""><?= $merk['merk']; ?></option>
+                                                    <?php endforeach; ?>
+                                                     </select>
                                                     <td>
                                                         
                                                         <div class="col-sm-6 pl-0">
@@ -85,8 +91,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        
-                                                        <input id="tipe" type="text" name="tipe" data-parsley-trigger="change" placeholder="" autocomplete="off" class="form-control">
+                                                      <select name="tipe" id="tipe">
+                                                        <?php foreach ($data['kategori']['tipe'] as $tipe):?>
+                                                        <option value=""><?= $tipe['tipe']; ?></option>
+                                                        <?php endforeach; ?>
+                                                        </select>
                                                     </td>
                                                     <td>
                                                         
@@ -225,3 +234,4 @@
                                 </div>
                             </div>
                         </div>
+
