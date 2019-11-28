@@ -38,7 +38,7 @@
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-lightbulb"></span></div>
                   <h3 class="features-title font-alt">Tepat Waktu</h3>
-                  <p>Perbaikan Hp anda akan diselesaikan dengan jangka waktu yang sudah ditentukan oleh mitra yang akan memperbaiki kerusakan Hp atau Laptop anda.</p>
+                  <p>Perbaikan Hp atau Laptop anda akan diselesaikan dengan jangka waktu yang sudah ditentukan oleh mitra yang akan memperbaiki kerusakan Hp atau Laptop anda.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
@@ -52,17 +52,17 @@
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-tools"></span></div>
                   <h3 class="features-title font-alt">Banyak Diskon</h3>
-                  <p>Semakin anda memperbaiki Hp atau Laptop anda pada kami, kami akan memberikan diskon pada anda sesuai yang tertera pada web ini.</p>
+                  <p>Semakin anda berlangganan memperbaiki Hp atau Laptop anda pada mitra tersebut, kami akan memberikan diskon pada anda sesuai yang tertera pada website ini.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-gears"></span></div>
                   <h3 class="features-title font-alt">Mitra Terpercaya</h3>
-                  <p>Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepaiRme maka mitra tersebut akan dikeluarkan dan akan dikenakan denda.</p>
+                  <p>Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepaiRme maka mitra tersebut akan dikeluarkan dan akan dikenakan sanksi.</p>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6 col-xs-12">
+              <!--<div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-tools-2"></span></div>
                   <h3 class="features-title font-alt">Coding &amp; development</h3>
@@ -88,7 +88,7 @@
                   <div class="features-icon"><span class="icon-lifesaver"></span></div>
                   <h3 class="features-title font-alt">Dedicated support</h3>
                   <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
-                </div>
+                </div>-->
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Our Works</h2>
+                <h2 class="module-title font-alt">Karya Kami</h2>
                 <div class="module-subtitle font-serif"></div>
               </div>
             </div>
@@ -119,11 +119,11 @@
             <div class="row">
               <div class="col-sm-12">
                 <ul class="filter font-alt" id="filters">
-                  <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".illustration" data-wow-delay="0.2s">Illustration</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".marketing" data-wow-delay="0.4s">Marketing</a></li>
+                  <li><a class="current wow fadeInUp" href="#" data-filter="*">Semua</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".illustration" data-wow-delay="0.2s">Ilustrasi</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".marketing" data-wow-delay="0.4s">Pemasaran</a></li>
                   <li><a class="wow fadeInUp" href="#" data-filter=".photography" data-wow-delay="0.6s">Photography</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".webdesign" data-wow-delay="0.6s">Web Design</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".webdesign" data-wow-delay="0.6s">Desain Web</a></li>
                 </ul>
               </div>
             </div>
@@ -172,12 +172,12 @@
             <div class="row">
               <div class="col-sm-6 col-md-8 col-lg-6 col-lg-offset-2">
                 <div class="callout-text font-alt">
-                  <h3 class="callout-title">Want to see more works?</h3>
-                  <p>We are always open to interesting projects.</p>
+                  <h3 class="callout-title">INGIN MELIHAT LEBIH BANYAK KARYA KAMI?</h3>
+                  <p>Kami Selalu Membuka Untuk Proyek Menarik.</p>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4 col-lg-2">
-                <div class="callout-btn-box"><a class="btn btn-w btn-round" href="portfolio_boxed_gutter_col_3.html">Lets view portfolio</a></div>
+                <div class="callout-btn-box"><a class="btn btn-w btn-round" href="portfolio_boxed_gutter_col_3.html">Lihat Portofolio</a></div>
               </div>
             </div>
           </div>
@@ -186,8 +186,8 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Our features</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                <h2 class="module-title font-alt">Fitur RepairMe</h2>
+                <div class="module-subtitle font-serif">Dalam fitur RepairMe terdapat Mitra-mitra terpercaya, berkualitas dan pekerjaanya sangat cepat berbeda dengan mitra yang tidak bergabung dengan RepairMe.</div>
               </div>
             </div>
             <div class="row">
@@ -238,8 +238,8 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Meet Our Team</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                <h2 class="module-title font-alt">RAPAT TIM KAMI</h2>
+                <div class="module-subtitle font-serif">Kami akan memberikan pelayanan yang layak semestinya dan kami akan memberikan promo yang sangat meriah pada mitra-mitra yang telah bergabung dengan RepairMe.</div>
               </div>
             </div>
             <div class="row">
@@ -388,8 +388,8 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Latest blog posts</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+                <h2 class="module-title font-alt">Blog Terbaru</h2>
+                <div class="module-subtitle font-serif">Kami akan memberikan blog terbaru kepada anda.</div>
               </div>
             </div>
             <div class="row multi-columns-row post-columns">
@@ -531,7 +531,7 @@
               </div>
               <div class="col-sm-3">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">Popular Posts</h5>
+                  <h5 class="widget-title font-alt">Postingan Populer</h5>
                   <ul class="widget-posts">
                     <li class="clearfix">
                       <div class="widget-posts-image"><a href="#"><img src="<?= BASEURL; ?>/home-master/assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
