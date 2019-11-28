@@ -73,6 +73,17 @@ public function inserttipe(){
 	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}
+
+// public function insertbarang(){
+// 	if($this->model('Admin_model')->inputtipe($_POST) > 0){
+// 	header ('Location: '.BASEURL.'/admin/barang');
+// 	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+// 		exit();
+// 	}else {
+// 	header ('Location: '.BASEURL.'/admin/barang');
+// 	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+// 		exit();
+// 	}
 }
 
 }
