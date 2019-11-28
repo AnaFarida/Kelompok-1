@@ -33,17 +33,6 @@ class Database{
 		$error = $_FILES[$data]['error'];
 		$tmpName = $_FILES[$data]['tmp_name'];
 
-	//jika gambar tidak di upload
-		
-		if($error === 4){
-			echo "<script>alert('Masukkan Gambar!!');</script>";
-			return false;
-		}
-
-	//jika yg di upload bukan gambar
-
-		$valid = ['jpg', 'jpeg', 'png'];
-
 	//explode untuk mengubah string menjadi array(memecah)
 	// '.' yang mau di pecah selanjutnya
 
@@ -53,19 +42,6 @@ class Database{
 	//menjadikan huruf kecil semua (strtolower())
 
 		$ekstensiGambar = strtolower(end($ekstensiGambar));
-		if(!in_array($ekstensiGambar, $valid)){
-			echo "<script>alert('yang anda Upload bukan Gambar!');</script>";
-			return false;
-		}
-
-	//cek ukurannya terlalu besar
-
-		if ($ukuranFile > 1000000) {
-			echo "<script>
-			alert('Gambar terlalu besar!');
-			</script>";
-			return false;
-		}
 
 	//membuat nama file baru
 

@@ -14,6 +14,10 @@ public function registrasi(){
 	$this->view('templates/footerReg');
 }
 public function insertMitra(){
+	// var_dump($_POST);
+	// var_dump($_FILES);
+	// $hasil = $this->model('Mitra_model')->inputMitra($_POST);
+	// var_dump($hasil);
 	if($this->model('Mitra_model')->inputMitra($_POST) > 0){
 	header ('Location: '.BASEURL.'/mitra/');
 	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');

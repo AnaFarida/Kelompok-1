@@ -1,25 +1,19 @@
+
+<!-- page ini banyak menggunakan javaScript, Tolong perhatikan -->
+
+
 <script>
 $(document).ready(function(){
 $('.miniProfile').hide();
 $('.pilihMitra').hide();
-// alert('oke');
+$('.barang').hide();
+// $('#map').attr('disabled',);
+// $('#map').hide();
 });
 </script>
+
 <!-- style css tambahan -->
 <style>
-/*.change{
-width: 100%;
-}
-*/
-#map {
-margin-left: 1px;
-margin-right: 100px;
-margin-top: 60px;
-width: 70%;
-height: 570px;
-z-index:100;
-border: solid black 1px;
-}
 #mapSearchContainer{
 position:fixed;
 top:20px;
@@ -45,7 +39,7 @@ z-index:99999;
     display: block;
 }
 </style>
-<div id="map" style="position: absolute;" class="change">
+<div id="map" style="position: absolute;margin-left: 1px; margin-right: 100px; margin-top: 60px; width: 70%; height: 570px; z-index:100; border: solid black 1px;">
   <div class='pointer'> Click search button</div>
   <script>
   var map = L.map('map').setView([-7.91346, 113.82145], 17);
@@ -70,6 +64,7 @@ z-index:99999;
   map.on('click', onMapClick);
   </script>
 </div>
+
 <?php foreach ($data['mitra'] as $mitra) : ?>
 <script>
 var popup = L.popup();
@@ -78,16 +73,19 @@ marker.bindPopup('<?= $mitra['nama_usaha']; ?>');
 </script>
 <script>
 $(marker).click(function(){
-map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
-const idMitra = '<?= $mitra['id_mitra']; ?>'
+
+$('#id').attr('value', '<?= $mitra['id_mitra']; ?>');
 $('.miniProfile').show();
 $('.pilihMitra').show();
 $('.tutorial').hide();
+$('.barang').hide();
 $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
 $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
+map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
 });
 </script>
 <?php endforeach; ?>
+
 <div class="tutorial mt-70" style="position: absolute; right: 10px; width: 28%;">
   <h4 class="font-alt mb-0">Tutorial</h4>
   <hr class="divider-w mt-10 mb-20">
@@ -222,26 +220,15 @@ $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>
 </div>
 </div>
 <div style="position: absolute; right:30px; bottom: 25px; width: 25%;" class="pilihMitra">
-<button class="btn btn-d btn-round btn-block" type="button">Pilih Mitra</button>
+<form action="<?= BASEURL; ?>/perbaikan/barangkerusakan" method="POST">
+<input type="text" id="id" name="id" hidden>
+<button class="btn btn-d btn-round btn-block" type="submit">Pilih Mitra</button>
+</form>
 </div>
-
 <script>
   $(document).ready(function(){
     $('.pilihMitra').click(function(){
-      $('.miniProfile').hide();
+      $('.LinkSelanjutnya').attr()
     })
   });
 </script>
-
-
-<!-- <div class="barang" style="position: absolute; right: 0; top: 20%; width: 250px;">
-                <select class="form-control">
-                  <option selected="selected">Default Sorting</option>
-                  <option>Popular</option>
-                  <option>Latest</option>
-                  <option>Average Price</option>
-                  <option>High Price</option>
-                  <option>Low Price</option>
-                </select>
-</div>
- -->

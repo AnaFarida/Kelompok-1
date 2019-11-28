@@ -17,14 +17,6 @@ class Admin_model{
 		return $result;
 	}
 	
-	// public function getAllMerk(){
-	// 	return $this->db->query("SELECT * FROM tb_merk");
-	// }
-	
-	// public function getAlltipe(){
-	// 	return $this->db->query("SELECT * FROM tb_tipe");
-	// }
-
 	public function inputkategori($data){
 		
 		$kategori = $data['kategori'];
