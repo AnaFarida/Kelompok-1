@@ -1,35 +1,20 @@
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
-            </div>
-        <!-- ============================================================== -->
-        <!-- end wrapper  -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- end main wrapper  -->
-    <!-- ============================================================== -->
-    <!-- Optional JavaScript -->
-    <!-- jquery 3.3.1 -->
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <!-- bootstap bundle js -->
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- slimscroll js -->
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <!-- main js -->
-    <script src="<?= BASEURL?>/adminSources/assets/libs/js/main-js.js"></script>
-    <!-- chart chartist js -->
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
-    <!-- sparkline js -->
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
-    <!-- morris js -->
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/charts/morris-bundle/raphael.min.js"></script>
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/charts/morris-bundle/morris.js"></script>
-    <!-- chart c3 js -->
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="<?= BASEURL?>/adminSources/assets/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="<?= BASEURL?>/adminSources/assets/libs/js/dashboard-ecommerce.js"></script>
+<!-- inject:js -->
+<script src="<?= BASEURL; ?>/panel-master/dist/js/d3.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/getmdl-select.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/material.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/nv.d3.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/layout/layout.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/scroll/scroll.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/charts/discreteBarChart.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/charts/linePlusBarChart.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/charts/stackedBarChart.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/employer-form/employer-form.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/line-chart/line-charts-nvd3.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/map/maps.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/pie-chart/pie-charts-nvd3.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/table/table.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/dist/js/widgets/todo/todo.min.js"></script>
+<!-- endinject -->
+
 </body>
- 
 </html>

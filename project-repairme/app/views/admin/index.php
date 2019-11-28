@@ -1,558 +1,537 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <div class="mdl-layout-spacer"></div>
+            <!-- Search-->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+                    <i class="material-icons">search</i>
+                </label>
 
-        <!-- ============================================================== -->
-        <!-- wrapper  -->
-        <!-- ============================================================== -->
-        <div class="dashboard-wrapper">
-            <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
-                    <!-- ============================================================== -->
-                    <!-- pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h2 class="pageheader-title">PENGUNJUNG REPAIRME  </h2>
-                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                                <div class="page-breadcrumb">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">PENGUNJUNG REPAIRME</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="ecommerce-widget">
-
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">JUMLAH PENGUNJUNG</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">200 K </h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">JUMLAH MITRA</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">300</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue2"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">JUMLAH PELANGGAN</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">1200</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-primary font-weight-bold">
-                                            
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue3"></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">TOTAL PENGHASILAN</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">2 MILIYAR</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
-                                            <span>+75%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue4"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- ============================================================== -->
-                      
-                            <!-- ============================================================== -->
-
-                                          <!-- recent orders  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">History Transaksi</h5>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead class="bg-light">
-                                                    <tr class="border-0">
-                                                        <th class="border-0">#</th>
-                                                        <th class="border-0">Image</th>
-                                                        <th class="border-0">Product Name</th>
-                                                        <th class="border-0">Product Id</th>
-                                                        <th class="border-0">Quantity</th>
-                                                        <th class="border-0">Price</th>
-                                                        <th class="border-0">Order Time</th>
-                                                        <th class="border-0">Customer</th>
-                                                        <th class="border-0">Status</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="<?= BASEURL; ?>/adminSources/assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Product #1 </td>
-                                                        <td>id000001 </td>
-                                                        <td>20</td>
-                                                        <td>$80.00</td>
-                                                        <td>27-08-2018 01:22:12</td>
-                                                        <td>Patricia J. King </td>
-                                                        <td><span class="badge-dot badge-brand mr-1"></span>InTransit </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="<?= BASEURL; ?>/adminSources/assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Product #2 </td>
-                                                        <td>id000002 </td>
-                                                        <td>12</td>
-                                                        <td>$180.00</td>
-                                                        <td>25-08-2018 21:12:56</td>
-                                                        <td>Rachel J. Wicker </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Delivered </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="<?= BASEURL; ?>/adminSources/assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Product #3 </td>
-                                                        <td>id000003 </td>
-                                                        <td>23</td>
-                                                        <td>$820.00</td>
-                                                        <td>24-08-2018 14:12:77</td>
-                                                        <td>Michael K. Ledford </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Delivered </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="<?= BASEURL; ?>/adminSources/assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Product #4 </td>
-                                                        <td>id000004 </td>
-                                                        <td>34</td>
-                                                        <td>$340.00</td>
-                                                        <td>23-08-2018 09:12:35</td>
-                                                        <td>Michael K. Ledford </td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Delivered </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end recent orders  -->
-
-    
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- customer acquistion  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Testimoni</h5>
-                                    <div class="card-body">
-                                        <div class="ct-chart ct-golden-section" style="height: 354px;"></div>
-                                        <div class="text-center">
-                                            <span class="legend-item mr-2">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Returning</span>
-                                            </span>
-                                            <span class="legend-item mr-2">
-
-                                                    <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">First Time</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end customer acquistion  -->
-                            <!-- ============================================================== -->
-                        </div>
-                        <div class="row">
-                            <!-- ============================================================== -->
-              				                        <!-- product category  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Kategori Perbaikan</h5>
-                                    <div class="card-body">
-                                        <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
-                                        <div class="text-center m-t-40">
-                                            <span class="legend-item mr-3">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">Man</span>
-                                            </span>
-                                            <span class="legend-item mr-3">
-                                                <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Woman</span>
-                                            </span>
-                                            <span class="legend-item mr-3">
-                                                <span class="fa-xs text-info mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Accessories</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end product category  -->
-                                   <!-- product sales  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <!-- <div class="float-right">
-                                                <select class="custom-select">
-                                                    <option selected>Today</option>
-                                                    <option value="1">Weekly</option>
-                                                    <option value="2">Monthly</option>
-                                                    <option value="3">Yearly</option>
-                                                </select>
-                                            </div> -->
-                                        <h5 class="mb-0"> Mitra profil </h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="ct-chart-product ct-golden-section"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end product sales  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
-                                <!-- ============================================================== -->
-                                <!-- top perfomimg  -->
-                                <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header">Rating Mitra </h5>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table no-wrap p-table">
-                                                <thead class="bg-light">
-                                                    <tr class="border-0">
-                                                        <th class="border-0">Nama Mitra </th>
-                                                        <th class="border-0">Orderan</th>
-                                                        <th class="border-0">Selesai</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Campaign#1</td>
-                                                        <td>98,789 </td>
-                                                        <td>$4563</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#2</td>
-                                                        <td>2,789 </td>
-                                                        <td>$325</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#3</td>
-                                                        <td>1,459 </td>
-                                                        <td>$225</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#4</td>
-                                                        <td>5,035 </td>
-                                                        <td>$856</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#5</td>
-                                                        <td>10,000 </td>
-                                                        <td>$1000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Campaign#5</td>
-                                                        <td>10,000 </td>
-                                                        <td>$1000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="3">
-                                                            <a href="#" class="btn btn-outline-light float-right">Details</a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ============================================================== -->
-                                <!-- end top perfomimg  -->
-                                <!-- ============================================================== -->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <!-- ============================================================== -->
-                            <!-- sales  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                <div class="card border-3 border-top border-top-primary">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Jumlah pendapatan Mitra </h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$120990878</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5.86%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end sales  -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- new customer  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                <div class="card border-3 border-top border-top-primary">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">New Customer</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">1245</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">10%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end new customer  -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- visitor  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                <div class="card border-3 border-top border-top-primary">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Visitor</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">13000</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end visitor  -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- total orders  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                                <div class="card border-3 border-top border-top-primary">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Total Orders</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">1340</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
-                                            <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">4%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end total orders  -->
-                            <!-- ============================================================== -->
-                        </div>
-                        <div class="row">
-                            <!-- ============================================================== -->
-                            <!-- total revenue  -->
-                            <!-- ============================================================== -->
-  
-                            
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- category revenue  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Kontak Admin</h5>
-                                    <div class="card-body">
-                                        <div id="c3chart_category" style="height: 420px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end category revenue  -->
-                            <!-- ============================================================== -->
-
-                            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header"> Total Pengunjung </h5>
-                                    <div class="card-body">
-                                        <div id="morris_totalrevenue"></div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <!-- ============================================================== -->
-                                <!-- social source  -->
-                                <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header"> Media sosial Repairme </h5>
-                                    <div class="card-body p-0">
-                                        <ul class="social-sales list-group list-group-flush">
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Facebook</span><span class="social-sales-count text-dark">Repairme</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Twitter</span><span class="social-sales-count text-dark">@repairme_perbaikan</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Instagram</span><span class="social-sales-count text-dark">@repairme_perbaikan</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Pinterest</span><span class="social-sales-count text-dark">Repairme.com</span>
-                                            </li>
-                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Google Plus</span><span class="social-sales-count text-dark">Repairme.com</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                                <!-- ============================================================== -->
-                                <!-- end social source  -->
-                                <!-- ============================================================== -->
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <!-- ============================================================== -->
-                                <!-- sales traffice source  -->
-                                <!-- ============================================================== -->
-                                <div class="card">
-                                    <h5 class="card-header"> Sales By Traffic Source</h5>
-                                    <div class="card-body p-0">
-                                        <ul class="traffic-sales list-group list-group-flush">
-                                            <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Direct</span><span class="traffic-sales-amount">$4000.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Search<span class="traffic-sales-amount">$3123.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Social<span class="traffic-sales-amount ">$3099.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">Referrals<span class="traffic-sales-amount ">$2220.00   <span class="icon-circle-small icon-box-xs text-danger ml-4 bg-danger-light"><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1 text-danger">4.02%</span></span>
-                                                </span>
-                                            </li>
-                                            <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">Email<span class="traffic-sales-amount">$1567.00   <span class="icon-circle-small icon-box-xs text-danger ml-4 bg-danger-light"><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1 text-danger">3.86%</span></span>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end sales traffice source  -->
-                            <!-- ============================================================== -->
-                            <!-- ============================================================== -->
-                            <!-- sales traffic country source  -->
-                            <!-- ============================================================== -->
-                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Sales By Country Traffic Source</h5>
-                                    <div class="card-body p-0">
-                                        <ul class="country-sales list-group list-group-flush">
-                                            <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
-                                                <span class="">United States</span><span class="float-right text-dark">78%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ca" title="ca" id="ca"></i></span><span class="">Canada</span><span class="float-right text-dark">7%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ru" title="ru" id="ru"></i></span><span class="">Russia</span><span class="float-right text-dark">4%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-in" title="in" id="in"></i></span><span class="">India</span><span class="float-right text-dark">12%</span>
-                                            </li>
-                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i></span><span class="">France</span><span class="float-right text-dark">16%</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <a href="#" class="btn-primary-link">View Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ============================================================== -->
-                            <!-- end sales traffice country source  -->
-                            <!-- ============================================================== -->
-                        </div>
-                    </div>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" id="search"/>
+                    <label class="mdl-textfield__label" for="search">Enter your query...</label>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <div class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                             Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            <div class="text-md-right footer-links d-none d-sm-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="material-icons mdl-badge mdl-badge--overlap mdl-button--icon notification" id="notification"
+                 data-badge="23">
+                notifications_none
             </div>
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
+            <!-- Notifications dropdown-->
+            <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right mdl-shadow--2dp notifications-dropdown"
+                for="notification">
+                <li class="mdl-list__item">
+                    You have 23 new notifications!
+                </li>
+                <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="mdl-list__item-avatar background-color--primary">
+                            <i class="material-icons">plus_one</i>
+                        </span>
+                        <span>You have 3 new orders.</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label">just now</span>
+                    </span>
+                </li>
+                <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="mdl-list__item-avatar background-color--secondary">
+                            <i class="material-icons">error_outline</i>
+                        </span>
+                      <span>Database error</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label">1 min</span>
+                    </span>
+                </li>
+                <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="mdl-list__item-avatar background-color--primary">
+                            <i class="material-icons">new_releases</i>
+                        </span>
+                      <span>The Death Star is built!</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label">2 hours</span>
+                    </span>
+                </li>
+                <li class="mdl-menu__item mdl-list__item list__item--border-top">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="mdl-list__item-avatar background-color--primary">
+                            <i class="material-icons">mail_outline</i>
+                        </span>
+                      <span>You have 4 new mails.</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label">5 days</span>
+                    </span>
+                </li>
+                <li class="mdl-list__item list__item--border-top">
+                    <button href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">ALL NOTIFICATIONS</button>
+                </li>
+            </ul>
+
+            <div class="material-icons mdl-badge mdl-badge--overlap mdl-button--icon message" id="inbox" data-badge="4">
+                mail_outline
+            </div>
+            <!-- Messages dropdown-->
+            <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right mdl-shadow--2dp messages-dropdown"
+                for="inbox">
+                <li class="mdl-list__item">
+                    You have 4 new messages!
+                </li>
+                <li class="mdl-menu__item mdl-list__item mdl-list__item--two-line list__item--border-top">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="mdl-list__item-avatar background-color--primary">
+                            <text>A</text>
+                        </span>
+                        <span>Alice</span>
+                        <span class="mdl-list__item-sub-title">Birthday Party</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label label--transparent">just now</span>
+                    </span>
+                </li>
+                <li class="mdl-menu__item mdl-list__item mdl-list__item--two-line list__item--border-top">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="mdl-list__item-avatar background-color--baby-blue">
+                            <text>M</text>
+                        </span>
+                        <span>Mike</span>
+                        <span class="mdl-list__item-sub-title">No theme</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label label--transparent">5 min</span>
+                    </span>
+                </li>
+                <li class="mdl-menu__item mdl-list__item mdl-list__item--two-line list__item--border-top">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="mdl-list__item-avatar background-color--cerulean">
+                            <text>D</text>
+                        </span>
+                        <span>Darth</span>
+                        <span class="mdl-list__item-sub-title">Suggestion</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label label--transparent">23 hours</span>
+                    </span>
+                </li>
+                <li class="mdl-menu__item mdl-list__item mdl-list__item--two-line list__item--border-top">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="mdl-list__item-avatar background-color--mint">
+                            <text>D</text>
+                        </span>
+                        <span>Don McDuket</span>
+                        <span class="mdl-list__item-sub-title">NEWS</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label label--transparent">30 Nov</span>
+                    </span>
+                </li>
+                <li class="mdl-list__item list__item--border-top">
+                    <button href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">SHOW ALL MESSAGES</button>
+                </li>
+            </ul>
+
+            <div class="avatar-dropdown" id="icon">
+                <span>Luke</span>
+                <img src="<?= BASEURL; ?>/panel-master/dist/images/Icon_header.png">
+            </div>
+            <!-- Account dropdawn-->
+            <ul class="mdl-menu mdl-list mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp account-dropdown"
+                for="icon">
+                <li class="mdl-list__item mdl-list__item--two-line">
+                    <span class="mdl-list__item-primary-content">
+                        <span class="material-icons mdl-list__item-avatar"></span>
+                        <span>Luke</span>
+                        <span class="mdl-list__item-sub-title">Luke@skywalker.com</span>
+                    </span>
+                </li>
+                <li class="list__item--border-top"></li>
+                <li class="mdl-menu__item mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">account_circle</i>
+                        My account
+                    </span>
+                </li>
+                <li class="mdl-menu__item mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">check_box</i>
+                        My tasks
+                    </span>
+                    <span class="mdl-list__item-secondary-content">
+                      <span class="label background-color--primary">3 new</span>
+                    </span>
+                </li>
+                <li class="mdl-menu__item mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">perm_contact_calendar</i>
+                        My events
+                    </span>
+                </li>
+                <li class="list__item--border-top"></li>
+                <li class="mdl-menu__item mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">settings</i>
+                        Settings
+                    </span>
+                </li>
+                <a href="login.html">
+                    <li class="mdl-menu__item mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
+                            Log out
+                        </span>
+                    </li>
+                </a>
+            </ul>
+
+            <button id="more"
+                    class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown"
+                for="more">
+                <li class="mdl-menu__item">
+                    Settings
+                </li>
+                <a class="mdl-menu__item" href="https://github.com/CreativeIT/getmdl-dashboard/issues">
+                    Support
+                </a>
+                <li class="mdl-menu__item">
+                    F.A.Q.
+                </li>
+            </ul>
         </div>
-        <!-- ============================================================== -->
-        <!-- end wrapper  -->
-        <!-- ============================================================== -->
+    </header>
+
+    <div class="mdl-layout__drawer">
+        <header>Admin</header>
+        <div class="scroll__wrapper" id="scroll__wrapper">
+            <div class="scroller" id="scroller">
+                <div class="scroll__container" id="scroll__container">
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link mdl-navigation__link--current" href="index.html">
+                            <i class="material-icons" role="presentation">dashboard</i>
+                            Menu
+                        </a>
+                        <div class="sub-navigation">
+                            <a class="mdl-navigation__link">
+                                <i class="material-icons">view_comfy</i>
+                                UI
+                                <i class="material-icons">keyboard_arrow_down</i>
+                            </a>
+                            <div class="mdl-navigation">
+                                <a class="mdl-navigation__link" href="<?= BASEURL;?>/mitra/index">
+                                    Mitra
+                                </a>
+                                <a class="mdl-navigation__link" href="ui-buttons.html">
+                                    Buttons
+                                </a>
+                                <a class="mdl-navigation__link" href="ui-cards.html">
+                                    Cards
+                                </a>
+                                <a class="mdl-navigation__link" href="ui-colors.html">
+                                    Colors
+                                </a>
+                                <a class="mdl-navigation__link" href="ui-form-components.html">
+                                    Forms
+                                </a>
+                                <a class="mdl-navigation__link" href="ui-icons.html">
+                                    Icons
+                                </a>
+                                <a class="mdl-navigation__link" href="ui-typography.html">
+                                    Typography
+                                </a>
+                                <a class="mdl-navigation__link" href="ui-tables.html">
+                                    Tables
+                                </a>
+                            </div>
+                        </div>
+                        <a class="mdl-navigation__link" href="ui-components.html">
+                            <i class="material-icons">developer_board</i>
+                            Components
+                        </a>
+                        <a class="mdl-navigation__link" href="forms.html">
+                            <i class="material-icons" role="presentation">person</i>
+                            Account
+                        </a>
+                        <a class="mdl-navigation__link" href="maps.html">
+                            <i class="material-icons" role="presentation">map</i>
+                            Maps
+                        </a>
+                        <a class="mdl-navigation__link" href="charts.html">
+                            <i class="material-icons">multiline_chart</i>
+                            Charts
+                        </a>
+                        <div class="sub-navigation">
+                            <a class="mdl-navigation__link">
+                                <i class="material-icons">pages</i>
+                                Pages
+                                <i class="material-icons">keyboard_arrow_down</i>
+                            </a>
+                            <div class="mdl-navigation">
+                                <a class="mdl-navigation__link" href="login.html">
+                                    Sign in
+                                </a>
+                                <a class="mdl-navigation__link" href="sign-up.html">
+                                    Sign up
+                                </a>
+                                <a class="mdl-navigation__link" href="forgot-password.html">
+                                    Forgot password
+                                </a>
+                                <a class="mdl-navigation__link" href="404.html">
+                                    404
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                        <hr>
+                        <a class="mdl-navigation__link" href="https://github.com/CreativeIT/getmdl-dashboard">
+                            <i class="material-icons" role="presentation">link</i>
+                            GitHub
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div class='scroller__bar' id="scroller__bar"></div>
+        </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- end main wrapper  -->
-    <!-- ============================================================== -->
-    
+
+    <main class="mdl-layout__content">
+
+        <div class="mdl-grid mdl-grid--no-spacing dashboard">
+
+            <div class="mdl-grid mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+
+                <!-- Pie chart-->
+                <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp pie-chart">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">My Day</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div class="pie-chart__container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Weather widget-->
+                <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp weather">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Now</h2>
+
+                            <div class="mdl-layout-spacer"></div>
+                            <div class="mdl-card__subtitle-text">
+                                <i class="material-icons">room</i>
+                                Minsk, Belarus
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text mdl-card--expand">
+                            <p class="weather-temperature">-11<sup>&deg;</sup></p>
+
+                            <p class="weather-description">
+                                Cloudy and snow
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Trending widget-->
+                <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp trending">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Trending</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <ul class="mdl-list">
+                                <li class="mdl-list__item">
+                                    <span class="mdl-list__item-primary-content list__item-text">UX</span>
+                                    <span class="mdl-list__item-secondary-content">
+                                        <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
+                                    </span>
+                                    <span class="mdl-list__item-secondary-content trending__percent">1 %</span>
+                                </li>
+                                <li class="mdl-list__item list__item--border-top">
+                                    <span class="mdl-list__item-primary-content list__item-text">PHP</span>
+                                    <span class="mdl-list__item-secondary-content">
+                                        <i class="material-icons trending__arrow-down" role="presentation">&#xE5C5</i>
+                                    </span>
+                                    <span class="mdl-list__item-secondary-content trending__percent">2 %</span>
+                                </li>
+                                <li class="mdl-list__item list__item--border-top">
+                                    <span class="mdl-list__item-primary-content list__item-text ">Big Data</span>
+                                    <span class="mdl-list__item-secondary-content">
+                                        <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
+                                    </span>
+                                    <span class="mdl-list__item-secondary-content trending__percent">5 %</span>
+                                </li>
+                                <li class="mdl-list__item list__item--border-top">
+                                    <span class="mdl-list__item-primary-content list__item-text">Material Design</span>
+                                    <span class="mdl-list__item-secondary-content">
+                                        <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
+                                    </span>
+                                    <span class="mdl-list__item-secondary-content trending__percent">18 %</span>
+                                </li>
+                                <li class="mdl-list__item list__item--border-top">
+                                    <span class="mdl-list__item-primary-content">JavaScript</span>
+                                    <span class="mdl-list__item-secondary-content">
+                                        <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
+                                    </span>
+                                    <span class="mdl-list__item-secondary-content trending__percent">17 %</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cotoneaster card-->
+                <div class="mdl-cell mdl-cell--5-col-desktop mdl-cell--5-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp cotoneaster">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">Cotoneaster</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div>
+                                Cotoneaster is a genus of flowering plants in the rose family, Roseaceae, netive to the
+                                Palaearctic region, with a strong concentration of diversity in the genus in the
+                                mountains
+                                of southwestern China and the Himalayas.
+                            </div>
+                            <a href="https://en.wikipedia.org/wiki/Cotoneaster" target="_blank">Wikipedia</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Line chart-->
+                <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--4-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp line-chart">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Startup Financing Cycle</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div class="line-chart__container">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table-->
+                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone ">
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp projects-table">
+                        <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Project</th>
+                            <th class="mdl-data-table__cell--non-numeric">Responsible</th>
+                            <th class="mdl-data-table__cell--non-numeric">Client contact</th>
+                            <th class="mdl-data-table__cell--non-numeric">Deadline</th>
+                            <th class="mdl-data-table__cell--non-numeric">Progress</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Darkboard</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span class="label label--mini color--light-blue">Alex</span>
+                                <span class="label label--mini background-color--primary">Dina</span>
+                                <span class="label label--mini color--orange">Misha</span>
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">Luke@skywalker.com</td>
+                            <td class="mdl-data-table__cell--non-numeric">Jun 15</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <div id="task1" class="mdl-progress mdl-js-progress"></div>
+                                <div class="mdl-tooltip" for="task1">
+                                    44%
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Big financial app</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span class="label label--mini color--orange">Vlada</span>
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">Boss@financial.com</td>
+                            <td class="mdl-data-table__cell--non-numeric">Mar 1</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <div id="task2" class="mdl-progress mdl-js-progress"></div>
+                                <div class="mdl-tooltip" for="task2">
+                                    14%
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="is-selected">
+                            <td class="mdl-data-table__cell--non-numeric">New Year office decoration</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span class="label label--mini background-color--primary">Dina</span>
+                                <span class="label label--mini color--orange">Vlada</span>
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">info@creativeit.io</td>
+                            <td class="mdl-data-table__cell--non-numeric">Dec 25</td>
+                            <td class="mdl-data-table__cell--non-numeric task-done">
+                                <i id="task3" class="material-icons">done</i>
+                                <span>Complete</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span class="label label--mini background-color--secondary">Everybody</span>
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <div id="task4" class="mdl-progress mdl-js-progress"></div>
+                                <div class="mdl-tooltip" for="task4">
+                                    31%
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mdl-grid mdl-cell mdl-cell--3-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+                <!-- Robot card-->
+                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp robot">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <h2 class="mdl-card__title-text">BB-8</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div>
+                                A skittish but loyal astromech, BB-8 accompanied Poe Dameron on many missions for the
+                                Resistance helping keep his X-wing in working order.
+                            </div>
+                            <a href="http://www.starwars.com/databank/bb-8" target="_blank">Star Wars Databank</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ToDo_widget-->
+                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
+                    <div class="mdl-card mdl-shadow--2dp todo">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">To-do list</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <ul class="mdl-list">
+
+                            </ul>
+                        </div>
+                        <div class="mdl-card__actions">
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">remove selected</button>
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-shadow--8dp mdl-button--colored ">
+                                <i class="material-icons mdl-js-ripple-effect">add</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+</div>
