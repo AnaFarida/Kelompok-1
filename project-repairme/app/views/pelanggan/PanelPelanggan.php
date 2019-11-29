@@ -1,4 +1,3 @@
-<body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -23,25 +22,25 @@
             <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right mdl-shadow--2dp notifications-dropdown"
                 for="notification">
                 <li class="mdl-list__item">
-                    You have 23 new notifications!
+                    Pemberitahuan!
                 </li>
                 <li class="mdl-menu__item mdl-list__item list__item--border-top">
                     <span class="mdl-list__item-primary-content">
                         <span class="mdl-list__item-avatar background-color--primary">
-                            <i class="material-icons">plus_one</i>
+                            <i class="material-icons">alarm</i>
                         </span>
-                        <span>You have 3 new orders.</span>
+                        <span>Sisa Waktu Perbaikan</span>
                     </span>
                     <span class="mdl-list__item-secondary-content">
-                      <span class="label">just now</span>
+                      <span class="label">Now</span>
                     </span>
                 </li>
                 <li class="mdl-menu__item mdl-list__item list__item--border-top">
                     <span class="mdl-list__item-primary-content">
                         <span class="mdl-list__item-avatar background-color--secondary">
-                            <i class="material-icons">error_outline</i>
+                            <i class="material-icons">assignment turned in</i>
                         </span>
-                      <span>Database error</span>
+                      <span>Barang Selesai Perbaikan</span>
                     </span>
                     <span class="mdl-list__item-secondary-content">
                       <span class="label">1 min</span>
@@ -70,7 +69,7 @@
                     </span>
                 </li>
                 <li class="mdl-list__item list__item--border-top">
-                    <button href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">ALL NOTIFICATIONS</button>
+                    <button href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Notifikasi</button>
                 </li>
             </ul>
 
@@ -138,7 +137,7 @@
 
             <div class="avatar-dropdown" id="icon">
                 <span>Luke</span>
-                <img src="images/Icon_header.png">
+                <img src="<?= BASEURL; ?>/panel-master/dist/images/Icon_header.png">
             </div>
             <!-- Account dropdawn-->
             <ul class="mdl-menu mdl-list mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp account-dropdown"
@@ -175,15 +174,15 @@
                 <li class="list__item--border-top"></li>
                 <li class="mdl-menu__item mdl-list__item">
                     <span class="mdl-list__item-primary-content">
-                        <i class="material-icons mdl-list__item-icon">settings</i>
+                        <i class="material-icons mdl-list__item-icon">Pengaturan</i>
                         Settings
                     </span>
                 </li>
-                <a href="login.html">
+                <a href="<?BASEURL?>/login/logout">
                     <li class="mdl-menu__item mdl-list__item">
                         <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
-                            Log out
+                            Keluar
                         </span>
                     </li>
                 </a>
@@ -215,53 +214,53 @@
             <div class="scroller" id="scroller">
                 <div class="scroll__container" id="scroll__container">
                     <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link mdl-navigation__link--current" href="index.html">
+                        <a class="mdl-navigation__link mdl-navigation__link--current" href="<?= BASEURL; ?>/pelanggan/panel">
                             <i class="material-icons" role="presentation">dashboard</i>
                             Dashboard
                         </a>
                         <div class="sub-navigation">
                             <a class="mdl-navigation__link">
                                 <i class="material-icons">view_comfy</i>
-                                UI
+                                Barang
                                 <i class="material-icons">keyboard_arrow_down</i>
                             </a>
                             <div class="mdl-navigation">
-                                <a class="mdl-navigation__link" href="ui-buttons.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/ui-buttons.html">
                                     Buttons
                                 </a>
-                                <a class="mdl-navigation__link" href="ui-cards.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/ui-cards.html">
                                     Cards
                                 </a>
-                                <a class="mdl-navigation__link" href="ui-colors.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/ui-colors.html">
                                     Colors
                                 </a>
-                                <a class="mdl-navigation__link" href="ui-form-components.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/ui-form-components.html">
                                     Forms
                                 </a>
-                                <a class="mdl-navigation__link" href="ui-icons.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/ui-icons.html">
                                     Icons
                                 </a>
-                                <a class="mdl-navigation__link" href="ui-typography.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/ui-typography.html">
                                     Typography
                                 </a>
-                                <a class="mdl-navigation__link" href="ui-tables.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/ui-tables.html">
                                     Tables
                                 </a>
                             </div>
                         </div>
-                        <a class="mdl-navigation__link" href="ui-components.html">
+                        <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/ui-components.html">
                             <i class="material-icons">developer_board</i>
                             Components
                         </a>
-                        <a class="mdl-navigation__link" href="forms.html">
+                        <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/.html">
                             <i class="material-icons" role="presentation">person</i>
-                            Account
+                            Akun
                         </a>
-                        <a class="mdl-navigation__link" href="maps.html">
+                        <a class="mdl-navigation__link" href="<?= BASEURL; ?>/perbaikan">
                             <i class="material-icons" role="presentation">map</i>
-                            Maps
+                            Cari Mitra
                         </a>
-                        <a class="mdl-navigation__link" href="charts.html">
+                        <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/charts.html">
                             <i class="material-icons">multiline_chart</i>
                             Charts
                         </a>
@@ -272,16 +271,16 @@
                                 <i class="material-icons">keyboard_arrow_down</i>
                             </a>
                             <div class="mdl-navigation">
-                                <a class="mdl-navigation__link" href="login.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/login.html">
                                     Sign in
                                 </a>
-                                <a class="mdl-navigation__link" href="sign-up.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/sign-up.html">
                                     Sign up
                                 </a>
-                                <a class="mdl-navigation__link" href="forgot-password.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/forgot-password.html">
                                     Forgot password
                                 </a>
-                                <a class="mdl-navigation__link" href="404.html">
+                                <a class="mdl-navigation__link" href="<?= BASEURL; ?>/panel-master/dist/404.html">
                                     404
                                 </a>
                             </div>
