@@ -1,4 +1,4 @@
- <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="<?= BASEURL; ?>/home-master/assets/images/section-2.jpg">
+ <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="<?= BASEURL; ?>/home-master/assets/images/stiker1.jpeg">
         <div class="titan-caption">
           <div class="caption-content">
             <div class="font-alt mb-30 titan-title-size-1">RepairMe</div>
@@ -100,7 +100,7 @@
                 <div class="video-box">
                   <div class="video-box-icon"><a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><span class="icon-video"></span></a></div>
                   <div class="video-title font-alt">Presentation RepairMe</div>
-                  <div class="video-subtitle font-alt">Tonton VIDEO TENTANG PRODUK BARU KAMI</div>
+                  <div class="video-subtitle font-alt">Tonton VIDEO TENTANG WEBSITE KAMI</div>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Karya Kami</h2>
+                <h2 class="module-title font-alt">Karya RepairMe</h2>
                 <div class="module-subtitle font-serif"></div>
               </div>
             </div>
@@ -128,7 +128,7 @@
               </div>
             </div>
           </div>
-          <ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
+          <!--<ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
             <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
                 <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-1.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
@@ -166,14 +166,14 @@
                   <div class="work-descr">Marketing</div>
                 </div></a></li>
           </ul>
-        </section>
+        </section>-->
         <section class="module-small bg-dark">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-md-8 col-lg-6 col-lg-offset-2">
                 <div class="callout-text font-alt">
-                  <h3 class="callout-title">INGIN MELIHAT LEBIH BANYAK KARYA KAMI?</h3>
-                  <p>Kami Selalu Membuka Untuk Proyek Menarik.</p>
+                  <h3 class="callout-title">INGIN MELIHAT PORTOFOLIO REPAIRME?</h3>
+                  <!--<p>Kami Selalu Membuka Untuk Proyek Menarik.</p>-->
                 </div>
               </div>
               <div class="col-sm-6 col-md-4 col-lg-2">
@@ -192,43 +192,43 @@
             </div>
             <div class="row">
               <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="alt-features-item">
+                <!--<div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-strategy"></span></div>
                   <h3 class="alt-features-title font-alt">Branding</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                </div>-->
+                <div class="alt-features-item">
+                  <div class="alt-features-icon"><span class="icon-target"></span></div>
+                  <h3 class="alt-features-title font-alt">Login</h3>Mau diisi apa ya:)
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-tools-2"></span></div>
-                  <h3 class="alt-features-title font-alt">Development</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
-                </div>
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-target"></span></div>
-                  <h3 class="alt-features-title font-alt">Marketing</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                  <h3 class="alt-features-title font-alt">Pengaturan</h3>Pengaturan apa yang patas diisi di website?
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="alt-features-title font-alt">Design</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                  <h3 class="alt-features-title font-alt">Design</h3>Design apa yang cocok?
                 </div>
               </div>
               <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
-                <div class="alt-services-image align-center"><img src="<?= BASEURL; ?>/home-master/assets/images/promo.png" alt="Feature Image"></div>
+                <div class="alt-services-image align-center"><img src="<?= BASEURL; ?>/home-master/assets/images/logo1.JPEG" alt="Feature Image"></div>
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-camera"></span></div>
-                  <h3 class="alt-features-title font-alt">Photography</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                  <h3 class="alt-features-title font-alt">Peta Lokasi</h3>Foto apa yang siap diposting?
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-mobile"></span></div>
-                  <h3 class="alt-features-title font-alt">Mobile</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                  <h3 class="alt-features-title font-alt">Banyak Mitra</h3>Mobile Legend?
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-linegraph"></span></div>
-                  <h3 class="alt-features-title font-alt">Music</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
+                  <h3 class="alt-features-title font-alt">Grafik</h3>Grafik yang sudah dikerjakan oleh mitra.
                 </div>
-                <div class="alt-features-item">
+                <!--<div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-basket"></span></div>
                   <h3 class="alt-features-title font-alt">Shop</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
-                </div>
+                </div>-->
               </div>
             </div>
           </div>
@@ -443,8 +443,8 @@
             <div class="row">
               <div class="col-sm-6 col-md-6 col-lg-4 col-lg-offset-2">
                 <div class="callout-text font-alt">
-                  <h3 class="callout-title">Berlangganan Sekarang</h3>
-                  <p>Kami Tidak AKan SPAM Email Anda.</p>
+                  <h3 class="callout-title">Berlangganan Sekarang?</h3>
+                  <!--<p>Kami Tidak Akan SPAM Email Anda.</p>-->
                 </div>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-4">
@@ -465,7 +465,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Get in touch</h2>
+                <h2 class="module-title font-alt">KIRIM PESAN</h2>
                 <div class="module-subtitle font-serif"></div>
               </div>
             </div>
@@ -502,18 +502,16 @@
                 <div class="widget">
                   <h5 class="widget-title font-alt">Tentang RepairMe</h5>
                   <p>RepairMe adalah tempat dan solusi untuk  mencari perbaikan Hp dan Laptop anda yang mengalami kerusakan dengan berbagai mitra terpercaya.</p>
-                  <p>Phone : +628XXXXXXX</p>
-                  <p>Email :<a href="#"> RepairMe@gmail.com</a></p>
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="widget">
                   <h5 class="widget-title font-alt">Kelebihan RepairMe</h5>
                   <ul class="icon-list">
-                    <li>Tepat Waktu</li>
-                    <li>Antar atau Jemput</li>
-                    <li>Banyak Diskon</li>
-                    <li>Mitra Terpercaya</li>
+                    <li><a> Tepat Waktu </a></li>
+                    <li><a> Antar atau Jemput </a></li>
+                    <li><a> Banyak Diskon </a></li>
+                    <li><a> Mitra Terpercaya </a></li>
                   </ul>
                 </div>
               </div>
@@ -524,15 +522,17 @@
                     <li><a href="#">Paket 1</a></li>
                     <li><a href="#">Paket 2</a></li>
                     <li><a href="#">Paket 3</a></li>
-                    <li><a href="#">Paket 4</a></li>
-                    <li><a href="#">Paket 5</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="widget">
-                  <h5 class="widget-title font-alt">Postingan Populer</h5>
-                  <ul class="widget-posts">
+                  <h5 class="widget-title font-alt">Hubungi Kami</h5>
+                  <p>Jl. Raya Situbondo, Blindungan, Kec. Bondowoso, Kab. Bondowoso, Jawa Timur 68211</p>
+                  <p>Phone  : +628234XXXXX</P>
+                  <p>Email  : RepairMe@gmail.com</p>
+                </div>
+                 <!-- <ul class="widget-posts">
                     <li class="clearfix">
                       <div class="widget-posts-image"><a href="#"><img src="<?= BASEURL; ?>/home-master/assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
                       <div class="widget-posts-body">
@@ -547,7 +547,7 @@
                         <div class="widget-posts-meta">15 February</div>
                       </div>
                     </li>
-                  </ul>
+                  </ul>-->
                 </div>
               </div>
             </div>
@@ -561,7 +561,7 @@
                 <p class="copyright font-alt">&copy; 2019&nbsp;<a href="index.html">RepairMe</a></p>
               </div>
               <div class="col-sm-6">
-                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
+                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-skype"></i></a>
                 </div>
               </div>
             </div>
