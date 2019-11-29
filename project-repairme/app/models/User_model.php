@@ -1,8 +1,11 @@
 <?php 
 
 class User_model{
-	private $nama = 'Admin';
-	public function getUser(){
-		return $this->nama;
+	private $db;
+	function __construct(){
+		$this->db = new Database;
+	}
+	public function getAllUser(){
+		return $this->db->query("SELECT * FROM tb_user");
 	}
 }

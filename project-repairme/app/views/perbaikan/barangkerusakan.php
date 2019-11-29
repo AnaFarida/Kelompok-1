@@ -1,6 +1,4 @@
 <!-- banyak javascript, tolong perhatikan -->
-
-
 <div class="lokasiMitra mt-80" style="position: absolute; left: 4%;">
 	
 	<h4 class="font-alt mb-0">Lokasi mitra</h4>
@@ -133,11 +131,13 @@
 </div>
 <div class="barang et-icons" style="position: absolute; top: 25%; right: 8%; width: 24%;">
 <p>Pilih Barang Yang Ingin Di Perbaiki?</p>
-<span class="box1" style="width: 100%;">
-<span class="icon-laptop" aria-hidden="true" style="width: 47.8%;">
+<span class="box1" style="width: 50%;">
+<span class="icon-laptop" aria-hidden="true" style="width:100%;">
 <button class="btn btn-block btn-round btn-d tlaptop" type="button" style="margin-top: 3px;">LAPTOP</button></span>
-<span class="icon-phone" aria-hidden="true" style="position: absolute; width: 47.8%; border: 0; left: 47.5%; right: -40px;  ">
-	<button class="btn btn-block btn-round btn-d thp" type="button" style="position: absolute; right: -12px; left: 0; margin-top: 3px; width: 108%;">HANDPHONE</button>
+</span>
+<span class="box1" style="width: 50%;">
+<span class="icon-phone" aria-hidden="true" style="width: 100%;">
+	<button class="btn btn-block btn-round btn-d thp" type="button" style="margin-top: 3px;">HANDPHONE</button>
 </span>
 </span>
 </div>

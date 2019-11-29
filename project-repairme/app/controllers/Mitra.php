@@ -14,10 +14,12 @@ public function Panel(){
 		$this->view('templates/footerPanel');
 	}
 public function registrasi(){
-	//$data['judul'] = 'Registrasi';
+	$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+	$data['user'] = $this->model('User_model')->getAllUser();
+	$data['judul'] = 'Registrasi';
 	// $this->view('templates/headerReg');
-	$this->view('templates/header');
-	$this->view('mitra/registrasi');
+	$this->view('templates/header', $data);
+	$this->view('mitra/registrasi', $data);
 	$this->view('templates/footer');
 	// $this->view('templates/footerReg');
 }
