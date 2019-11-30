@@ -15,9 +15,9 @@ class Admin extends Controller{
 		$data['kategori'] = $this->model('Admin_model')->getAllKategori();
 		//$data['merk'] = $this->model('Admin_model')->getAllMerk();
 		// $data['tipe'] = $this->model('Admin_model')->getAllTipe();
-		$this->view('templates/headerAdmin');
+		$this->view('templates/headerPanel');
 		$this->view('admin/tambahKategori', $data);
-		$this->view('templates/footerAdmin');
+		$this->view('templates/footerPanel');
 	}
 
 
@@ -27,9 +27,9 @@ class Admin extends Controller{
 
 	public function dataMitra(){
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
-		$this->view('templates/headerAdmin');
+		$this->view('templates/headerPanel');
 		$this->view('admin/dataMitra', $data);
-		$this->view('templates/footerAdmin');
+		$this->view('templates/footerPanel');
 	}
 
 	public function petaLokasi(){
@@ -46,11 +46,11 @@ class Admin extends Controller{
 
 	public function insertkategori(){
 	if($this->model('Admin_model')->inputkategori($_POST) > 0){
-	header ('Location: '.BASEURL.'/admin/');
+	header ('Location: '.BASEURL.'/admin/barang');
 	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 		exit();
 	}else {
-	header ('Location: '.BASEURL.'/admin/');
+	header ('Location: '.BASEURL.'/admin/barang');
 	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}

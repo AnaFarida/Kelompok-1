@@ -8,9 +8,9 @@ class Pelanggan extends Controller{
 		$this->view('templates/footerAdmin');
 	}
 	public function panel(){
-		$this->view('templates/headerPelanggan');
+		$this->view('templates/HeaderPanel');
 		$this->view('pelanggan/PanelPelanggan');
-		$this->view('templates/footerPelanggan');
+		$this->view('templates/footerPanel');
 	}
 
 
