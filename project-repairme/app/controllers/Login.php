@@ -16,7 +16,7 @@ class Login extends Controller{
             
             if ($ret[0]['id_jenis'] == 2) {
                 mySession::setSession('true', 'mitra', $ret[0]);
-                header('Location:'.BASEURL.'/login/');
+                header('Location:'.BASEURL.'/mitra/');
             }else if($ret[0]['id_jenis'] == 3) {
                 mySession::setSession('true', 'pelanggan');
                 header('Location:'.BASEURL.'/login/');            

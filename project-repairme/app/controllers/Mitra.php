@@ -1,17 +1,13 @@
 <?php
 class Mitra extends Controller{
 	public function index(){
-		$data['judul'] = 'Daftar Mitra';
-		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
-		$this->view('templates/header',$data);
+		$data['judul'] = 'Mitra RepairMe';
+		// $data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
 		$this->view('mitra/index', $data);
-		$this->view('templates/footer');
-	}
-
-public function Panel(){
-		$this->view('templates/header');
-		$this->view('mitra/PanelMitra');
-		$this->view('templates/footerPanel');
+		}else{
+			header('Location:'.BASEURL.'/home');
+		}
 	}
 public function registrasi(){
 	$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
@@ -64,4 +60,17 @@ public function detailMitra($id){
 public function ubah(){
 	
 }
+
+public function profile(){
+		// var_dump($_SESSION['login']['data']['nama_usaha']);
+		// echo $_SESSION['login'];
+		$data['judul'] = 'Mitra RepairMe';
+		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+		$this->view('mitra/profile', $data);
+		}else{
+			header('Location:'.BASEURL.'/home');
+		}
+	}
+
 }

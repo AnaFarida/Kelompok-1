@@ -16,6 +16,7 @@ class mySession{
 		}
 	}
 
+
 	public static function sessionLogin(){
 		if (isset($_SESSION['login'])) {
 			if ($_SESSION['login']['pesan'] == 'true') {
