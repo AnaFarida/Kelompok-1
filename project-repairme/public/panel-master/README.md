@@ -1,90 +1,115 @@
-# Material Dashboard Lite
+Introduction
+============
 
-Welcome to first dark dashboard on the Material Design Lite!
+[![Build Status](https://img.shields.io/travis/ColorlibHQ/AdminLTE/master.svg)](https://travis-ci.org/ColorlibHQ/AdminLTE)
+[![npm version](https://img.shields.io/npm/v/admin-lte/latest.svg)](https://www.npmjs.com/package/admin-lte)
+[![Packagist](https://img.shields.io/packagist/v/almasaeed2010/adminlte.svg)](https://packagist.org/packages/almasaeed2010/adminlte)
+[![CDNJS](https://img.shields.io/cdnjs/v/admin-lte.svg)](https://cdnjs.com/libraries/admin-lte)
 
-<a target="_blank" href="http://creativeit.io/material-dashboard-lite/"><img src="https://trello-attachments.s3.amazonaws.com/56af74f7f1b5b81a201453c4/2000x1105/796e1dae05e88ba87162dd8bbf188e65/Darkboard_Showcase_1_3.png"/></a>
+**AdminLTE** is a fully responsive administration template. Based on **[Bootstrap 4](https://getbootstrap.com)** framework.
+Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops.
 
-Its much more fun with the [demo](http://creativeit.io/material-dashboard-lite/).
+**Preview on [AdminLTE.io](https://adminlte.io/themes/v3)**
 
-Material admin template is absolutely free for commercial usage theme, that uses google's implementation of material design — [Material Design Lite](http://www.getmdl.io) library. It doesn’t rely on any JavaScript frameworks and aims to be responsive and optimized for cross-device usage. All components are created with CSS (scss), JavaScript (es6), and HTML5.
+Looking for Premium Templates?
+------------------------------
+AdminLTE.io just opened a new premium templates page. Hand picked to insure the best quality and the most affordable
+prices. Visit https://adminlte.io/premium for more information.
 
->**Important**: We are still working on the project and there will be much more awesome, check out our [issues](https://github.com/CreativeIT/material-dashboard-lite/issues) to see what features are coming soon.
+!["AdminLTE Presentation"](https://adminlte.io/AdminLTE3.png "AdminLTE Presentation")
 
-# SETUP and USAGE
-The steps bellow will take you through cloning your own fork, installing dependencies and building:
+**AdminLTE** has been carefully coded with clear comments in all of its JS, SCSS and HTML files.
+SCSS has been used to increase code customizability.
 
-1. Fork and/or clone our repository. To use Git from command line, see the [Setting up Git](https://help.github.com/articles/set-up-git/) and [Fork a repo](https://help.github.com/articles/fork-a-repo/) articles. 
-  
-  ```
-    git clone https://github.com/CreativeIT/material-dashboard-lite.git
-  ```
+Installation
+------------
+There are multiple ways to install AdminLTE.
 
-2. Open your copied repo folder in terminal and install [npm](https://www.npmjs.com/) components with command:
-  
-  ```
-    cd material-dashboard-lite
-    npm install
-  ```
+#### Download:
 
-3. Install [bower](http://bower.io/) components with command:
-  
-  ```
-    bower install
-  ```
+Download from [Github releases](https://github.com/ColorlibHQ/AdminLTE/releases).
 
-4. Now you are able to build project with [gulp](http://gulpjs.com/):
-  
-  ```
-    gulp build
-  ```
+#### Using The Command Line:
 
-5. To see the result use command:
-  
-  ```
-    gulp serve
-  ```
+__Via NPM__
+```bash
+npm install admin-lte@^3.0 --save
+```
 
-# FEATURES
+__Via Yarn__
+```bash
+yarn add admin-lte@^3.0
+```
 
-*  [Material Design](http://www.google.com/design/spec/material-design/introduction.html) via [Material Design Lite](http://getmdl.io)
+__Via Composer__
+```bash
+composer require "almasaeed2010/adminlte=~3.0"
+```
 
-*  Ecmascript 6 (with [babel](https://babeljs.io/))
+__Via Git__
+- Clone to your machine
+```
+git clone https://github.com/ColorlibHQ/AdminLTE.git
+```
 
-*  Responsive dark material design. DARK, Carl!
+Documentation
+-------------
+Visit the [online documentation](https://adminlte.io/docs/3.0/) for the most
+updated guide. Information will be added on a weekly basis.
 
-*  User experience focused
+Browser Support
+---------------
+- IE 10+
+- Firefox (latest)
+- Chrome (latest)
+- Safari (latest)
+- Opera (latest)
 
-*  [Sass](http://sass-lang.com/)
+Contribution
+------------
+Contribution are always **welcome and recommended**! Here is how:
 
-*  [Gulp](http://gulpjs.com/) build
+- Fork the repository ([here is the guide](https://help.github.com/articles/fork-a-repo/)).
+- Clone to your machine ```git clone https://github.com/YOUR_USERNAME/AdminLTE.git```
+- Create a new branch
+- Make your changes
+- Create a pull request
 
-*  [D3](https://d3js.org/) and [NVD3](http://nvd3.org/)
+#### Compile dist files
+To compile the dist files you need nodejs/npm, clone/download the repo then:
 
-*  MIT License
+1. `npm install` (install npm deps)
+2. _Optional:_ `npm dev` (developer mode, autocompile with browsersync support for live demo)
+3. `npm run production` (compile css/js files)
 
-# Additional
+#### Contribution Requirements:
+- When you contribute, you agree to give a non-exclusive license to AdminLTE.io to use that contribution in any context as we (AdminLTE.io) see appropriate.
+- If you use content provided by another party, it must be appropriately licensed using an [open source](http://opensource.org/licenses) license.
+- Contributions are only accepted through Github pull requests.
+- Finally, contributed code must work in all supported browsers (see above for browser support).
 
-Since the project uses [BEM](http://getbem.com) structure with sass, it can be customized in easy way by editing `src/variables.scss` file. To take effect you must run `gulp build` in terminal again. Also you may want to use `gulp watch`, that will run default command every time you modify any file in source folder. You can use `gulp default`if you don't want to minify js-files.
+License
+-------
+AdminLTE is an open source project by [AdminLTE.io](https://adminlte.io) that is licensed under [MIT](http://opensource.org/licenses/MIT). AdminLTE.io
+reserves the right to change the license of future releases.
 
-Google hasn't implemented select element yet ([see why here](http://37.media.tumblr.com/6a9fcffde2da977266b0ea99b15d5803/tumblr_n42cjjsriB1smcbm7o1_400.gif)), that is why the project depends on [getmdl-select plugin](https://github.com/CreativeIT/getmdl-select). Also project uses [d3](https://d3js.org/) and [nvd3](http://nvd3.org/) to build charts and chart components.
+Legacy Releases
+---------------
+- [AdminLTE 2](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18)
+- [AdminLTE 1](https://github.com/ColorlibHQ/AdminLTE/releases/tag/1.3.1)
 
+Change log
+----------
+Visit the [releases](https://github.com/ColorlibHQ/AdminLTE/releases) page to view the changelog
 
-# Hire us
-We are ready to bring value to your business. Visit our site [creativeit.io](http://creativeit.io/) or drop us a line <hello@creativeit.io>. We will be happy to help you!
+Image Credits
+-------------
+[Pixeden](http://www.pixeden.com/psd-web-elements/flat-responsive-showcase-psd)
 
+[Graphicsfuel](http://www.graphicsfuel.com/2013/02/13-high-resolution-blur-backgrounds/)
 
-# Credits
+[Pickaface](http://pickaface.net/)
 
-UI components built with [Material Design Lite](http://www.getmdl.io).
+[Unsplash](https://unsplash.com/)
 
-Designed with passion and coffee by CreativeIT
-
-# Support the project
-
-* Star the repo
-
-* Create issue report or feature request
-
-* [Tweet about it](https://twitter.com/intent/tweet?text=Wow!%20New%20%23free%20dark%20%23dashboard%20on%20%23MaterialDesignLite!%0Ahttp://creativeit.github.io/material-dashboard-lite/index.html%0A&via=CreativeITeam&hashtags=materialDesign,responsive,UI,JS)
-
-* Follow [us on Twitter](https://twitter.com/intent/follow?screen_name=CreativeITeam)
+[Uifaces](http://uifaces.com/)

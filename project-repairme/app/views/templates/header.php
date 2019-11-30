@@ -56,7 +56,6 @@
 
     <?php require 'leafletjs.php'; ?>
 
-
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>

@@ -9,7 +9,7 @@ class Mitra extends Controller{
 	}
 
 public function Panel(){
-		$this->view('templates/headerPanel');
+		$this->view('templates/header');
 		$this->view('mitra/PanelMitra');
 		$this->view('templates/footerPanel');
 	}
