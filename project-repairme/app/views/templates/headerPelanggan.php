@@ -17,12 +17,12 @@
 -->
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="icon" type="image/png" href="<? BASEURL?>/dist/images/DB_16х16.png">
+    <link rel="icon" type="image/png" href="<?= BASEURL; ?>/panel-master/dist/images/DB_16х16.png">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Dashboard Lite</title>
+    <title>Dashboard Pelanggan</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -35,7 +35,7 @@
 
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="<?= BASEURL; ?>/panel-master/dist/images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
@@ -47,9 +47,10 @@
           type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- inject:css -->
-    <link rel="stylesheet" href="css/lib/getmdl-select.min.css">
-    <link rel="stylesheet" href="css/lib/nv.d3.min.css">
-    <link rel="stylesheet" href="css/application.min.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/dist/css/lib/getmdl-select.min.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/dist/css/lib/nv.d3.min.css">
+    <link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/dist/css/application.min.css">
     <!-- endinject -->
 
 </head>
+<body>
