@@ -12,7 +12,47 @@
         <section class="module" id="about">
           <div class="container">
             <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="module-title font-alt">Portofolio Mitra</h2>
+            <ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
+            <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
+                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-1.jpg" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Corporate Identity</h3>
+                  <div class="work-descr">Illustration</div>
+                </div></a></li>
+            <li class="work-item marketing photography"><a href="portfolio-single-1.html">
+                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-2.jpg" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Bag MockUp</h3>
+                  <div class="work-descr">Marketing</div>
+                </div></a></li>
+            <li class="work-item illustration photography"><a href="portfolio-single-1.html">
+                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-3.jpg" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Disk Cover</h3>
+                  <div class="work-descr">Illustration</div>
+                </div></a></li>
+            <li class="work-item marketing photography"><a href="portfolio-single-1.html">
+                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-4.jpg" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Business Card</h3>
+                  <div class="work-descr">Photography</div>
+                </div></a></li>
+            <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
+                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-5.jpg" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Business Card</h3>
+                  <div class="work-descr">Webdesign</div>
+                </div></a></li>
+            <li class="work-item marketing webdesign"><a href="portfolio-single-1.html">
+                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-6.jpg" alt="Portfolio Item"/></div>
+                <div class="work-caption font-alt">
+                  <h3 class="work-title">Business Cards in paper clip</h3>
+                  <div class="work-descr">Marketing</div>
+                </div></a></li>
+          </ul>
+        </section>
+              <!--<div class="col-sm-8 col-sm-offset-2">
                 <h2 class="module-title font-alt">Tentang RepairMe</h2>
                 <div class="module-subtitle font-serif large-text">RepairMe adalah jasa tempat dan solusi untuk anda mencari perbaikan hp atau laptop yang mengalami kerusakan dengan berbagai mitra terpercaya, berkualitas, dan cepat dalam memperbaiki hp atau laptop anda. RepairMe menyediakan berbagai promosi pelayanan untuk memuaskan pengunjung kami. RepairMe juga merupakan solusi untuk anda yang memiliki usaha dalam bidang perbaikan hp dan laptop dengan berbagai paket pemasangan iklan dan mendapatkan pelanggan dengan mudah.</div>
               </div>
@@ -23,7 +63,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section>-->
         <hr class="divider-w">
         <section class="module" id="services">
           <div class="container">
