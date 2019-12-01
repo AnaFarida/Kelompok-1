@@ -1,5 +1,6 @@
 <script>
   $(document).ready(function(){
+     // $("").addClass('active');
      $("[href='<?= BASEURL; ?>/mitra/profile'").addClass('active');
   });
 </script>
@@ -30,17 +31,17 @@
           <div class="col-md-3">
 
             <!-- Profile Image -->
-            <div class="card card-primary card-outline">
+            <div class="card card-dark card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-                  <img class="profile-user-img img-fluid img-circle"
-                       src="<?= BASEURL; ?>/panel-master/dist/img/user4-128x128.jpg"
+                  <img class="profile-user-img img-fluid img-box"
+                       src="<?= BASEURL; ?>/img/mitra/<?= $_SESSION['login']['data']['foto_usaha']; ?>"
                        alt="User profile picture">
                 </div>
 
-                <h3 class="profile-username text-center">Nina Mcintire</h3>
+                <h3 class="profile-username text-center"><?= strtoupper($_SESSION['login']['data']['nama_usaha']); ?></h3>
 
-                <p class="text-muted text-center">Software Engineer</p>
+                <p class="text-muted text-center text-sm"><?= strtoupper($_SESSION['login']['data']['nama']); ?></p>
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
@@ -53,21 +54,21 @@
                     <b>Friends</b> <a class="float-right">13,287</a>
                   </li>
                 </ul>
-
-                <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                
+                <a href="#" class="btn btn-danger btn-block"><b>Belum Terverifikasi</b></a>
               </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
 
             <!-- About Me Box -->
-            <div class="card card-primary">
+            <div class="card card-dark">
               <div class="card-header">
-                <h3 class="card-title">About Me</h3>
+                <h3 class="card-title">Tentang Mitra</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <strong><i class="fas fa-book mr-1"></i> Education</strong>
+                <strong><i class="fas fa-book mr-1"></i> Deskripsi</strong>
 
                 <p class="text-muted">
                   B.S. in Computer Science from the University of Tennessee at Knoxville
@@ -75,20 +76,16 @@
 
                 <hr>
 
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+                <strong><i class="fas fa-map-marker-alt mr-1"></i> Lokasi Usaha</strong>
 
-                <p class="text-muted">Malibu, California</p>
+                <p class="text-muted"><?= $_SESSION['login']['data']['alamat']; ?></p>
 
                 <hr>
 
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Jenis Perbaikan</strong>
 
                 <p class="text-muted">
-                  <span class="tag tag-danger">UI Design</span>
-                  <span class="tag tag-success">Coding</span>
-                  <span class="tag tag-info">Javascript</span>
-                  <span class="tag tag-warning">PHP</span>
-                  <span class="tag tag-primary">Node.js</span>
+                  <?= $_SESSION['login']['data']['jenis']; ?>
                 </p>
 
                 <hr>

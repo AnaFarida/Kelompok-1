@@ -53,7 +53,9 @@
     <!-- Main stylesheet and color file-->
     <link href="<?= BASEURL; ?>/home-master/assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="<?= BASEURL; ?>/home-master/assets/css/colors/default.css" rel="stylesheet">
-
+    <!-- untuk registrasi pelanggan -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <?php require 'leafletjs.php'; ?>
 
   </head>

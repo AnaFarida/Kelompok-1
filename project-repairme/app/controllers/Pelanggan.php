@@ -15,8 +15,11 @@ class Pelanggan extends Controller{
 
 
 public function registrasi(){
-	$this->view('templates/header');
-	$this->view('pelanggan/registrasi');
+	$data['judul'] = 'Registrasi pelanggan';
+	$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
+	$data['user'] = $this->model('User_model')->getAllUser();
+	$this->view('templates/header', $data);
+	$this->view('pelanggan/regis', $data);
 	$this->view('templates/footer');
 }
 public function insertpelanggan(){
