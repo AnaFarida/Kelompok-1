@@ -4,9 +4,11 @@ class Mitra extends Controller{
 		$data['judul'] = 'Mitra RepairMe';
 		// $data['mitra'] = $this->model('Mitra_model')->getAllMitra();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+		$this->view('mitra/templates/header', $data);
 		$this->view('mitra/index', $data);
+		$this->view('mitra/templates/footer');
 		}else{
-			header('Location:'.BASEURL.'/home');
+			header('Location:'.BASEURL.'/login');
 		}
 	}
 public function registrasi(){
@@ -67,9 +69,11 @@ public function profile(){
 		$data['judul'] = 'Mitra RepairMe';
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+		$this->view('mitra/templates/header', $data);
 		$this->view('mitra/profile', $data);
+		$this->view('mitra/templates/footer');
 		}else{
-			header('Location:'.BASEURL.'/home');
+			header('Location:'.BASEURL.'/login');
 		}
 	}
 
