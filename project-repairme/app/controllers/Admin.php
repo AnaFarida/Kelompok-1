@@ -3,9 +3,9 @@ class Admin extends Controller{
 	public function index(){
 		$data['judul'] = 'Admin';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'admin') {
-		$this->view('templates/headerPanel', $data);
-		$this->view('admin/index');
-		$this->view('templates/footerPanel');
+		$this->view('admin/templates/header', $data);
+		$this->view('admin/index',$data);
+		$this->view('admin/templates/footer');
 		}else{
 			header('Location:'.BASEURL.'/login');
 		}
@@ -15,9 +15,9 @@ class Admin extends Controller{
 		$data['kategori'] = $this->model('Admin_model')->getAllKategori();
 		//$data['merk'] = $this->model('Admin_model')->getAllMerk();
 		// $data['tipe'] = $this->model('Admin_model')->getAllTipe();
-		$this->view('templates/headerPanel');
+		$this->view('admin/templates/header');
 		$this->view('admin/tambahKategori', $data);
-		$this->view('templates/footerPanel');
+		$this->view('admin/templates/footer');
 	}
 
 
@@ -27,21 +27,21 @@ class Admin extends Controller{
 
 	public function dataMitra(){
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
-		$this->view('templates/headerPanel');
+		$this->view('admin/templates/header');
 		$this->view('admin/dataMitra', $data);
-		$this->view('templates/footerPanel');
+		$this->view('admin/templates/footer');
 	}
 
 	public function petaLokasi(){
-		$this->view('templates/headerAdmin');
+		$this->view('admin/templates/header');
 		$this->view('admin/ControlMaps');
-		$this->view('templates/footerAdmin');
+		$this->view('admin/templates/footer');
 	}
 
 	public function chart(){
-		$this->view('templates/headerAdmin');
+		$this->view('admin/templates/header');
 		$this->view('admin/chart');
-		$this->view('templates/footerAdmin');
+		$this->view('admin/templates/footer');
 	}
 
 	public function insertkategori(){
