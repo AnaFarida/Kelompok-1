@@ -1,17 +1,21 @@
 <?php
 class Pelanggan extends Controller{
 	public function index(){
-		$data['judul'] = 'Daftar pelanggan';
-		$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
-		$this->view('templates/headerAdmin',$data);
-		$this->view('pelanggan/index', $data);
-		$this->view('templates/footerAdmin');
-	}
-	public function panel(){
-		$this->view('templates/HeaderPanel');
-		$this->view('pelanggan/PanelPelanggan');
-		$this->view('templates/footerPanel');
-	}
+		$data['judul'] = 'Pelanggan RepairMe';
+		//$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+			$this->view('pelanggan/templates/header', $data);
+			$this->view('pelanggan/index', $data);
+			$this->view('pelanggan/templates/footer');
+			}else{
+				header('Location:'.BASEURL.'/login');
+			}
+		}
+	// public function panel(){
+	// 	$this->view('templates/HeaderPanel');
+	// 	$this->view('pelanggan/PanelPelanggan');
+	// 	$this->view('templates/footerPanel');
+	// }
 
 
 public function registrasi(){
@@ -53,6 +57,20 @@ public function delete($id){
 			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
 			header('Location: '.BASEURL.'/mitra/');
 			exit;
+		}
+	}
+
+public function profile(){
+		// var_dump($_SESSION['login']['data']['nama_usaha']);
+		// echo $_SESSION['login'];
+		$data['judul'] = 'Pelanggan RepairMe';
+		$data['pelanggan'] = $this->model('pelanggan_model')->getAllPelanggan();
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+		$this->view('pelanggan/templates/header', $data);
+		$this->view('pelanggan/profile', $data);
+		$this->view('pelanggan/templates/footer');
+		}else{
+			header('Location:'.BASEURL.'/login');
 		}
 	}
 }

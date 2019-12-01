@@ -6,36 +6,46 @@ class Kategori_model{
 	function __construct(){
 		$this->db = new Database;
 	}
-	// public function getAllkategori(){
-	// 	return $this->db->query("SELECT * FROM tb_kategori");
-	// }
 
-	public function getAllmerk(){
-		return $this->db->query("SELECT * FROM tb_merk");
-	}
-	// public function getAlltipe(){
-		// return $this->db->query("SELECT * FROM tb_tipe");
-	// }
-    public function inputbarang($data){
-		
-		$merk = $data['merk'];
-		// $tipe = $data['tipe']
-
-	  	$result = $this->db->data("INSERT INTO tb_merk VALUES (NULL,'$merk')");
-	  	return $result;
-		
+		public function getAllKategori(){
+			$data1 = $this->db->query("SELECT * FROM tb_kategori");
+			$data2 = $this->db->query("SELECT * FROM tb_merk");
+			$data3 = $this->db->query("SELECT * FROM tb_tipe");
+			$result = array('kategori' => $data1, 'merk' => $data2, 'tipe' => $data3);
+			return $result;
 		}
-
-		public function deletemerk($id){
 		
-	$delmerk = $this->db->data("DELETE FROM tb_merk WHERE id_merk ='$id'");
-			 
+		public function inputkategori($data){
 			
+			$kategori = $data['kategori'];
+	
 			
-			
-			return $delmerk;
+	
+			$result = $this->db->data("INSERT INTO tb_kategori VALUES ( NULL,'$kategori')");
+			return $result;
 		}
-
+	
+		public function inputmerk($data){
+			
+			 $merk = $data['merk'];
+	
+			
+	
+			$result = $this->db->data("INSERT INTO tb_merk VALUES ( NULL,'$merk')");
+			return $result;
+		}
+	
+		public function inputtipe($data){
+			
+			$tipe = $data['tipe'];
+	
+			
+	
+			$result = $this->db->data("INSERT INTO tb_tipe VALUES ( NULL,'$tipe')");
+			return $result;
+		}
+	
+	
 
 	}
 	

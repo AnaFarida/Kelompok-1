@@ -46,7 +46,11 @@ class Admin_model{
 		$result = $this->db->data("INSERT INTO tb_tipe VALUES ( NULL,'$tipe')");
 		return $result;
 	}
+	 
+	public function inputbarang($data){
 
+		
+	}
 
 
 }
