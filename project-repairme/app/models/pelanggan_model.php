@@ -26,7 +26,19 @@ class pelanggan_model{
 		$alamat = $data['alamat'];
 		$username = $data['username'];
 		$password = $data['password'];
+	//validasi username dan password
 
+		$username = strtolower(stripslashes($data['username']));
+		$password = mysqli_real_escape_string($conn, $data['password']);
+
+		$password = password_hash($password, PASSWORD_DEFAULT);
+		$cekUsername = $this->db->query("SELECT * FROM tb_user");
+		foreach ($cekUsername as $key) {
+	if ($key['username'] == $username
+	) {
+		return false;
+	}
+}
 		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
 
 		foreach ($preIdUser as $key) {
