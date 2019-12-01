@@ -72,6 +72,7 @@
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu">
                   <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_video_background.html">Default</a></li>
+                  <li><a href="<?= BASEURL; ?>/admin/barang">Kategori</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_op_fullscreen_gradient_overlay.html">One Page</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_agency.html">Agency</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_portfolio.html">Portfolio</a></li>

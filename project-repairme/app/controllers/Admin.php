@@ -15,9 +15,9 @@ class Admin extends Controller{
 		$data['kategori'] = $this->model('Admin_model')->getAllKategori();
 		//$data['merk'] = $this->model('Admin_model')->getAllMerk();
 		// $data['tipe'] = $this->model('Admin_model')->getAllTipe();
-		$this->view('admin/templates/header');
-		$this->view('admin/tambahKategori', $data);
-		$this->view('admin/templates/footer');
+		$this->view('templates/header');
+		$this->view('admin/tambah', $data);
+		$this->view('templates/footer');
 	}
 
 
