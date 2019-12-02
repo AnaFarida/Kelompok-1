@@ -3,9 +3,9 @@ class Admin extends Controller{
 	public function index(){
 		$data['judul'] = 'Admin';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'admin') {
-		$this->view('templates/headerPanel', $data);
+		$this->view('admin/templates/header', $data);
 		$this->view('admin/index',$data);
-		$this->view('templates/footerPanel');
+		$this->view('admin/templates/footer');
 		}else{
 			header('Location:'.BASEURL.'/login');
 		}
