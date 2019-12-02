@@ -11,7 +11,7 @@ class Login extends Controller{
 
     function checklogin(){
     	$ret = $this->model('Login_model')->checkloginkey($_POST);
-    	var_dump($ret);
+    	// var_dump($ret);
     	if (count($ret) == 1) {
             
             if ($ret[0]['id_jenis'] == 2) {

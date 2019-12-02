@@ -403,16 +403,19 @@
 				// validasi username dan password untuk login
 				var username;
 				$('#username').on('keyup',function(){
+					if ($(this).val() < 1) {
+						$('.username').text('Username Harus Diisi');
+					}
 					<?php foreach ($data['user'] as $user):?>
-						if ($(this).val() == '<?= $user["username"]; ?>' ){
+					else if ($(this).val() == "<?= $user['username']; ?>" ){
 							$('.username').text('Username tidak bisa dipakai');
 							username = false;
-						}
-					<?php endforeach; ?>
-					else {
-						$('.username').text('');
-						username = true;
 					}
+					<?php endforeach; ?>
+					else{
+						$('.username').text('');
+					}
+					
 				});
 				var passv;
 				$('#password1').on('keyup',function(){
