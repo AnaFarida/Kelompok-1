@@ -92,10 +92,18 @@ class Mitra_model{
 		  
 	}
 
-	public function updateDeskripsi($data){
+	public function inputDeskripsi($data){
 	$id = $data['id_mitra'];
 	$deskripsi = $data['deskripsi'];
 	$input=$this->db->data("INSERT INTO deskripsi VALUES ($id,'$deskripsi')");
 	return $input;
+	}
+
+	public function updateDeskripsi($data){
+		$conn = mysqli_connect( 'localhost', 'root', '', 'repairme');
+	$id = $data['id_mitra'];
+	$deskripsi = $data['deskripsi'];
+	$update=$this->db->data("UPDATE deskripsi SET(deskripsi) WHERE ('$id')");
+	return $update;
 	}
 }

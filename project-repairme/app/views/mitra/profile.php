@@ -71,7 +71,9 @@
                 <strong><i class="fas fa-book mr-1"></i> Deskripsi</strong>
 
                 <p class="text-muted">
-                  B.S. in Computer Science from the University of Tennessee at Knoxville
+                 <?= strtoupper($_SESSION['login']['data']['deskripsi']); ?>
+                 <a class="btn btn-dark" href="<?= BASEURL; ?>/mitra/deskripsi" role="button">Update Deskripsi</a>
+                 
                 </p>
 
                 <hr>
