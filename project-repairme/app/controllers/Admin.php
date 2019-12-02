@@ -3,9 +3,9 @@ class Admin extends Controller{
 	public function index(){
 		$data['judul'] = 'Admin';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'admin') {
-		$this->view('admin/templates/header', $data);
+		$this->view('templates/headerPanel', $data);
 		$this->view('admin/index',$data);
-		$this->view('admin/templates/footer');
+		$this->view('templates/footerPanel');
 		}else{
 			header('Location:'.BASEURL.'/login');
 		}
@@ -16,7 +16,7 @@ class Admin extends Controller{
 		//$data['merk'] = $this->model('Admin_model')->getAllMerk();
 		// $data['tipe'] = $this->model('Admin_model')->getAllTipe();
 		$this->view('templates/header');
-		$this->view('admin/tambah', $data);
+		$this->view('admin/tambahKategori', $data);
 		$this->view('templates/footer');
 	}
 

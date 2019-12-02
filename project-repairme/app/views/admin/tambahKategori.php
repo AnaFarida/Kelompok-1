@@ -1,124 +1,37 @@
-<!-- wrapper  -->
-<!-- ============================================================== -->
-<div class="dashboard-wrapper">
-    <div class="container-fluid  dashboard-content">
-        <!-- ============================================================== -->
-        <!-- pageheader -->
-        <!-- ============================================================== -->
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-               
-            </div>
-        </div>
-        <br><br>
-        <div class="row">
-            <!-- ============================================================== -->
-            <!-- basic form -->
-            <!-- ============================================================== -->
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="card">
-                    <div class="card-body">
-                    <br><br><br>
-                    <P >INPUT DATA</P>
-                        <form action="<?= BASEURL;?>/admin/insertbarang" method="POST" id="formKat" data-parsley-validate="">
-                            <div class="form-group">
-                                <table>
-                                    <tr>
-                                        <label for="kategori">Kategori </label><br>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                        <select class="form-control" name="kategori" id="kategori" style="margin: 10px;">
-                                              <option selected="selected">Pilih Kategori</option>
-                                              <?php foreach ($data['kategori']['kategori'] as $kategori):?>
-                                              <option><?= $kategori['kategori']; ?></option>
-                                              <?php endforeach; ?>
-                                        </select>
-                                            
-                                        </td>
-                                        <td>
-                                            
-                                            <div class="col-sm-6 pl-0">
-                                               
-                                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal1">+
-                                                                    </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                                    </div>
-                                        <div class="form-group">
-                                            <table>
-                                                <tr>
-                                                    <label for="merk">Merk </label><br>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                       <select class="form-control" name="merk" id="merk" style="margin: 10px;">
-                                              <option selected="selected">Pilih Merk</option>
-                                              <?php foreach  ($data['kategori']['merk'] as $merk):?>
-                                              <option><?= $merk['merk']; ?></option>
-                                              <?php endforeach; ?>
-                                        </select>
-                                                   
-                                                    <td>
-                                                        
-                                                        <div class="col-sm-6 pl-0">
-                                        
-                                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal2">+
-                                                                    </button>
-                                                        </div>        
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                   
-                                        <div class="form-group">
-                                            <table>
-                                                <tr>
-                                                    <label for="tipe">Tipe </label><br>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                    <select class="form-control" name="tipe" id="tipe" style="margin: 10px;">
-                                              <option selected="selected">Pilih tipe</option>
-                                              <?php foreach  ($data['kategori']['tipe'] as $tipe):?>
-                                              <option><?= $tipe['tipe']; ?></option>
-                                              <?php endforeach; ?>
-                                        </select>
-                                                    </td>
-                                                    <td>
-                                                        
-                                                        <div class="col-sm-6 pl-0">
-                                                          
-                                                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal3">+
-                                                                    </button>
-                                                               
-                                    
-                                                        </div>        
-                                                    </td>
-                                                </tr>
-                                            <tr>
-                                            <td>
-                                            <br><br>
-                                            <button type="submit" class="btn btn-dark" name="submit3" id="submit3">kirim
-                                                                    </button>
-                                            </td>
-                                            </tr>
-                                            </table>
-                                        </div>
-                                    </form>                 
-                    </div>
-                </div>
-            </div>
-        </div>
-                         
-                                   
-                                    </div>
-                                </div>
-                                <!-- ============================================================== -->
-                                <!-- end main wrapper -->
-                                <!-- ============================================================== -->
+<div class="mt-80" style="position: absolute; left: 20%;">
+<h4 class="font-alt mb-0 namaMitra">INPUT KATEGORI DAN BARANG</h4>
+<hr class="divider-w mt-10 mb-20" style="width: 120%;">
+</div>
+
+<form class="row detailKerusakan" style="position: absolute; top: 25%; right: 60%; width: 24%;">
+<select class="form-control" name="kategori" id="kategori" style="margin: 10px;">
+<option selected="selected">Pilih Kategori</option>
+<?php foreach ($data['kategori']['kategori'] as $kategori):?>
+<option><?= $kategori['kategori']; ?></option>
+<?php endforeach; ?>
+</select>
+<select class="form-control" name="merk" id="merk" style="margin: 10px;">
+<option selected="selected">Pilih Merk</option>
+<?php foreach  ($data['kategori']['merk'] as $merk):?>
+<option><?= $merk['merk']; ?></option>
+<?php endforeach; ?>
+</select>
+<select class="form-control" name="tipe" id="tipe" style="margin: 10px;">
+<option selected="selected">Pilih tipe</option>
+<?php foreach  ($data['kategori']['tipe'] as $tipe):?>
+<option><?= $tipe['tipe']; ?></option>
+<?php endforeach; ?>
+</select>
+<button class="btn btn-block btn-round btn-d" type="submit" style="margin: 10px; margin-top: 30px;">KIRIM </button>
+</form>
+<form class="row detailKerusakan2" style="position: absolute; top: 25%; right: 34%; width: 24%;">
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal1">+</button><br><br>
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal2">+</button><br><br>
+<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal3">+</button>
+
+                                                                    
+                                                                    
+</form>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
@@ -205,4 +118,3 @@
     </div>
   </div>
 </div>
-                        
