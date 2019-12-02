@@ -25,6 +25,8 @@ class mySession{
 
 				}else if($_SESSION['login']['jenis'] == 'admin'){
 					echo '<li><a href="'.BASEURL.'/login/logout">LOGOUT ADMIN</a></li>';
+				}else if($_SESSION['login']['jenis'] == 'pelanggan'){
+					echo '<li><a href="'.BASEURL.'/login/logout">LOGOUT PELANGGAN</a></li>';
 				}
 			}
 		}
