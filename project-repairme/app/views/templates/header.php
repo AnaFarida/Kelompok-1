@@ -53,7 +53,9 @@
     <!-- Main stylesheet and color file-->
     <link href="<?= BASEURL; ?>/home-master/assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="<?= BASEURL; ?>/home-master/assets/css/colors/default.css" rel="stylesheet">
-
+    <!-- untuk registrasi pelanggan -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <?php require 'leafletjs.php'; ?>
 
   </head>
@@ -72,6 +74,7 @@
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu">
                   <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_video_background.html">Default</a></li>
+                  <li><a href="<?= BASEURL; ?>/admin/barang">Kategori</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_op_fullscreen_gradient_overlay.html">One Page</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_agency.html">Agency</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_portfolio.html">Portfolio</a></li>

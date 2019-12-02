@@ -1,8 +1,7 @@
+<!-- style tambahan pelanggan -->
 <style>
-
 body {
   margin: 0;
-  background: #25A3FF;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -15,7 +14,7 @@ h1 {
 
 #progress {
   position: absolute;
-  background: #0069ec;
+  background: lightgrey;
   height: 100vh;
   width: 0;
   transition: width 0.2s ease-in-out;
@@ -34,7 +33,9 @@ h1 {
 
 #register {
   background: #fff;
-  position: relative;
+  position: absolute;
+  top: 30%;
+  left: 60%;
   width: 410px;
   padding: 2px 15px 20px 15px;
   box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
@@ -54,7 +55,7 @@ h1 {
   right: 20px;
   bottom: 10px;
   font-size: 40px;
-  color: #25a3ff;
+  color: grey;
   float: right;
   cursor: pointer;
 }
@@ -101,7 +102,7 @@ h1 {
 
 #inputProgress {
   position: absolute;
-  border-bottom: 2px solid #25a3ff;
+  border-bottom: 2px solid grey;
   padding: 3px 0;
   width: 0;
   transition: width .6s ease-in-out;
@@ -112,18 +113,48 @@ h1 {
 }
 </style>
 
+
 <div id="progress"></div>
 
 <div class="center">
-
+<div class="tutorial mt-70" id="tutorial" style="position: absolute; left: 7%; width: 45%; top: 0;">
+  <h4 class="font-alt mb-0">Tutorial</h4>
+  <hr class="divider-w mt-10 mb-20">
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Bagaimana Cara Memilih Mitra?</a></h4>
+      </div>
+      <div class="panel-collapse collapse in" id="support1">
+        <div class="panel-body">
+          Pilih mitra yang anda inginkan dengan menekan area peta, deskripsi mitra akan muncul bersamaan dengan rating mitra.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Support Question 2</a></h4>
+      </div>
+      <div class="panel-collapse collapse" id="support2">
+        <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+        $(document).ready(function(){
+          
+          $('#inputField').keyup(function(){
+            this.value = this.value.toUpperCase();
+          });
+        });
+      </script>
+    
   <div id="register">
-
     <i id="progressButton" class="ion-android-arrow-forward next"></i>
-    <p class="input" style="font-size: 12px; color: red;"></p>
     <div id="inputContainer">
-      
       <input id="inputField" required autofocus />
-      
       <label id="inputLabel"></label>
 
       <div id="inputProgress"></div>
@@ -139,16 +170,17 @@ h1 {
     </div>
 
   </div>
-
+    <p class="input" style="font-size: 12px; color: red; position: absolute; left: 62%;"></p>
   <script>
 
 
   var questions = [
-    {question:"masukkan nama lengkap anda !", pattern: /^[A-Za-z]+$/ },
+    {question:"masukkan nama lengkap anda !", pattern: /^[A-Za-z ]+$/ },
     {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
-    {question:"masukkan no telepon anda !"},
+    {question:"masukkan no telepon anda !", pattern: /^[09]+$/},
     {question:"masukkan alamat anda !"},
     {question:"username "},
+    {question:"password ", type: "password", pattern: /^.{8,}$/},
     {question:"password ", type: "password", pattern: /^.{8,}$/}
   ]
   
@@ -183,16 +215,6 @@ h1 {
       showCurrent()
     }
     
-      $(document).ready(function(){
-      $('.next').on('click',function(){
-        if (!inputField.value.match(questions[0].pattern)){
-          $('.input').text('Pastikan Nama tidak memuat angka atau simbol!');  
-         wrong();
-         
-       }
-      });
-    });
-
     // when all the questions have been answered
     function done() {
       
@@ -200,11 +222,13 @@ h1 {
 
       // remove the box if there is no next question
       register.className = 'close'
+
       
       // add the h1 at the end with the welcome text
       var h1 = document.createElement('h1')
       
       $(document).ready(function(){
+      $('#tutorial').hide().fadeOut();
       var q1 = questions[0].value;
       var q2 = questions[1].value;
       var q3 = questions[2].value;
@@ -217,9 +241,7 @@ h1 {
       $('#no_tlp').attr('value',q4);
       $('#username').attr('value',q5);
       $('#password').attr('value',q6);
-
-      console.log($('#nama').val()+$('#email').val()+$('#alamat').val()+$('#no_tlp').val()+$('#username').val()+$('#password').val());
-      
+    
       });
       h1.appendChild(document.createTextNode('Selamat Datang ' + questions[0].value + '!'))
       setTimeout(function() {
@@ -232,32 +254,33 @@ h1 {
               setTimeout(submit, 4000);
             });
       }, eTime)
-      
-
-      
-      
     }
+
+
   
     // when submitting the current question
     function validate() {
   
       // set the value of the field into the array
       questions[position].value = inputField.value
-  
       // check if the pattern matches
       if (!inputField.value.match(questions[position].pattern || /.+/)) wrong()
       else ok(function() {
         
+
         // set the progress of the background
         progress.style.width = ++position * 100 / questions.length + 'vw'
-  
-        // if there is a new question, hide current and load next
-        if (questions[position]) hideCurrent(putQuestion)
+        if (questions[5].value != questions[6].value) {
+          wrong();
+        }  
+        else if (questions[position]) hideCurrent(putQuestion)
         else hideCurrent(done)
                
       })
   
     }
+
+
   
     // helper
     // --------------
