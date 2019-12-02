@@ -90,7 +90,12 @@ class Mitra_model{
 			 $rows = $key2 ['id_user'];
 		 }
 		  
+	}
 
-
+	public function updateDeskripsi($data){
+	$id = $data['id_mitra'];
+	$deskripsi = $data['deskripsi'];
+	$input=$this->db->data("INSERT INTO deskripsi VALUES ($id,'$deskripsi')");
+	return $input;
 	}
 }

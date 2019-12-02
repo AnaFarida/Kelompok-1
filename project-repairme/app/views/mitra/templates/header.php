@@ -90,7 +90,7 @@
                   <img src="<?= BASEURL; ?>/panel-master/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                   <div class="media-body">
                     <h3 class="dropdown-item-title">
-                    Nora Silvester
+                    Nora  Silvester
                     <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
                     </h3>
                     <p class="text-sm">The subject goes here</p>
@@ -234,7 +234,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/layout/boxed.html" class="nav-link">
+                    <a href="<?=BASEURL; ?>/mitra/deskripsi" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Ubah Deskripsi</p>
                     </a>
