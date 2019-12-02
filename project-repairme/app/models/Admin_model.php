@@ -47,10 +47,6 @@ class Admin_model{
 		return $result;
 	}
 	 
-	public function inputbarang($data){
-
-		
-	}
 
 
 }
