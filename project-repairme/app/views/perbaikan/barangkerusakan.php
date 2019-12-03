@@ -30,7 +30,7 @@
 			<div class="tab-pane active" id="description">
 				<img class="fotoMitra" src="<?= BASEURL ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt="" width="678px" height="452px">
 				<?php endforeach; ?>
-				<?php var_dump($data['barang']); ?>
+				<?php var_dump($data['laptop']); ?>
 				<p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
 			</div>
 			<div class="tab-pane" id="data-sheet">
@@ -134,33 +134,33 @@
 <p>Pilih Barang Yang Ingin Di Perbaiki?</p>
 <span class="box1" style="width: 50%;">
 <span class="icon-laptop" aria-hidden="true" style="width:100%;">
-<button class="btn btn-block btn-round btn-d tlaptop" type="button" style="margin-top: 3px;">LAPTOP</button></span>
+<button class="btn btn-block btn-round btn-d tlaptop" type="button" style="margin-top: 3px;" value="laptop">LAPTOP</button></span>
 </span>
 <span class="box1" style="width: 50%;">
 <span class="icon-phone" aria-hidden="true" style="width: 100%;">
-	<button class="btn btn-block btn-round btn-d thp" type="button" style="margin-top: 3px;">HANDPHONE</button>
+	<button class="btn btn-block btn-round btn-d thp" type="button" style="margin-top: 3px;" value="hp">HANDPHONE</button>
 </span>
 </span>
 </div>
 <form class="row detailKerusakan" style="position: absolute; top: 25%; right: 8%; width: 24%;">
-<select class="form-control" style="margin: 10px;">
+
+<select class="form-control" id="merk" style="margin: 10px;">
 <option selected="selected">MERK</option>
-<option>A</option>
+<option class="merk">a</option>
 </select>
+
 <select class="form-control" style="margin: 10px;">
 <option selected="selected">TIPE</option>
 <option>A</option>
 </select>
-<select class="form-control" style="margin: 10px;">
-<option selected="selected">KERUSAKAN</option>
-<option>A</option>
-</select>
-<button class="btn btn-block btn-round btn-d" type="submit" style="margin: 10px; margin-top: 30px;">KIRIM PERMINTAAN</button>
+
+<button class="btn btn-block btn-round btn-d" type="button" style="margin: 10px; margin-top: 30px;">SELANJUTNYA</button>
 </form>
 <script>
 $(document).ready(function(){
 $('.detailKerusakan').hide();
 $('.tlaptop').on('click', function(){
+
 $('.barang').hide();
 $('.detailKerusakan').show();
 });

@@ -18,7 +18,18 @@ class Admin_model{
 	}
 	
 	public function getAllBarang(){
-		$barang = $this->db->query("SELECT * FROM tb_barang");
+		return $this->db->query("SELECT * FROM tb_barang");
+	}
+	public function getLaptop(){
+		$laptop = $this->db->query("SELECT * FROM tb_barang WHERE id_kategori = 1");
+		$i = 0;
+		$count = count($laptop);
+		foreach ($laptop as $key) {
+			$key[$i]['id_merk'];
+		}
+	}
+	public function getHp(){
+		return $this->db->query("SELECT * FROM tb_barang WHERE id_kategori = 2");
 	}
 
 	public function getAllKerusakan(){
