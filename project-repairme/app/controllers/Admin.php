@@ -11,17 +11,22 @@ class Admin extends Controller{
 		}
 	}
 
-	public function barang(){
+	public function tambahbarang(){
+		$data['judul'] = 'Tambah Barang';
 		$data['barang'] = $this->model('Admin_model')->getAllKategori();
-		$this->view('admin/templates/header');
+		$this->view('admin/templates/header',$data);
 		$this->view('admin/barang/tambahBarang', $data);
 		$this->view('admin/templates/footer');
 	}
 
+	public function tambahkerusakan(){
+		$data['judul'] = 'Tambah Kerusakan';
+		$data['kerusakan'] = $this->model('Admin_model')->getAllKerusakan();
+		$this->view('admin/templates/header',$data);
+		$this->view('admin/kerusakan/tambahkerusakan', $data);
+		$this->view('admin/templates/footer');
+	}
 
-	// public function finance(){
-	// 	require '../app/views/admin/dashboard-finance.html';
-	// }
 
 	public function dataMitra(){
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
@@ -77,17 +82,30 @@ public function inserttipe(){
 		exit();
 	}
 }
-public function tambahbarang(){
-	var_dump($_POST);
-	// if($this->model('Admin_model')->inputtipe($_POST) > 0){
-	// header ('Location: '.BASEURL.'/admin/barang');
-	// // Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-	// 	exit();
-	// }else {
-	// header ('Location: '.BASEURL.'/admin/barang');
-	// // Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
-	// 	exit();
-	// }
+public function insertbarang(){
+	// var_dump($_POST);
+	if($this->model('Admin_model')->tambahbarang($_POST) > 0){
+	header ('Location: '.BASEURL.'/admin/barang');
+	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/admin/barang');
+	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
+	}
 }
+public function insertkerusakan(){
+	// var_dump($_POST);
+	if($this->model('Admin_model')->tambahkerusakan($_POST) > 0){
+	header ('Location: '.BASEURL.'/admin/tambahkerusakan');
+	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/admin/barang');
+	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
+	}
+}
+
 
 }

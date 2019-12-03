@@ -169,10 +169,10 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?= BASEURL; ?>/mitra" class="nav-link">
+            <a href="<?= BASEURL; ?>/admin" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                Data Cepat
               </p>
             </a>
           </li>
@@ -193,9 +193,33 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= BASEURL; ?>/admin/barang" class="nav-link">
+                <a href="<?= BASEURL; ?>/admin/tambahbarang" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambahkan Barang</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tools"></i>
+              <p>
+                Kerusakan
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-light right">Baru</span>
+              </p>
+            </a>
+             <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/layout/top-nav.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daftar Kerusakan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= BASEURL; ?>/admin/tambahkerusakan" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambahkan Kerusakan</p>
                 </a>
               </li>
             </ul>

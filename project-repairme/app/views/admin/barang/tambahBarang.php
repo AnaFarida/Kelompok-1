@@ -38,8 +38,9 @@
               <div class="card-body">
                   <select class="form-control select1" style="width: 50%;">
                     <option selected="selected">Kategori</option>
-                    <option>Laptop</option>
-                    <option>Handphone</option>
+                    <?php foreach ($data['barang']['kategori'] as $kat):?>
+                    <option value="<?= $kat['id_kategori']; ?>"><?= $kat['kategori']; ?></option>
+                  <?php endforeach; ?>
                   </select>
                 </div>
 
@@ -48,7 +49,7 @@
                   <select class="form-control select2" style="width: 50%;">
                     <option selected="selected">Merk</option>
                     <?php foreach ($data['barang']['merk'] as $merk):?>
-                      <option value="<?= $merk['merk']; ?>"><?= $merk['merk']; ?></option>
+                      <option value="<?= $merk['id_merk']; ?>"><?= $merk['merk']; ?></option>
                     <?php endforeach; ?>
                   </select>
                 </div>
@@ -57,18 +58,18 @@
                   <select class="form-control select3" style="width: 50%;">
                     <option selected="selected">Tipe</option>
                     <?php foreach ($data['barang']['tipe'] as $tipe):?>
-                      <option><?= $tipe['tipe']; ?></option>
+                      <option value="<?= $tipe['id_tipe']; ?>"><?= $tipe['tipe']; ?></option>
                     <?php endforeach; ?>
                   </select>
                 </div>
                 <button type="button" class="btn btn-block btn-secondary" style="position: absolute; right: 32%; width: 15%; top:79%;" data-toggle="modal" data-target="#exampleModal3">TAMBAH TIPE</button>
-                <button type="submit" class="btn btn-block btn-success" style="position: absolute; right: 2%; width: 25%; top:48%;" data-toggle="modal" data-target="#exampleModal3">TAMBAH BARANG BARU</button>
+                <button type="submit" class="btn btn-block btn-success" style="position: absolute; right: 2%; width: 25%; top:48%;" id="submit">TAMBAH BARANG BARU</button>
               </div>
               <!-- /.card-body -->
-              <form action="<?= BASEURL; ?>/admin/tambahbarang" method="POST">
-                <input type="text" id="brgKategori" hidden>
-                <input type="text" id="brgMerk" hidden>
-                <input type="text" id="brgTipe" hidden>
+              <form action="<?= BASEURL; ?>/admin/insertbarang" method="POST" id="formKat">
+                <input type="text" id="brgKategori" name="brgKategori" hidden>
+                <input type="text" id="brgMerk" name="brgMerk" hidden>
+                <input type="text" id="brgTipe" name="brgTipe" hidden>
               </form>
             </div>
             <!-- /.card -->
@@ -84,8 +85,18 @@
     $(document).ready(function(){
       $('.select1').change(function(){
         var value = $(this).val();
-        $('#brgKategori').attr('value',value);
-        alert( $('#brgKategori').val());
+        $('#brgKategori').attr('value',parseInt(value));
+      });
+      $('.select2').change(function(){
+        var value = $(this).val();
+        $('#brgMerk').attr('value',parseInt(value));
+      });
+      $('.select3').change(function(){
+        var value = $(this).val();
+        $('#brgTipe').attr('value',parseInt(value));
+      });
+      $('#submit').click(function(){
+        $('#formKat').submit();
       });
     });
   </script>

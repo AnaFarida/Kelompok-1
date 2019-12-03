@@ -1,9 +1,9 @@
 <script>
   $(document).ready(function(){
      $("[href='<?= BASEURL; ?>/mitra'").addClass('active');
-  });
-</script>
+  }); 
 
+</script>
 
   <!-- content body -->
 

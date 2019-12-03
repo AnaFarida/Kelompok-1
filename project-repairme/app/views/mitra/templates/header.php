@@ -17,6 +17,10 @@
     <script src="<?= BASEURL; ?>/panel-master/plugins/jquery/jquery.min.js"></script>
   </head>
   <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm">
+
+
+
+
     <div class="wrapper">
       <!-- Navbar -->
       <nav class="main-header navbar navbar-expand navbar-white navbar-light border-bottom-0">
@@ -752,3 +756,5 @@
         </div>
         <!-- /.sidebar -->
       </aside>
+
+   

@@ -12,6 +12,7 @@ class Perbaikan extends Controller{
 	public function barangkerusakan(){
 		$data['judul'] = 'Perbaikan';
 		$data['id'] = $this->model('Mitra_model')->getDetail($_POST['id']);
+		$data['barang'] = $this->model('Admin_model')->getAllBarang();
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/barangkerusakan', $data);
 		$this->view('templates/footer');

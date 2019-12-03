@@ -17,6 +17,14 @@ class Admin_model{
 		return $result;
 	}
 	
+	public function getAllBarang(){
+		$barang = $this->db->query("SELECT * FROM tb_barang");
+	}
+
+	public function getAllKerusakan(){
+		return $this->db->query("SELECT * FROM tb_kerusakan");
+	}
+	
 	public function inputkategori($data){
 		
 		$kategori = $data['kategori'];
@@ -46,7 +54,21 @@ class Admin_model{
 		$result = $this->db->data("INSERT INTO tb_tipe VALUES ( NULL,'$tipe')");
 		return $result;
 	}
-	 
+
+	public function tambahbarang($data){
+		$kat = $data['brgKategori'];
+		$merk = $data['brgMerk'];
+		$tipe = $data['brgTipe'];
+
+	
+
+		$result = $this->db->data("INSERT INTO tb_barang VALUES ( NULL,'$kat','$merk','$tipe')");
+		return $result;
+	}
+	public function tambahkerusakan($data){
+		$kerusakan = $data['kerusakan'];
+		return $this->db->data("INSERT INTO tb_kerusakan VALUES ( NULL,'$kerusakan')");
+	}
 
 
 }
