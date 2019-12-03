@@ -21,12 +21,7 @@ class Admin_model{
 		return $this->db->query("SELECT * FROM tb_barang");
 	}
 	public function getLaptop(){
-		$laptop = $this->db->query("SELECT * FROM tb_barang WHERE id_kategori = 1");
-		$i = 0;
-		$count = count($laptop);
-		foreach ($laptop as $key) {
-			$key[$i]['id_merk'];
-		}
+		return $this->db->query("SELECT * FROM tb_barang WHERE id_kategori = 1");
 	}
 	public function getHp(){
 		return $this->db->query("SELECT * FROM tb_barang WHERE id_kategori = 2");

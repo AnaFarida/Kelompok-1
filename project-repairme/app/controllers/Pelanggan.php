@@ -21,7 +21,7 @@ public function registrasi(){
 	$this->view('templates/footer');
 }
 public function insertpelanggan(){
-
+	// var_dump($_POST);
 	if($this->model('pelanggan_model')->inputpelanggan($_POST) > 0){
 		header ('Location: '.BASEURL.'/pelanggan/');
 		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
