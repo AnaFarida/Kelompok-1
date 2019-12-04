@@ -31,4 +31,10 @@ class mySession{
 			}
 		}
 	}
+
+	public static function perbaikanSession($pesan, $data, $barang){
+		$_SESSION['perbaikan'] = ['pesan' => $pesan, 'mitra' => $data, 'barang' => $barang];
+	}
+
+
 	}

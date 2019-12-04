@@ -103,7 +103,7 @@ class Mitra_model{
 		$conn = mysqli_connect( 'localhost', 'root', '', 'repairme');
 	$id = $data['id_mitra'];
 	$deskripsi = $data['deskripsi'];
-	$update=$this->db->data("UPDATE deskripsi SET(deskripsi) WHERE ('$id')");
+	$update=$this->db->data("UPDATE deskripsi SET(deskripsi) WHERE (id_mitra=$id)");
 	return $update;
 	}
 }

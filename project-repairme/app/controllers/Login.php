@@ -11,15 +11,15 @@ class Login extends Controller{
 
     function checklogin(){
     	$ret = $this->model('Login_model')->checkloginkey($_POST);
-    	// var_dump($ret);
+    	// var_dump($ret); 
     	if (count($ret) == 1) {
-            
+
             if ($ret[0]['id_jenis'] == 2) {
                 mySession::setSession('true', 'mitra', $ret[0]);
                 header('Location:'.BASEURL.'/mitra/');
             }else if($ret[0]['id_jenis'] == 3) {
                 mySession::setSession('true', 'pelanggan', $ret[0]);
-                header('Location:'.BASEURL.'/pelanggan/');            
+                header('Location:'.BASEURL.'/perbaikan/');            
             }else if($ret[0]['id_jenis'] == 1){
                 mySession::setSession('true', 'admin', $ret[0]);
                 header('Location:'.BASEURL.'/admin/'); 

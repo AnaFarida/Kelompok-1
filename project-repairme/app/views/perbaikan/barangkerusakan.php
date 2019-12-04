@@ -129,17 +129,18 @@
 <h4 class="font-alt mb-0 namaMitra">Barang Dan Kerusakan</h4>
 <hr class="divider-w mt-10 mb-20" style="width: 120%;">
 </div>
-<form action="<?= BASEURL; ?>/perbaikan/detail" method="POST">
+<form action="<?= BASEURL; ?>/perbaikan/detail" method="POST" id="pemilihan">
 <div class="barang et-icons" style="position: absolute; top: 25%; right: 8%; width: 24%;">
 <p>Pilih Barang Yang Ingin Di Perbaiki?</p>
 <span class="box1" style="width: 50%;">
 <input type="text" id="id" name="id" hidden value="<?= $data['id'][0]['id_mitra']; ?>">
+<input type="text" id="barang" name="barang" hidden>
 <span class="icon-laptop" aria-hidden="true" style="width:100%;">
-<button class="btn btn-block btn-round btn-d tlaptop" type="submit" style="margin-top: 3px;" value="laptop">LAPTOP</button></span>
+<button class="btn btn-block btn-round btn-d tlaptop" type="button" style="margin-top: 3px;" value="laptop">LAPTOP</button></span>
 </span>
 <span class="box1" style="width: 50%;">
 <span class="icon-phone" aria-hidden="true" style="width: 100%;">
-	<button class="btn btn-block btn-round btn-d thp" type="submit" style="margin-top: 3px;" value="hp">HANDPHONE</button>
+	<button class="btn btn-block btn-round btn-d thp" type="button" style="margin-top: 3px;" value="hp">HANDPHONE</button>
 </span>
 </span>
 </form>
@@ -149,18 +150,14 @@
 $(document).ready(function(){
 $('.detailKerusakan').hide();
 $('.tlaptop').on('click', function(){
-	$('.barang').hide();
-	$('.detailKerusakan').show();;
-	<?php foreach ($data['all']['kategori'] as $key):?>
-	if (<?= $key['id_kategori']; ?> === 1) {
-		$('.merk').text("<?= $key['kategori']; ?>");
-	}
-	<?php endforeach; ?>
-
+$('#barang').val('laptop');
+$('#pemilihan').submit();
 });
 $('.thp').on('click', function(){
 $('.barang').hide();
 $('.detailKerusakan').show();
+$('#barang').val('handphone');
+$('#pemilihan').submit();
 });
 });
 </script>
