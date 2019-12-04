@@ -23,20 +23,12 @@ class Perbaikan extends Controller{
 
 	public function detail(){
 		$data['judul'] = 'Detail';
+		$data['kategori'] = $_POST['barang'];
 		$data['id'] = $this->model('Mitra_model')->getDetail($_POST['id']);
-		$call = $this->model('Admin_model');
-		$data['barang'] = $call->getAllKategori();
-		if ($_POST['barang'] == 'laptop') {
-			$key = $call->getLaptop();
-			$i = 0;
-			foreach ($key as $res) {
-				$data['barangMerk'][$i] = $call->getSpeMerk($res['id_merk']);
-				$data['barangTipe'][$i] = $call->getSpeTipe($res['id_tipe']);
-				$i++;
-			}
-		}else{
-			$data['barang'] = $call->getHp();
-		}
+		$call = $this->model('Barang_model');
+		$data['merk_laptop'] = $call->getSpeMerkLaptop();
+		$data['tipe_laptop'] = $call->getTipeLaptop();
+		$data['laptop'] = $call->getLaptop();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/detail', $data);

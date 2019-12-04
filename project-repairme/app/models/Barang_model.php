@@ -28,6 +28,10 @@ class Barang_model{
 		return $this->db->query("SELECT * FROM tb_merk_laptop");
 	}
 
+	public function getSpeMerkLaptop(){
+		return $this->db->query("SELECT DISTINCT id_merk_laptop FROM tb_laptop");
+	}
+
 	public function tambahTipeLaptop($data){
 		$tipe_laptop = $data['tipe_laptop'];
 		return $this->db->data("INSERT INTO tb_tipe_laptop VALUES ( NULL,'$tipe_laptop')");
@@ -37,10 +41,18 @@ class Barang_model{
 		return $this->db->query("SELECT * FROM tb_tipe_laptop");
 	}
 
+	public function getSpeLaptop(){
+		return $this->db->query("SELECT * FROM tb_tipe_laptop");
+	}
+
 	public function tambahLaptop($data){
 		$merk_laptop = $data['merklaptop'];
 		$tipe_laptop = $data['tipelaptop'];
 		return $this->db->data("INSERT INTO tb_laptop VALUES ( NULL,'$merk_laptop','$tipe_laptop')");
+	}
+
+	public function getLaptop(){
+		return $this->db->query("SELECT * FROM tb_laptop");
 	}
 
 	// untuk menambah barang hp
