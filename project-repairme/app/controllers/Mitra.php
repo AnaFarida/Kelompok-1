@@ -78,8 +78,10 @@ public function profile(){
 	}
 
 	public function deskripsi(){
+		$data['judul'] = 'Deskripsi';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-		$this->view('mitra/templates/header');
+		$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
+		$this->view('mitra/templates/header',$data);
 		$this->view('mitra/deskripsi', $data);
 		$this->view('mitra/templates/footer');
 	}else{
@@ -89,8 +91,8 @@ public function profile(){
 
 	public function insertDeskripsi(){
 		//var_dump($_POST);
-		if($this->model('Mitra_model')->updateDeskripsi($_POST) > 0){
-		header ('Location: '.BASEURL.'/mitra/');
+		if($this->model('Mitra_model')->inputDeskripsi($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/deskripsi');
 		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 			exit();
 		}else {
@@ -99,6 +101,19 @@ public function profile(){
 			exit();
 		}
 	
-	}
+	 }
+	 public function editDeskripsi(){
+		//var_dump($_POST);
+		if($this->model('Mitra_model')->updateDeskripsi($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/deskripsi');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/deskripsi');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	
+	 }
 	
 }

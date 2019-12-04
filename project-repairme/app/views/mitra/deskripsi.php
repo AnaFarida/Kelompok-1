@@ -10,7 +10,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">deskripsi</a></li>
+              <li class="breadcrumb-item"><a href="#">Profile Mitra</a></li>
               <li class="breadcrumb-item active">Update Deskripsi</li>
             </ol>
           </div>
@@ -27,7 +27,6 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Deskripsi Mitra</h3>
-
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                     <i class="fas fa-minus"></i></button>
@@ -36,11 +35,20 @@
                 </div>
               </div>
               <div class="card-body">
-                <form action="<?= BASEURL; ?>/mitra/insertDeskripsi" method="POST">
+                <div id="formInsert">
+                <form action="<?= BASEURL; ?>/mitra/insertDeskripsi" method="POST" >
                 <input type="text" id="id_mitra" name="id_mitra" value="<?= $_SESSION['login']['data']['id_mitra'];?>" hidden>
                 <input type="text" id="deskripsi" name="deskripsi">
                 <button type="submit" class="btn btn-dark">Kirim</button>
                 </form>
+                </div>
+                <div id="formUpdate">
+                <form action="<?= BASEURL; ?>/mitra/editDeskripsi" method="POST">
+                <input type="text" id="id_mitra" name="id_mitra" value="<?= $_SESSION['login']['data']['id_mitra'];?>" hidden>
+                <input type="text" id="deskripsi" name="deskripsi">
+                <button type="submit" class="btn btn-dark">Kirim</button>
+                </form>
+                </div>
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
@@ -56,3 +64,15 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+<?php foreach ($data['deskripsi'] as $result):?>
+<script>
+  $(document).ready(function(){
+    // alert($result['id_mitra'])
+    if (<?= $_SESSION['login']['data']['id_mitra'];?> == <?= $result['id_mitra']; ?>) {
+      $('#formInsert').hide();
+    }else{
+      $('#formUpdate').hide();
+    }
+  });
+</script>
+<?php endforeach; ?>

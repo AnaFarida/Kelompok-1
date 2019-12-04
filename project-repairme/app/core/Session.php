@@ -6,6 +6,7 @@ class mySession{
 			'pesan' => $pesan,
 			'jenis' => $jenis,
 			'data' => $data
+			
 		];
 
 	}
