@@ -110,6 +110,7 @@ class Mitra_model{
 		deskripsi = '$deskripsi' 
 		WHERE id_mitra = $id
 		");
+
 	return $update;
 	}
 }

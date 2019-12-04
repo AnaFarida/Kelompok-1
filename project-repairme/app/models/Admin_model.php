@@ -16,7 +16,12 @@ class Admin_model{
 		$result = array('kategori' => $data1, 'merk' => $data2, 'tipe' => $data3);
 		return $result;
 	}
-	
+	public function getSpeMerk($data){
+		return $this->db->query("SELECT * FROM tb_merk WHERE id_merk =".$data);
+	}
+	public function getSpeTipe($data){
+		return $this->db->query("SELECT * FROM tb_tipe WHERE id_tipe =".$data);
+	}
 	public function getAllBarang(){
 		return $this->db->query("SELECT * FROM tb_barang");
 	}
