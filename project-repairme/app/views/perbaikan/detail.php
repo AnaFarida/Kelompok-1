@@ -11,7 +11,10 @@
 </select>
 <select class="form-control" style="margin: 10px;">
 <option selected="selected">TIPE</option>
-<option class="tipe"></option>
+<?php foreach ($data['barang']['merk'] as $value):?>
+<option class="tipe"><?= $value['merk']; ?></option>
+<?php endforeach; ?>
+</select>
 <button class="btn btn-block btn-round btn-d" type="button" style="margin: 10px; margin-top: 30px;">SELANJUTNYA</button>
 </form>
 <script>

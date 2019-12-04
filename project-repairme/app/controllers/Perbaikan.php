@@ -25,6 +25,7 @@ class Perbaikan extends Controller{
 		$data['judul'] = 'Detail';
 		$data['id'] = $this->model('Mitra_model')->getDetail($_POST['id']);
 		$call = $this->model('Admin_model');
+		$data['barang'] = $call->getAllKategori();
 		if ($_POST['barang'] == 'laptop') {
 			$key = $call->getLaptop();
 			$i = 0;

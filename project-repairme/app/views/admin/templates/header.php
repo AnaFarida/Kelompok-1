@@ -193,9 +193,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= BASEURL; ?>/admin/tambahbarang" class="nav-link">
+                <a href="<?= BASEURL; ?>/admin/tambahdatalaptop" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambahkan Barang</p>
+                  <p>Tambahkan Daftar Laptop</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= BASEURL; ?>/admin/tambahdatahp" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambahkan Daftar Handphone</p>
                 </a>
               </li>
             </ul>
