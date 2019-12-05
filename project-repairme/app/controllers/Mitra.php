@@ -115,5 +115,15 @@ public function profile(){
 		}
 	
 	 }
+
+	 public	function tampildesk(){
+	 	$data['judul'] = 'tampilDeskripsi';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+		$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
+		$this->view('mitra/templates/header',$data);
+		$this->view('mitra/tampildesk', $data);
+		$this->view('mitra/templates/footer');
+	 }
+	}
 	
 }

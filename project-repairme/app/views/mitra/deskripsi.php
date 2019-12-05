@@ -39,14 +39,14 @@
                 <form action="<?= BASEURL; ?>/mitra/insertDeskripsi" method="POST" >
                 <input type="text" id="id_mitra" name="id_mitra" value="<?= $_SESSION['login']['data']['id_mitra'];?>" hidden>
                 <input type="text" id="deskripsi" name="deskripsi">
-                <button type="submit" class="btn btn-dark">Kirim</button>
+                <button type="submit" class="btn btn-dark">tambah</button>
                 </form>
                 </div>
                 <div id="formUpdate">
                 <form action="<?= BASEURL; ?>/mitra/editDeskripsi" method="POST">
                 <input type="text" id="id_mitra" name="id_mitra" value="<?= $_SESSION['login']['data']['id_mitra'];?>" hidden>
                 <input type="text" id="deskripsi" name="deskripsi">
-                <button type="submit" class="btn btn-dark">Kirim</button>
+                <button type="submit" class="btn btn-dark">ubah</button>
                 </form>
                 </div>
               </div>
@@ -67,7 +67,7 @@
 <?php foreach ($data['deskripsi'] as $result):?>
 <script>
   $(document).ready(function(){
-    // alert($result['id_mitra'])
+    //\ alert($result['id_mitra'])
     if (<?= $_SESSION['login']['data']['id_mitra'];?> == <?= $result['id_mitra']; ?>) {
       $('#formInsert').hide();
     }else{

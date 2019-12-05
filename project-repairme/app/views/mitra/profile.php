@@ -69,9 +69,8 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <strong><i class="fas fa-book mr-1"></i> Deskripsi</strong>
-
                 <p class="text-muted">
-                  <?= strtoupper($_SESSION['login']['data']['deskripsi']); ?>
+
                  <a class="btn btn-dark" href="<?= BASEURL; ?>/mitra/deskripsi" role="button">Update Deskripsi</a>
                  
                 </p>
