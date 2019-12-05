@@ -49,20 +49,15 @@
                 </div>
                  <button type="button" class="btn btn-block btn-secondary" style="position: absolute; right: 32%; width: 15%; top:36%;" data-toggle="modal" data-target="#exampleModal2">TAMBAH MERK</button>
                 <div class="card-body">
-                  <select class="form-control select3" style="width: 50%;">
-                    <option selected="selected">Tipe</option>
-                    <?php foreach ($data['tipe'] as $tipe):?>
-                      <option value="<?= $tipe['id_tipe_laptop']; ?>"><?= $tipe['tipe_laptop']; ?></option>
-                    <?php endforeach; ?>
-                  </select>
+                  <form action="<?= BASEURL; ?>/admin/tambahTipeLaptop" method="POST" id="formKat">
+                  <input type="text" name="tipelaptop" class="form-control" id="tipelaptop" placeholder="Tipe Laptop Baru" style="width: 50%;">
                 </div>
-                <button type="button" class="btn btn-block btn-secondary" style="position: absolute; right: 32%; width: 15%; top:68%;" data-toggle="modal" data-target="#exampleModal3">TAMBAH TIPE</button>
-                <button type="submit" class="btn btn-block btn-success" style="position: absolute; right: 2%; width: 25%; top:48%;" id="submit">TAMBAH BARANG BARU</button>
+        
+                <button type="submit" class="btn btn-block btn-success" style="position: absolute; right: 32%; width: 15%; top:68%;" id="submit">TAMBAH BARANG</button>
               </div>
               <!-- /.card-body -->
-              <form action="<?= BASEURL; ?>/admin/tambahdatalaptopbaru" method="POST" id="formKat">
+              
                 <input type="text" id="merklaptop" name="merklaptop" hidden>
-                <input type="text" id="tipelaptop" name="tipelaptop" hidden>
               </form>
             </div>
             <!-- /.card -->
@@ -79,10 +74,6 @@
       $('.select2').change(function(){
         var value = $(this).val();
         $('#merklaptop').attr('value',parseInt(value));
-      });
-      $('.select3').change(function(){
-        var value = $(this).val();
-        $('#tipelaptop').attr('value',parseInt(value));
       });
       $('#submit').click(function(){
         $('#formKat').submit();

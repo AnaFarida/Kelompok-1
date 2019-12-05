@@ -28,27 +28,28 @@ class Barang_model{
 		return $this->db->query("SELECT * FROM tb_merk_laptop");
 	}
 
-	public function getSpeMerkLaptop(){
-		return $this->db->query("SELECT DISTINCT id_merk_laptop FROM tb_laptop");
-	}
-
-	public function tambahTipeLaptop($data){
-		$tipe_laptop = $data['tipe_laptop'];
-		return $this->db->data("INSERT INTO tb_tipe_laptop VALUES ( NULL,'$tipe_laptop')");
-	}
 
 	public function getTipeLaptop(){
 		return $this->db->query("SELECT * FROM tb_tipe_laptop");
 	}
 
 	public function getSpeLaptop(){
-		return $this->db->query("SELECT * FROM tb_tipe_laptop");
+		$merk = $this->db->query("SELECT * FROM tb_merk_laptop");	
+		$result = [];
+		$i = 0;
+		foreach ($merk as $resMerk) {
+			$result[$i] = $this->db->query("SELECT * FROM tb_tipe_laptop WHERE id_merk_laptop = ".$resMerk['id_merk_laptop']);
+			$i++;
+		}
+		$tipe = $this->db->query("SELECT * FROM tb_tipe_laptop");
+		return $result;
 	}
 
-	public function tambahLaptop($data){
+
+	public function tambahTipeLaptop($data){
 		$merk_laptop = $data['merklaptop'];
 		$tipe_laptop = $data['tipelaptop'];
-		return $this->db->data("INSERT INTO tb_laptop VALUES ( NULL,'$merk_laptop','$tipe_laptop')");
+		return $this->db->data("INSERT INTO tb_tipe_laptop VALUES ( NULL,'$tipe_laptop','$merk_laptop')");
 	}
 
 	public function getLaptop(){
@@ -66,19 +67,14 @@ class Barang_model{
 		return $this->db->query("SELECT * FROM tb_merk_hp");
 	}
 
-	public function tambahTipeHp($data){
-		$tipe_hp = $data['tipe_hp'];
-		return $this->db->data("INSERT INTO tb_tipe_hp VALUES ( NULL,'$tipe_hp')");
-	}
-
 	public function getTipeHp(){
 		return $this->db->query("SELECT * FROM tb_tipe_hp");
 	}
 
-	public function tambahHp($data){
+	public function tambahTipeHp($data){
 		$merk_hp = $data['merkhp'];
 		$tipe_hp = $data['tipehp'];
-		return $this->db->data("INSERT INTO tb_hp VALUES ( NULL,'$merk_hp','$tipe_hp')");
+		return $this->db->data("INSERT INTO tb_tipe_hp VALUES ( NULL,'$tipe_hp','$merk_hp')");
 	}
 
 	public function tambahkerusakan($data){

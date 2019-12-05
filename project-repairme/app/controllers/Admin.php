@@ -85,17 +85,6 @@ class Admin extends Controller{
 		}
 	}
 
-	public function tambahdatalaptopbaru(){
-		if($this->model('Barang_model')->tambahLaptop($_POST) > 0){
-			Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-			header ('Location: '.BASEURL.'/admin/tambahdatalaptop');
-			exit();
-		}else {
-			Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
-			header ('Location: '.BASEURL.'/admin/tambahdatalaptop');
-			exit();
-		}
-	}
 
 	public function tambahMerkHp(){
 		if($this->model('Barang_model')->tambahMerkHp($_POST) > 0){
@@ -110,19 +99,10 @@ class Admin extends Controller{
 	}
 
 	public function tambahTipeHp(){
+		// var_dump($_POST);
+		// $s = $this->model('Barang_model')->tambahTipeHp($_POST);
+		// var_dump($s);
 		if($this->model('Barang_model')->tambahTipeHp($_POST) > 0){
-			Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-			header ('Location: '.BASEURL.'/admin/tambahdatahp');
-			exit();
-		}else {
-			Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
-			header ('Location: '.BASEURL.'/admin/tambahdatahp');
-			exit();
-		}
-	}
-
-	public function tambahdatahpbaru(){
-		if($this->model('Barang_model')->tambahHp($_POST) > 0){
 			Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 			header ('Location: '.BASEURL.'/admin/tambahdatahp');
 			exit();

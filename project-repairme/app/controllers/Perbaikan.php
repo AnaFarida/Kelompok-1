@@ -26,9 +26,9 @@ class Perbaikan extends Controller{
 		$data['kategori'] = $_POST['barang'];
 		$data['id'] = $this->model('Mitra_model')->getDetail($_POST['id']);
 		$call = $this->model('Barang_model');
-		$data['merk_laptop'] = $call->getSpeMerkLaptop();
-		$data['tipe_laptop'] = $call->getTipeLaptop();
-		$data['laptop'] = $call->getLaptop();
+		$data['laptop'] = $call->getTipeLaptop();
+		$data['merk_laptop'] = $call->getMerkLaptop();
+		$data['spe_laptop'] = $call->getSpeLaptop();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/detail', $data);
