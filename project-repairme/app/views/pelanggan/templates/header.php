@@ -150,7 +150,7 @@
           <!-- Sidebar user panel (optional) -->
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <img src="<?= BASEURL; ?>/img/mitra/<?= $_SESSION['login']['data']['foto_usaha']; ?>" class="img-box elevation-2" alt="Foto Usaha Mitra">
+              <img src="<?= BASEURL; ?>/panel-master/dist/img/user1.png" class="img-box elevation-2" alt="Foto Profile">
             </div>
             <div class="info">
               <a href="#" class="d-block"><?=$_SESSION['login']['data']['nama']; ?></a>
@@ -173,7 +173,7 @@
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-shopping-cart"></i>
                   <p>
-                    Perbaikan
+                    Barang
                     <i class="fas fa-angle-left right"></i>
                     <span class="badge badge-info right">6</span>
                   </p>
@@ -182,7 +182,7 @@
                   <li class="nav-item">
                     <a href="pages/layout/top-nav.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Permintaan Perbaikan</p>
+                      <p>Barang yang sedang perbaikan</p>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -221,14 +221,14 @@
                 <a href="" class="nav-link">
                   <i class="nav-icon fas fa-user"></i>
                   <p>
-                    Profile Mitra
+                    Profile Pelanggan
                     <i class="fas fa-angle-left right"></i>
                     <span class="right badge badge-warning">Edit</span>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= BASEURL; ?>/mitra/profile" class="nav-link">
+                    <a href="<?= BASEURL; ?>/pelanggan/profile" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Profile</p>
                     </a>
@@ -315,33 +315,13 @@
                 </ul>
               </li>
               <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-chart-pie"></i>
+                <a href="<?= BASEURL; ?>/perbaikan/index" class="nav-link">
+                  <i class="nav-icon fas fa-map"></i>
                   <p>
-                    Charts
+                   Cari Mitra
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="pages/charts/chartjs.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>ChartJS</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/charts/flot.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Flot</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/charts/inline.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Inline</p>
-                    </a>
-                  </li>
-                </ul>
               </li>
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
