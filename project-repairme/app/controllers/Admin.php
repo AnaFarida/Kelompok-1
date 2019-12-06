@@ -33,11 +33,18 @@ class Admin extends Controller{
 		$this->view('admin/templates/footer');
 	}
 
-	public function tambahkerusakan(){
+	public function tambahkerusakanlaptop(){
 		$data['judul'] = 'Tambah Kerusakan';
-		$data['kerusakan'] = $this->model('Admin_model')->getAllKerusakan();
+		$data['kerusakan'] = $this->model('Barang_model')->getKerusakanLaptop();
 		$this->view('admin/templates/header',$data);
-		$this->view('admin/kerusakan/tambahkerusakan', $data);
+		$this->view('admin/kerusakan/tambahkerusakanlaptop', $data);
+		$this->view('admin/templates/footer');
+	}
+	public function tambahkerusakanhp(){
+		$data['judul'] = 'Tambah Kerusakan';
+		$data['kerusakan'] = $this->model('Barang_model')->getKerusakanHp();
+		$this->view('admin/templates/header',$data);
+		$this->view('admin/kerusakan/tambahkerusakanhp', $data);
 		$this->view('admin/templates/footer');
 	}
 
@@ -74,6 +81,8 @@ class Admin extends Controller{
 	}
 
 	public function tambahTipeLaptop(){
+		// var_dump($_POST);
+
 		if($this->model('Barang_model')->tambahTipeLaptop($_POST) > 0){
 			Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 			header ('Location: '.BASEURL.'/admin/tambahdatalaptop');
@@ -113,18 +122,32 @@ class Admin extends Controller{
 		}
 	}
 
-public function insertkerusakan(){
+public function tambahkerusakanlaptopbaru(){
 	// var_dump($_POST);
-	if($this->model('Admin_model')->tambahkerusakan($_POST) > 0){
-	header ('Location: '.BASEURL.'/admin/tambahkerusakan');
-	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+	if($this->model('Barang_model')->tambahkerusakanlaptop($_POST) > 0){
+	header ('Location: '.BASEURL.'/admin/tambahkerusakanlaptop');
+	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 		exit();
 	}else {
-	header ('Location: '.BASEURL.'/admin/barang');
-	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+	header ('Location: '.BASEURL.'/admin/barang/tambahkerusakanlaptop');
+	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}
 }
+
+public function tambahkerusakanhpbaru(){
+	// var_dump($_POST);
+	if($this->model('Barang_model')->tambahkerusakanhp($_POST) > 0){
+	header ('Location: '.BASEURL.'/admin/tambahkerusakanlaptop');
+	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/admin/barang/tambahkerusakanlaptop');
+	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
+	}
+}
+
 
 
 }

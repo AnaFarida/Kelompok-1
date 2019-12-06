@@ -10,7 +10,7 @@
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Admin</a></li>
             <li class="breadcrumb-item"><a href="#">Kerusakan</a></li>
-            <li class="breadcrumb-item active">Tambah Kerusakan Baru</li>
+            <li class="breadcrumb-item active">Tambah Kerusakan Laptop Baru</li>
           </ol>
         </div>
       </div>
@@ -24,7 +24,7 @@
             <!-- Default box -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Tambah Kerusakan Baru</h3>
+                <h3 class="card-title">Tambah Kerusakan Laptop Baru</h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                   <i class="fas fa-minus"></i></button>
@@ -34,13 +34,16 @@
               </div>
               
               <div class="card-body">
-                <form action="<?= BASEURL; ?>/admin/insertkerusakan" method="POST">
+              <div class="notif" style="width: 50%; height: 10%; top: 0; left: 50%; position: absolute;">
+                  <?php Flasher::flash(); ?>
+                </div>
+                <form action="<?= BASEURL; ?>/admin/tambahkerusakanlaptopbaru" method="POST">
                   <div class="form-group row">
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="kerusakan" placeholder="Kerusakan" name="kerusakan">
+                      <input type="text" class="form-control" id="kerusakan" placeholder="Kerusakan" name="kerusakan"  style=" width: 150%; ">
                     </div>
                   </div>
-                <button type="submit" class="btn btn-block btn-success" style="position: absolute; right: 40%; width: 25%; top:48%;" id="submit">TAMBAH KERUSAKAN BARU</button>
+                <button type="submit" class="btn btn-block btn-success" style="position: absolute; right: 20%; width: 25%; top:48%;" id="submit">TAMBAH KERUSAKAN BARU</button>
                 </form>
               </div>
               <!-- /.card-body -->

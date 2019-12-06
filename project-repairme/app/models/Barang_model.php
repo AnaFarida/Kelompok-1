@@ -25,24 +25,12 @@ class Barang_model{
 	}
 
 	public function getMerkLaptop(){
-		return $this->db->query("SELECT * FROM tb_merk_laptop");
+		return $this->db->query("SELECT DISTINCT ml.id_merk_laptop, merk_laptop FROM tb_merk_laptop ml JOIN tb_tipe_laptop tl ON ml.id_merk_laptop = tl.id_merk_laptop");
 	}
 
 
 	public function getTipeLaptop(){
 		return $this->db->query("SELECT * FROM tb_tipe_laptop");
-	}
-
-	public function getSpeLaptop(){
-		$merk = $this->db->query("SELECT * FROM tb_merk_laptop");	
-		$result = [];
-		$i = 0;
-		foreach ($merk as $resMerk) {
-			$result[$i] = $this->db->query("SELECT * FROM tb_tipe_laptop WHERE id_merk_laptop = ".$resMerk['id_merk_laptop']);
-			$i++;
-		}
-		$tipe = $this->db->query("SELECT * FROM tb_tipe_laptop");
-		return $result;
 	}
 
 
@@ -64,7 +52,7 @@ class Barang_model{
 	}
 
 	public function getMerkHp(){
-		return $this->db->query("SELECT * FROM tb_merk_hp");
+		return $this->db->query("SELECT DISTINCT ml.id_merk_hp, merk_hp FROM tb_merk_hp ml JOIN tb_tipe_hp tl ON ml.id_merk_hp = tl.id_merk_hp");
 	}
 
 	public function getTipeHp(){
@@ -77,9 +65,19 @@ class Barang_model{
 		return $this->db->data("INSERT INTO tb_tipe_hp VALUES ( NULL,'$tipe_hp','$merk_hp')");
 	}
 
-	public function tambahkerusakan($data){
+	public function tambahkerusakanLaptop($data){
 		$kerusakan = $data['kerusakan'];
-		return $this->db->data("INSERT INTO tb_kerusakan VALUES ( NULL,'$kerusakan')");
+		return $this->db->data("INSERT INTO tb_kerusakan_laptop VALUES ( NULL,'$kerusakan')");
+	}
+	public function getKerusakanLaptop(){
+		return $this->db->query("SELECT * FROM tb_kerusakan_laptop");
+	}
+	public function tambahkerusakanHp($data){
+		$kerusakan = $data['kerusakan'];
+		return $this->db->data("INSERT INTO tb_kerusakan_hp VALUES ( NULL,'$kerusakan')");
+	}
+	public function getKerusakanHp(){
+		return $this->db->query("SELECT * FROM tb_kerusakan_hp");
 	}
 
 

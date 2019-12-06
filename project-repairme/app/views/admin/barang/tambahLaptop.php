@@ -108,30 +108,3 @@
     </div>
   </div>
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel3">Tambah Tipe Laptop Baru</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-                                            
-  <!-- isi dari class modal -->
-                                            
-     <form action="<?=BASEURL;?>/admin/tambahTipeLaptop" method="POST" id="formmodmerk" data-parsley-validate="">                                                                                             
-    <label for="tipe">Tipe Laptop Baru</label>
-    <input id="tipe_laptop" type="text" name="tipe_laptop" data-parsley-trigger="change"  placeholder="Isi Dengan Tipe Laptop Baru" autocomplete="off" class="form-control">
-    <br><br>
-    <button type="submit3" name="submit3" id="submit3" class="btn btn-secondary">Tambah</button>
-                                                
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-    </form>
-    </div>
-    </div>
-  </div>
-</div>

@@ -13,6 +13,12 @@ class Perbaikan extends Controller{
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
 		$data['judul'] = 'Perbaikan';
 		$data['id'] = $this->model('Mitra_model')->getDetail($_POST['id']);
+		$call = $this->model('Barang_model');
+		$data['merk_laptop'] = $call->getMerkLaptop();
+		$data['tipe_laptop'] = $call->getTipeLaptop();
+		$data['merk_hp'] = $call->getMerkHp();
+		$data['tipe_hp'] = $call->getTipeHp();
+		$data['kerusakan_laptop'] = $call->getKerusakanLaptop();
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/barangkerusakan', $data);
 		$this->view('templates/footer');
@@ -28,7 +34,6 @@ class Perbaikan extends Controller{
 		$call = $this->model('Barang_model');
 		$data['laptop'] = $call->getTipeLaptop();
 		$data['merk_laptop'] = $call->getMerkLaptop();
-		$data['spe_laptop'] = $call->getSpeLaptop();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/detail', $data);
@@ -37,4 +42,9 @@ class Perbaikan extends Controller{
 			header('Location:'.BASEURL.'/login');
 		}
 	}
+
+	public function tipekerusakan(){
+		var_dump($_POST);
+	}
+
 }

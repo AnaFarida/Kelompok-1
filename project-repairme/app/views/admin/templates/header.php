@@ -201,7 +201,7 @@
               <li class="nav-item">
                 <a href="<?= BASEURL; ?>/admin/tambahdatahp" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambahkan Daftar Handphone</p>
+                  <p>Tambahkan Daftar Hp</p>
                 </a>
               </li>
             </ul>
@@ -223,9 +223,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= BASEURL; ?>/admin/tambahkerusakan" class="nav-link">
+                <a href="<?= BASEURL; ?>/admin/tambahkerusakanlaptop" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambahkan Kerusakan</p>
+                  <p>Tambahkan Kerusakan Laptop</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= BASEURL; ?>/admin/tambahkerusakanhp" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambahkan Kerusakan Hp</p>
                 </a>
               </li>
             </ul>
