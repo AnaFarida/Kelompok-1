@@ -63,6 +63,19 @@ class pelanggan_model{
 			return $delUsr && $delpelanggan;
 		}
 
+		public function updatePelanggan($data){
+		$id = $data['id_pelanggan'];
+		$nama = $data['nama'];
+		$email = $data['email'];
+		$no = $data['no_tlp'];
+		$alamat = $data['alamat'];
+		$update=$this->db->data("UPDATE tb_pelanggan SET 
+		tb_pelanggan.nama='$nama',tb_pelanggan.email='$email',tb_pelanggan.no_tlp='$no', tb_pelanggan.alamat='$alamat' where id_pelanggan='$id'");
+	
+
+	return $update;
+	}
+
 
 	}
 	

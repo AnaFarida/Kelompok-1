@@ -67,4 +67,28 @@ public function profile(){
 			header('Location:'.BASEURL.'/login');
 		}
 	}
+
+public function editProfile(){
+		
+		$data['judul'] = 'editprofile';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+		$data['Pelanggan'] = $this->model('Pelanggan_model')->getAllpelanggan();
+		$this->view('pelanggan/templates/header',$data);
+		$this->view('pelanggan/editprofile', $data);
+		$this->view('pelanggan/templates/footer');
+		}
+	}
+ public function editProfilePel(){
+		//var_dump($_POST);
+		if($this->model('pelanggan_model')->updatePelanggan($_POST) > 0){
+		header ('Location: '.BASEURL.'/pelanggan/');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/editprofile');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	
+	 }
 }

@@ -143,7 +143,7 @@
         <a href="index3.html" class="brand-link">
           <img src="<?= BASEURL; ?>/panel-master/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">
-          <span class="brand-text font-weight-light">Mitra RepairMe</span>
+          <span class="brand-text font-weight-light">Pelanggan RepairMe</span>
         </a>
         <!-- Sidebar -->
         <div class="sidebar">
@@ -175,14 +175,14 @@
                   <p>
                     Barang
                     <i class="fas fa-angle-left right"></i>
-                    <span class="badge badge-info right">6</span>
+                    <span class="badge badge-info right">3</span>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="pages/layout/top-nav.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Barang yang sedang perbaikan</p>
+                      <p>Riwayat perbaikan</p>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -197,7 +197,7 @@
                       <p>Barang Selesai Di Perbaiki</p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a href="pages/layout/fixed-topnav.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Data Barang Lengkap</p>
@@ -214,7 +214,7 @@
                       <i class="far fa-circle nav-icon"></i>
                       <p>Collapsed Sidebar</p>
                     </a>
-                  </li>
+                  </li> -->
                 </ul>
               </li>
               <li class="nav-item has-treeview">
@@ -234,12 +234,12 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/layout/boxed.html" class="nav-link">
+                    <a href="<?= BASEURL; ?>/Pelanggan/editProfile" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Ubah Deskripsi</p>
+                      <p>Ubah Profile</p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a href="pages/layout/fixed-sidebar.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Tambahkan Data Teknisi</p>
@@ -262,7 +262,7 @@
                       <i class="far fa-circle nav-icon"></i>
                       <p>Collapsed Sidebar</p>
                     </a>
-                  </li>
+                  </li> -->
                 </ul>
               </li>
               </li>
