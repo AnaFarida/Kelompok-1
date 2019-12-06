@@ -96,18 +96,21 @@ class Mitra_model{
 		return $this->db->query("SELECT * FROM tb_deskripsi");
 	}
 
-	public function inputDeskripsi($data){
-	$id = $data['id_mitra'];
-	$deskripsi = $data['deskripsi'];
-	$input=$this->db->data("INSERT INTO tb_deskripsi VALUES ($id,'$deskripsi')");
-	return $input;
-	}
+	// public function inputDeskripsi($data){
+	// $id = $data['id_mitra'];
+	// $deskripsi = $data['deskripsi'];
+	// $input=$this->db->data("INSERT INTO tb_mitra VALUES ($id,'$deskripsi')");
+	// return $input;
+	// }
 
 	public function updateDeskripsi($data){
 	$id = $data['id_mitra'];
+	$nama = $data ['nama'];
+	$email= $data['email'];
+	$alamat = $data['alamat'];
+	$no = $data['no_tlp'];
 	$deskripsi = $data['deskripsi'];
-	$update=$this->db->data("UPDATE tb_deskripsi SET 
-		deskripsi = '$deskripsi' 
+	$update=$this->db->data("UPDATE tb_mitra SET tb_mitra.nama = '$nama' , tb_mitra.email = '$email' ,tb_mitra.alamat = '$alamat' ,tb_mitra.no_tlp = '$no' ,tb_mitra.deskripsi = '$deskripsi' 
 		WHERE id_mitra = $id
 		");
 

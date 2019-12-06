@@ -35,21 +35,22 @@
                 </div>
               </div>
               <div class="card-body">
-                <div id="formInsert">
-                <form action="<?= BASEURL; ?>/mitra/insertDeskripsi" method="POST" >
-                <input type="text" id="id_mitra" name="id_mitra" value="<?= $_SESSION['login']['data']['id_mitra'];?>" hidden>
-                <input type="text" id="deskripsi" name="deskripsi">
-                <button type="submit" class="btn btn-dark">tambah</button>
-                </form>
-                </div>
-                <div id="formUpdate">
                 <form action="<?= BASEURL; ?>/mitra/editDeskripsi" method="POST">
                 <input type="text" id="id_mitra" name="id_mitra" value="<?= $_SESSION['login']['data']['id_mitra'];?>" hidden>
-                <input type="text" id="deskripsi" name="deskripsi">
-                <button type="submit" class="btn btn-dark">ubah</button>
+                 <input type="text"  id="nama" name="nama"  class="form-control" style="width: 30%;" value="<?= $_SESSION['login']['data']['nama'];?>" >
+                 <br>
+                 <input type="text"  class="form-control"  id="email" name="email" style="width: 30%;" value="<?= $_SESSION['login']['data']['email'];?>" >
+                 <br>
+                 <input type="text"  class="form-control" id="alamat" name="alamat" style="width: 30%;" value="<?= $_SESSION['login']['data']['alamat'];?>" >
+                 <br>
+                  <input type="text"  class="form-control" id="no_tlp" name="no_tlp" style="width: 30%;" value="<?= $_SESSION['login']['data']['no_tlp'];?>" >
+                 <br>
+                  <input type="text"  class="form-control" id="deskripsi" name="deskripsi" style="width: 30%;" value="<?= $_SESSION['login']['data']['deskripsi'];?>" >
+                 <br>
+                <button type="submit" class="btn btn-dark">Kirim</button>
                 </form>
                 </div>
-              </div>
+              
               <!-- /.card-body -->
               <div class="card-footer">
                 
@@ -64,7 +65,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-<?php foreach ($data['deskripsi'] as $result):?>
+<!-- <?php foreach ($data['deskripsi'] as $result):?>
 <script>
   $(document).ready(function(){
     //\ alert($result['id_mitra'])
@@ -74,5 +75,5 @@
       $('#formUpdate').hide();
     }
   });
-</script>
-<?php endforeach; ?>
+</script> -->
+<!-- <?php endforeach; ?> -->
