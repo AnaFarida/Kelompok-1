@@ -253,7 +253,7 @@
 		</select>
 		<div class="form-group mt-20">
 			<input type="text" name="merklaptop" id="merklaptop" hidden>
-			<input class="form-control" id="merklaptopbaru" name="merklaptopbaru" type="text" placeholder="Merk dan tipe Laptop Anda">
+			<input class="form-control" id="merklaptopbaru" name="merklaptopbaru" value="" type="text" placeholder="Merk dan tipe Laptop Anda">
 		</div>
 		<select class="form-control" id="selector_tipe_laptop" >
 			<option selected="selected" disabled>Tipe</option>
@@ -320,10 +320,22 @@
 </div>
 </div>
 
+<div class="formKita">
+	<form action="<?= BASEURL; ?>/pengajuan">
+		<input type="text" id="id_pelanggan" name="id_pelanggan" hidden>
+		<input type="text" id="id_mitra" name="id_mitra" hidden>
+		<input type="text" id="id_tipe_laptop" name="id_tipe_laptop" hidden>
+		<input type="text" id="id_kerusakan_laptop" name="id_kerusakan_laptop" hidden>
+		<input type="text" id="merk_laptop_ttd" name="merk_laptop_ttd" hidden>
+		<input type="text" id="kerusakan_laptop_lain" name="kerusakan_laptop_lain" hidden>
+		<input type="text" id="ket_kerusakan_laptop_lain" name="ket_kerusakan_laptop_lain" hidden>
+	</form>
+</div>
+
 <script>
 $(document).ready(function(){
-	$('.step-pertama').hide();
-	// $('.step-kedua').hide();
+	// $('.step-pertama').hide();
+	$('.step-kedua').hide();
 	$('#merklaptopbaru').hide();
 	$('#merkhpbaru').hide();
 	$('#tipelaptopbaru').hide();
@@ -337,7 +349,7 @@ $(document).ready(function(){
 	$('#selector_tipe_hp').hide();
 	$('.container_laptop').hide();
 	$('.container_hp').hide();
-	// $('.container_kerusakan_laptop').hide();
+	$('.container_kerusakan_laptop').hide();
 
 $('.tlaptop').on('click', function(){
 	$('.step-pertama').hide();

@@ -27,20 +27,8 @@ class Perbaikan extends Controller{
 		}
 	}
 
-	public function detail(){
-		$data['judul'] = 'Detail';
-		$data['kategori'] = $_POST['barang'];
-		$data['id'] = $this->model('Mitra_model')->getDetail($_POST['id']);
-		$call = $this->model('Barang_model');
-		$data['laptop'] = $call->getTipeLaptop();
-		$data['merk_laptop'] = $call->getMerkLaptop();
-		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
-		$this->view('templates/header',$data);
-		$this->view('perbaikan/detail', $data);
-		$this->view('templates/footer');
-		}else{
-			header('Location:'.BASEURL.'/login');
-		}
+	public function pengajuan(){
+		
 	}
 
 	public function tipekerusakan(){

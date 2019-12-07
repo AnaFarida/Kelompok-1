@@ -278,7 +278,10 @@
 				var regex = /^[0-9]+$/;
 				if (regex.test(this.value) !== true) {
 				this.value = this.value.replace(/[^0-9]+/, '');
-				}else{
+				}if ($(this).val().length < 12) {
+				$('.no_telpon').text('salah');
+				}
+				else{
 				$('.no_telpon').text('');
 				}
 				});
