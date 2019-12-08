@@ -19,6 +19,7 @@ class Perbaikan extends Controller{
 		$data['merk_hp'] = $call->getMerkHp();
 		$data['tipe_hp'] = $call->getTipeHp();
 		$data['kerusakan_laptop'] = $call->getKerusakanLaptop();
+		$data['kerusakan_hp'] = $call->getKerusakanHp();
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/barangkerusakan', $data);
 		$this->view('templates/footer');
@@ -27,12 +28,44 @@ class Perbaikan extends Controller{
 		}
 	}
 
-	public function pengajuan(){
-		
+		public function detail(){
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+		$data['judul'] = 'Pengajuan Perbaikan';
+		$call = $this->model('Perbaikan_model');
+		$data['perbaikan'] = $call->getPerbaikan();
+		$this->view('templates/header',$data);
+		$this->view('perbaikan/detail', $data);
+		$this->view('templates/footer');
+		}else{
+			header('Location:'.BASEURL.'/login');
+		}
 	}
 
-	public function tipekerusakan(){
-		var_dump($_POST);
+	public function pengajuanperbaikanlaptop(){
+		if($this->model('Perbaikan_model')->tambahPerbaikanLaptop($_POST) > 0){
+			// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			header ('Location: '.BASEURL.'/perbaikan/');
+			exit();
+		}else {
+			// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			header ('Location: '.BASEURL);
+			exit();
+		}
 	}
+
+	public function pengajuanperbaikanhp(){
+		// var_dump($_POST);
+		if($this->model('Perbaikan_model')->tambahPerbaikanHp($_POST) > 0){
+			// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			header ('Location: '.BASEURL.'/perbaikan/');
+			exit();
+		}else {
+			// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			header ('Location: '.BASEURL);
+			exit();
+		}
+	}
+
+	
 
 }

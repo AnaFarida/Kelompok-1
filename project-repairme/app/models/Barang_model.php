@@ -83,10 +83,10 @@ class Barang_model{
 
 	// untuk pengajuan perbaikan laptop
 	
-	public function tambahkerusakanLaptop($data){
-		$kerusakan = $data['kerusakan'];
-		return $this->db->data("INSERT INTO tb_kerusakan_laptop VALUES ( NULL,'$kerusakan')");
-	}
+	// public function tambahkerusakanLaptop($data){
+	// 	$kerusakan = $data['kerusakan'];
+	// 	return $this->db->data("INSERT INTO tb_kerusakan_laptop VALUES ( NULL,'$kerusakan')");
+	// }
 
 
 }

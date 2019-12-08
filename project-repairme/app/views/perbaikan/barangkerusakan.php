@@ -4,6 +4,7 @@
 		
 		<h4 class="font-alt mb-0">Lokasi mitra</h4>
 		<hr class="divider-w mt-10 mb-20" style="width: 120%;">
+
 	</div>
 	<div id="map" style="position: absolute;margin-left: 3%; margin-right: 3%; top: 24%; width: 25%; height: 65%; z-index:100; border: solid black 1px;">
 		<?php foreach ($data['id'] as $mitra):?>
@@ -31,6 +32,7 @@
 				<div class="tab-pane active" id="description">
 					<img class="fotoMitra" src="<?= BASEURL ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt="" width="678px" height="452px">
 					<?php endforeach; ?>
+
 					<p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
 				</div>
 				<div class="tab-pane" id="data-sheet">
@@ -187,12 +189,13 @@
 						<tbody>
 							<?php foreach ($data['id'] as $mitra):?>
 							<tr>
-								<th>Mitra</th>
+								<th>Mitra</th>	
 								<th>Informasi</th>
 							</tr>
 							<tr>
 								<td>Nama Usaha</td>
 								<td><?= strtoupper($mitra['nama_usaha']); ?></td>
+								<td class="idmitra" hidden><?= $mitra['id_mitra']; ?></td>
 							</tr>
 							<tr>
 								<td>Jenis Perbaikan</td>
@@ -253,14 +256,13 @@
 		</select>
 		<div class="form-group mt-20">
 			<input type="text" name="merklaptop" id="merklaptop" hidden>
-			<input class="form-control" id="merklaptopbaru" name="merklaptopbaru" value="" type="text" placeholder="Merk dan tipe Laptop Anda">
+			<input class="form-control" id="merklaptopbaru" name="merklaptopbaru" type="text" placeholder="Merk Laptop Anda">
 		</div>
 		<select class="form-control" id="selector_tipe_laptop" >
 			<option selected="selected" disabled>Tipe</option>
 			<option style="color: red;" value="false">tidak ada di daftar</option>
 		</select>
 		<div class="form-group mt-20">
-			<input type="text" name="tipelaptop" id="tipelaptop" hidden>
 			<input class="form-control" id="tipelaptopbaru" name="tipelaptopbaru" type="text" placeholder="tipe Laptop Anda">
 		</div>
 		<button class="btn btn-block btn-round btn-d next1" style="width: 100%; margin-top: 30px;">SELANJUTNYA</button>
@@ -281,7 +283,7 @@
 		</select>
 		<div class="form-group mt-20">
 			<input type="text" name="merkhp" id="merkhp" hidden>
-			<input class="form-control" id="merkhpbaru" name="merkhpbaru" type="text" placeholder="Merk dan tipe hp Anda">
+			<input class="form-control" id="merkhpbaru" name="merkhpbaru" type="text" placeholder="Merk HP Anda">
 		</div>
 		<select class="form-control" id="selector_tipe_hp" >
 			<option selected="selected" disabled>Tipe</option>
@@ -307,33 +309,122 @@
 			<option value="<?= $laptop['id_kerusakan_laptop']; ?>"><?= $laptop['kerusakan_laptop']; ?></option>
 			<?php endforeach; ?>
 		</select>
-		<div class="form-group mt-20">
-			<input type="text" name="kerusakanlaptop" id="kerusakanlaptop" hidden>
-			<input class="form-control" id="kerusakanlaptopbaru" name="kerusakanlaptopbaru" type="text" placeholder="Kerusakan Laptop Anda">
-		</div>
+	
 		<div class="form-group mt-20">
 			<input class="form-control" id="ketkerlap" name="ketkerlap" type="text" placeholder="Keterangan kerusakan lain">
 		</div>
 		<button class="btn btn-block btn-round btn-d next3" style="width: 100%; margin-top: 30px;">SELANJUTNYA</button>
 	</div>
 </div>
+<div class="container_kerusakan_hp">
+	<div class="mt-70" style="position: absolute; right: 2%; width: 30%;">
+		<h4 class="font-alt mb-0">Kerusakan</h4>
+		<hr class="divider-w mt-10 mb-20">
+	</div>
+	<div class="row" style="position: absolute; right: 3%; top: 24%; width: 30%;">
+		<select class="form-control" id="selector_kerusakan_hp" >
+			<option selected="selected" disabled>Kerusakan</option>
+			<option style="color: red;" value="false">tidak ada di daftar</option>
+			<?php foreach ($data['kerusakan_hp'] as $hp):?>
+			<option value="<?= $hp['id_kerusakan_hp']; ?>"><?= $hp['kerusakan_hp']; ?></option>
+			<?php endforeach; ?>
+		</select>
+	
+		<div class="form-group mt-20">
+			<input class="form-control" id="ketkerhp" name="ketkerhp" type="text" placeholder="Keterangan kerusakan lain">
+		</div>
+		<button class="btn btn-block btn-round btn-d next4" style="width: 100%; margin-top: 30px;">SELANJUTNYA</button>
+	</div>
+</div>
 </div>
 </div>
 
-<div class="formKita">
-	<form action="<?= BASEURL; ?>/pengajuan">
-		<input type="text" id="id_pelanggan" name="id_pelanggan" hidden>
+<div class="myForm">
+	<form action="<?= BASEURL; ?>/perbaikan/pengajuanperbaikanlaptop" method="POST" id="formperbaikanlaptop">
+		<input type="text" id="id_pelanggan" name="id_pelanggan" value="<?= $_SESSION['login']['data']['id_pelanggan']; ?>" hidden>
 		<input type="text" id="id_mitra" name="id_mitra" hidden>
 		<input type="text" id="id_tipe_laptop" name="id_tipe_laptop" hidden>
 		<input type="text" id="id_kerusakan_laptop" name="id_kerusakan_laptop" hidden>
 		<input type="text" id="merk_laptop_ttd" name="merk_laptop_ttd" hidden>
-		<input type="text" id="kerusakan_laptop_lain" name="kerusakan_laptop_lain" hidden>
+		<input type="text" id="tipe_laptop_ttd" name="tipe_laptop_ttd" hidden>
 		<input type="text" id="ket_kerusakan_laptop_lain" name="ket_kerusakan_laptop_lain" hidden>
+	</form>
+	<form action="<?= BASEURL; ?>/perbaikan/pengajuanperbaikanhp" method="POST" id="formperbaikanhp">
+		<input type="text" id="id_pelanggan2" name="id_pelanggan2" value="<?= $_SESSION['login']['data']['id_pelanggan']; ?>" hidden>
+		<input type="text" id="id_mitra2" name="id_mitra2" hidden>
+		<input type="text" id="id_tipe_hp" name="id_tipe_hp" hidden>
+		<input type="text" id="id_kerusakan_hp" name="id_kerusakan_hp" hidden>
+		<input type="text" id="merk_hp_ttd" name="merk_hp_ttd" hidden>
+		<input type="text" id="tipe_hp_ttd" name="tipe_hp_ttd" hidden>
+		<input type="text" id="ket_kerusakan_hp_lain" name="ket_kerusakan_hp_lain" hidden>
 	</form>
 </div>
 
 <script>
 $(document).ready(function(){
+
+	//form laptop
+	$('.next3').click(function(){
+		$('#id_mitra').val($('.idmitra').text());
+		
+		if ($('#selector_merk_laptop').val() == 'false') {
+			$('#id_tipe_laptop').val(0);
+			$('#merk_laptop_ttd').val($('#merklaptopbaru').val());
+			$('#tipe_laptop_ttd').val($('#tipelaptopbaru').val());
+		}else if($('#selector_tipe_laptop').val() == 'false'){
+			$('#id_tipe_laptop').val(0);
+			<?php foreach ($data['merk_laptop'] as $laptop):?>
+			if ($('#selector_merk_laptop').val() == "<?= $laptop['id_merk_laptop']; ?>") {
+				$('#merk_laptop_ttd').val("<?= $laptop['merk_laptop']; ?>");
+			}
+			<?php endforeach; ?>
+			$('#tipe_laptop_ttd').val($('#tipelaptopbaru').val());
+		}else{
+			$('#id_tipe_laptop').val($('#selector_merk_laptop').val());
+		}
+		
+		if ($('#selector_kerusakan_laptop').val() == 'false') {
+			$('#id_kerusakan_laptop').val(0);
+			$('#kerusakan_laptop_lain').val($('#ketkerlap').val());
+		}else{
+				$('#id_kerusakan_laptop').val($('#selector_kerusakan_laptop').val());
+		}
+
+		$('#ket_kerusakan_laptop_lain').val($('#ketkerlap').val());
+		$('#formperbaikanlaptop').submit();
+	});
+
+		//form hp
+	$('.next4').click(function(){
+		$('#id_mitra2').val($('.idmitra').text());
+		
+		if ($('#selector_merk_hp').val() == 'false') {
+			$('#id_tipe_hp').val(0);
+			$('#merk_hp_ttd').val($('#merkhpbaru').val());
+			$('#tipe_hp_ttd').val($('#tipehpbaru').val());
+		}else if($('#selector_tipe_hp').val() == 'false'){
+			$('#id_tipe_hp').val(0);
+			<?php foreach ($data['merk_hp'] as $hp):?>
+			if ($('#selector_merk_hp').val() == "<?= $hp['id_merk_hp']; ?>") {
+				$('#merk_hp_ttd').val("<?= $hp['merk_hp']; ?>");
+			}
+			<?php endforeach; ?>
+			$('#tipe_hp_ttd').val($('#tipehpbaru').val());
+		}else{
+			$('#id_tipe_hp').val($('#selector_merk_hp').val());
+		}
+		
+		if ($('#selector_kerusakan_hp').val() == 'false') {
+			$('#id_kerusakan_hp').val(0);
+			$('#kerusakan_hp_lain').val($('#ketkerlap').val());
+		}else{
+				$('#id_kerusakan_hp').val($('#selector_kerusakan_hp').val());
+		}
+
+		$('#ket_kerusakan_hp_lain').val($('#ketkerhp').val());
+		$('#formperbaikanhp').submit();
+	});
+
 	// $('.step-pertama').hide();
 	$('.step-kedua').hide();
 	$('#merklaptopbaru').hide();
@@ -350,7 +441,7 @@ $(document).ready(function(){
 	$('.container_laptop').hide();
 	$('.container_hp').hide();
 	$('.container_kerusakan_laptop').hide();
-
+	$('.container_kerusakan_hp').hide();
 $('.tlaptop').on('click', function(){
 	$('.step-pertama').hide();
 	$('.getKategori').text('LAPTOP');
@@ -374,7 +465,7 @@ $('.thp').on('click', function(){
 			$('.next1').show();
 			$('#selector_tipe_laptop').hide();
 		}else{
-			alert("<?= $getMerklaptop; ?>");
+			alert($(this).val());
 			$('.next1').show();
 			$('#merklaptopbaru').hide();
 			$('#tipelaptopbaru').hide();
@@ -430,21 +521,34 @@ $('.thp').on('click', function(){
 	});
 	$('.next2').click(function(){
 		$('.container_hp').hide();
+		$('.container_kerusakan_hp').show();
 	});
 
 	//untuk step 3
 
 	$('#selector_kerusakan_laptop').change(function(){
 		if ($(this).val() == 'false') {
-			$('#kerusakanlaptopbaru').show();
 			$('.next3').show();
 			$('#ketkerlap').show();
 		}else{
-			$('#kerusakanlaptopbaru').hide();
 			$('.next3').show();
 			$('#ketkerlap').show();
 		}
 	});
+
+	$('#selector_kerusakan_hp').change(function(){
+		if ($(this).val() == 'false') {
+			$('.next4').show();
+			$('#ketkerhp').show();
+		}else{
+			$('.next4').show();
+			$('#ketkerhp').show();
+		}
+	});
+
+
+
+
 
 
 });
