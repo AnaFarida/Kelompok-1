@@ -89,6 +89,18 @@ public function profile(){
 	}
 	}
 
+	public function pengajuanperbaikan(){
+		$data['judul'] = 'Pengajuan Perbaikan';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+		$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
+		$this->view('mitra/templates/header',$data);
+		$this->view('mitra/perbaikan/pengajuan', $data);
+		$this->view('mitra/templates/footer');
+	}else{
+		header('Location:'.BASEURL.'/mitra/deskripsi/');
+	}
+	}
+
 	public function insertDeskripsi(){
 		//var_dump($_POST);
 		if($this->model('Mitra_model')->inputDeskripsi($_POST) > 0){

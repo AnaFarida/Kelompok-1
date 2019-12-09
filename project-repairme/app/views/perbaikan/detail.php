@@ -47,15 +47,15 @@
           </div>
 
     <div class="container" style="position: absolute; top: 150%; left: 10%; width: 80%; ">
-      <?php var_dump($data['perbaikan']);  ?>
+      <?php var_dump($data['perbaikan']['mitra'][0][0]['nama_usaha']);  ?>
       <div class="row">
       <div class="row">
         <div class="col-sm-12">
-        <?php foreach ($data['perbaikan']['laptop'] as $laptop):?>
+       <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
           <table class="table table-striped table-border checkout-table laptop">
             <tbody>
               <tr>
-                <th class="hidden-xs"><?= $laptop['id_perbaikan'] ?></th>
+                <th class="hidden-xs"></th>
                 <th>Mitra</th>
                 <th class="hidden-xs">Tipe Laptop</th>
                 <th>Tipe Laptop Lainnya</th>
@@ -66,23 +66,13 @@
                 
                 <td class="hidden-xs"><a href="#"><img src=""></a></td>
                 <td>
-                  <h5 class="product-title font-alt" id="status" value="<?= $laptop['id_status_perbaikan'];?>"><?= $laptop['id_status_perbaikan'];  ?></h5>
+                  <h5 class="product-title font-alt" id="status"><?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?></h5>
                 </td>
                 <td class="hidden-xs">
-                  <h5 class="product-title font-alt">£20.00</h5>
+                  <h5 class="product-title font-alt"><?= $data['perbaikan']['tipe_laptop'][$i][0]['tipe_laptop']; ?></h5>
                 </td>
                 <td>
-                  <?php foreach ($data['status_perbaikan'] as $status):?>
-                  <script>
-                    $(document).ready(function(){
-                      if (<?= $laptop['id_status_perbaikan']; ?> === <?= $status['id_status_perbaikan']; ?>) {
-                        // alert("<?= $status['status_perbaikan']; ?>");
-                      // $('.statusperbaikan').text('<?= $status["status_perbaikan"]; ?>');
-
-                     }
-                    });
-                  </script>
-                  <?php endforeach;  ?>
+                
                   <div class="statusperbaikan"></div>
                 </td>
                 <td>
@@ -92,8 +82,7 @@
               </tr>
             </tbody>
           </table>
-          <?php endforeach; ?>
-          
+          <?php endfor; ?>
                   
                 
         </div>
