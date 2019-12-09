@@ -33,6 +33,9 @@ class Perbaikan extends Controller{
 		$data['judul'] = 'Pengajuan Perbaikan';
 		$call = $this->model('Perbaikan_model');
 		$data['perbaikan'] = $call->getPerbaikan();
+		$data['status_perbaikan'] = $call->getStatusPerbaikan();
+		$data['ttd'] = $call->ttd();
+		$data['barang'] = $call->getTipe();
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/detail', $data);
 		$this->view('templates/footer');
