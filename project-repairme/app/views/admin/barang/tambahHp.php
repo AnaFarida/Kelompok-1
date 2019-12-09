@@ -58,6 +58,29 @@
               </form>
             </div>
             <!-- /.card -->
+            <div class="col-sm-12"><table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                <thead>
+                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Merk Hp</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Tipe Hp</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Id Merk Hp</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Engine version</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">CSS grade</th></tr>
+                </thead>
+                <tbody> 
+
+                <?php 
+                foreach($data['tipe']as $tipe):?>
+              
+                <tr role="row" class="odd">
+                  <td></td>
+                  <td class=""><?=$tipe['tipe_hp'];?></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                <?php endforeach;?>
+                </tr>
+                </tfoot>
+              </table></div>
           </div>
         </div>
       </div>
