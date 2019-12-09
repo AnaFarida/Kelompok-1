@@ -56,6 +56,13 @@ class Admin extends Controller{
 		$this->view('admin/templates/footer');
 	}
 
+	public function dataPelanggan(){
+		$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
+		$this->view('admin/templates/header');
+		$this->view('admin/dataPelanggan', $data);
+		$this->view('admin/templates/footer');
+	}
+
 	public function petaLokasi(){
 		$this->view('admin/templates/header');
 		$this->view('admin/ControlMaps');

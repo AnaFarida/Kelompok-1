@@ -293,6 +293,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= BASEURL; ?>/admin/dataPelanggan" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Data Pelanggan
+                <span class="right badge badge-warning">Edit</span>
+              </p>
+            </a>
+          </li>
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
