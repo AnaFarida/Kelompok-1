@@ -82,7 +82,9 @@ class Perbaikan_model{
 		$k = 0;
 		foreach ($perbaikan_laptop as $laptop) {
 			if ($laptop['id_tipe_laptop'] != 0) {
-			$tipe_laptop[$k] = $this->db->query("SELECT tipe_laptop FROM tb_tipe_laptop WHERE id_tipe_laptop = ".$laptop['id_tipe_laptop']);
+			$tipe_laptop[$k] = $this->db->query("SELECT pl.merk_laptop, nama, tgl_transaksi, total_transaksi
+			FROM tb_merk_laptop pl
+			JOIN penjualan pn ON pl.id_pelanggan = pn.id_pelanggan = ".$laptop['id_tipe_laptop']);
 			$k++;
 			}
 		}
