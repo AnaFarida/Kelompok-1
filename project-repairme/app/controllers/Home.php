@@ -13,4 +13,13 @@ class Home extends Controller{
 		$this->view('home/index2');
 		$this->view('templates/footer');
 	}
+
+	public function portfolioMitra(){
+		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		$data['judul'] = 'Portfolio Mitra';
+		$this->view('templates/header', $data);
+		$this->view('home/portfolioMitra',$data);
+		$this->view('templates/footer');
+	}
+
 }
