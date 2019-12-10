@@ -81,6 +81,9 @@ public function editProfile(){
  public function editProfilePel(){
 		//var_dump($_POST);
 		if($this->model('pelanggan_model')->updatePelanggan($_POST) > 0){
+			session_destroy();
+			session_start();
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
 		header ('Location: '.BASEURL.'/pelanggan/');
 		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 			exit();

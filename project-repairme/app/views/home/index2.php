@@ -1,8 +1,8 @@
  <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="<?= BASEURL; ?>/home-master/assets/images/stiker1.jpeg">
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1">RepairMe</div>
-            <div class="font-alt mb-40 titan-title-size-3"><span class="rotate">Jasa Perbaikan Hp dan Laptop | Segera Perbaiki Sekarang | Diskon yang meriah</span>
+            <div class="font-alt mb-30 titan-title-size-1"></div>
+            <div class="font-alt mb-40 titan-title-size-3"><span class="rotate">Jasa Perbaikan Hp dan Laptop | Segera Perbaiki Sekarang | Diskon yang meriah | Mitra Terpercaya</span>
             </div><a class="btn btn-border-w btn-circle" href="<?= BASEURL; ?>/perbaikan">Perbaiki Sekarang!</a>
             <!-- </div><a class="section-scroll btn btn-border-w btn-circle" href="#about">Learn More</a> -->
           </div>
