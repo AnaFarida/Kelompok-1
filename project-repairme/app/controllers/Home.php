@@ -18,7 +18,7 @@ class Home extends Controller{
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
 		$data['judul'] = 'Portfolio Mitra';
 		$this->view('templates/header', $data);
-		$this->view('home/portfolioMitra');
+		$this->view('home/portfolioMitra',$data);
 		$this->view('templates/footer');
 	}
 

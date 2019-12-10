@@ -5,77 +5,24 @@
                 <h2 class="module-title font-alt">Portofolio Mitra</h2>
               </div>
             </div>
+           
+            
+             
             <div class="row multi-columns-row">
+              <?php foreach ($data['mitra'] as $mitra) :?>
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="shop-item">
-                  <?php foreach ($data['mitra'] as $mitra) : ?>
-                  <div class="shop-item-image"><img src="<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');" alt=""/>
-                    <?php endforeach; ?>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Pilih Mitra</span></a></div>
+
+                  <div class="shop-item-image"><img src="<?= BASEURL; ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt=""/>
+                    <form action="<?= BASEURL; ?>/perbaikan/barangkerusakan" method="POST">
+                    <input type="text" id="id" name="id" hidden value="<?= $mitra['id_mitra']?>">
+                    <div class="shop-item-detail"><button class="btn btn-round btn-b" type="submit"><span class="icon-basket">Pilih Mitra</span></button></div>
+                     </form>
                   </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>£9.00
+                  <h4 class="shop-item-title font-alt"><a href="#"><?=$mitra['nama_usaha']; ?></a></h4><?=$mitra['alamat'];?>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-8.jpg" alt="Men’s Casual Pack"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Pilih Mitra</span></a></div>
-                  </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Men’s Casual Pack</a></h4>£12.00
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-9.jpg" alt="Men’s Garb"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-                  </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Men’s Garb</a></h4>£6.00
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-10.jpg" alt="Cold Garb"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-                  </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Cold Garb</a></h4>£14.00
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-11.jpg" alt="Accessories Pack"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-                  </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>£9.00
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-12.jpg" alt="Men’s Casual Pack"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-                  </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Men’s Casual Pack</a></h4>£12.00
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-13.jpg" alt="Men’s Garb"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-                  </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Men’s Garb</a></h4>£6.00
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-                  <div class="shop-item-image"><img src="assets/images/shop/product-14.jpg" alt="Cold Garb"/>
-                    <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-basket">Add To Cart</span></a></div>
-                  </div>
-                  <h4 class="shop-item-title font-alt"><a href="#">Cold Garb</a></h4>£14.00
-                </div>
-              </div>
-            </div>
-            <div class="row mt-30">
-              <div class="col-sm-12 align-center"><a class="btn btn-b btn-round" href="#">See all products</a></div>
-            </div>
+              <?php endforeach; ?>
           </div>
         </section>
         <section class="module module-video bg-dark-30" data-background="">
