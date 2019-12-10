@@ -33,7 +33,7 @@
 					<img class="fotoMitra" src="<?= BASEURL ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt="" width="678px" height="452px">
 					<?php endforeach; ?>
 
-					<p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
+					<p><?= $mitra['deskripsi']; ?>.</p>
 				</div>
 				<div class="tab-pane" id="data-sheet">
 					<table class="table table-striped ds-table table-responsive">
@@ -380,7 +380,7 @@ $(document).ready(function(){
 			<?php endforeach; ?>
 			$('#tipe_laptop_ttd').val($('#tipelaptopbaru').val());
 		}else{
-			$('#id_tipe_laptop').val($('#selector_merk_laptop').val());
+			$('#id_tipe_laptop').val($('#selector_tipe_laptop').val());
 		}
 		
 		if ($('#selector_kerusakan_laptop').val() == 'false') {

@@ -77,7 +77,7 @@
                   <li><a href="<?= BASEURL; ?>/admin/barang">Kategori</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_op_fullscreen_gradient_overlay.html">One Page</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_agency.html">Agency</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_portfolio.html">Portfolio</a></li>
+                  <li><a href="<?= BASEURL; ?>/home/portfolioMitra">Portfolio</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_restaurant.html">Restaurant</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_finance.html">Finance</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_landing.html">Landing Page</a></li>
