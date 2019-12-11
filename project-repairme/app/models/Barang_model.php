@@ -44,6 +44,7 @@ class Barang_model{
 		return $this->db->query("SELECT * FROM tb_laptop");
 	}
 
+
 	// untuk menambah barang hp
 
 	public function tambahMerkHp($data){
@@ -79,6 +80,34 @@ class Barang_model{
 	public function getKerusakanHp(){
 		return $this->db->query("SELECT * FROM tb_kerusakan_hp");
 	}
+
+	public function getAllPaket(){
+		return $this->db->query("SELECT * FROM tb_paket");
+	}
+	public function tambahpaket($data){
+		$nama_paket = $data['nama_paket'];
+		$harga = $data['harga'];
+
+		return $this->db->data("INSERT INTO tb_paket VALUES ( NULL,'$nama_paket','$harga')");
+	}
+
+	public function deletePaket($id){
+		
+		$preIdPaket = $this->db->query("SELECT * FROM tb_paket WHERE id_paket = " . $id);
+		
+		 foreach ($preIdPaket as $key) {
+		 	$rows = $key['id_paket'];
+		 }
+
+		 $delpkt = $this->db->data("DELETE FROM `tb_paket` WHERE id_paket = ".$rows);
+		
+
+		
+		
+		
+		return $delpkt;
+	}
+
 
 
 	// untuk pengajuan perbaikan laptop

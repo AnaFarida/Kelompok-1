@@ -302,6 +302,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= BASEURL; ?>/admin/paket" class="nav-link">
+              <i class="nav-icon fas fa-poll-h"></i>
+              <p>
+                Paket Biaya Iklan
+                <span class="right badge badge-light">Edit</span>
+              </p>
+            </a>
+          </li>
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
