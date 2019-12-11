@@ -52,16 +52,15 @@ z-index:99999;
   }
   });
   
-// var hpIcon = L.icon({
-//     iconUrl: '<?= BASEURL; ?>/img/leaflet/mymarker.png',
-//     shadowUrl: '<?= BASEURL; ?>/img/leaflet/shadow.png',
+var greyIcon = new L.Icon({
+  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
-//     iconSize:     [50, 50], 
-//     shadowSize:   [50, 64], 
-//     iconAnchor:   [22, 94], 
-//     shadowAnchor: [4, 62], 
-//     popupAnchor:  [-3, -76] 
-// });
   setTimeout(function(){$('.pointer').fadeOut('slow');},3400);
   var c = new L.Control.Coordinates();
   c.addTo(map);
@@ -76,7 +75,7 @@ z-index:99999;
 <?php foreach ($data['mitra'] as $mitra) : ?>
 <script>
 var popup = L.popup();
-var marker = L.marker([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>]).addTo(map);
+var marker = L.marker([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], {icon: greyIcon}).addTo(map)
 marker.bindPopup('<?= $mitra['nama_usaha']; ?>');
 </script>
 <script>

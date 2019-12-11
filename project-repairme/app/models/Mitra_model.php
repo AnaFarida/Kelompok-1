@@ -123,7 +123,7 @@ class Mitra_model{
 		$status_perbaikan = [];
 		$i = 0;
 		foreach ($perbaikan_laptop as $laptop) {
-			$status_perbaikan[$i] = $this->db->query("SELECT status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$laptop['id_status_perbaikan']);
+			$status_perbaikan[$i] = $this->db->query("SELECT id_status_perbaikan,status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$laptop['id_status_perbaikan']);
 			$i++;
 		}
 		$pelanggan = [];
@@ -152,7 +152,97 @@ class Mitra_model{
 			
 		}
 
-		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'pelanggan' => $pelanggan, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop];
+		$kerusakan_laptop = [];
+		$ket_lain = [];
+		$l = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			if ($laptop['id_kerusakan_laptop'] != 0) {
+				$kerusakan_laptop[$l] = $this->db->query("SELECT kerusakan_laptop FROM tb_kerusakan_laptop WHERE id_kerusakan_laptop = ".$laptop['id_kerusakan_laptop']);
+				$ket_lain[$l] = $laptop['kerusakan_lain']; 
+			}else{
+				$kerusakan_laptop[$l][0]['kerusakan_laptop'] = $laptop['kerusakan_lain'];
+				$ket_lain[$l] = '-';
+			}
+			$l++;
+		}
+
+		$harga = [];
+		$m = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			if ($laptop['harga'] == 0) {
+				$harga[$m] = 'Menunggu Kisaran Harga';
+			}else{
+				$harga[$m] = $laptop['harga'];
+			}
+			$m++;
+		}
+
+		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'pelanggan' => $pelanggan, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
+
+		return $result;
+	}
+
+	public function getPerbaikan2(){
+		$id_mitra = $_SESSION['login']['data']['id_mitra'];
+		$perbaikan_hp = $this->db->query("SELECT * FROM tb_perbaikan_hp WHERE id_mitra = ".$id_mitra);
+		$status_perbaikan = [];
+		$i = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$status_perbaikan[$i] = $this->db->query("SELECT id_status_perbaikan,status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$hp['id_status_perbaikan']);
+			$i++;
+		}
+		$pelanggan = [];
+		$j = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$pelanggan[$j] = $this->db->query("SELECT nama FROM tb_pelanggan WHERE id_pelanggan = ".$hp['id_pelanggan']);
+			$j++;
+		}
+
+		$tipe_hp = [];
+		$merk_hp = [];
+		$k = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['id_tipe_hp'] != 0) {
+			$tipe_hp[$k] = $this->db->query("SELECT tipe_hp,id_merk_hp FROM tb_tipe_hp WHERE id_tipe_hp = ".$hp['id_tipe_hp']);
+			
+			
+			$merk_hp[$k] = $this->db->query("SELECT merk_hp FROM tb_merk_hp WHERE id_merk_hp = ".$tipe_hp[$k][0]['id_merk_hp']);
+
+
+			}else{
+				$tipe_hp[$k] = $this->db->query("SELECT tipe_hp FROM tb_ttd_hp WHERE id_ttd_hp = ".$hp['id_ttd_hp']);
+				$merk_hp[$k] = $this->db->query("SELECT merk_hp FROM tb_ttd_hp WHERE id_ttd_hp = ".$hp['id_ttd_hp']);
+			}
+			$k++;
+			
+		}
+
+		$kerusakan_hp = [];
+		$ket_lain = [];
+		$l = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['id_kerusakan_hp'] != 0) {
+				$kerusakan_hp[$l] = $this->db->query("SELECT kerusakan_hp FROM tb_kerusakan_hp WHERE id_kerusakan_hp = ".$hp['id_kerusakan_hp']);
+				$ket_lain[$l] = $hp['kerusakan_lain']; 
+			}else{
+				$kerusakan_hp[$l][0]['kerusakan_hp'] = $hp['kerusakan_lain'];
+				$ket_lain[$l] = '-';
+			}
+			$l++;
+		}
+
+		$harga = [];
+		$m = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['harga'] == 0) {
+				$harga[$m] = 'Menunggu Kisaran Harga';
+			}else{
+				$harga[$m] = $hp['harga'];
+			}
+			$m++;
+		}
+
+		$result = ['perbaikan_hp' => $perbaikan_hp, 'pelanggan' => $pelanggan, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
 
 		return $result;
 
@@ -165,5 +255,4 @@ class Mitra_model{
 	public function getMitraNow(){
 		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = " . $_SESSION['login']['data']['id_mitra']);
 	}
-
 }
