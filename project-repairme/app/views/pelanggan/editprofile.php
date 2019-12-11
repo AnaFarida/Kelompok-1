@@ -37,11 +37,30 @@
               <div class="card-body">
                 <form action="<?= BASEURL; ?>/pelanggan/editProfilePel" method="POST">
                 <input type="text" id="id_pelanggan" name="id_pelanggan" value="<?= $_SESSION['login']['data']['id_pelanggan'];?>" hidden>
-                <input type="text" id="nama" name="nama">
-                <input type="text" id="email" name="email">
-                <input type="text" id="no_tlp" name="no_tlp">
-                <input type="text" id="alamat" name="alamat">
-                <button type="submit" class="btn btn-dark">ubah</button>
+                <tr>
+                  <td>
+                    <label for="nama">Nama:</label>
+                <input type="text" class="form-control" value="<?= $_SESSION['login']['data']['nama']; ?>" name="nama" id="nama">
+                </td>
+                 <td>
+                  <label for="email ">Email:</label>
+                <input type="email" class="form-control" value="<?= $_SESSION['login']['data']['email']; ?>" name="email" id="email">
+                </td>
+                 <td>
+                 <label for="no_tlp">No Telfon:</label>
+                <input type="text" class="form-control" value="<?= $_SESSION['login']['data']['no_tlp']; ?>" name="no_tlp" id="no_tlp">
+                </td>
+                <td>
+                 <label for="alamat">Alamat:</label>
+                <input type="text" class="form-control" value="<?= $_SESSION['login']['data']['alamat']; ?>" name="alamat" id="alamat">
+                </td>
+                </tr>
+                <tr>
+                  <td>
+                    <br>
+                <button type="submit" class="btn btn-dark">Ubah</button>
+                </td>
+                </tr>
                 </form>
               </div>
               <!-- /.card-body -->
@@ -58,15 +77,50 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-<!-- <?php foreach ($data['deskripsi'] as $result):?>
-<script>
-  $(document).ready(function(){
-    //\ alert($result['id_mitra'])
-    if (<?= $_SESSION['login']['data']['id_mitra'];?> == <?= $result['id_mitra']; ?>) {
-      $('#formInsert').hide();
-    }else{
-      $('#formUpdate').hide();
-    }
-  });
-</script>
-<?php endforeach; ?> -->
+ <script>
+   $('#nama').on('keyup',function(){
+      var regex = /^[a-z A-Z]+$/;
+      if (regex.test(this.value) !== true) {
+      this.value = this.value.replace(/[^a-zA-Z]+/, '');
+      }else if ($(this).val().length < 5) {
+      $('.nama').text('Anda Yakin Nama Anda Terdiri Dari '+ $(this).val().length + ' Huruf?');
+      }else{
+      $('.nama').text('');
+      }
+      if ($(this).val().length == 0) {
+      $('.nama').text('Nama Harus Di isi!');
+      }
+
+      var email;
+        $('#email').on('keyup', function(){
+
+
+        var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!this.value.match(valid)){
+        $('.email').text('Isi Email dengan Benar!');
+        email = false;
+        }
+        <?php foreach ($data['pelanggan'] as $pelanggan): ?>
+        else if($(this).val() == "<?= $pelanggan['email']; ?>"){
+        $('.email').text('Email Sudah Terdaftar!');
+        email = false;
+        }
+        <?php endforeach; ?>
+        else{
+        $('.email').text('');
+        email = true;
+        }
+        });
+
+        $('#no_tlp').on('keyup', function(){
+        var regex = /^[0-9]+$/;
+        if (regex.test(this.value) !== true) {
+        this.value = this.value.replace(/[^0-9]+/, '');
+        }else{
+        $('.no_tlp').text('');
+        }
+        });
+
+        
+
+ </script>
