@@ -92,9 +92,9 @@ class Mitra_model{
 		  
 	}
 
-	public function getDeskripsi(){
-		return $this->db->query("SELECT * FROM tb_deskripsi");
-	}
+	// public function getDeskripsi(){
+	// 	return $this->db->query("SELECT * FROM tb_deskripsi");
+	// }
 
 	// public function inputDeskripsi($data){
 	// $id = $data['id_mitra'];
@@ -162,5 +162,8 @@ class Mitra_model{
 		// // return $result;
 	}
 
+	public function getMitraNow(){
+		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = " . $_SESSION['login']['data']['id_mitra']);
+	}
 
 }
