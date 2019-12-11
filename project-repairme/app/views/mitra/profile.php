@@ -69,8 +69,11 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <strong><i class="fas fa-book mr-1"></i> Deskripsi</strong>
+                 <?php foreach ($data['mitra'] as $mitra):?>
                 <p class="text-muted">
-                <?= $_SESSION['login']['data']['deskripsi']; ?>
+               
+                  <?= $mitra['deskripsi']; ?>
+
                  <a class="btn btn-dark" href="<?= BASEURL; ?>/mitra/deskripsi" role="button">Update Deskripsi</a>
                  
                 </p>
@@ -79,14 +82,14 @@
 
                 <strong><i class="fas fa-map-marker-alt mr-1"></i> Lokasi Usaha</strong>
 
-                <p class="text-muted"><?= $_SESSION['login']['data']['alamat']; ?></p>
+                <p class="text-muted">   <?= $mitra['alamat']; ?></p>
 
                 <hr>
 
                 <strong><i class="fas fa-pencil-alt mr-1"></i> Jenis Perbaikan</strong>
 
                 <p class="text-muted">
-                  <?= $_SESSION['login']['data']['jenis']; ?>
+                     <?= $mitra['jenis']; ?>
                 </p>
 
                 <hr>
@@ -94,6 +97,7 @@
                 <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
 
                 <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                <?php endforeach; ?>
               </div>
               <!-- /.card-body -->
             </div>

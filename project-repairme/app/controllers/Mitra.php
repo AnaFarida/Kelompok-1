@@ -53,7 +53,7 @@ public function detailMitra($id){
 			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
 			header('Location: '.BASEURL.'/mitra/');
 			exit;
-		}else{
+	 	}else{
 			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
 			header('Location: '.BASEURL.'/mitra/');
 			exit;
@@ -80,7 +80,7 @@ public function profile(){
 	public function deskripsi(){
 		$data['judul'] = 'Deskripsi';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-		$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
+		$data['mitra'] = $this->model('Mitra_model')->getMitraNow();
 		$this->view('mitra/templates/header',$data);
 		$this->view('mitra/deskripsi', $data);
 		$this->view('mitra/templates/footer');
@@ -103,24 +103,25 @@ public function profile(){
 	}
 	}
 
-	public function insertDeskripsi(){
-		//var_dump($_POST);
-		if($this->model('Mitra_model')->inputDeskripsi($_POST) > 0){
-		header ('Location: '.BASEURL.'/mitra/deskripsi');
-		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-			exit();
-		}else {
-		header ('Location: '.BASEURL.'/mitra/deskripsi');
-		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
-			exit();
-		}
+	// public function insertDeskripsi(){
+	// 	//var_dump($_POST);
+	// 	if($this->model('Mitra_model')->inputDeskripsi($_POST) > 0){
+	// 	header ('Location: '.BASEURL.'/mitra/deskripsi');
+	// 	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+	// 		exit();
+	// 	}else {
+	// 	header ('Location: '.BASEURL.'/mitra/deskripsi');
+	// 	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+	// 		exit();
+	// 	}
 	
-	 }
+	//  }
 	 public function editDeskripsi(){
 		//var_dump($_POST);
 		if($this->model('Mitra_model')->updateDeskripsi($_POST) > 0){
+		$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra';
 		header ('Location: '.BASEURL.'/mitra/deskripsi');
-		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		Flasher::setFlash(' berhasil', 'diubah', 'success');
 			exit();
 		}else {
 		header ('Location: '.BASEURL.'/mitra/deskripsi');
@@ -129,15 +130,5 @@ public function profile(){
 		}
 	
 	 }
-
-	//  public	function tampildesk(){
-	//  	$data['judul'] = 'tampilDeskripsi';
-	// 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-	// 	$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
-	// 	$this->view('mitra/templates/header',$data);
-	// 	$this->view('mitra/tampildesk', $data);
-	// 	$this->view('mitra/templates/footer');
-	//  }
-	// }
 	
 }
