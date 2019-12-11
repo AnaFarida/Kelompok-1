@@ -47,6 +47,13 @@ class Admin extends Controller{
 		$this->view('admin/kerusakan/tambahkerusakanhp', $data);
 		$this->view('admin/templates/footer');
 	}
+	public function paket(){
+		$data['judul'] = 'Tambah Paket';
+		$data['paket'] = $this->model('Barang_model')->getAllPaket();
+		$this->view('admin/templates/header',$data);
+		$this->view('admin/paket', $data);
+		$this->view('admin/templates/footer');
+	}
 
 
 	public function dataMitra(){
@@ -155,6 +162,28 @@ public function tambahkerusakanhpbaru(){
 	}
 }
 
+public function tambahpaketlagi(){
+	// var_dump($_POST);
+	if($this->model('Barang_model')->tambahpaket($_POST) > 0){
+	header ('Location: '.BASEURL.'/admin/paket');
+	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/admin/paket');
+	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
+	}
 
-
+}
+public function delete($id){
+		if ($this->model('Barang_model')->deletePaket($id) > 0) {
+			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/admin/');
+			exit;
+		}else{
+			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/admin/');
+			exit;
+		}
+	}
 }

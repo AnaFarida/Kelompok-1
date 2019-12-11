@@ -41,26 +41,24 @@
 </div>
 </section>
 <div class="container">
-<div class="row">
-<div class="col-sm-6 col-sm-offset-3">
-<h1 class="module-title font-alt">Laptop</h1>
-</div>
-</div>
-<h4 class="font-alt mb-0"><?= $_SESSION['login']['data']['nama']; ?></h4>
-<hr class="divider-w pt-20">
+<div class="detaillaptop">
+<h4 class="font-alt mb-0"><?= $_SESSION['login']['data']['nama']; ?>. Jenis : LAPTOP</h4>
+
+	<hr class="divider-w pt-20">
 <div class="row">
 <div class="col-sm-12">
-<table class="table table-striped table-border checkout-table">
-	<?= $data['perbaikan']['keterangan_lain'][0]; ?>
+<table class="table table-striped table-border checkout-table table_laptop">
 	<tbody>
 		<?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-		<tr>
+		<?php if ($i < 3):?>
+			<tr>
 			<th class="hidden-xs" style="width: 18%;">Mitra</th>
 			<th style="width: 20%;">Status Perbaikan</th>
 			<th class="hidden-xs">Merk Laptop</th>
 			<th>Tipe Laptop</th>
 			<th>Kerusakan</th>
 			<th>Keterangan Lain</th>
+			<th>Harga</th>
 			<th>Remove</th>
 		</tr>
 		<tr>
@@ -82,31 +80,90 @@
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan']['keterangan_lain'][$i]; ?></h5>
 			</td>
+			<td class="hidden-xs">
+				<h5 class="product-title font-alt"><?= $data['perbaikan']['harga'][$i]; ?></h5>
+			</td>
 			<td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
 		</tr>
+		<?php endif; ?>
 		<?php endfor; ?>
 	</tbody>
 </table>
 </div>
 </div>
+</div>
+<div class="detailhp">
+	<h4 class="font-alt mb-0"><?= $_SESSION['login']['data']['nama']; ?>. JENIS : HANDPHONE</h4>
+<hr class="divider-w">
+<div class="row mt-20">
+<div class="col-sm-12">
+<table class="table table-striped table-border checkout-table">
+	<tbody>
+		<?php for ($j=0; $j < count($data['perbaikan2']['perbaikan_hp']); $j++):?>
+		<?php if ($j < 3):?>
+			<tr>
+			<th class="hidden-xs" style="width: 18%;">Mitra</th>
+			<th style="width: 20%;">Status Perbaikan</th>
+			<th class="hidden-xs">Merk Laptop</th>
+			<th>Tipe Laptop</th>
+			<th>Kerusakan</th>
+			<th>Keterangan Lain</th>
+			<th>Harga</th>
+			<th>Remove</th>
+		</tr>
+		<tr>
+			<td>
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['mitra'][$j][0]['nama_usaha']; ?></h5>
+			</td>
+			<td>
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['status'][$j][0]['status_perbaikan']; ?></h5>
+			</td>
+			<td>
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['merk_hp'][$j][0]['merk_hp']; ?></h5>
+			</td>
+			<td class="hidden-xs">
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['tipe_hp'][$j][0]['tipe_hp']; ?></h5>
+			</td>
+			<td class="hidden-xs">
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['kerusakan_hp'][$j][0]['kerusakan_hp']; ?></h5>
+			</td>
+			<td class="hidden-xs">
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['keterangan_lain'][$j]; ?></h5>
+			</td>
+			<td class="hidden-xs">
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['harga'][$j]; ?></h5>
+			</td>
+			<td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
+		</tr>
+		<?php endif; ?>
+		<?php endfor; ?>
+	</tbody>
+</table>
+
+</div>
 <div class="row">
 <div class="col-sm-3">
 <div class="form-group">
-	<input class="form-control" type="text" id="" name="" placeholder="Coupon code"/>
+	<input class="form-control" type="text" id="" name="" placeholder="kode voucher"/>
 </div>
 </div>
 <div class="col-sm-3">
 <div class="form-group">
-	<button class="btn btn-round btn-g" type="submit">Apply</button>
+	<button class="btn btn-round btn-g" type="submit">Kirim</button>
 </div>
 </div>
 <div class="col-sm-3 col-sm-offset-3">
 <div class="form-group">
-	<button class="btn btn-block btn-round btn-d pull-right" type="submit">Update Cart</button>
+	<button class="btn btn-block btn-round btn-d pull-right" type="submit">Lihat detail</button>
 </div>
+</div>
+</div>
+
 </div>
 </div>
 <hr class="divider-w">
+
+
 <div class="row mt-70">
 <div class="col-sm-5 col-sm-offset-7">
 <div class="shop-Cart-totalbox">
@@ -132,3 +189,21 @@
 </div>
 </div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		
+		$('.semua').click(function() {
+			$('.detaillaptop').show();
+			$('.detailhp').show();
+		});
+		$('.tlaptop').click(function() {
+			$('.detaillaptop').show();
+			$('.detailhp').hide();
+		});
+		$('.thp').click(function() {
+			$('.detaillaptop').hide();
+			$('.detailhp').show();
+		});
+	});
+</script>

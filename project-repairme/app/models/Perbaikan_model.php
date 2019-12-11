@@ -51,7 +51,7 @@ class Perbaikan_model{
 		}
 		$readyttd = $rows + 1;
 
-		$this->db->data("INSERT INTO tb_ttd_hp VALUES ( $readyttd,'$merk_hp', '$tipe_hp')");
+		$this->db->data("INSERT INTO tb_ttd_hp VALUES ( $readyttd,'$merk_hp_ttd', '$tipe_hp_ttd')");
 
 		return $this->db->data("INSERT INTO tb_perbaikan_hp VALUES (NULL, 1, $id_pelanggan, $id_mitra, $id_tipe_hp, $readyttd, $id_kerusakan_hp, '$ket_kerusakan_hp_lain', '', 0)");
 		
@@ -83,12 +83,6 @@ class Perbaikan_model{
 		$k = 0;
 		foreach ($perbaikan_laptop as $laptop) {
 			if ($laptop['id_tipe_laptop'] != 0) {
-
-			$tipe_laptop[$k] = $this->db->query("SELECT pl.merk_laptop, nama, tgl_transaksi, total_transaksi
-			FROM tb_merk_laptop pl
-			JOIN penjualan pn ON pl.id_pelanggan = pn.id_pelanggan = ".$laptop['id_tipe_laptop']);
-			$k++;
-
 			$tipe_laptop[$k] = $this->db->query("SELECT tipe_laptop,id_merk_laptop FROM tb_tipe_laptop WHERE id_tipe_laptop = ".$laptop['id_tipe_laptop']);
 			
 			
@@ -112,20 +106,93 @@ class Perbaikan_model{
 				$kerusakan_laptop[$l] = $this->db->query("SELECT kerusakan_laptop FROM tb_kerusakan_laptop WHERE id_kerusakan_laptop = ".$laptop['id_kerusakan_laptop']);
 				$ket_lain[$l] = $laptop['kerusakan_lain']; 
 			}else{
-				$kerusakan_laptop[$l] = $laptop['kerusakan_lain'];
+				$kerusakan_laptop[$l][0]['kerusakan_laptop'] = $laptop['kerusakan_lain'];
 				$ket_lain[$l] = '-';
 			}
 			$l++;
 		}
 
-		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'mitra' => $mitra, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain];
+		$harga = [];
+		$m = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			if ($laptop['harga'] == 0) {
+				$harga[$m] = 'Menunggu Kisaran Harga';
+			}else{
+				$harga[$m] = $laptop['harga'];
+			}
+			$m++;
+		}
+
+
+		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'mitra' => $mitra, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
 
 		return $result;
+	}
+
+	public function getPerbaikan2(){
+		$id_pelanggan = $_SESSION['login']['data']['id_pelanggan'];
+		$perbaikan_hp = $this->db->query("SELECT * FROM tb_perbaikan_hp WHERE id_pelanggan = ".$id_pelanggan);
+		$status_perbaikan = [];
+		$i = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$status_perbaikan[$i] = $this->db->query("SELECT status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$hp['id_status_perbaikan']);
+			$i++;
+		}
+		$mitra = [];
+		$j = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$mitra[$j] = $this->db->query("SELECT nama_usaha FROM tb_mitra WHERE id_mitra = ".$hp['id_mitra']);
+			$j++;
+		}
+
+		$tipe_hp = [];
+		$merk_hp = [];
+		$k = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['id_tipe_hp'] != 0) {
+			$tipe_hp[$k] = $this->db->query("SELECT tipe_hp,id_merk_hp FROM tb_tipe_hp WHERE id_tipe_hp = ".$hp['id_tipe_hp']);
+			
+			
+			$merk_hp[$k] = $this->db->query("SELECT merk_hp FROM tb_merk_hp WHERE id_merk_hp = ".$tipe_hp[$k][0]['id_merk_hp']);
 	
 
-		// $perbaikan_hp = $this->db->query("SELECT * FROM tb_perbaikan_hp WHERE id_pelanggan = ".$id_pelanggan);
-		// $result = ['laptop' => $perbaikan_laptop, 'hp' => $perbaikan_hp];
-		// // return $result;
+			}else{
+				$tipe_hp[$k] = $this->db->query("SELECT tipe_hp FROM tb_ttd_hp WHERE id_ttd_hp = ".$hp['id_ttd_hp']);
+				$merk_hp[$k] = $this->db->query("SELECT merk_hp FROM tb_ttd_hp WHERE id_ttd_hp = ".$hp['id_ttd_hp']);
+
+			}
+			$k++;
+			
+		}
+
+		$kerusakan_hp = [];
+		$ket_lain = [];
+		$l = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['id_kerusakan_hp'] != 0) {
+				$kerusakan_hp[$l] = $this->db->query("SELECT kerusakan_hp FROM tb_kerusakan_hp WHERE id_kerusakan_hp = ".$hp['id_kerusakan_hp']);
+				$ket_lain[$l] = $hp['kerusakan_lain']; 
+			}else{
+				$kerusakan_hp[$l][0]['kerusakan_hp'] = $hp['kerusakan_lain'];
+				$ket_lain[$l] = '-';
+			}
+			$l++;
+		}
+
+		$harga = [];
+		$m = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['harga'] == 0) {
+				$harga[$m] = 'Menunggu Kisaran Harga';
+			}else{
+				$harga[$m] = $hp['harga'];
+			}
+			$m++;
+		}
+
+		$result = ['perbaikan_hp' => $perbaikan_hp, 'mitra' => $mitra, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
+
+		return $result;
 	}
 
 

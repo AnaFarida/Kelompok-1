@@ -33,6 +33,7 @@ class Perbaikan extends Controller{
 		$data['judul'] = 'Pengajuan Perbaikan';
 		$call = $this->model('Perbaikan_model');
 		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/detail', $data);
 		$this->view('templates/footer');
@@ -57,7 +58,7 @@ class Perbaikan extends Controller{
 		// var_dump($_POST);
 		if($this->model('Perbaikan_model')->tambahPerbaikanHp($_POST) > 0){
 			// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-			header ('Location: '.BASEURL.'/perbaikan/');
+			header ('Location: '.BASEURL.'/perbaikan/detail');
 			exit();
 		}else {
 			// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
