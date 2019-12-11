@@ -2,7 +2,7 @@
 class Mitra extends Controller{
 	public function index(){
 		$data['judul'] = 'Mitra RepairMe';
-		// $data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		 $data['mitra'] = $this->model('Mitra_model')->getMitraNow();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
 		$this->view('mitra/templates/header', $data);
 		$this->view('mitra/index', $data);
@@ -67,7 +67,7 @@ public function profile(){
 		// var_dump($_SESSION['login']['data']['nama_usaha']);
 		// echo $_SESSION['login'];
 		$data['judul'] = 'Mitra RepairMe';
-		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		$data['mitra'] = $this->model('Mitra_model')->getMitraNow();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
 		$this->view('mitra/templates/header', $data);
 		$this->view('mitra/profile', $data);

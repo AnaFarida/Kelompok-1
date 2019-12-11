@@ -156,9 +156,13 @@
             <div class="image">
               <img src="<?= BASEURL; ?>/img/mitra/<?= $_SESSION['login']['data']['foto_usaha']; ?>" class="img-box elevation-2" alt="Foto Usaha Mitra">
             </div>
+            <?php foreach ($data['mitra'] as $mitra):?>
             <div class="info">
-              <a href="#" class="d-block"><?=$_SESSION['login']['data']['nama']; ?></a>
+              
+               <a class="float-right"><?= $mitra ['nama'] ?></a>
+               
             </div>
+            <?php endforeach; ?>
           </div>
           <!-- Sidebar Menu -->
           <nav class="mt-2">
@@ -240,31 +244,25 @@
                   <li class="nav-item">
                     <a href="<?=BASEURL; ?>/mitra/deskripsi" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Ubah Deskripsi</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Tambahkan Data Teknisi</p>
+                      <p>Ubah Profile</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="pages/layout/fixed-topnav.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Rating Mitra</p>
+                      <p>Ubah Password</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="pages/layout/fixed-footer.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Fixed Footer</p>
+                      <p>Garansi</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Collapsed Sidebar</p>
+                      <p>Promosi</p>
                     </a>
                   </li>
                 </ul>
