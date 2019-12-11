@@ -89,10 +89,10 @@ public function profile(){
 	}
 	}
 
-	public function pengajuanperbaikan(){
+	public function permintaanperbaikan(){
 		$data['judul'] = 'Pengajuan Perbaikan';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-		$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
+		$data['perbaikan'] = $this->model('Mitra_model')->getPerbaikan();
 		$this->view('mitra/templates/header',$data);
 		$this->view('mitra/perbaikan/pengajuan', $data);
 		$this->view('mitra/templates/footer');
