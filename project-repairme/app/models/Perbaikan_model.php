@@ -97,7 +97,21 @@ class Perbaikan_model{
 			
 		}
 
-		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'mitra' => $mitra, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop];
+		$kerusakan_laptop = [];
+		$ket_lain = [];
+		$l = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			if ($laptop['id_kerusakan_laptop'] != 0) {
+				$kerusakan_laptop[$l] = $this->db->query("SELECT kerusakan_laptop FROM tb_kerusakan_laptop WHERE id_kerusakan_laptop = ".$laptop['id_kerusakan_laptop']);
+				$ket_lain[$l] = $laptop['kerusakan_lain']; 
+			}else{
+				$kerusakan_laptop[$l] = $laptop['kerusakan_lain'];
+				$ket_lain[$l] = '-';
+			}
+			$l++;
+		}
+
+		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'mitra' => $mitra, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain];
 
 		return $result;
 	
