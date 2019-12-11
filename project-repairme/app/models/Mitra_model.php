@@ -116,4 +116,51 @@ class Mitra_model{
 
 	return $update;
 	}
+
+		public function getPerbaikan(){
+		$id_mitra = $_SESSION['login']['data']['id_mitra'];
+		$perbaikan_laptop = $this->db->query("SELECT * FROM tb_perbaikan_laptop WHERE id_mitra = ".$id_mitra);
+		$status_perbaikan = [];
+		$i = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			$status_perbaikan[$i] = $this->db->query("SELECT status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$laptop['id_status_perbaikan']);
+			$i++;
+		}
+		$pelanggan = [];
+		$j = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			$pelanggan[$j] = $this->db->query("SELECT nama FROM tb_pelanggan WHERE id_pelanggan = ".$laptop['id_pelanggan']);
+			$j++;
+		}
+
+		$tipe_laptop = [];
+		$merk_laptop = [];
+		$k = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			if ($laptop['id_tipe_laptop'] != 0) {
+			$tipe_laptop[$k] = $this->db->query("SELECT tipe_laptop,id_merk_laptop FROM tb_tipe_laptop WHERE id_tipe_laptop = ".$laptop['id_tipe_laptop']);
+			
+			
+			$merk_laptop[$k] = $this->db->query("SELECT merk_laptop FROM tb_merk_laptop WHERE id_merk_laptop = ".$tipe_laptop[$k][0]['id_merk_laptop']);
+
+
+			}else{
+				$tipe_laptop[$k] = $this->db->query("SELECT tipe_laptop FROM tb_ttd_laptop WHERE id_ttd_laptop = ".$laptop['id_ttd_laptop']);
+				$merk_laptop[$k] = $this->db->query("SELECT merk_laptop FROM tb_ttd_laptop WHERE id_ttd_laptop = ".$laptop['id_ttd_laptop']);
+			}
+			$k++;
+			
+		}
+
+		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'pelanggan' => $pelanggan, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop];
+
+		return $result;
+
+
+		// $perbaikan_hp = $this->db->query("SELECT * FROM tb_perbaikan_hp WHERE id_pelanggan = ".$id_pelanggan);
+		// $result = ['laptop' => $perbaikan_laptop, 'hp' => $perbaikan_hp];
+		// // return $result;
+	}
+
+
 }
