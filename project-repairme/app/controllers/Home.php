@@ -30,4 +30,25 @@ class Home extends Controller{
 		$this->view('templates/footer');
 	}
 
+	// public function transaksi(){
+	// 	$data['mitra'] = $this->model('Mitra_model')->inputTransaksi();
+	// 	$data['judul'] = 'Paket Biaya Iklan';
+	// 	$this->view('templates/header', $data);
+	// 	$this->view('home/paket',$data);
+	// 	$this->view('templates/footer');
+	// }
+	public function transaksi(){
+		//var_dump($_POST);
+		if($this->model('Mitra_model')->inputTransaksi($_POST) > 0){
+		header ('Location: '.BASEURL.'/home/paket');
+		 Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/home/paket');
+		 Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	
+	 }
+
 }

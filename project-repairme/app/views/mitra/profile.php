@@ -58,7 +58,6 @@
                 <a href="<?= BASEURL;?>/home/paket" class="btn btn-danger btn-block"><b>Belum Terverifikasi</b></a>
 
                 <?php endforeach; ?>
-                <a href="#" class="btn btn-danger btn-block"><b>Belum Terverifikasi</b></a>
 
               </div>
               <!-- /.card-body -->

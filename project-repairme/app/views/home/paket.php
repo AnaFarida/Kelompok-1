@@ -63,10 +63,14 @@
                                             
   <!-- isi dari class modal -->
                                             
-     <form action="<?=BASEURL;?>/mitra/buktitrans" method="POST" id="formmodtrans" data-parsley-validate=""> 
-      <div>                                             
+     <form action="<?=BASEURL;?>/home/transaksi" method="POST" id="formmodtrans" data-parsley-validate=""> 
+      <div>
+      <div class="notif" style="width: 50%; height: 10%; top: 0; left: 50%; position: absolute;">
+                  <?php Flasher::flash(); ?>
+                </div>                                             
       <label class="fa fa-camera" for="buktitrans"> Upload Bukti Bayar (Gambar Maks 2Mb) </label>
       <div class="input-icon">
+      <input type="hidden" name="id_mitra">
       <input id="foto_transaksi" name="foto_transaksi" type="file" required>
       <p class="foto_transaksi" style="color: red;"></p>
       </div>
@@ -76,6 +80,7 @@
         <button type="submit" class="btn btn-d btn-round">Kirim</button>
       </div>
     </form>
+   
     </div>
     </div>
   </div>

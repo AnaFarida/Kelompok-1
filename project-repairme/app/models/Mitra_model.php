@@ -117,6 +117,13 @@ class Mitra_model{
 	return $update;
 	}
 
+	public function inputTransaksi($data){
+		$id_mitra = $_SESSION['login']['data']['id_mitra'];
+		$foto_transaksi = $this->db->upload('foto_transaksi');
+		$foto_update = $this->db->query("UPDATE tb_mitra SET foto_transaksi='$foto_transaksi' WHERE id_mitra='$id_mitra'");
+		return $foto_update;
+	}
+
 		public function getPerbaikan(){
 		$id_mitra = $_SESSION['login']['data']['id_mitra'];
 		$perbaikan_laptop = $this->db->query("SELECT * FROM tb_perbaikan_laptop WHERE id_mitra = ".$id_mitra);

@@ -81,6 +81,15 @@ class Barang_model{
 		return $this->db->query("SELECT * FROM tb_kerusakan_hp");
 	}
 
+	public function getAllPaket(){
+		return $this->db->query("SELECT * FROM tb_paket");
+	}
+
+	public function tambahPaket($data){
+		$kerusakan = $data['kerusakan'];
+		return $this->db->data("INSERT INTO tb_paket VALUES ( NULL,'$nama_paket', '$harga')");
+	}
+
 
 	// untuk pengajuan perbaikan laptop
 	
