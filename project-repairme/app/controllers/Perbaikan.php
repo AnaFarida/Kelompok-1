@@ -45,7 +45,7 @@ class Perbaikan extends Controller{
 	public function pengajuanperbaikanlaptop(){
 		if($this->model('Perbaikan_model')->tambahPerbaikanLaptop($_POST) > 0){
 			// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-			header ('Location: '.BASEURL.'/perbaikan/');
+			header ('Location: '.BASEURL.'/perbaikan/detail');
 			exit();
 		}else {
 			// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	

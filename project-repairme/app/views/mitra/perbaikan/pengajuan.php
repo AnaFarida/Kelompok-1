@@ -19,7 +19,7 @@
 
     <!-- Main content -->
     <section class="content">
-
+      <?php Flasher::flash(); ?>
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
@@ -35,6 +35,7 @@
         <div class="card-body p-0">
           <table class="table table-striped projects">
             <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
+            <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 1):?>
               <thead>
                   <tr>
                       <th style="width: 20%">
@@ -85,7 +86,7 @@
                           </ul>
                       </td>
                       <td class="project-actions text-right">
-                          <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#terimaLaptop">
+                          <button class="btn btn-success btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
                               Terima 
                           </button>
                           <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#tolakLaptop">
@@ -94,6 +95,7 @@
                       </td>
                   </tr>
               </tbody>
+            <?php endif; ?>
             <?php endfor; ?>
           </table>
         </div>
@@ -292,6 +294,8 @@
       </div>
       <div class="modal-body">
         <div class="form-group mt-20">
+          <form action="<?= BASEURL; ?>/mitra/terimaperbaikanlaptop" method="POST">
+            <input type="text" id="id_perbaikan_laptop" name="id_perbaikan_laptop" hidden>
               <input class="form-control" id="hargalaptop" name="hargalaptop" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
             </div>
             <p class="hargalaptop" style="color: red;"></p>
@@ -300,7 +304,8 @@
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success">Terima Permintaan</button>
+        <button type="submit" class="btn btn-success">Terima Permintaan</button>
+        </form>
       </div>
     </div>
   </div>
@@ -309,8 +314,9 @@
 
 <script>
   $(document).ready(function(){
-    $('#hargalaptop').on('keyup', function(){
-      
+    $('.t-terimalaptop').click(function(){
+      $('#id_perbaikan_laptop').val($(this).val());
+    });
   });
 </script>
 

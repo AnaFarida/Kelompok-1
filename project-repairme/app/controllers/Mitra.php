@@ -130,5 +130,20 @@ public function profile(){
 		}
 	
 	 }
+
+	 public function terimaperbaikanlaptop(){
+	 // var_dump($_POST);
+	 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra') {
+	 	if($this->model('Mitra_model')->terimapengajuanlaptop($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' berhasil', 'diterima', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' gagal', 'diterima', 'danger');	
+			exit();
+		}
+	 }
+	 }
 	
 }

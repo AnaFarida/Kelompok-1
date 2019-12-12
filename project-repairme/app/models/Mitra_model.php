@@ -255,4 +255,14 @@ class Mitra_model{
 	public function getMitraNow(){
 		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = " . $_SESSION['login']['data']['id_mitra']);
 	}
+
+	public function terimapengajuanlaptop($data){
+	$id = $data['id_perbaikan_laptop'];
+	$harga = $data['hargalaptop'];
+	$keterangan_lain = $data['ketlaptoplain'];
+	return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 2, tb_perbaikan_laptop.harga = '$harga', tb_perbaikan_laptop.keterangan_mitra = '$keterangan_lain'
+		WHERE id_perbaikan = $id
+		");
+	}
+
 }
