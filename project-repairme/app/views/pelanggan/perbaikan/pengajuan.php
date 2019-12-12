@@ -1,5 +1,4 @@
-<script src="<?= BASEURL; ?>/js/autoNumeric.js"></script>
-  <div class="content-wrapper">
+ <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -23,7 +22,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Laptop</h3>
+          <h3 class="card-title">Pengajuan Perbaikan : Laptop</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -34,17 +33,18 @@
         </div>
         <div class="card-body p-0">
           <table class="table table-striped projects">
-            <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-            <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 1):?>
               <thead>
                   <tr>
-                      <th style="width: 20%">
-                          Nama Pelanggan
-                      </th>
                       <th style="width: 15%">
+                          Nama Pengaju
+                      </th>
+                      <th style="width: 12%">
+                          Mitra
+                      </th>
+                      <th style="width: 10%">
                           Merk Laptop
                       </th>
-                      <th style="width: 15%">
+                      <th style="width: 10%">
                           Tipe Laptop
                       </th>
                       <th style="width: 15%;">
@@ -54,16 +54,23 @@
                           Keterangan Lain
                       </th>
                       <th style="width: 15%">
-
+                        Status Perbaikan
                       </th>
                   </tr>
               </thead>
+            <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
+            <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 1):?>
               <tbody>
                   <tr>
                       <td>
                           <a>
-                              <?= $data['perbaikan']['pelanggan'][$i][0]['nama']; ?>
+                              <?= $_SESSION['login']['data']['nama']; ?>
                           </a>                   
+                      </td>
+                      <td>
+                          <ul class="list-inline">
+                              <?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?>
+                          </ul>
                       </td>
                       <td>
                           <ul class="list-inline">
@@ -85,13 +92,10 @@
                               <?= $data['perbaikan']['keterangan_lain'][$i]; ?>
                           </ul>
                       </td>
-                      <td class="project-actions text-right">
-                          <button class="btn btn-success btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                              Terima 
-                          </button>
-                          <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#tolakLaptop">
-                              Tolak
-                          </button>
+                      <td >
+                         <ul class="list-inline" style="color: red;">
+                              <?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?>
+                          </ul>
                       </td>
                   </tr>
               </tbody>
@@ -190,145 +194,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper-->
-
-<!-- penolakan -->
-<!-- Modal -->
-<div class="modal fade" id="tolakLaptop" tabindex="-1" role="dialog" aria-labelledby="tolakLaptopLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="tolakLaptopLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-              <div class="form-group">
-                <form action="<?= BASEURL; ?>/mitra/tolakperbaikanlaptop" method="POST">
-                <select class="form-control" id="alasanPenolakanLaptop">
-                  <option selected="true" disabled="">Alasan Penolakan</option>
-                  <option>Teknisi Belum Ready</option>
-                  <option>Permintaan Masih Penuh</option>
-                  <option>Permintaan Tidak Benar</option>
-                  <option style="color: red;" value="false">Alasan Lain</option>
-                </select>
-              </div>
-            <div class="form-group mt-20">
-              <input class="form-control" id="ketpenolakanlaptop" name="ketpenolakanlaptop" type="text" placeholder="Alasan Anda">
-            </div>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-danger">Tolak Permintaan</button>
-        </form>
-      </div>
-      </div>
-    </div>
-  </div>
-
-<script>
-  $(document).ready(function(){
-    $('#ketpenolakanlaptop').hide();
-    $('#alasanPenolakanLaptop').change(function() {
-      $('#ketpenolakanlaptop').val('');
-      if ($(this).val() == 'false') {
-        $('#ketpenolakanlaptop').show();
-      }else{
-        $('#ketpenolakanlaptop').hide();
-        $('#ketpenolakanlaptop').val($(this).val());
-      }
-    });
-  });
-</script>
-
-<!-- Modal -->
-<div class="modal fade" id="tolakHp" tabindex="-1" role="dialog" aria-labelledby="tolakHpLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="tolakHpLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <div class="form-group">
-
-                <select class="form-control" id="alasanPenolakanHp">
-                 <option selected="true" disabled="">Alasan Penolakan</option>
-                  <option>Teknisi Belum Ready</option>
-                  <option>Permintaan Masih Penuh</option>
-                  <option>Permintaan Tidak Benar</option>
-                  <option style="color: red;" value="false">Alasan Lain</option>
-                </select>
-
-              </div>
-            <div class="form-group mt-20">
-              <input class="form-control" id="ketpenolakanhp" name="ketpenolakanhp" type="text" placeholder="Alasan Anda">
-            </div>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-danger">Tolak Permintaan</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  $(document).ready(function(){
-    $('#ketpenolakanhp').hide();
-    $('#alasanPenolakanHp').change(function() {
-      if ($(this).val() == 'false') {
-        $('#ketpenolakanhp').show();
-      }else{
-        $('#ketpenolakanhp').hide();
-        $('#ketpenolakanhp').val($(this).val());
-      }
-    });
-  });
-</script>
-
-<!-- untuk penerimaan -->
-
-<!-- Modal -->
-<div class="modal fade" id="terimaLaptop" tabindex="-1" role="dialog" aria-labelledby="terimaLaptopLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="terimaLaptopLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group mt-20">
-          <form action="<?= BASEURL; ?>/mitra/terimaperbaikanlaptop" method="POST">
-            <input type="text" id="id_perbaikan_laptop" name="id_perbaikan_laptop" hidden>
-              <input class="form-control" id="hargalaptop" name="hargalaptop" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
-            </div>
-            <p class="hargalaptop" style="color: red;"></p>
-            <div class="form-group mt-20">
-              <input class="form-control" id="ketlaptoplain" name="ketlaptoplain" type="text" placeholder="Keterangan Lain">
-            </div>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-success">Terima Permintaan</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-  $(document).ready(function(){
-    $('.t-terimalaptop').click(function(){
-      $('#id_perbaikan_laptop').val($(this).val());
-    });
-  });
-</script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#hargalaptop').autoNumeric('init');
-    });
-</script>

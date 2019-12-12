@@ -105,4 +105,16 @@ public function beriRating(){
 		$this->view('templates/footer');
 		}
 	}
+
+	public function pengajuanperbaikan(){	
+		$data['judul'] = 'Pengajuan Perbaikan';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+		$call = $this->model('Perbaikan_model');
+		$data['perbaikan'] = $call->getPerbaikan();
+		$this->view('pelanggan/templates/header',$data);
+		$this->view('pelanggan/perbaikan/pengajuan', $data);
+		$this->view('pelanggan/templates/footer');
+		}
+	}
+
 }

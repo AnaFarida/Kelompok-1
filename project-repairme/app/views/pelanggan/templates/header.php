@@ -180,9 +180,9 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="<?= BASEURL; ?>/pelanggan/pengajuanperbaikan" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Riwayat perbaikan</p>
+                      <p>Pengajuan perbaikan</p>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -197,25 +197,12 @@
                       <p>Barang Selesai Di Perbaiki</p>
                     </a>
                   </li>
-                  <!-- <li class="nav-item">
-                    <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Data Barang Lengkap</p>
-                    </a>
-                  </li>
                   <li class="nav-item">
-                    <a href="pages/layout/fixed-footer.html" class="nav-link">
+                    <a href="pages/layout/top-nav.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Fixed Footer</p>
+                      <p>Riwayat perbaikan</p>
                     </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Collapsed Sidebar</p>
-                    </a>
-                  </li> -->
-                </ul>
+                  </li></ul>
               </li>
               <li class="nav-item has-treeview">
                 <a href="" class="nav-link">
