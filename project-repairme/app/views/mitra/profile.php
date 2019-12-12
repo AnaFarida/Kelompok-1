@@ -54,11 +54,8 @@
                     <b>No Telfon</b> <a class="float-right"><?= $mitra ['no_tlp'] ?></a>
                   </li>
                 </ul>
-                
-                <a href="<?= BASEURL;?>/home/paket" class="btn btn-danger btn-block"><b>Belum Terverifikasi</b></a>
-
                 <?php endforeach; ?>
-
+                <a href="<?= BASEURL;?>/home/paket" class="btn btn-danger btn-block"><b>Belum Terverifikasi</b></a>
               </div>
               <!-- /.card-body -->
             </div>
