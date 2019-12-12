@@ -144,12 +144,12 @@ public function profile(){
 	 }
 	 public function buktitrans(){
 	// var_dump($_POST);
-	if($this->model('Mitra_model')->inputMitra($_POST) > 0){
-	header ('Location: '.BASEURL.'/admin/paket');
+	if($this->model('Mitra_model')->inputTransaksi($_POST) > 0){
+	header ('Location: '.BASEURL.'/home/paket');
 	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 		exit();
 	}else {
-	header ('Location: '.BASEURL.'/admin/paket');
+	header ('Location: '.BASEURL.'/home/paket');
 	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}
