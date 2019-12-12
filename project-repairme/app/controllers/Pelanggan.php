@@ -95,7 +95,7 @@ public function editProfile(){
 	
 	 }
 
-public function beriRating(){
+	public function beriRating(){
 		
 		$data['judul'] = 'BeriRating';
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
@@ -117,4 +117,18 @@ public function beriRating(){
 		}
 	}
 
+ 	// public function rating(){
+		// //var_dump($_POST);
+		// if($this->model('pelanggan_model')->inputrating($_POST) > 0){
+		// 	$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		// header ('Location: '.BASEURL.'/pelanggan/');
+		// // Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		// 	exit();
+		// }else {
+		// header ('Location: '.BASEURL.'/pelanggan/editprofile');
+		// // Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		// 	exit();
+		// }
+	
+	 // }
 }

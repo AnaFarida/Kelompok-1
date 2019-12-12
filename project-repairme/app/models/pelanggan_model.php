@@ -46,7 +46,7 @@ class pelanggan_model{
 		return $input;
 		}
 
-		public function deletepelanggan($id){
+	public function deletepelanggan($id){
 		
 			$preIdpelanggan = $this->db->query("SELECT * FROM tb_pelanggan WHERE id_pelanggan = " . $id);
 			
@@ -63,7 +63,7 @@ class pelanggan_model{
 			return $delUsr && $delpelanggan;
 		}
 
-		public function updatePelanggan($data){
+	public function updatePelanggan($data){
 		$id = $data['id_pelanggan'];
 		$nama = $data['nama'];
 		$email = $data['email'];
@@ -75,7 +75,18 @@ class pelanggan_model{
 
 	return $update;
 	}
-
+	public function getRating($id){
+		$id_pelanggan = $_SESSION['login']['data']['id_pelanggan'];
+		$rat = $this->db->query("SELECT * FROM tb_rating WHERE id_rating = ".$id_rating);
+	}
+	public function inputrating($data){
+		$id_pelanggan =  $_SESSION['login']['data']['id_Pelanggan'];
+		$id_mitra = $data['id_mitra'];
+		$rating = $data ['rating'];
+		$testimoni =$data ['testimoni'];
+		$input = $this->db->data("INSERT INTO tb_user VALUES (NULL,'$id_mitra','$rating','$testimoni')");
+		return $input;
+	}
 
 	}
 	
