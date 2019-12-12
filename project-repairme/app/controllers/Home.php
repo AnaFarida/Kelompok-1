@@ -22,4 +22,12 @@ class Home extends Controller{
 		$this->view('templates/footer');
 	}
 
+	public function paket(){
+		$data['paket'] = $this->model('Barang_model')->getAllPaket();
+		$data['judul'] = 'Paket Biaya Iklan';
+		$this->view('templates/header', $data);
+		$this->view('home/paket',$data);
+		$this->view('templates/footer');
+	}
+
 }
