@@ -66,16 +66,17 @@
             <div class="card-body">
               <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
                 <thead>
-                <tr role="row"><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">Rendering engine</th><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column descending" aria-sort="ascending">Browser</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Platform(s)</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Engine version</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">CSS grade</th></tr>
+                <tr role="row">
+                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">Tipe Laptop</th><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column descending" aria-sort="ascending">Merk Laptop</th></tr>
                 </thead>
                 <tbody>
+
                <?php foreach($data['tipe'] as $tipe):?>
+
                 <tr role="row" class="odd">
-                  <td class=""><?= $tipe['tipe_laptop'];?></td>
-                  <td class="sorting_1">All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
+                <td><?= $tipe['tipe_laptop']; ?></td>
+                <td><?= $tipe['merk_laptop']; ?></td>
+                 
                 </tr>
                <?php endforeach;?> 
                 </tbody>

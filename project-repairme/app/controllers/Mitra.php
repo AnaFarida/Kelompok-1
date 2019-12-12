@@ -2,7 +2,7 @@
 class Mitra extends Controller{
 	public function index(){
 		$data['judul'] = 'Mitra RepairMe';
-		// $data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		 $data['mitra'] = $this->model('Mitra_model')->getMitraNow();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
 		$this->view('mitra/templates/header', $data);
 		$this->view('mitra/index', $data);
@@ -53,7 +53,7 @@ public function detailMitra($id){
 			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
 			header('Location: '.BASEURL.'/mitra/');
 			exit;
-		}else{
+	 	}else{
 			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
 			header('Location: '.BASEURL.'/mitra/');
 			exit;
@@ -67,7 +67,7 @@ public function profile(){
 		// var_dump($_SESSION['login']['data']['nama_usaha']);
 		// echo $_SESSION['login'];
 		$data['judul'] = 'Mitra RepairMe';
-		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		$data['mitra'] = $this->model('Mitra_model')->getMitraNow();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
 		$this->view('mitra/templates/header', $data);
 		$this->view('mitra/profile', $data);
@@ -80,7 +80,7 @@ public function profile(){
 	public function deskripsi(){
 		$data['judul'] = 'Deskripsi';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-		$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
+		$data['mitra'] = $this->model('Mitra_model')->getMitraNow();
 		$this->view('mitra/templates/header',$data);
 		$this->view('mitra/deskripsi', $data);
 		$this->view('mitra/templates/footer');
@@ -92,7 +92,9 @@ public function profile(){
 	public function permintaanperbaikan(){
 		$data['judul'] = 'Pengajuan Perbaikan';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-		$data['perbaikan'] = $this->model('Mitra_model')->getPerbaikan();
+		$call = $this->model('Mitra_model');
+		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
 		$this->view('mitra/templates/header',$data);
 		$this->view('mitra/perbaikan/pengajuan', $data);
 		$this->view('mitra/templates/footer');
@@ -101,24 +103,25 @@ public function profile(){
 	}
 	}
 
-	public function insertDeskripsi(){
-		//var_dump($_POST);
-		if($this->model('Mitra_model')->inputDeskripsi($_POST) > 0){
-		header ('Location: '.BASEURL.'/mitra/deskripsi');
-		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-			exit();
-		}else {
-		header ('Location: '.BASEURL.'/mitra/deskripsi');
-		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
-			exit();
-		}
+	// public function insertDeskripsi(){
+	// 	//var_dump($_POST);
+	// 	if($this->model('Mitra_model')->inputDeskripsi($_POST) > 0){
+	// 	header ('Location: '.BASEURL.'/mitra/deskripsi');
+	// 	// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+	// 		exit();
+	// 	}else {
+	// 	header ('Location: '.BASEURL.'/mitra/deskripsi');
+	// 	// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+	// 		exit();
+	// 	}
 	
-	 }
+	//  }
 	 public function editDeskripsi(){
 		//var_dump($_POST);
 		if($this->model('Mitra_model')->updateDeskripsi($_POST) > 0){
+		$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra';
 		header ('Location: '.BASEURL.'/mitra/deskripsi');
-		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		Flasher::setFlash(' berhasil', 'diubah', 'success');
 			exit();
 		}else {
 		header ('Location: '.BASEURL.'/mitra/deskripsi');
@@ -128,14 +131,19 @@ public function profile(){
 	
 	 }
 
-	//  public	function tampildesk(){
-	//  	$data['judul'] = 'tampilDeskripsi';
-	// 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-	// 	$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
-	// 	$this->view('mitra/templates/header',$data);
-	// 	$this->view('mitra/tampildesk', $data);
-	// 	$this->view('mitra/templates/footer');
-	//  }
-	// }
+	 public function terimaperbaikanlaptop(){
+	 // var_dump($_POST);
+	 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra') {
+	 	if($this->model('Mitra_model')->terimapengajuanlaptop($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' berhasil', 'diterima', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' gagal', 'diterima', 'danger');	
+			exit();
+		}
+	 }
+	 }
 	
 }

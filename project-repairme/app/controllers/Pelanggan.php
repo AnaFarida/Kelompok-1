@@ -94,4 +94,15 @@ public function editProfile(){
 		}
 	
 	 }
+
+public function beriRating(){
+		
+		$data['judul'] = 'BeriRating';
+		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+		$this->view('templates/header',$data);
+		$this->view('pelanggan/rating/ratingmitra', $data);
+		$this->view('templates/footer');
+		}
+	}
 }

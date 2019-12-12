@@ -290,13 +290,28 @@
                 </ul>
               </li>
               <li class="nav-item has-treeview">
-                <a href="<?= BASEURL; ?>/perbaikan/index" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="nav-icon fas fa-map"></i>
                   <p>
-                   Cari Mitra
+                   Mitra
                     <i class="right fas fa-angle-left"></i>
+                     <span class="badge badge-info right">2</span>
                   </p>
                 </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="<?= BASEURL; ?>/perbaikan/index" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Cari Mitra</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= BASEURL; ?>/Pelanggan/beriRating" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Berikan Rating</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">

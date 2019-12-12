@@ -58,6 +58,7 @@
 			<th>Tipe Laptop</th>
 			<th>Kerusakan</th>
 			<th>Keterangan Lain</th>
+			<th>Keterangan Dari Mitra</th>
 			<th>Harga</th>
 			<th>Remove</th>
 		</tr>
@@ -79,6 +80,9 @@
 			</td>
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan']['keterangan_lain'][$i]; ?></h5>
+			</td>
+			<td class="hidden-xs">
+				<h5 class="product-title font-alt"><?= $data['perbaikan']['perbaikan_laptop'][$i]['keterangan_mitra']; ?></h5>
 			</td>
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan']['harga'][$i]; ?></h5>

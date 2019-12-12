@@ -38,24 +38,28 @@
                        src="<?= BASEURL; ?>/img/mitra/<?= $_SESSION['login']['data']['foto_usaha']; ?>"
                        alt="User profile picture">
                 </div>
-
+                <?php foreach ($data['mitra'] as $mitra):?>
                 <h3 class="profile-username text-center"><?= strtoupper($_SESSION['login']['data']['nama_usaha']); ?></h3>
-
-                <p class="text-muted text-center text-sm"><?= strtoupper($_SESSION['login']['data']['nama']); ?></p>
+                  
+                <p class="text-muted text-center text-sm"></p>
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>Followers</b> <a class="float-right">1,322</a>
+                    <b>Nama Mitra</b> <a class="float-right"><?= $mitra ['nama'] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Following</b> <a class="float-right">543</a>
+                    <b>E-mail</b> <a class="float-right"><?= $mitra ['email'] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Friends</b> <a class="float-right">13,287</a>
+                    <b>No Telfon</b> <a class="float-right"><?= $mitra ['no_tlp'] ?></a>
                   </li>
                 </ul>
                 
                 <a href="<?= BASEURL;?>/home/paket" class="btn btn-danger btn-block"><b>Belum Terverifikasi</b></a>
+
+                <?php endforeach; ?>
+                <a href="#" class="btn btn-danger btn-block"><b>Belum Terverifikasi</b></a>
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -69,8 +73,11 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <strong><i class="fas fa-book mr-1"></i> Deskripsi</strong>
+                 <?php foreach ($data['mitra'] as $mitra):?>
                 <p class="text-muted">
-                <?= $_SESSION['login']['data']['deskripsi']; ?>
+               
+                  <?= $mitra['deskripsi']; ?>
+
                  <a class="btn btn-dark" href="<?= BASEURL; ?>/mitra/deskripsi" role="button">Update Deskripsi</a>
                  
                 </p>
@@ -79,14 +86,14 @@
 
                 <strong><i class="fas fa-map-marker-alt mr-1"></i> Lokasi Usaha</strong>
 
-                <p class="text-muted"><?= $_SESSION['login']['data']['alamat']; ?></p>
+                <p class="text-muted">   <?= $mitra['alamat']; ?></p>
 
                 <hr>
 
                 <strong><i class="fas fa-pencil-alt mr-1"></i> Jenis Perbaikan</strong>
 
                 <p class="text-muted">
-                  <?= $_SESSION['login']['data']['jenis']; ?>
+                     <?= $mitra['jenis']; ?>
                 </p>
 
                 <hr>
@@ -94,6 +101,7 @@
                 <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
 
                 <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                <?php endforeach; ?>
               </div>
               <!-- /.card-body -->
             </div>
