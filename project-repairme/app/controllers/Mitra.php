@@ -67,7 +67,7 @@ public function profile(){
 		// var_dump($_SESSION['login']['data']['nama_usaha']);
 		// echo $_SESSION['login'];
 		$data['judul'] = 'Mitra RepairMe';
-		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		$data['mitra'] = $this->model('Mitra_model')->getMitraNow();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
 		$this->view('mitra/templates/header', $data);
 		$this->view('mitra/profile', $data);
@@ -130,12 +130,12 @@ public function profile(){
 
 	 public function buktitrans(){
 	// var_dump($_POST);
-	if($this->model('Mitra_model')->inputMitra($_POST) > 0){
-	header ('Location: '.BASEURL.'/admin/paket');
+	if($this->model('Mitra_model')->inputTransaksi($_POST) > 0){
+	header ('Location: '.BASEURL.'/home/paket');
 	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 		exit();
 	}else {
-	header ('Location: '.BASEURL.'/admin/paket');
+	header ('Location: '.BASEURL.'/home/paket');
 	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}

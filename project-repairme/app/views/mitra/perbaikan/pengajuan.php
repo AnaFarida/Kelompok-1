@@ -204,6 +204,7 @@
       </div>
       <div class="modal-body">
               <div class="form-group">
+                <form action="<?= BASEURL; ?>/mitra/tolakperbaikanlaptop" method="POST">
                 <select class="form-control" id="alasanPenolakanLaptop">
                   <option selected="true" disabled="">Alasan Penolakan</option>
                   <option>Teknisi Belum Ready</option>
@@ -217,20 +218,23 @@
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger">Tolak Permintaan</button>
+        <button type="submit" class="btn btn-danger">Tolak Permintaan</button>
+        </form>
+      </div>
       </div>
     </div>
   </div>
-</div>
 
 <script>
   $(document).ready(function(){
     $('#ketpenolakanlaptop').hide();
     $('#alasanPenolakanLaptop').change(function() {
+      $('#ketpenolakanlaptop').val('');
       if ($(this).val() == 'false') {
         $('#ketpenolakanlaptop').show();
       }else{
         $('#ketpenolakanlaptop').hide();
+        $('#ketpenolakanlaptop').val($(this).val());
       }
     });
   });
@@ -248,20 +252,22 @@
       </div>
       <div class="modal-body">
           <div class="form-group">
+
                 <select class="form-control" id="alasanPenolakanHp">
-                  <option selected="true" disabled="">Alasan Penolakan</option>
+                 <option selected="true" disabled="">Alasan Penolakan</option>
                   <option>Teknisi Belum Ready</option>
                   <option>Permintaan Masih Penuh</option>
                   <option>Permintaan Tidak Benar</option>
                   <option style="color: red;" value="false">Alasan Lain</option>
                 </select>
+
               </div>
             <div class="form-group mt-20">
               <input class="form-control" id="ketpenolakanhp" name="ketpenolakanhp" type="text" placeholder="Alasan Anda">
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger">Tolak Permintaan</button>
+        <button type="submit" class="btn btn-danger">Tolak Permintaan</button>
       </div>
     </div>
   </div>
@@ -275,6 +281,7 @@
         $('#ketpenolakanhp').show();
       }else{
         $('#ketpenolakanhp').hide();
+        $('#ketpenolakanhp').val($(this).val());
       }
     });
   });
