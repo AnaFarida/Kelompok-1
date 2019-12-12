@@ -431,7 +431,7 @@ $(document).ready(function(){
 	$('#merkhpbaru').hide();
 	$('#tipelaptopbaru').hide();
 	$('#tipehpbaru').hide();
-	$('#kerusakanlaptopbaru').hide()
+	$('#kerusakanlaptopbaru').hide();
 	$('.next1').hide();
 	$('.next2').hide();
 	$('.next3').hide();
@@ -465,7 +465,6 @@ $('.thp').on('click', function(){
 			$('.next1').show();
 			$('#selector_tipe_laptop').hide();
 		}else{
-			alert($(this).val());
 			$('.next1').show();
 			$('#merklaptopbaru').hide();
 			$('#tipelaptopbaru').hide();
@@ -545,11 +544,6 @@ $('.thp').on('click', function(){
 			$('#ketkerhp').show();
 		}
 	});
-
-
-
-
-
 
 });
 </script>

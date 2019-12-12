@@ -30,7 +30,7 @@ class Barang_model{
 
 
 	public function getTipeLaptop(){
-		return $this->db->query("SELECT tb_tipe_laptop.tipe_laptop, tb_merk_laptop.merk_laptop FROM tb_tipe_laptop left join tb_merk_laptop on tb_merk_laptop.id_merk_laptop = tb_tipe_laptop.id_merk_laptop");
+		return $this->db->query("SELECT * FROM tb_tipe_laptop");
 	}
 
 
@@ -57,7 +57,7 @@ class Barang_model{
 	}
 
 	public function getTipeHp(){
-		return $this->db->query("SELECT tb_tipe_hp.tipe_hp, tb_merk_hp.merk_hp FROM tb_tipe_hp left join tb_merk_hp on tb_merk_hp.id_merk_hp = tb_tipe_hp.id_merk_hp ");
+		return $this->db->query("SELECT * FROM tb_tipe_hp");
 	}
 
 	public function tambahTipeHp($data){

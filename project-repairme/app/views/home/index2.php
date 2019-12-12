@@ -1,3 +1,21 @@
+<script>
+  $(document).ready(function(){
+    if (<?= $_SESSION['login']['pesan']; ?> === true) {
+    selamatDatang();
+    }
+    
+    function selamatDatang(){
+    const nama = "<?= $_SESSION['login']['data']['nama']; ?>";
+    $.notiny({
+      text: "Selamat Datang " + nama,
+      position: 'right-bottom',
+      animation_hide: 'custom-hide-animation 20s forwards'
+    });
+
+    }
+
+  });
+</script>
  <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="<?= BASEURL; ?>/home-master/assets/images/stiker1.jpeg">
         <div class="titan-caption">
           <div class="caption-content">

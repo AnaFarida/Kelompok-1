@@ -115,7 +115,7 @@ class Perbaikan_model{
 		$harga = [];
 		$m = 0;
 		foreach ($perbaikan_laptop as $laptop) {
-			if ($laptop['harga'] == 0) {
+			if ($laptop['harga'] == '0') {
 				$harga[$m] = 'Menunggu Kisaran Harga';
 			}else{
 				$harga[$m] = $laptop['harga'];
