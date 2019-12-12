@@ -127,7 +127,21 @@ public function profile(){
 		}
 	
 	 }
-
+	 
+	 public function tolakperbaikanlaptop(){
+	 // var_dump($_POST);
+	 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra') {
+	 	if($this->model('Mitra_model')->tolakpengajuanlaptop($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' berhasil', 'diterima', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' gagal', 'diterima', 'danger');	
+			exit();
+		}
+	 }
+	 }
 	 public function buktitrans(){
 	// var_dump($_POST);
 	if($this->model('Mitra_model')->inputTransaksi($_POST) > 0){
@@ -139,16 +153,6 @@ public function profile(){
 	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}
-
-	//  public	function tampildesk(){
-	//  	$data['judul'] = 'tampilDeskripsi';
-	// 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-	// 	$data['deskripsi'] = $this->model('Mitra_model')->getDeskripsi();
-	// 	$this->view('mitra/templates/header',$data);
-	// 	$this->view('mitra/tampildesk', $data);
-	// 	$this->view('mitra/templates/footer');
-	//  }
-	// }
-	
 }
+	
 }
