@@ -111,6 +111,8 @@ public function editProfile(){
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
 		$call = $this->model('Perbaikan_model');
 		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
+		$data['voucher'] = $call->getVoucher();
 		$this->view('pelanggan/templates/header',$data);
 		$this->view('pelanggan/perbaikan/pengajuan', $data);
 		$this->view('pelanggan/templates/footer');

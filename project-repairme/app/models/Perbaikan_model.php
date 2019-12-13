@@ -137,7 +137,7 @@ class Perbaikan_model{
 		$status_perbaikan = [];
 		$i = 0;
 		foreach ($perbaikan_hp as $hp) {
-			$status_perbaikan[$i] = $this->db->query("SELECT status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$hp['id_status_perbaikan']);
+			$status_perbaikan[$i] = $this->db->query("SELECT id_status_perbaikan,status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$hp['id_status_perbaikan']);
 			$i++;
 		}
 		$mitra = [];
@@ -217,6 +217,10 @@ class Perbaikan_model{
 		$result = ['tipe_laptop' => $datatipelaptop, 'tipe_hp' => $datatipehp, 'merk_laptop' => $datamerklaptop, 'merk_hp' => $datamerkhp];
 		return $result;
 
+	}
+
+	public function getVoucher(){
+		return $this->db->query("SELECT * FROM tb_voucher_laptop");
 	}
 
 
