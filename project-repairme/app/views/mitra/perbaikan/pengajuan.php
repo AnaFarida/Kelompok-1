@@ -89,7 +89,7 @@
                           <button class="btn btn-success btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
                               Terima 
                           </button>
-                          <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#tolakLaptop">
+                          <button class="btn btn-danger btn-sm t-tolaklaptop" data-toggle="modal" data-target="#tolakLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
                               Tolak
                           </button>
                       </td>
@@ -170,10 +170,10 @@
                           </ul>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-success btn-sm" href="#">
+                          <button class="btn btn-success btn-sm t-terimahp" data-toggle="modal" data-target="#terimahp" value="<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>">
                               Terima 
-                          </a>
-                          <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#tolakHp">
+                          </button>
+                          <button class="btn btn-danger btn-sm t-tolakhp" data-toggle="modal" data-target="#tolakHp" value="<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>">
                               Tolak
                           </button>
                       </td>
@@ -205,6 +205,7 @@
       <div class="modal-body">
               <div class="form-group">
                 <form action="<?= BASEURL; ?>/mitra/tolakperbaikanlaptop" method="POST">
+                   <input type="text" id="id_perbaikan_laptopx" name="id_perbaikan_laptopx" hidden>
                 <select class="form-control" id="alasanPenolakanLaptop">
                   <option selected="true" disabled="">Alasan Penolakan</option>
                   <option>Teknisi Belum Ready</option>
@@ -225,20 +226,6 @@
     </div>
   </div>
 
-<script>
-  $(document).ready(function(){
-    $('#ketpenolakanlaptop').hide();
-    $('#alasanPenolakanLaptop').change(function() {
-      $('#ketpenolakanlaptop').val('');
-      if ($(this).val() == 'false') {
-        $('#ketpenolakanlaptop').show();
-      }else{
-        $('#ketpenolakanlaptop').hide();
-        $('#ketpenolakanlaptop').val($(this).val());
-      }
-    });
-  });
-</script>
 
 <!-- Modal -->
 <div class="modal fade" id="tolakHp" tabindex="-1" role="dialog" aria-labelledby="tolakHpLabel" aria-hidden="true">
@@ -252,7 +239,8 @@
       </div>
       <div class="modal-body">
           <div class="form-group">
-
+                <form action="<?= BASEURL; ?>/mitra/tolakperbaikanhp" method="POST">
+                  <input type="text" id="id_perbaikan_hpx" name="id_perbaikan_hpx" hidden>
                 <select class="form-control" id="alasanPenolakanHp">
                  <option selected="true" disabled="">Alasan Penolakan</option>
                   <option>Teknisi Belum Ready</option>
@@ -268,24 +256,12 @@
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-danger">Tolak Permintaan</button>
+         </form>
       </div>
     </div>
   </div>
 </div>
 
-<script>
-  $(document).ready(function(){
-    $('#ketpenolakanhp').hide();
-    $('#alasanPenolakanHp').change(function() {
-      if ($(this).val() == 'false') {
-        $('#ketpenolakanhp').show();
-      }else{
-        $('#ketpenolakanhp').hide();
-        $('#ketpenolakanhp').val($(this).val());
-      }
-    });
-  });
-</script>
 
 <!-- untuk penerimaan -->
 
@@ -294,7 +270,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="terimaLaptopLabel">Modal title</h5>
+        <h5 class="modal-title" id="terimaLaptopLabel"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -303,6 +279,7 @@
         <div class="form-group mt-20">
           <form action="<?= BASEURL; ?>/mitra/terimaperbaikanlaptop" method="POST">
             <input type="text" id="id_perbaikan_laptop" name="id_perbaikan_laptop" hidden>
+            <input type="text" id="voucherlaptop" name="voucherlaptop" hidden>
               <input class="form-control" id="hargalaptop" name="hargalaptop" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
             </div>
             <p class="hargalaptop" style="color: red;"></p>
@@ -318,12 +295,104 @@
   </div>
 </div>
 
+<!-- terima hp -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="terimahp" tabindex="-1" role="dialog" aria-labelledby="terimahpLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="terimahpLabel">Menerima Permintaan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mt-20">
+          <form action="<?= BASEURL; ?>/mitra/terimaperbaikanhp" method="POST">
+            <input type="text" id="id_perbaikan_hp" name="id_perbaikan_hp" hidden>
+            <input type="text" id="voucherhp" name="voucherhp" hidden>
+              <input class="form-control" id="hargahp" name="hargahp" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
+            </div>
+            <p class="hargahp" style="color: red;"></p>
+            <div class="form-group mt-20">
+              <input class="form-control" id="kethplain" name="kethplain" type="text" placeholder="Keterangan Lain">
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Terima Permintaan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script>
   $(document).ready(function(){
+
+    //membuat voucher
+
+    function voucher(){
+      var result = '';
+    var character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var characterLength = character.length;
+    for (var i = 0; i < 7; i++) {
+      result += character.charAt(Math.floor(Math.random() * characterLength));
+    }
+    return result;
+    }
+
+    //penolakan laptop
+
+    $('#ketpenolakanlaptop').hide();
+    $('#alasanPenolakanLaptop').change(function() {
+      $('#ketpenolakanlaptop').val('');
+      if ($(this).val() == 'false') {
+        $('#ketpenolakanlaptop').show();
+      }else{
+        $('#ketpenolakanlaptop').hide();
+        $('#ketpenolakanlaptop').val($(this).val());
+      }
+    });
+    $('.t-tolaklaptop').click(function(){
+      $('#id_perbaikan_laptopx').val($(this).val());
+    });
+
+    // penolakan hp
+
+     $('#ketpenolakanhp').hide();
+    $('#alasanPenolakanHp').change(function() {
+      if ($(this).val() == 'false') {
+        $('#ketpenolakanhp').show();
+      }else{
+        $('#ketpenolakanhp').hide();
+        $('#ketpenolakanhp').val($(this).val());
+      }
+    });
+    $('.t-tolakhp').click(function(){
+      $('#id_perbaikan_hpx').val($(this).val());
+    });
+    //penerimaan laptop
+
     $('.t-terimalaptop').click(function(){
       $('#id_perbaikan_laptop').val($(this).val());
+      var vlaptop = voucher();
+      $('#terimaLaptopLabel').text("Kode Voucher : " + vlaptop);
+      $('#voucherlaptop').val(vlaptop);
     });
+
+    //penerimaan hp
+
+    $('.t-terimahp').click(function(){
+      $('#id_perbaikan_hp').val($(this).val());
+      var vhp = voucher();
+      $('#terimahpLabel').text("Kode Voucher : " + vhp);
+      $('#voucherhp').val(vhp);
+    });
+
+
   });
 </script>
 
@@ -332,3 +401,10 @@
         $('#hargalaptop').autoNumeric('init');
     });
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#hargahp').autoNumeric('init');
+    });
+</script>
+

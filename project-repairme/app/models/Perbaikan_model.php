@@ -117,6 +117,8 @@ class Perbaikan_model{
 		foreach ($perbaikan_laptop as $laptop) {
 			if ($laptop['harga'] == '0') {
 				$harga[$m] = 'Menunggu Kisaran Harga';
+			}else if($laptop['harga'] == '1'){
+				$harga[$m] = '-';
 			}else{
 				$harga[$m] = $laptop['harga'];
 			}
@@ -182,9 +184,12 @@ class Perbaikan_model{
 		$harga = [];
 		$m = 0;
 		foreach ($perbaikan_hp as $hp) {
-			if ($hp['harga'] == 0) {
+			if ($hp['harga'] == '0') {
 				$harga[$m] = 'Menunggu Kisaran Harga';
-			}else{
+			}else if($hp['harga'] == '1'){
+				$harga[$m] = '-';
+			}
+			else{
 				$harga[$m] = $hp['harga'];
 			}
 			$m++;

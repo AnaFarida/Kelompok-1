@@ -92,7 +92,9 @@ public function profile(){
 	public function permintaanperbaikan(){
 		$data['judul'] = 'Pengajuan Perbaikan';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
-		$data['perbaikan'] = $this->model('Mitra_model')->getPerbaikan();
+			$call = $this->model('Mitra_model');
+		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
 		$this->view('mitra/templates/header',$data);
 		$this->view('mitra/perbaikan/pengajuan', $data);
 		$this->view('mitra/templates/footer');
@@ -127,13 +129,26 @@ public function profile(){
 		}
 	
 	 }
-	 
+	  public function terimaperbaikanlaptop(){
+	 // var_dump($_POST);
+	 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra') {
+	 	if($this->model('Mitra_model')->terimapengajuanlaptop($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' berhasil', 'diterima', 'success');
+		exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' gagal', 'diterima', 'danger');	
+		exit();
+		}
+		}
+	}
 	 public function tolakperbaikanlaptop(){
 	 // var_dump($_POST);
 	 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra') {
 	 	if($this->model('Mitra_model')->tolakpengajuanlaptop($_POST) > 0){
 		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
-		Flasher::setFlash(' berhasil', 'diterima', 'success');
+		Flasher::setFlash(' berhasil', 'ditolak', 'success');
 			exit();
 		}else {
 		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
@@ -142,6 +157,38 @@ public function profile(){
 		}
 	 }
 	 }
+
+	 //untuk handphone
+
+	  public function terimaperbaikanhp(){
+	 // var_dump($_POST);
+	 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra') {
+	 	if($this->model('Mitra_model')->terimapengajuanhp($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' berhasil', 'diterima', 'success');
+		exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' gagal', 'diterima', 'danger');	
+		exit();
+		}
+		}
+	}
+	 public function tolakperbaikanhp(){
+	 // var_dump($_POST);
+	 	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra') {
+	 	if($this->model('Mitra_model')->tolakpengajuanhp($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' berhasil', 'ditolak', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/permintaanperbaikan');
+		Flasher::setFlash(' gagal', 'diterima', 'danger');	
+			exit();
+		}
+	 }
+	 }
+
 	 public function buktitrans(){
 	// var_dump($_POST);
 	if($this->model('Mitra_model')->inputTransaksi($_POST) > 0){

@@ -53,13 +53,18 @@
                       <th style="width: 15%;">
                           Keterangan Lain
                       </th>
-                      <th style="width: 15%">
+                      <th style="width: 15%;">
+                          Keterangan Mitra
+                      </th>
+                      <th style="width: 15%;">
                         Status Perbaikan
+                      </th>
+                      <th style="width: 15%;">
+                        Lanjut Perbaikan
                       </th>
                   </tr>
               </thead>
             <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-            <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 1):?>
               <tbody>
                   <tr>
                       <td>
@@ -93,13 +98,41 @@
                           </ul>
                       </td>
                       <td >
+                         <ul class="list-inline">
+                              <?= $data['perbaikan']['perbaikan_laptop'][$i]['keterangan_mitra']; ?>
+                          </ul>
+                      </td>
+                      <td >
+                         <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Mitra Menolak Perbaikan'):?>
                          <ul class="list-inline" style="color: red;">
                               <?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?>
                           </ul>
+                          <?php elseif ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Menunggu Persetujuan'):?>
+                            <ul class="list-inline" style="color: blue;">
+                              <?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?>
+                          </ul>
+                          <?php else: ?>
+                            <ul class="list-inline" style="color: green;">
+                              <?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?>
+                          </ul>
+                        <?php endif; ?>
+                      </td>
+                      <td>
+                        <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Mitra Menolak Perbaikan' || $data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Menunggu Persetujuan'):?>
+                        <ul class="list-inline">
+                          <button disabled class="btn btn-success btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop"  value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
+                              Terima 
+                          </button>
+                        </ul>
+                        <?php else: ?>
+                          <button class="btn btn-success btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
+                              Terima 
+                          </button>
+                        </ul>
+                        <?php endif; ?>
                       </td>
                   </tr>
               </tbody>
-            <?php endif; ?>
             <?php endfor; ?>
           </table>
         </div>
@@ -194,3 +227,34 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper-->
+
+  
+<!-- Modal -->
+<div class="modal fade" id="terimaLaptop" tabindex="-1" role="dialog" aria-labelledby="terimaLaptopLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="terimaLaptopLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mt-20">
+          <form action="<?= BASEURL; ?>/mitra/terimaperbaikanlaptop" method="POST">
+            <input type="text" id="id_perbaikan_laptop" name="id_perbaikan_laptop" hidden>
+            <input type="text" id="voucherlaptop" name="voucherlaptop" hidden>
+              <input class="form-control" id="hargalaptop" name="hargalaptop" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
+            </div>
+            <p class="hargalaptop" style="color: red;"></p>
+            <div class="form-group mt-20">
+              <input class="form-control" id="ketlaptoplain" name="ketlaptoplain" type="text" placeholder="Keterangan Lain">
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Terima Permintaan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -40,7 +40,7 @@
 </div>
 </div>
 </section>
-<div class="container">
+<div class="container" style="width: 90%;">
 <div class="detaillaptop">
 <h4 class="font-alt mb-0"><?= $_SESSION['login']['data']['nama']; ?>. Jenis : LAPTOP</h4>
 
@@ -52,9 +52,9 @@
 		<?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
 		<?php if ($i < 3):?>
 			<tr>
-			<th class="hidden-xs" style="width: 18%;">Mitra</th>
-			<th style="width: 20%;">Status Perbaikan</th>
-			<th class="hidden-xs">Merk Laptop</th>
+			<th style="width: 12%;">Mitra</th>
+			<th>Status Perbaikan</th>
+			<th>Merk Laptop</th>
 			<th>Tipe Laptop</th>
 			<th>Kerusakan</th>
 			<th>Keterangan Lain</th>
@@ -67,7 +67,16 @@
 				<h5 class="product-title font-alt"><?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?></h5>
 			</td>
 			<td>
-				<h5 class="product-title font-alt"><?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?></h5>
+				<script>
+					$(document).ready(function(){
+						if ("<?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?>" == 'Mitra Menolak Perbaikan') 
+						{ $('.status').attr("style", "color:red;");}
+						else{
+							
+						}
+					});
+				</script>
+				<h5 class="product-title font-alt status"><?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?></h5>
 			</td>
 			<td>
 				<h5 class="product-title font-alt"><?= $data['perbaikan']['merk_laptop'][$i][0]['merk_laptop']; ?></h5>
@@ -106,12 +115,13 @@
 		<?php for ($j=0; $j < count($data['perbaikan2']['perbaikan_hp']); $j++):?>
 		<?php if ($j < 3):?>
 			<tr>
-			<th class="hidden-xs" style="width: 18%;">Mitra</th>
-			<th style="width: 20%;">Status Perbaikan</th>
-			<th class="hidden-xs">Merk Laptop</th>
-			<th>Tipe Laptop</th>
+			<th style="width: 12%;">Mitra</th>
+			<th>Status Perbaikan</th>
+			<th>Merk Handphone</th>
+			<th>Tipe Handphone</th>
 			<th>Kerusakan</th>
 			<th>Keterangan Lain</th>
+			<th>Keterangan Dari Mitra</th>
 			<th>Harga</th>
 			<th>Remove</th>
 		</tr>
@@ -133,6 +143,9 @@
 			</td>
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan2']['keterangan_lain'][$j]; ?></h5>
+			</td>
+			<td class="hidden-xs">
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['perbaikan_hp'][$j]['keterangan_mitra']; ?></h5>
 			</td>
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan2']['harga'][$j]; ?></h5>
