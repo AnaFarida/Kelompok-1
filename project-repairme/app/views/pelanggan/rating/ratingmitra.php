@@ -43,27 +43,24 @@
 
       </form>
     </div> -->
-    <!DOCTYPE html>
-<html>
-  <head>
-    <title>jQuery Emoji Ratings</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="<?= BASEURL; ?>/rating-master/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
+   
+    
     <div class="row">
       <div class="comment-form mt-30" style="width: 40%; position: absolute; top: 10%; right: 4%;">
         <h2 class="comment-form-title font-alt">Rating Mitra</h2>
-        <form method="post">
+        <form method="post" action="<?= BASEURL; ?>/Pelanggan/rating">
         <div class="row">
           <div class="col-sm-12">
             <div class="form-group">
-              <label  for="name">Name</label>
-              <input class="form-control" id="" type="text" name="name" placeholder="Name" value="<?= $_SESSION['login']['data']['nama']; ?>">
+              <label  for="nama"> </label>
+              <input class="form-control" id="nama" type="text" name="nama" placeholder="Name" value="<?= $_SESSION['login']['data']['nama']; ?>" disabled>
+              <input type="text" name="id_pelanggan" id="id_pelanggan" value="<?= $_SESSION['login']['data']['id_pelanggan']; ?>" hidden>
+              <input type="text" id="id_mitra" name="id_mitra" hidden>
+              <input type="text" id="ratingmitra" name="ratingmitra" hidden>
             </div>
             <div class="form-group">
-              <label  for="mitra">List Mitra</label>
-              <select class="form-control">
+              <label  for="mitra"></label>
+              <select class="form-control" id="pilihMitra">
                 <option selected="true" disabled="" hidden>List Mitra</option>
                 <?php foreach ($data['mitra'] as $mitra):?>
                 <option value="<?= $mitra['id_mitra']; ?>"><?= $mitra['nama_usaha']; ?></option>
@@ -72,20 +69,26 @@
               </select>
             </div>
           <div class="form-group">
-            <label for="comments">Testimoni</label>
-            <textarea class="form-control" id="comments" name="comments"></textarea>
+            <label for="testimoni"> </label>
+            <textarea class="form-control" id="testimoni" name="testimoni" placeholder=" Isi Testimoni"></textarea>
           </div>
           <div class="form-group" id="rating">
-            <label for="rating">Rating</label>
+            <label for="rating"> </label>
           </div>
           <button class="btn btn-d btn-round btn-block" type="submit">Beri Rating
-            <span class="review-text" style="display:none"><span id="starCount"></span> Review</span>
+            <span class="review-text" style="display:none"><span id="rating" name="rating" ></span> </span>
           </button>
         </form>
       </div>
     </div>
 
-
+  <script>
+    $(document).ready(function(){
+      $('#pilihMitra').on('change',function(){
+        $('#id_mitra').val($(this).val());
+      });
+    });
+  </script>
 
 
 
@@ -96,17 +99,18 @@
         fontSize: 32,
         onUpdate: function(count) {
           $(".review-text").show();
-          $("#starCount").html(count + " Star");
+          $("#rating").html(count + " Bintang");
+          $('#ratingmitra').val(count);
         }
       });
       $("#demo").submit( function(e) {
         e.preventDefault();
 
         var 
-          name = $(this).find('#firstName').val() + ' ' + $(this).find('#lastName').val(),
-          comments = $(this).find('#comments').val(),
-          rating = $(this).find('.emoji-rating').val(),
-          alert = 'Name: ' + name + '\nComments: ' + comments + '\nRating: ' + rating;
+          nama = $(this).find('#nama').val() + ' ' + $(this).find('#mitra').val(),
+          testimoni = $(this).find('#testimoni').val(),
+          rating = $(this).find('.rating').val(),
+          alert = 'Nama: ' + nama + '\ntestimoni: ' + testimoni + '\nrating: ' + rating;
 
         window.alert(alert);
       });
@@ -137,5 +141,4 @@
   </div>
 </div>
 
-  </body>
-</html>
+ 

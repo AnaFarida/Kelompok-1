@@ -37,20 +37,21 @@
                        src="<?= BASEURL; ?>/panel-master/dist/img/user1.png"
                        alt="User profile picture">
                 </div>
-
-                <h3 class="profile-username text-center"><?= strtoupper($_SESSION['login']['data']['nama']); ?></p></h3>
+                <?php foreach ($data['pelanggan'] as $pelanggan ) :?>
+                <h3 class="profile-username text-center"><?= $pelanggan ['nama'] ?></p></h3>
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>Email</b> <a class="float-right"><?= $_SESSION['login']['data']['email']; ?></a>
+                    <b>Email</b> <a class="float-right"><?= $pelanggan ['email'] ?></a>
                   </li>
                    <li class="list-group-item">
-                    <b>No Telepon</b> <a class="float-right"><?= $_SESSION['login']['data']['no_tlp']; ?></a>
+                    <b>No Telepon</b> <a class="float-right"><?= $pelanggan ['no_tlp'] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Alamat</b> <a class="float-right"><?= $_SESSION['login']['data']['alamat']; ?></a>
+                    <b>Alamat</b> <a class="float-right"><?= $pelanggan ['alamat'] ?></a>
                   </li>
                 </ul>
+              <?php endforeach; ?>
 
                 <a href="#" class="btn btn-primary btn-block"><b>Biodata Pelanggan</b></a>
               </div>

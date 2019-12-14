@@ -153,7 +153,9 @@
               <img src="<?= BASEURL; ?>/panel-master/dist/img/user1.png" class="img-box elevation-2" alt="Foto Profile">
             </div>
             <div class="info">
-              <a href="#" class="d-block"><?=$_SESSION['login']['data']['nama']; ?></a>
+               <?php foreach ($data['pelanggan'] as $pelanggan ) :?>
+              <a href="#" class="d-block"><?= $pelanggan ['nama']; ?></a>
+            <?php endforeach; ?>
             </div>
           </div>
           <!-- Sidebar Menu -->
