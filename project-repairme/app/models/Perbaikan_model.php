@@ -219,9 +219,4 @@ class Perbaikan_model{
 
 	}
 
-	public function getVoucher(){
-		return $this->db->query("SELECT * FROM tb_voucher_laptop");
-	}
-
-
 }

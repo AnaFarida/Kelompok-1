@@ -178,7 +178,7 @@ class Mitra_model{
 		$harga = [];
 		$m = 0;
 		foreach ($perbaikan_laptop as $laptop) {
-			if ($laptop['harga'] == 0) {
+			if ($laptop['harga'] == '0') {
 				$harga[$m] = 'Menunggu Kisaran Harga';
 			}else{
 				$harga[$m] = $laptop['harga'];
@@ -232,7 +232,11 @@ class Mitra_model{
 		foreach ($perbaikan_hp as $hp) {
 			if ($hp['id_kerusakan_hp'] != 0) {
 				$kerusakan_hp[$l] = $this->db->query("SELECT kerusakan_hp FROM tb_kerusakan_hp WHERE id_kerusakan_hp = ".$hp['id_kerusakan_hp']);
+				if ($hp['kerusakan_lain'] == '') {
+					$ket_lain[$l] = '-';	
+				}else{
 				$ket_lain[$l] = $hp['kerusakan_lain']; 
+				}
 			}else{
 				$kerusakan_hp[$l][0]['kerusakan_hp'] = $hp['kerusakan_lain'];
 				$ket_lain[$l] = '-';
@@ -243,7 +247,7 @@ class Mitra_model{
 		$harga = [];
 		$m = 0;
 		foreach ($perbaikan_hp as $hp) {
-			if ($hp['harga'] == 0) {
+			if ($hp['harga'] == '0') {
 				$harga[$m] = 'Menunggu Kisaran Harga';
 			}else{
 				$harga[$m] = $hp['harga'];
@@ -255,10 +259,6 @@ class Mitra_model{
 
 		return $result;
 
-
-		// $perbaikan_hp = $this->db->query("SELECT * FROM tb_perbaikan_hp WHERE id_pelanggan = ".$id_pelanggan);
-		// $result = ['laptop' => $perbaikan_laptop, 'hp' => $perbaikan_hp];
-		// // return $result;
 	}
 
 	public function getMitraNow(){
@@ -308,5 +308,13 @@ class Mitra_model{
 	return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 3, tb_perbaikan_hp.harga = '$harga', tb_perbaikan_hp.keterangan_mitra = '$keterangan_lain'
 		WHERE id_perbaikan = $id
 		");
+	}
+
+	//untuk mengambil voucher
+	public function getVoucher(){
+		return $this->db->query("SELECT * FROM tb_voucher_laptop");
+	}
+	public function getVoucher2(){
+		return $this->db->query("SELECT * FROM tb_voucher_hp");
 	}
 }

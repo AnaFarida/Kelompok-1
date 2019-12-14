@@ -103,6 +103,23 @@ public function profile(){
 	}
 	}
 
+	public function voucher(){
+		$data['judul'] = 'Perbaikan';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+		$call = $this->model('Mitra_model');
+		$data['voucher'] = $call->getVoucher();
+		$data['voucher2'] = $call->getVoucher2();
+		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
+		$this->view('mitra/templates/header',$data);
+		$this->view('mitra/perbaikan/terimaVoucher', $data);
+		$this->view('mitra/templates/footer');
+	}else{
+		header('Location:'.BASEURL.'/mitra/deskripsi/');
+	}
+	}
+
+
 	public function insertDeskripsi(){
 		//var_dump($_POST);
 		if($this->model('Mitra_model')->inputDeskripsi($_POST) > 0){
@@ -188,6 +205,8 @@ public function profile(){
 		}
 	 }
 	 }
+
+
 
 	 public function buktitrans(){
 	// var_dump($_POST);
