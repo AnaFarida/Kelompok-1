@@ -151,7 +151,7 @@
             </div>
           </div>
         </section>
-        <section class="module bg-dark-60" data-background="<?= BASEURL; ?>/home-master/assets/images/section-6.jpg">
+        <!--<section class="module bg-dark-60" data-background="<?= BASEURL; ?>/home-master/assets/images/section-6.jpg">
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
@@ -185,7 +185,7 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div>-->
           <!--<ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
             <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
                 <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-1.jpg" alt="Portfolio Item"/></div>
@@ -230,7 +230,7 @@
             <div class="row">
               <div class="col-sm-6 col-md-8 col-lg-6 col-lg-offset-2">
                 <div class="callout-text font-alt">
-                  <h3 class="callout-title">INGIN MELIHAT PORTOFOLIO REPAIRME?</h3>
+                  <h3 class="callout-title">PORTOFOLIO REPAIRME</h3>
                   <!--<p>Kami Selalu Membuka Untuk Proyek Menarik.</p>-->
                 </div>
               </div>
@@ -296,7 +296,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">RAPAT TIM KAMI</h2>
+                <h2 class="module-title font-alt">REPAIRME GROUP</h2>
                 <div class="module-subtitle font-serif">Kami akan memberikan pelayanan yang layak semestinya dan kami akan memberikan promo yang sangat meriah pada mitra-mitra yang telah bergabung dengan RepairMe.</div>
               </div>
             </div>
@@ -364,7 +364,7 @@
             </div>
           </div>
         </section>
-        <section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="<?= BASEURL; ?>/home-master/assets/images/testimonial_bg.jpg">
+        <!--<section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="<?= BASEURL; ?>/home-master/assets/images/testimonial_bg.jpg">
           <div class="testimonials-slider pt-140 pb-140">
             <ul class="slides">
               <li>
@@ -502,7 +502,7 @@
               <div class="col-sm-6 col-md-6 col-lg-4 col-lg-offset-2">
                 <div class="callout-text font-alt">
                   <h3 class="callout-title">Berlangganan Sekarang?</h3>
-                  <!--<p>Kami Tidak Akan SPAM Email Anda.</p>-->
+                  <p>Kami Tidak Akan SPAM Email Anda.</p>
                 </div>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-4">
@@ -510,7 +510,7 @@
                   <form id="subscription-form" role="form" method="post" action="php/subscribe.php">
                     <div class="input-group">
                       <input class="form-control" type="email" id="semail" name="semail" placeholder="Email Anda" data-validation-required-message="Please enter your email address." required="required"/><span class="input-group-btn">
-                        <button class="btn btn-g btn-round" id="subscription-form-submit" type="submit">Kirim</button></span>
+                        <button class="btn btn-g btn-round" id="subscription-form-submit" type="submit">Kirim</button></span>-->
                     </div>
                   </form>
                   <div class="text-center" id="subscription-response"></div>

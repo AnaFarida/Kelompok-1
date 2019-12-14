@@ -267,9 +267,39 @@ class Mitra_model{
 	$id = $data['id_perbaikan_laptop'];
 	$harga = $data['hargalaptop'];
 	$keterangan_lain = $data['ketlaptoplain'];
+	$voucher = $data['voucherlaptop'];
+	$this->db->data("INSERT INTO tb_voucher_laptop VALUES (NULL,'$voucher',$id)");
 	return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 2, tb_perbaikan_laptop.harga = '$harga', tb_perbaikan_laptop.keterangan_mitra = '$keterangan_lain'
 		WHERE id_perbaikan = $id
 		");
 	}
 
+	public function tolakpengajuanlaptop($data){
+	$id = $data['id_perbaikan_laptopx'];
+	$keterangan_lain = $data['ketpenolakanlaptop'];
+	$harga = '1';
+	return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 3, tb_perbaikan_laptop.harga = '$harga', tb_perbaikan_laptop.keterangan_mitra = '$keterangan_lain'
+		WHERE id_perbaikan = $id
+		");
+	}
+
+	public function terimapengajuanhp($data){
+	$id = $data['id_perbaikan_hp'];
+	$harga = $data['hargahp'];
+	$keterangan_lain = $data['kethplain'];
+	$voucher = $data['voucherhp'];
+	$this->db->data("INSERT INTO tb_voucher_hp VALUES (NULL,'$voucher',$id)");
+	return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 2, tb_perbaikan_hp.harga = '$harga', tb_perbaikan_hp.keterangan_mitra = '$keterangan_lain'
+		WHERE id_perbaikan = $id
+		");
+	}
+
+	public function tolakpengajuanhp($data){
+	$id = $data['id_perbaikan_hpx'];
+	$keterangan_lain = $data['ketpenolakanhp'];
+	$harga = '1';
+	return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 3, tb_perbaikan_hp.harga = '$harga', tb_perbaikan_hp.keterangan_mitra = '$keterangan_lain'
+		WHERE id_perbaikan = $id
+		");
+	}
 }
