@@ -21,7 +21,7 @@
     <section class="content">
       <?php Flasher::flash(); ?>
       <!-- Default box -->
-      <div class="card">
+      <div class="card card-dark">
         <div class="card-header">
           <h3 class="card-title">Laptop</h3>
 
@@ -105,7 +105,7 @@
       <br><br>
     <!-- untuk hp -->
 
-          <div class="card">
+          <div class="card card-dark">
         <div class="card-header">
           <h3 class="card-title">Handphone</h3>
 

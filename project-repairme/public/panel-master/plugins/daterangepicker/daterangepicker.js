@@ -72,10 +72,10 @@
             direction: 'ltr',
             format: moment.localeData().longDateFormat('L'),
             separator: ' - ',
-            applyLabel: 'Apply',
-            cancelLabel: 'Cancel',
+            applyLabel: 'Pilih',
+            cancelLabel: 'Batal',
             weekLabel: 'W',
-            customRangeLabel: 'Custom Range',
+            customRangeLabel: 'Pilihan Lain',
             daysOfWeek: moment.weekdaysMin(),
             monthNames: moment.monthsShort(),
             firstDay: moment.localeData().firstDayOfWeek()

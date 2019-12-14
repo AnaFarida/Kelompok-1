@@ -17,5 +17,14 @@
     </form>
 </div>
 
-
-
+<script>
+    $(document).ready(function(){
+        $('#username').keyup(function(){
+            $(this).val($(this).val().toLowerCase());
+            console.log($(this).val());
+        });
+        $('#password').keyup(function(){
+            $(this).val($(this).val().toLowerCase());
+        });
+    })
+</script>

@@ -194,9 +194,15 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/layout/boxed.html" class="nav-link">
+                    <a href="<?= BASEURL; ?>/mitra/voucher" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Dalam Pengerjaan</p>
+                      <p>Voucher Perbaikan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= BASEURL; ?>/mitra/perbaikan" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Perbaikan</p>
                     </a>
                   </li>
                   <li class="nav-item">
