@@ -73,23 +73,25 @@ var greyIcon = new L.Icon({
 </div>
 
 <?php foreach ($data['mitra'] as $mitra) : ?>
-<script>
-var popup = L.popup();
-var marker = L.marker([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], {icon: greyIcon}).addTo(map)
-marker.bindPopup('<?= $mitra['nama_usaha']; ?>');
-</script>
-<script>
-$(marker).click(function(){
+  <script>
+    var popup = L.popup();
+    var marker = L.marker([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], {icon: greyIcon}).addTo(map)
+    marker.bindPopup('<?= $mitra['nama_usaha']; ?>');
+    </script>
+    <script>
+    $(marker).click(function(){
 
-$('#id').attr('value', '<?= $mitra['id_mitra']; ?>');
-$('.miniProfile').show();
-$('.pilihMitra').show();
-$('.tutorial').hide();
-$('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
-$('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
-map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
-});
-</script>
+    $('#id').attr('value', '<?= $mitra['id_mitra']; ?>');
+    $('.miniProfile').show();
+    $('.pilihMitra').show();
+    $('.tutorial').hide();
+    $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
+    $('.descMitra').text('<?= $mitra['deskripsi']; ?>');
+    $('.ratingMitra').text('<?= $mitra['rating_data']; ?>');
+    $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
+    map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
+    });
+  </script>
 <?php endforeach; ?>
 
 <div class="tutorial mt-70" style="position: absolute; right: 10px; width: 28%;">
@@ -130,7 +132,12 @@ map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
     <div class="tab-content">
       <div class="tab-pane active" id="description">
         <img class="fotoMitra" src="" alt="" width="678px" height="452px">
-        <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
+        <p class="font-alt mb-0 descMitra"></p>
+        <div>
+          <img style="vertical-align: middle;"src="http://localhost/Kelompok-1/project-repairme/public/img/images/star.png" height="20px" width="20px"  />
+          <span style="" class="ratingMitra"> </span>
+        </div>
+        
       </div>
       <div class="tab-pane" id="data-sheet">
         <table class="table table-striped ds-table table-responsive">
