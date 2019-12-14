@@ -2,7 +2,7 @@
 class Pelanggan extends Controller{
 	public function index(){
 		$data['judul'] = 'Pelanggan RepairMe';
-		//$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
+		$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
 			$this->view('pelanggan/templates/header', $data);
 			$this->view('pelanggan/index', $data);
@@ -34,6 +34,7 @@ public function insertpelanggan(){
 }
 
 public function detailPelanggan($id){
+
 	$data['judul'] = 'Detail Pelanggan';
 	$data['pelanggan'] = $this->model('Pelanggan_model')->getDetail($id);
 	$this->view('templates/header', $data);
@@ -58,7 +59,7 @@ public function profile(){
 		// var_dump($_SESSION['login']['data']['nama_usaha']);
 		// echo $_SESSION['login'];
 		$data['judul'] = 'Pelanggan RepairMe';
-		$data['pelanggan'] = $this->model('pelanggan_model')->getAllPelanggan();
+		$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
 		$this->view('pelanggan/templates/header', $data);
 		$this->view('pelanggan/profile', $data);
@@ -72,7 +73,7 @@ public function editProfile(){
 		
 		$data['judul'] = 'editprofile';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
-		$data['Pelanggan'] = $this->model('Pelanggan_model')->getAllpelanggan();
+		$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
 		$this->view('pelanggan/templates/header',$data);
 		$this->view('pelanggan/editprofile', $data);
 		$this->view('pelanggan/templates/footer');
@@ -81,8 +82,6 @@ public function editProfile(){
  public function editProfilePel(){
 		//var_dump($_POST);
 		if($this->model('pelanggan_model')->updatePelanggan($_POST) > 0){
-			session_destroy();
-			session_start();
 			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
 		header ('Location: '.BASEURL.'/pelanggan/');
 		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
@@ -117,18 +116,18 @@ public function editProfile(){
 		}
 	}
 
- 	// public function rating(){
-		// //var_dump($_POST);
-		// if($this->model('pelanggan_model')->inputrating($_POST) > 0){
-		// 	$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
-		// header ('Location: '.BASEURL.'/pelanggan/');
-		// // Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-		// 	exit();
-		// }else {
-		// header ('Location: '.BASEURL.'/pelanggan/editprofile');
-		// // Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
-		// 	exit();
-		// }
+ 	public function rating(){
+		// var_dump($_POST);
+		if($this->model('pelanggan_model')->inputrating($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/beriRating');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
 	
-	 // }
+	 }
 }

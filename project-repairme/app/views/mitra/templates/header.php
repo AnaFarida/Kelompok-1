@@ -156,13 +156,13 @@
             <div class="image">
               <img src="<?= BASEURL; ?>/img/mitra/<?= $_SESSION['login']['data']['foto_usaha']; ?>" class="img-box elevation-2" alt="Foto Usaha Mitra">
             </div>
-            <?php foreach ($data['mitra'] as $mitra):?>
+            
             <div class="info">
-              
+              <?php foreach ($data['mitra'] as $mitra):?>
                <a class="float-right"><?= $mitra ['nama'] ?></a>
-               
+               <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
+            
           </div>
           <!-- Sidebar Menu -->
           <nav class="mt-2">
