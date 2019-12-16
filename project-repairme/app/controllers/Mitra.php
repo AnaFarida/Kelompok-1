@@ -85,7 +85,7 @@ public function profile(){
 		$this->view('mitra/deskripsi', $data);
 		$this->view('mitra/templates/footer');
 	}else{
-		header('Location:'.BASEURL.'/mitra/deskripsi/');
+		header('Location:'.BASEURL.'/login/');
 	}
 	}
 
@@ -99,7 +99,7 @@ public function profile(){
 		$this->view('mitra/perbaikan/pengajuan', $data);
 		$this->view('mitra/templates/footer');
 	}else{
-		header('Location:'.BASEURL.'/mitra/deskripsi/');
+		header('Location:'.BASEURL.'/login/');
 	}
 	}
 
@@ -115,10 +115,50 @@ public function profile(){
 		$this->view('mitra/perbaikan/terimaVoucher', $data);
 		$this->view('mitra/templates/footer');
 	}else{
-		header('Location:'.BASEURL.'/mitra/deskripsi/');
+		header('Location:'.BASEURL.'/login/');
 	}
 	}
 
+	public function vouchermasuk(){
+		// var_dump($_POST);
+		if($this->model('Mitra_model')->terimaVoucher($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/perbaikan');
+		Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/voucher');
+		Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	}
+	public function vouchermasuk2(){
+		var_dump($_POST);
+		// if($this->model('Mitra_model')->terimaVoucher($_POST) > 0){
+		// header ('Location: '.BASEURL.'/mitra/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		// 	exit();
+		// }else {
+		// header ('Location: '.BASEURL.'/mitra/voucher');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		// 	exit();
+		// }
+	}
+
+	public function perbaikan(){
+		$data['judul'] = 'Perbaikan';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+		$call = $this->model('Mitra_model');
+		$data['waktu'] = $call->getWaktuLaptop();
+		$data['voucher2'] = $call->getVoucher2();
+		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
+		$this->view('mitra/templates/header',$data);
+		$this->view('mitra/perbaikan/perbaikan', $data);
+		$this->view('mitra/templates/footer');
+	}else{
+		header('Location:'.BASEURL.'/login/');
+	}
+	}
 
 	public function insertDeskripsi(){
 		//var_dump($_POST);

@@ -20,6 +20,7 @@
         </div>
       </div>
       </div><!-- /.container-fluid -->
+      <?php Flasher::flash(); ?>
     </section>
     <div class="card card-dark" style="width: 35%; margin-left: 20px">
       <div class="card-header">
@@ -125,7 +126,7 @@
             </tr>
           </tbody>
         </table>
-        <button class="btn btn-dark btn-block mt-4">Perbaiki Handphone</button>
+        <button class="btn btn-dark btn-block mt-4" data-toggle="modal" data-target="#terimaHp" type="button">Perbaiki Handphone</button>
       </div>
       <!-- /.card-body -->
     </div>
@@ -168,12 +169,77 @@
                     </button>
                   </div>
                 </div>
-                <br>
-                <span id="reportrange"></span>
-                <br>
-                <span id="reportrangeday"></span>
+                <div class="waktulaptop">
+                  <table border="1" cellpadding="10">
+                  <tr>
+                    <td style="width: 15%"><strong>Waktu</strong></td>
+                    <td><span id="reportrange"></span></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="width: 15%">Lama</strong></td>
+                    <td><span id="reportrangeday"></span></td>
+                  </tr>
                 <!-- /.form group -->
+                </table>
+                
+                <!-- untuk form lama perbaikan laptop -->
+                <form action="<?= BASEURL; ?>/mitra/vouchermasuk" method="POST">
+                <input type="text" id="idlaptop" name="idlaptop" hidden>
+                <input type="text" id="tanggallaptop" name="tanggallaptop" hidden>
+                <input type="text" id="harilaptop" name="harilaptop" hidden>
+                <input type="text" id="berakhirlaptop" name="berakhirlaptop" hidden>
+                <button type="submit" class="btn btn-dark btn-block mt-4">Perbaiki</button>
+                </form>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="terimaHp" tabindex="-1" role="dialog" aria-labelledby="terimaHpLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="card  card-dark" style="position: absolute; right: 0; left: 0; top: 0;">
+              <div class="card-header">
+                <h3 class="card-title">Date picker</h3>
+              </div>
+              <div class="card-body">
+              <!-- Date and time range -->
+                <div class="form-group">
+                  <label>Perkiraan Mitra :</label>
 
+                  <div class="input-group">
+                    <button type="button" class="btn btn-default float-right" id="daterange2">
+                      <i class="far fa-calendar-alt"></i>Perkiraan Lama Perbaikan
+                    </button>
+                  </div>
+                </div>
+                <div class="waktuhp">
+                  <table border="1" cellpadding="10">
+                  <tr>
+                    <td style="width: 15%"><strong>Waktu</strong></td>
+                    <td><span id="reportrange2"></span></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="width: 15%">Lama</strong></td>
+                    <td><span id="reportrangeday2"></span></td>
+                  </tr>
+                <!-- /.form group -->
+                </table>
+                
+                <!-- untuk form lama perbaikan laptop -->
+                <form action="<?= BASEURL; ?>/mitra/vouchermasuk2" method="POST">
+                <input type="text" id="idhp" name="idhp" hidden>
+                <input type="text" id="tanggalhp" name="tanggalhp" hidden>
+                <input type="text" id="harihp" name="harihp" hidden>
+                <input type="text" id="berakhirhp" name="berakhirhp" hidden>
+                <button type="submit" class="btn btn-dark btn-block mt-4">Perbaiki</button>
+                </form>
+                </div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -188,7 +254,10 @@
     $('.pelangganLaptop').hide();
     $('.datahp').hide();
     $('.pelangganhp').hide();
-
+    $('.waktulaptop').hide();
+    $('.waktuhp').hide();
+    var laptop = true;
+    var hp = true;
     $('.terimaVoucher').click(function(){
       <?php foreach ($data['voucher'] as $voucher):?>
         if ("<?= $voucher['voucher_laptop']; ?>" === $('#cariVoucher').val()) {
@@ -203,6 +272,9 @@
               $('.keteranganmitralaptop').text("<?= $data['perbaikan']['perbaikan_laptop'][$i]['keterangan_mitra']; ?>");
               $('.hargalaptop').text("<?= $data['perbaikan']['harga'][$i]; ?>");
 
+              //untuk form 
+              $('#idlaptop').val("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>");
+
               //untuk data pelanggan
               $('.namapelangganlaptop').text("<?= $data['perbaikan']['pelanggan'][$i][0]['nama']; ?>");
               $('.datahp').hide();
@@ -211,11 +283,12 @@
               $('.dataLaptop').show();
               $('.pelangganLaptop').show();
             }
+             laptop = false;
           <?php endfor; ?>
         }
       <?php endforeach; ?>
       <?php foreach ($data['voucher2'] as $voucher):?>
-        else if("<?= $voucher['voucher_hp']; ?>" === $('#cariVoucher').val()){
+        if("<?= $voucher['voucher_hp']; ?>" === $('#cariVoucher').val()){
           <?php for ($i=0; $i < count($data['perbaikan2']['perbaikan_hp']); $i++):?>
             if ("<?= $voucher['id_perbaikan_hp']; ?>" === "<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>") {
               $('#cariVoucher').val('');
@@ -227,6 +300,9 @@
               $('.keteranganmitrahp').text("<?= $data['perbaikan2']['perbaikan_hp'][$i]['keterangan_mitra']; ?>");
               $('.hargahp').text("<?= $data['perbaikan2']['harga'][$i]; ?>");
 
+              //untuk form 
+              $('#idhp').val("<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>");
+
               //untuk data pelanggan
               $('.namapelangganhp').text("<?= $data['perbaikan2']['pelanggan'][$i][0]['nama']; ?>");
               $('.dataLaptop').hide();
@@ -234,13 +310,14 @@
               $('.datahp').show();
               $('.pelangganhp').show();
             }
+          hp = false;
+        }
         <?php endfor; ?>
-        }
-        <?php endforeach; ?>
-
-        else{
-          alert("Voucher Tidak Ditemukan");
-        }
+         <?php endforeach; ?>
+         // alert(hp);
+         if (laptop === true && hp === true) {
+          alert("Voucher Tidak Di Temukan")
+         }
     });
 
     //Date range button
@@ -248,8 +325,7 @@
     var end = moment().add(170,'days');
     $('#daterange').daterangepicker(
       {
-        startDate : start,
-        endDate : end,
+        minDate : 0,
         ranges   : {
           'Hari ini'       : [moment(), moment()],
           '3 Hari '   : [moment(), moment().add(3, 'days')],
@@ -259,11 +335,41 @@
         },
         minDate : moment()
       },
-      function (star, end) {
-        $('#reportrange').text('Jarak Waktu : ' + star.format('D-MMMM-YYYY') + ' sampai ' + end.format('D-MMMM-YYYY'))
-        var range = end.format('D') - star.format('D');
-        
-        $('#reportrangeday').text('Hari : ' + range);
+      function (start, end) {
+        $('#reportrange').text(start.format('D-MMMM-YYYY') + ' sampai ' + end.format('D-MMMM-YYYY'));
+        var range = Math.floor(Math.floor((end - start)) / 86400000);
+        $('#reportrangeday').text(range + ' hari');
+        $('#tanggallaptop').val($('#reportrange').text());
+        $('#harilaptop').val($('#reportrangeday').text());
+        $('#berakhirlaptop').val(Math.floor(end));
+        $('.waktulaptop').show();
+      }
+    );
+
+
+    //Date range button 2
+    var start = moment();
+    var end = moment().add(170,'days');
+    $('#daterange2').daterangepicker(
+      {
+        minDate : 0,
+        ranges   : {
+          'Hari ini'       : [moment(), moment()],
+          '3 Hari '   : [moment(), moment().add(3, 'days')],
+          '1 Minggu' : [moment(), moment().add(7, 'days')],
+          '2 Minggu': [moment(), moment().add(12, 'days')],
+          '30 Hari'  : [moment(), moment().add(30,'days')]
+        },
+        minDate : moment()
+      },
+      function (start, end) {
+        $('#reportrange2').text(start.format('D-MMMM-YYYY') + ' sampai ' + end.format('D-MMMM-YYYY'));
+        var range = Math.floor(Math.floor((end - start)) / 86400000);
+        $('#reportrangeday2').text(range + ' hari');
+        $('#tanggalhp').val($('#reportrange2').text());
+        $('#harihp').val($('#reportrangeday2').text());
+        $('#berakhirhp').val(Math.floor(end));
+        $('.waktuhp').show();
       }
     );
 

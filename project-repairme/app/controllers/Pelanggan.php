@@ -55,6 +55,20 @@ public function delete($id){
 		}
 	}
 
+public function pengajuanperbaikan(){	
+	$data['judul'] = 'Pengajuan Perbaikan';
+	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+	$call = $this->model('Perbaikan_model');
+	$data['perbaikan'] = $call->getPerbaikan();
+	$data['perbaikan2'] = $call->getPerbaikan2();
+	$data['voucher'] = $call->getVoucher();
+	$data['voucher2'] = $call->getVoucher2();
+	$this->view('pelanggan/templates/header',$data);
+	$this->view('pelanggan/perbaikan/pengajuan', $data);
+	$this->view('pelanggan/templates/footer');
+	}
+}
+
 public function profile(){
 		// var_dump($_SESSION['login']['data']['nama_usaha']);
 		// echo $_SESSION['login'];
@@ -102,19 +116,6 @@ public function editProfile(){
 		$this->view('templates/header',$data);
 		$this->view('pelanggan/rating/ratingmitra', $data);
 		$this->view('templates/footer');
-		}
-	}
-
-	public function pengajuanperbaikan(){	
-		$data['judul'] = 'Pengajuan Perbaikan';
-		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
-		$call = $this->model('Perbaikan_model');
-		$data['perbaikan'] = $call->getPerbaikan();
-		$data['perbaikan2'] = $call->getPerbaikan2();
-		$data['voucher'] = $call->getVoucher();
-		$this->view('pelanggan/templates/header',$data);
-		$this->view('pelanggan/perbaikan/pengajuan', $data);
-		$this->view('pelanggan/templates/footer');
 		}
 	}
 

@@ -171,7 +171,7 @@
 </div>
 <div class="col-sm-3 col-sm-offset-3">
 <div class="form-group">
-	<button class="btn btn-block btn-round btn-d pull-right" type="submit">Lihat detail</button>
+	<a class="btn btn-block btn-round btn-d pull-right" href="<?= BASEURL; ?>/pelanggan/perbaikan">Lihat detail</a>
 </div>
 </div>
 </div>

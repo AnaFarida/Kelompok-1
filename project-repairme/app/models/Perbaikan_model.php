@@ -201,22 +201,11 @@ class Perbaikan_model{
 	}
 
 
-	public function getStatusPerbaikan(){
-		return $this->db->query("SELECT * FROM tb_status_perbaikan");
+	//untuk mengambil voucher
+	public function getVoucher(){
+		return $this->db->query("SELECT * FROM tb_voucher_laptop");
 	}
-	public function ttd(){
-		return $this->db->query("SELECT * FROM tb_ttd");
+	public function getVoucher2(){
+		return $this->db->query("SELECT * FROM tb_voucher_hp");
 	}
-
-	public function getTipe(){
-		$datatipelaptop = $this->db->query("SELECT * FROM tb_tipe_laptop");
-		$datatipehp = $this->db->query("SELECT * FROM tb_tipe_hp");
-		$datamerklaptop = $this->db->query("SELECT * FROM tb_merk_laptop");
-		$datamerkhp = $this->db->query("SELECT * FROM tb_merk_hp");
-
-		$result = ['tipe_laptop' => $datatipelaptop, 'tipe_hp' => $datatipehp, 'merk_laptop' => $datamerklaptop, 'merk_hp' => $datamerkhp];
-		return $result;
-
-	}
-
 }

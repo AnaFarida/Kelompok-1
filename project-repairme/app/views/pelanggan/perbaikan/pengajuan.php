@@ -65,6 +65,7 @@
                   </tr>
               </thead>
             <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
+              <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] != 'Sedang Diperbaiki'):?>
               <tbody>
                   <tr>
                       <td>
@@ -137,6 +138,7 @@
                       </td>
                   </tr>
               </tbody>
+              <?php endif; ?>
             <?php endfor; ?>
           </table>
         </div>
@@ -268,6 +270,7 @@
                       </td>
                   </tr>
               </tbody>
+              
             <?php endfor; ?>
           </table>
         </div>
@@ -290,6 +293,29 @@
                   if (<?= $voucher['id_perbaikan_laptop'] ?> == $(this).val()) {
                     $('.voucherme').text("Voucher Anda : "+"<?= $voucher['voucher_laptop']; ?>");
                   }
+                  <?php endforeach; ?>
+                });
+              });
+            </script>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="terimaHp" tabindex="-1" role="dialog" aria-labelledby="terimaLaptoHp" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="form-group mt-20">
+          <strong class="voucherme2" style="position: absolute; top: 15px;"></strong>
+          <script>
+              $(document).ready(function(){
+                $('.t-terimaHp').click(function(){
+                  <?php foreach ($data['voucher2'] as $voucher):?>
+                    if (<?= $voucher['id_perbaikan_hp'] ?> == $(this).val()) {
+                    $('.voucherme2').text("Voucher Anda : "+"<?= $voucher['voucher_hp']; ?>");
+                    }
                   <?php endforeach; ?>
                 });
               });

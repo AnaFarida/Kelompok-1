@@ -310,4 +310,22 @@ class Mitra_model{
 	public function getVoucher2(){
 		return $this->db->query("SELECT * FROM tb_voucher_hp");
 	}
+
+	//menuju perbaikan
+
+	public function terimaVoucher($data){
+	$id = $data['idlaptop'];
+	$tanggallaptop = $data['tanggallaptop'];
+	$harilaptop = $data['harilaptop'];
+	$berakhir = $data['berakhirlaptop'];
+	$this->db->data("INSERT INTO tb_waktu_perbaikan_laptop VALUES (NULL,'$tanggallaptop','$harilaptop', '$berakhir' ,$id)");
+	$this->db->data("DELETE FROM tb_voucher_laptop WHERE id_perbaikan_laptop = $id");
+	return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 4 WHERE id_perbaikan = $id");
+	}
+
+	//mengambil data lama perbaikan
+	public function getWaktuLaptop(){
+		return $this->db->query("SELECT * FROM tb_waktu_perbaikan_laptop");
+	}
+
 }
