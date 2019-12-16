@@ -186,7 +186,14 @@ class Mitra_model{
 			$m++;
 		}
 
-		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'pelanggan' => $pelanggan, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
+		$waktu = [];
+		$n = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			$waktu[$n] = $this->db->query("SELECT waktu_tanggal,waktu_hari,berakhir FROM tb_waktu_perbaikan_laptop WHERE id_perbaikan_laptop = ".$laptop['id_perbaikan']);
+			$n++;
+		}
+
+		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'pelanggan' => $pelanggan, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu];
 
 		return $result;
 	}
@@ -326,13 +333,12 @@ class Mitra_model{
 	$harilaptop = $data['harilaptop'];
 	$berakhir = $data['berakhirlaptop'];
 	$this->db->data("INSERT INTO tb_waktu_perbaikan_laptop VALUES (NULL,'$tanggallaptop','$harilaptop', '$berakhir' ,$id)");
-	$this->db->data("DELETE FROM tb_voucher_laptop WHERE id_perbaikan_laptop = $id");
 	return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 4 WHERE id_perbaikan = $id");
 	}
 
 	//mengambil data lama perbaikan
 	public function getWaktuLaptop(){
-		return $this->db->query("SELECT * FROM tb_waktu_perbaikan_laptop");
+		return $this->db->query("SELECT * FROM `perbaikan_laptop_view`");
 	}
 
 }

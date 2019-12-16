@@ -80,14 +80,16 @@ var greyIcon = new L.Icon({
     </script>
     <script>
     $(marker).click(function(){
-
     $('#id').attr('value', '<?= $mitra['id_mitra']; ?>');
     $('.miniProfile').show();
     $('.pilihMitra').show();
     $('.tutorial').hide();
     $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
     $('.descMitra').text('<?= $mitra['deskripsi']; ?>');
-    $('.ratingMitra').text('<?= $mitra['rating_data']; ?>');
+    for (var i = 0; i < Math.floor(<?= $mitra['rating_data']; ?>); i++) {
+         $('.ratingMitra').append('<i class="fa fa-star star"></i>');
+         // alert('oke');
+    }
     $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
     map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
     });
@@ -134,7 +136,7 @@ var greyIcon = new L.Icon({
         <img class="fotoMitra" src="" alt="" width="678px" height="452px">
         <p class="font-alt mb-0 descMitra"></p>
         <div>
-          <img style="vertical-align: middle;"src="http://localhost/Kelompok-1/project-repairme/public/img/images/star.png" height="20px" width="20px"  />
+          
           <span style="" class="ratingMitra"> </span>
         </div>
         

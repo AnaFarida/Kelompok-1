@@ -95,6 +95,7 @@ public function profile(){
 			$call = $this->model('Mitra_model');
 		$data['perbaikan'] = $call->getPerbaikan();
 		$data['perbaikan2'] = $call->getPerbaikan2();
+		 $data['mitra'] =$call->getMitraNow();
 		$this->view('mitra/templates/header',$data);
 		$this->view('mitra/perbaikan/pengajuan', $data);
 		$this->view('mitra/templates/footer');
@@ -107,6 +108,7 @@ public function profile(){
 		$data['judul'] = 'Perbaikan';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
 		$call = $this->model('Mitra_model');
+		$data['mitra'] =$call->getMitraNow();
 		$data['voucher'] = $call->getVoucher();
 		$data['voucher2'] = $call->getVoucher2();
 		$data['perbaikan'] = $call->getPerbaikan();
@@ -148,7 +150,7 @@ public function profile(){
 		$data['judul'] = 'Perbaikan';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
 		$call = $this->model('Mitra_model');
-		$data['waktu'] = $call->getWaktuLaptop();
+		$data['mitra'] =$call->getMitraNow();
 		$data['voucher2'] = $call->getVoucher2();
 		$data['perbaikan'] = $call->getPerbaikan();
 		$data['perbaikan2'] = $call->getPerbaikan2();
