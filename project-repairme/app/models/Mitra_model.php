@@ -10,11 +10,13 @@ class Mitra_model{
 	}
 
 	public function getAllMitra(){
-		return $this->db->query("SELECT * FROM tb_mitra");
+		return $this->db->query("SELECT tb_mitra.*, avg.rating_data FROM `tb_mitra`, avg WHERE tb_mitra.id_mitra = avg.id_mitra");
 	}
+
+
 	
 	public function getDetail($id){
-		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = ".$id);
+		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = $id ");
 	}
 	
 	public function getAllPengguna(){
@@ -260,7 +262,12 @@ class Mitra_model{
 	}
 
 	public function getMitraNow(){
-		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = " . $_SESSION['login']['data']['id_mitra']);
+		return $this->db->query("SELECT * FROM tb_mitra, avg WHERE avg.id_mitra = tb_mitra.id_mitra AND tb_mitra.id_mitra = " . $_SESSION['login']['data']['id_mitra']);
+	}
+ 
+	public function AvgRatingMitra(){
+		$rating = $this->db->query("SELECT id_mitra, AVG(rating) FROM tb_rating WHERE rating GROUP BY id_mitra");
+		return $rating;
 	}
 
 	public function terimapengajuanlaptop($data){

@@ -72,12 +72,14 @@
                 <tbody>
 
                <?php foreach($data['tipe'] as $tipe):?>
+                <?php foreach($data['merk'] as $merk):?>
 
                 <tr role="row" class="odd">
                 <td><?= $tipe['tipe_laptop']; ?></td>
-                <td><?= $tipe['merk_laptop']; ?></td>
+                <td><?= $merk['merk_laptop']; ?></td>
                  
                 </tr>
+               <?php endforeach;?>
                <?php endforeach;?> 
                 </tbody>
                 <tfoot>

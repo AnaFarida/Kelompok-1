@@ -95,8 +95,8 @@
                 <hr>
 
                 <strong><i class="far fa-file-alt mr-1"></i>Rating</strong>
-
-                <p class="text-muted">.</p>
+                  <img style="vertical-align: middle;"src="http://localhost/Kelompok-1/project-repairme/public/img/images/star.png" height="20px" width="20px"  />
+                <p class="text-muted"><?= $mitra['rating_data']; ?></p>
                 <?php endforeach; ?>
               </div>
               <!-- /.card-body -->
