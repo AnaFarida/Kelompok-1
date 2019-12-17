@@ -3,7 +3,7 @@
 class Perbaikan extends Controller{
 	public function index(){
 		$data['judul'] = 'Perbaikan';
-		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		$data['mitra'] = $this->model('Mitra_model')->getMitra();
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/index', $data);
 		$this->view('templates/footer');

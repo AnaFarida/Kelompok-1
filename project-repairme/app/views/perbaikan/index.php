@@ -11,6 +11,56 @@ $('.pilihMitra').hide();
 
 <!-- style css tambahan -->
 <style>
+table {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  background: #fff;
+}
+ 
+table th, 
+table tr:nth-child(2n+2) {
+  background: #e7e7e7;
+}
+  
+table th, 
+table td {
+  padding: 20px 50px;
+}
+  
+table th {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
+ 
+.stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
+}
+ 
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+ 
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #f8ce0b;
+}
+
+.stars-inner {
+  width: 0;
+}
+
+
 #mapSearchContainer{
 position:fixed;
 top:20px;
@@ -86,10 +136,20 @@ var greyIcon = new L.Icon({
     $('.tutorial').hide();
     $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
     $('.descMitra').text('<?= $mitra['deskripsi']; ?>');
-    for (var i = 0; i < Math.floor(<?= $mitra['rating_data']; ?>); i++) {
-         $('.ratingMitra').append('<i class="fa fa-star star"></i>');
-         // alert('oke');
+
+      var my_var = <?php echo $mitra['rating_data']; ?>;
+
+    const ratings = {
+      hotel_a : my_var
+    };  
+    const starTotal = 5;
+    for(const rating in ratings) {  
+      const starPercentage = (ratings[rating] / starTotal) * 100;
+      const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
+      document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded; 
     }
+
+
     $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
     map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
     });
@@ -135,10 +195,16 @@ var greyIcon = new L.Icon({
       <div class="tab-pane active" id="description">
         <img class="fotoMitra" src="" alt="" width="678px" height="452px">
         <p class="font-alt mb-0 descMitra"></p>
-        <div>
-          
-          <span style="" class="ratingMitra"> </span>
-        </div>
+        <table>
+
+          <tr class="hotel_a">
+            <td>
+              <div class="stars-outer">
+                <div class="stars-inner"></div>
+              </div>
+            </td>
+          </tr>
+        </table>
         
       </div>
       <div class="tab-pane" id="data-sheet">
@@ -247,3 +313,4 @@ var greyIcon = new L.Icon({
     })
   });
 </script>
+ 

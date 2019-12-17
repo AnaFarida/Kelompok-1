@@ -10,11 +10,14 @@ class Mitra_model{
 	}
 
 	public function getAllMitra(){
+		return $this->db->query("SELECT * FROM tb_mitra");
+    }
+	public function getMitra(){
 		return $this->db->query("SELECT tb_mitra.*, avg.rating_data FROM `tb_mitra`, avg WHERE tb_mitra.id_mitra = avg.id_mitra");
 	}
-
-
-	
+	public function getMitraNow(){
+		return $this->db->query("SELECT * FROM tb_mitra, avg WHERE avg.id_mitra = tb_mitra.id_mitra AND tb_mitra.id_mitra = " . $_SESSION['login']['data']['id_mitra']);
+	}
 	public function getDetail($id){
 		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = $id ");
 	}
@@ -42,6 +45,7 @@ class Mitra_model{
 		$lat = $data['lat'];
 		$lng = $data['lng'];
 		$jenis = $data['jenis'];
+		$deskripsi = $data['deskripsi'];
 		//validasi username dan password
 
 		$username = strtolower(stripslashes($data['username']));
@@ -65,7 +69,7 @@ class Mitra_model{
 		$readyUser = $rows + 1;
 
 		$input = $this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')") &&
-		$this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','')");
+		$this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi')");
 		return $input;
 	}
 		
@@ -267,16 +271,7 @@ class Mitra_model{
 		return $result;
 
 	}
-
-	public function getMitraNow(){
-		return $this->db->query("SELECT * FROM tb_mitra, avg WHERE avg.id_mitra = tb_mitra.id_mitra AND tb_mitra.id_mitra = " . $_SESSION['login']['data']['id_mitra']);
-	}
  
-	public function AvgRatingMitra(){
-		$rating = $this->db->query("SELECT id_mitra, AVG(rating) FROM tb_rating WHERE rating GROUP BY id_mitra");
-		return $rating;
-	}
-
 	public function terimapengajuanlaptop($data){
 	$id = $data['id_perbaikan_laptop'];
 	$harga = $data['hargalaptop'];

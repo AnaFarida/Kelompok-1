@@ -101,6 +101,7 @@
 					</span>
 				</span>
 					<input id="jenis" name="jenis" type="text" hidden>
+					<input id="deskripsi" name="deskripsi" type="text" value="-" hidden>
 				<br><br><br><br><br>
 				<button class="btn btn-g btn-round btn-block back1" type="button" style="width: 95%;">Kembali</button>
 			</div>
@@ -116,7 +117,7 @@
 				<div class="form-group">
 					<input class="form-control" id="alamat" type="text" name="alamat" placeholder="Alamat Tempat usaha anda"/>
 					<p class="alamat" style="color: red;"></p>
-				</div>
+				</div> 
 				<button class="btn btn-block btn-round btn-d selanjutnya2" type="button">SELANJUTNYA</button>
 				<button class="btn btn-g btn-round btn-block back2" type="button" style="width: 100%;">Kembali</button>
 			</div>
