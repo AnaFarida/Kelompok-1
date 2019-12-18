@@ -11,56 +11,6 @@ $('.pilihMitra').hide();
 
 <!-- style css tambahan -->
 <style>
-table {
-  margin: 0 auto;
-  text-align: center;
-  font-size: 20px;
-  background: #fff;
-}
- 
-table th, 
-table tr:nth-child(2n+2) {
-  background: #e7e7e7;
-}
-  
-table th, 
-table td {
-  padding: 20px 50px;
-}
-  
-table th {
-  border-bottom: 1px solid #d4d4d4;
-}
-
-.stars-outer {
-  display: inline-block;
-  position: relative;
-  font-family: FontAwesome;
-}
- 
-.stars-outer::before {
-  content: "\f006 \f006 \f006 \f006 \f006";
-}
- 
-.stars-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-}
- 
-.stars-inner::before {
-  content: "\f005 \f005 \f005 \f005 \f005";
-  color: #f8ce0b;
-}
-
-.stars-inner {
-  width: 0;
-}
-
-
 #mapSearchContainer{
 position:fixed;
 top:20px;
@@ -78,12 +28,6 @@ position:absolute;
 top:86px;
 left:60px;
 z-index:99999;
-}
-.morecontent span {
-    display: none;
-}
-.morelink {
-    display: block;
 }
 </style>
 <div id="map" style="position: absolute;margin-left: 1px; margin-right: 100px; margin-top: 60px; width: 70%; height: 570px; z-index:100; border: solid black 1px;">
@@ -137,19 +81,6 @@ var greyIcon = new L.Icon({
     $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
     $('.descMitra').text('<?= $mitra['deskripsi']; ?>');
 
-      var my_var = <?php echo $mitra['rating_data']; ?>;
-
-    const ratings = {
-      hotel_a : my_var
-    };  
-    const starTotal = 5;
-    for(const rating in ratings) {  
-      const starPercentage = (ratings[rating] / starTotal) * 100;
-      const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
-      document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded; 
-    }
-
-
     $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
     map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
     });
@@ -187,24 +118,16 @@ var greyIcon = new L.Icon({
     <hr class="divider-w mt-10 mb-20">
     <ul class="nav nav-tabs font-alt" role="tablist">
       <li class="active"><a href="#description" data-toggle="tab"><span class="icon-tools-2"></span>Deskripsi Mitra</a></li>
-      <!-- <li><a href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>Data sheet</a></li>
- -->      <li><a href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
+      
+      <li><a href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
+      
     </ul>
 
     <div class="tab-content">
       <div class="tab-pane active" id="description">
         <img class="fotoMitra" src="" alt="" width="678px" height="452px">
         <p class="font-alt mb-0 descMitra"></p>
-        <table>
-
-          <tr class="hotel_a">
-            <td>
-              <div class="stars-outer">
-                <div class="stars-inner"></div>
-              </div>
-            </td>
-          </tr>
-        </table>
+       <i class="fa fa-star star"></i>
         
       </div>
       <div class="tab-pane" id="data-sheet">

@@ -77,12 +77,77 @@
 <td >
  <ul class="list-inline">
         <input type="text" id="tes1" value="<?= $data['perbaikan']['waktu'][$i][0]['berakhir']; ?>" hidden>
+        <script>
+        $().ready(function(){
+          var today = Math.floor(moment());
+          var terakhir = "<?= $data['perbaikan']['waktu'][$i][0]['berakhir']; ?>";
+          var countday = Math.floor(Math.floor(terakhir - today)) / 86400000;
+          // untuk membuat progress
+          // var 
+          var ambilhari = "<?= $data['perbaikan']['waktu'][$i][0]['waktu_hari']; ?>";
+
+          let jmlHari = ambilhari.split(' ', 1);
+          var persentase = Math.floor(countday) / parseInt(ambilhari) * 100;
+          
+          
+          if (<?= $data['perbaikan']['waktu'][$i][0]['id_perbaikan_laptop']; ?> === $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']) {
+
+             // var hari = moment().add(splitHari[0], "days");  
+          // alert(persentase);
+          if (Math.floor(jmlHari) == Math.floor(countday)) {
+            $('.hithari').attr('style','width:0%;');
+            $('.hithari').addClass('bg-success');
+            $('.persentase').text('0%');
+          }else if (Math.floor(jmlHari*0.9) == Math.floor(countday)) {
+            $('.hithari').attr('style','width:10%;');
+            $('.hithari').addClass('bg-success');
+            $('.persentase').text('10%');
+          }else if (Math.floor(jmlHari*0.8) == Math.floor(countday)) {
+            $('.hithari').attr('style','width:20%;');
+            $('.hithari').addClass('bg-success');
+            $('.persentase').text('20%');
+          }else if (Math.floor(jmlHari*0.7) == Math.floor(countday)) {
+            $('.hithari').addClass('bg-success');
+            $('.hithari').attr('style','width:30%;');
+            $('.persentase').text('30%');
+          }else if (Math.floor(jmlHari*0.6) == Math.floor(countday)) {
+            $('.hithari').attr('style','width:40%;');
+            $('.hithari').addClass('bg-success');
+            $('.persentase').text('40%');
+          }else if (Math.floor(jmlHari*0.5) == Math.floor(countday)) {
+            $('.hithari').attr('style','width:50%;');
+            $('.hithari').addClass('bg-warning');
+            $('.persentase').text('50%');
+          }else if (Math.floor(jmlHari*0.4) == Math.floor(countday)) {
+            $('.hithari').attr('style','width:70%;');
+            $('.hithari').addClass('bg-warning');
+            $('.persentase').text('70%');
+          }else if (Math.floor(jmlHari*0.3) == Math.floor(countday)) {
+            $('.hithari').addClass('bg-danger');
+            $('.hithari').attr('style','width:80%;');
+            $('.persentase').text('80%');
+          }else if (Math.floor(jmlHari*0.9) == Math.floor(countday)) {
+            $('.hithari').attr('style','width:90%;');
+            $('.hithari').addClass('bg-danger');
+            $('.persentase').text('90%');
+          }else if (Math.floor(jmlHari*0) == Math.floor(countday)) {
+            $('.hithari').attr('style','width:100%;');
+            $('.hithari').addClass('bg-danger');
+            $('.persentase').text('100%');
+          }
+          // $('waktuberakhir').append(persentase);
+          }
+
+         
+        });
+      </script>
          <div class="progress progress-sm">
             <div class="progress-bar hithari" style="width: 100%"></div>
             
           </div>
-          <span class="badge bg-info persentase">100%</span>
-          <span class="badge bg-info waktuberakhir">100%</span>
+          <div class="testerr"></div>
+          <span class="badge bg-info persentase"></span>
+          <span class="badge bg-info waktuberakhir"></span>
   </ul>
 </td>
 <td >
@@ -263,57 +328,3 @@
 </div>
 </div>
 </div>
-<script>
-        $().ready(function(){
-          var today = Math.floor(moment());
-          var terakhir = $('#tes1').val();
-          var countday = Math.floor(Math.floor(terakhir - today)) / 86400000;
-          $('.waktuberakhir').append(Math.floor(countday) + ' hari');
-          // untuk membuat progress
-          var ambilhari = "<?= $data['perbaikan']['waktu'][$i][0]['waktu_hari']; ?>";
-          let jmlHari = ambilhari.split(' ', 1);
-          // var hari = moment().add(splitHari[0], "days");  
-          // alert(Math.floor(countday));
-          if (Math.floor(jmlHari) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:0%;');
-            $('.hithari').addClass('bg-success');
-            $('.persentase').text('0%');
-          }else if (Math.floor(jmlHari*0.9) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:10%;');
-            $('.hithari').addClass('bg-success');
-            $('.persentase').text('10%');
-          }else if (Math.floor(jmlHari*0.8) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:20%;');
-            $('.hithari').addClass('bg-success');
-            $('.persentase').text('20%');
-          }else if (Math.floor(jmlHari*0.7) == Math.floor(countday)) {
-            $('.hithari').addClass('bg-success');
-            $('.hithari').attr('style','width:30%;');
-            $('.persentase').text('30%');
-          }else if (Math.floor(jmlHari*0.6) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:40%;');
-            $('.hithari').addClass('bg-success');
-            $('.persentase').text('40%');
-          }else if (Math.floor(jmlHari*0.5) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:50%;');
-            $('.hithari').addClass('bg-warning');
-            $('.persentase').text('50%');
-          }else if (Math.floor(jmlHari*0.4) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:70%;');
-            $('.hithari').addClass('bg-warning');
-            $('.persentase').text('70%');
-          }else if (Math.floor(jmlHari*0.3) == Math.floor(countday)) {
-            $('.hithari').addClass('bg-danger');
-            $('.hithari').attr('style','width:80%;');
-            $('.persentase').text('80%');
-          }else if (Math.floor(jmlHari*0.9) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:90%;');
-            $('.hithari').addClass('bg-danger');
-            $('.persentase').text('90%');
-          }else if (Math.floor(jmlHari*0) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:100%;');
-            $('.hithari').addClass('bg-danger');
-            $('.persentase').text('100%');
-          }
-        });
-      </script>

@@ -62,21 +62,20 @@ class Mitra_model{
 
 		
 		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
-		$userID = $this->db->query("SELECT * FROM tb_mitra ORDER BY id_mitra DESC LIMIT 1");
+		
 
 		foreach ($preIdUser as $key) {
 			$rows = $key['id_user'];
 		}
-		foreach ($userID as $kuy) {
-			$ros = $kuy['id_mitra'];
-		}
+		
 
 		$readyUser = $rows + 1;
 		$err = $ros + 1;
 
-		$input = $this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')") &&
-		$this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi')") && $this->db->data("INSERT INTO `tb_rating`(`id_rating`, `id_pelanggan`, `id_mitra`, `rating`, `testimoni`) VALUES (NULL, 32, $err, 3, 'GOOD')");
-		return $input;
+		$this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')");
+		return $this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi')");
+		 //&& $this->db->data("INSERT INTO `tb_rating`(`id_rating`, `id_pelanggan`, `id_mitra`, `rating`, `testimoni`) VALUES (NULL, 32, $err, 3, 'GOOD')")
+		
 	}
 		
 	public function deleteMitra($id){
