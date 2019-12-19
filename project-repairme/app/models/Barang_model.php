@@ -73,6 +73,15 @@ class Barang_model{
 	public function getKerusakanLaptop(){
 		return $this->db->query("SELECT * FROM tb_kerusakan_laptop");
 	}
+
+	public function deleteKerusakanhp($id){
+		
+		 $delkerhp = $this->db->data("DELETE FROM tb_kerusakan_hp WHERE id_kerusakan_hp  = ". $id);
+
+		return $delkerhp;
+	}
+
+
 	public function tambahkerusakanHp($data){
 		$kerusakan = $data['kerusakan'];
 		return $this->db->data("INSERT INTO tb_kerusakan_hp VALUES ( NULL,'$kerusakan')");
@@ -81,13 +90,29 @@ class Barang_model{
 		return $this->db->query("SELECT * FROM tb_kerusakan_hp");
 	}
 
+	public function deleteKerusakanlaptop($id){
+		
+		 $delkerlaptop = $this->db->data("DELETE FROM tb_kerusakan_hp WHERE id_kerusakan_hp  = ". $id);
+
+		return $delkerlaptop;
+	}
+
+
 	public function getAllPaket(){
 		return $this->db->query("SELECT * FROM tb_paket");
 	}
 
-	public function tambahPaket($data){
-		$kerusakan = $data['kerusakan'];
+	public function tambahpaket($data){
+		$nama_paket = $data['nama_paket'];
+		$harga = $data['harga'] ;
 		return $this->db->data("INSERT INTO tb_paket VALUES ( NULL,'$nama_paket', '$harga')");
+	}
+
+	public function deletePaket($id){
+		
+		 $delpak = $this->db->data("DELETE FROM tb_paket  WHERE id_paket  = ". $id);
+
+		return $delpak;
 	}
 
 

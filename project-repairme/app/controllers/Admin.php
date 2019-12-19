@@ -55,14 +55,14 @@ class Admin extends Controller{
 		$this->view('admin/templates/footer');
 	}
 
-
+	//data Mitra
 	public function dataMitra(){
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
 		$this->view('admin/templates/header');
 		$this->view('admin/dataMitra', $data);
 		$this->view('admin/templates/footer');
 	}
-
+	//data Pelanggan
 	public function dataPelanggan(){
 		$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
 		$this->view('admin/templates/header');
@@ -152,18 +152,18 @@ public function tambahkerusakanlaptopbaru(){
 public function tambahkerusakanhpbaru(){
 	// var_dump($_POST);
 	if($this->model('Barang_model')->tambahkerusakanhp($_POST) > 0){
-	header ('Location: '.BASEURL.'/admin/tambahkerusakanlaptop');
+	header ('Location: '.BASEURL.'/admin/tambahkerusakanhp');
 	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 		exit();
 	}else {
-	header ('Location: '.BASEURL.'/admin/barang/tambahkerusakanlaptop');
+	header ('Location: '.BASEURL.'/admin/barang/tambahkerusakanhp');
 	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}
 }
 
 public function tambahpaketlagi(){
-	// var_dump($_POST);
+	// var_dump($_POST)
 	if($this->model('Barang_model')->tambahpaket($_POST) > 0){
 	header ('Location: '.BASEURL.'/admin/paket');
 	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
@@ -175,6 +175,18 @@ public function tambahpaketlagi(){
 	}
 
 }
+
+	
+	public function pengajuanperbaikan(){	
+		$data['judul'] = 'Pengajuan Perbaikan';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+		$call = $this->model('Perbaikan_model');
+		$data['perbaikan'] = $call->getPerbaikan();
+		$this->view('pelanggan/templates/header',$data);
+		$this->view('pelanggan/perbaikan/pengajuan', $data);
+		$this->view('pelanggan/templates/footer');
+		}
+	}
 public function delete($id){
 		if ($this->model('Barang_model')->deletePaket($id) > 0) {
 			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
@@ -186,4 +198,76 @@ public function delete($id){
 			exit;
 		}
 	}
+ public function editKerusakanHp(){
+		//var_dump($_POST);
+		if($this->model('Admin_model')->updateKerusakanHp($_POST) > 0){
+		header ('Location: '.BASEURL.'/admin/tambahkerusakanhp');
+		Flasher::setFlash(' berhasil', 'diubah', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/admin/tambahkerusakanhp');
+		Flasher::setFlash(' gagal', 'diubah', 'danger');	
+			exit();
+		}
+	
+	 }
+public function deleteKerusakanhp($id){
+		if ($this->model('Barang_model')->deleteKerusakanhp($id) > 0) {
+			Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/admin/tambahkerusakanhp');
+			exit;
+		}else{
+			Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/admin/tambahkerusakanhp');
+			exit;
+		}
+	}
+
+public function deleteKerusakanlaptop($id){
+		if ($this->model('Barang_model')->deleteKerusakanlaptop($id) > 0) {
+			Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/admin/tambahkerusakanlaptop');
+			exit;
+		}else{
+			Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/admin/tambahkerusakanlaptop');
+			exit;
+		}
+	}
+public function deletehp($id){
+		if ($this->model('Barang_model')->deleteBarangHp($id) > 0) {
+			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/admin/tambahdatahp');
+			exit;
+		}else{
+			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/admin/tambahdatahp');
+			exit;
+		}
+	}
+
+public function deletelaptop($id){
+		if ($this->model('Barang_model')->deleteBaranglaptop($id) > 0) {
+			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/admin/tambahdatalaptop');
+			exit;
+		}else{
+			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/admin/tambahdatalaptop');
+			exit;
+		}
+	}
+
+public function deletepaket($id){
+		if ($this->model('Barang_model')->deletePaket($id) > 0) {
+			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/admin/paket');
+			exit;
+		}else{
+			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/admin/paket');
+			exit;
+		}
+	}
+
 }

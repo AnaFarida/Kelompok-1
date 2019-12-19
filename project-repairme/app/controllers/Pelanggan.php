@@ -44,16 +44,19 @@ public function detailPelanggan($id){
 }
 
 public function delete($id){
-		if ($this->model('pelanggan_model')->deletepelanggan($id) > 0) {
+		if ($this->model('Pelanggan_model')->deletepelanggan($id) > 0) {
 			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
-			header('Location: '.BASEURL.'/pelanggan/');
+			header('Location: '.BASEURL.'/Pelanggan/');
 			exit;
 		}else{
 			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
-			header('Location: '.BASEURL.'/mitra/');
+			header('Location: '.BASEURL.'/Pelanggan/');
 			exit;
 		}
 	}
+	
+
+
 
 public function pengajuanperbaikan(){	
 	$data['judul'] = 'Pengajuan Perbaikan';
