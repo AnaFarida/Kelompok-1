@@ -29,12 +29,6 @@ top:86px;
 left:60px;
 z-index:99999;
 }
-.morecontent span {
-    display: none;
-}
-.morelink {
-    display: block;
-}
 </style>
 <div id="map" style="position: absolute;margin-left: 1px; margin-right: 100px; margin-top: 60px; width: 70%; height: 570px; z-index:100; border: solid black 1px;">
   <div class='pointer'> Click search button</div>
@@ -86,10 +80,7 @@ var greyIcon = new L.Icon({
     $('.tutorial').hide();
     $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
     $('.descMitra').text('<?= $mitra['deskripsi']; ?>');
-    for (var i = 0; i < Math.floor(<?= $mitra['rating_data']; ?>); i++) {
-         $('.ratingMitra').append('<i class="fa fa-star star"></i>');
-         // alert('oke');
-    }
+
     $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
     map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
     });
@@ -127,18 +118,16 @@ var greyIcon = new L.Icon({
     <hr class="divider-w mt-10 mb-20">
     <ul class="nav nav-tabs font-alt" role="tablist">
       <li class="active"><a href="#description" data-toggle="tab"><span class="icon-tools-2"></span>Deskripsi Mitra</a></li>
-      <!-- <li><a href="#data-sheet" data-toggle="tab"><span class="icon-tools-2"></span>Data sheet</a></li>
- -->      <li><a href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
+      
+      <li><a href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
+      
     </ul>
 
     <div class="tab-content">
       <div class="tab-pane active" id="description">
         <img class="fotoMitra" src="" alt="" width="678px" height="452px">
         <p class="font-alt mb-0 descMitra"></p>
-        <div>
-          
-          <span style="" class="ratingMitra"> </span>
-        </div>
+       <i class="fa fa-star star"></i>
         
       </div>
       <div class="tab-pane" id="data-sheet">
@@ -247,3 +236,4 @@ var greyIcon = new L.Icon({
     })
   });
 </script>
+ 

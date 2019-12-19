@@ -10,11 +10,14 @@ class Mitra_model{
 	}
 
 	public function getAllMitra(){
-		return $this->db->query("SELECT tb_mitra.*, avg.rating_data FROM `tb_mitra`, avg WHERE tb_mitra.id_mitra = avg.id_mitra");
+		return $this->db->query("SELECT * FROM tb_mitra");
+    }
+	public function getMitra(){
+		return $this->db->query("SELECT tb_mitra.*, AVG(rating) as rating_data FROM `tb_mitra`, tb_rating WHERE tb_mitra.id_mitra = tb_rating.id_mitra GROUP BY id_mitra");
 	}
-
-
-	
+	public function getMitraNow(){
+		return $this->db->query("SELECT tb_mitra.*, AVG(rating) as rating_data FROM `tb_mitra`, tb_rating WHERE tb_mitra.id_mitra = tb_rating.id_mitra AND tb_mitra.id_mitra = " . $_SESSION['login']['data']['id_mitra']);
+	}
 	public function getDetail($id){
 		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = $id ");
 	}
@@ -42,6 +45,7 @@ class Mitra_model{
 		$lat = $data['lat'];
 		$lng = $data['lng'];
 		$jenis = $data['jenis'];
+		$deskripsi = $data['deskripsi'];
 		//validasi username dan password
 
 		$username = strtolower(stripslashes($data['username']));
@@ -56,17 +60,22 @@ class Mitra_model{
 			}
 		}
 
+		
 		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
+		
 
 		foreach ($preIdUser as $key) {
 			$rows = $key['id_user'];
 		}
+		
 
 		$readyUser = $rows + 1;
+		$err = $ros + 1;
 
-		$input = $this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')") &&
-		$this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','')");
-		return $input;
+		$this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')");
+		return $this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi')");
+		 //&& $this->db->data("INSERT INTO `tb_rating`(`id_rating`, `id_pelanggan`, `id_mitra`, `rating`, `testimoni`) VALUES (NULL, 32, $err, 3, 'GOOD')")
+		
 	}
 		
 	public function deleteMitra($id){
@@ -267,16 +276,7 @@ class Mitra_model{
 		return $result;
 
 	}
-
-	public function getMitraNow(){
-		return $this->db->query("SELECT * FROM tb_mitra, avg WHERE avg.id_mitra = tb_mitra.id_mitra AND tb_mitra.id_mitra = " . $_SESSION['login']['data']['id_mitra']);
-	}
  
-	public function AvgRatingMitra(){
-		$rating = $this->db->query("SELECT id_mitra, AVG(rating) FROM tb_rating WHERE rating GROUP BY id_mitra");
-		return $rating;
-	}
-
 	public function terimapengajuanlaptop($data){
 	$id = $data['id_perbaikan_laptop'];
 	$harga = $data['hargalaptop'];
