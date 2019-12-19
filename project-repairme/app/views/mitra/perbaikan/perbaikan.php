@@ -34,8 +34,6 @@
 </div>
 <div class="card-body p-0">
 <table class="table table-striped projects">
-<?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-<?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 4):?>
 <thead>
 <tr>
 <th style="width: 13%">
@@ -47,8 +45,11 @@
 <th style="width: 13%;">
   Kerusakan
 </th>
-<th style="width: 15%;">
-  Progres
+<th style="width: 3%;">
+  Lama
+</th>
+<th style="width: 1%">
+  detail
 </th>
 <th style="width: 15%">
 
@@ -56,6 +57,8 @@
 </tr>
 </thead>
 <tbody>
+<?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
+<?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 4):?>
 <tr>
 <td>
   <a>
@@ -76,91 +79,25 @@
 </td>
 <td >
  <ul class="list-inline">
-        <input type="text" id="tes1" value="<?= $data['perbaikan']['waktu'][$i][0]['berakhir']; ?>" hidden>
-        <script>
-        $().ready(function(){
-          var today = Math.floor(moment());
-          var terakhir = "<?= $data['perbaikan']['waktu'][$i][0]['berakhir']; ?>";
-          var countday = Math.floor(Math.floor(terakhir - today)) / 86400000;
-          // untuk membuat progress
-          // var 
-          var ambilhari = "<?= $data['perbaikan']['waktu'][$i][0]['waktu_hari']; ?>";
-
-          let jmlHari = ambilhari.split(' ', 1);
-          var persentase = Math.floor(countday) / parseInt(ambilhari) * 100;
-          
-          
-          if (<?= $data['perbaikan']['waktu'][$i][0]['id_perbaikan_laptop']; ?> === $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']) {
-
-             // var hari = moment().add(splitHari[0], "days");  
-          // alert(persentase);
-          if (Math.floor(jmlHari) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:0%;');
-            $('.hithari').addClass('bg-success');
-            $('.persentase').text('0%');
-          }else if (Math.floor(jmlHari*0.9) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:10%;');
-            $('.hithari').addClass('bg-success');
-            $('.persentase').text('10%');
-          }else if (Math.floor(jmlHari*0.8) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:20%;');
-            $('.hithari').addClass('bg-success');
-            $('.persentase').text('20%');
-          }else if (Math.floor(jmlHari*0.7) == Math.floor(countday)) {
-            $('.hithari').addClass('bg-success');
-            $('.hithari').attr('style','width:30%;');
-            $('.persentase').text('30%');
-          }else if (Math.floor(jmlHari*0.6) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:40%;');
-            $('.hithari').addClass('bg-success');
-            $('.persentase').text('40%');
-          }else if (Math.floor(jmlHari*0.5) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:50%;');
-            $('.hithari').addClass('bg-warning');
-            $('.persentase').text('50%');
-          }else if (Math.floor(jmlHari*0.4) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:70%;');
-            $('.hithari').addClass('bg-warning');
-            $('.persentase').text('70%');
-          }else if (Math.floor(jmlHari*0.3) == Math.floor(countday)) {
-            $('.hithari').addClass('bg-danger');
-            $('.hithari').attr('style','width:80%;');
-            $('.persentase').text('80%');
-          }else if (Math.floor(jmlHari*0.9) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:90%;');
-            $('.hithari').addClass('bg-danger');
-            $('.persentase').text('90%');
-          }else if (Math.floor(jmlHari*0) == Math.floor(countday)) {
-            $('.hithari').attr('style','width:100%;');
-            $('.hithari').addClass('bg-danger');
-            $('.persentase').text('100%');
-          }
-          // $('waktuberakhir').append(persentase);
-          }
-
-         
-        });
-      </script>
-         <div class="progress progress-sm">
-            <div class="progress-bar hithari" style="width: 100%"></div>
-            
-          </div>
-          <div class="testerr"></div>
-          <span class="badge bg-info persentase"></span>
-          <span class="badge bg-info waktuberakhir"></span>
+        <!-- <div class="progress progress-sm">
+          <div class="progress-bar hithari" style="width: 100%"></div>           
+          </div> -->
+         <!--  <span class="badge bg-info persentase"></span>
+          <span class="badge bg-info waktuberakhir"></span> -->
+          <?= $data['perbaikan']['waktu'][$i][0]['waktu_hari']; ?>
+  </ul>
+</td>
+<td>
+  <ul class="list-inline">
+     <button class="btn btn-dark btn-sm" data-toggle="modal" data-target="#progress">
+      progress
+  </button>
   </ul>
 </td>
 <td >
  <ul class="list-inline">
+  
   </ul>
-</td>
-<td class="project-actions text-right">
-  <button class="btn btn-success btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-      Terima 
-  </button>
-  <button class="btn btn-danger btn-sm t-tolaklaptop" data-toggle="modal" data-target="#tolakLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-      Tolak
-  </button>
 </td>
 </tr>
 </tbody>
@@ -328,3 +265,28 @@
 </div>
 </div>
 </div>
+
+<div class="modal fade" id="progress" tabindex="-1" role="dialog" aria-labelledby="progressLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="progressLabel" >Progress</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+</button>
+</div>
+<div class="modal-body">
+
+</div>
+<div class="modal-footer">
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+  for (var i = 0; i < loop; i++) {
+        loop[i]
+  
+</script>

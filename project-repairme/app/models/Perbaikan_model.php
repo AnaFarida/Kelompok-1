@@ -125,8 +125,14 @@ class Perbaikan_model{
 			$m++;
 		}
 
-
-		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'mitra' => $mitra, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
+		$waktu = [];
+		$n = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			$waktu[$n] = $this->db->query("SELECT waktu_tanggal,waktu_hari,berakhir FROM tb_waktu_perbaikan_laptop WHERE id_perbaikan_laptop = ".$laptop['id_perbaikan']);
+			$n++;
+		}
+		
+		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'mitra' => $mitra, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu];
 
 		return $result;
 	}

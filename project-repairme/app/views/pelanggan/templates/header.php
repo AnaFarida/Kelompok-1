@@ -189,7 +189,7 @@
                   </li>
                   
                   <li class="nav-item">
-                    <a href="pages/layout/boxed.html" class="nav-link">
+                    <a href="<?= BASEURL; ?>/pelanggan/perbaikan" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Dalam Pengerjaan</p>
                     </a>

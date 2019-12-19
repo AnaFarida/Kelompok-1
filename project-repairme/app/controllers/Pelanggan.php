@@ -70,6 +70,22 @@ public function pengajuanperbaikan(){
 	}
 }
 
+
+public function perbaikan(){	
+	$data['judul'] = 'Perbaikan';
+	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+	$call = $this->model('Perbaikan_model');
+	$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
+	$data['perbaikan'] = $call->getPerbaikan();
+	// $data['perbaikan2'] = $call->getPerbaikan2();
+	// $data['voucher'] = $call->getVoucher();
+	// $data['voucher2'] = $call->getVoucher2();
+	$this->view('pelanggan/templates/header',$data);
+	$this->view('pelanggan/perbaikan/perbaikan', $data);
+	$this->view('pelanggan/templates/footer');
+	}
+}
+
 public function profile(){
 		// var_dump($_SESSION['login']['data']['nama_usaha']);
 		// echo $_SESSION['login'];
