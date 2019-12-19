@@ -62,7 +62,7 @@
       <div class="modal-body">
                                             
   <!-- isi dari class modal -->
-                                            
+                                    
      <form action="<?=BASEURL;?>/home/transaksi" method="POST" id="formmodtrans" data-parsley-validate=""> 
       <div>
       <div class="notif" style="width: 50%; height: 10%; top: 0; left: 50%; position: absolute;">
