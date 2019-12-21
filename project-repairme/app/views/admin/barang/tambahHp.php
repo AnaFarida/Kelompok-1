@@ -68,17 +68,15 @@
 
                 <!--Menampilkan data dari database-->
                 <?php foreach($data['tipe']as $tipe):?>
-                  <?php foreach($data['merk']as $merk):?>
                 
                   <tr role="row" class="odd">
                   <td><?= $tipe['tipe_hp']; ?></td>
-                  <td><?= $merk['merk_hp']; ?></td>
+                  <td><?= $tipe['merk_hp']; ?></td>
                   
                 </tbody>
                 <tfoot>
                 <tr>
                 
-                <?php endforeach;?>
                 <?php endforeach;?>
                 
                  </tr>

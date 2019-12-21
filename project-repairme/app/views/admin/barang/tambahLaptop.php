@@ -72,15 +72,12 @@
                 <tbody>
 
                <?php foreach($data['tipe'] as $tipe):?>
-                <?php foreach($data['merk'] as $merk):?>
 
                 <tr role="row" class="odd">
                 <td><?= $tipe['tipe_laptop']; ?></td>
-                <td><?= $merk['merk_laptop']; ?></td>
+                <td><?= $tipe['merk_laptop']; ?></td>
                 <td><a href="<?= BASEURL; ?>/admin/deletelaptop/<?= $tipe['id_tipe_laptop']; ?>" class="badge badge-danger float-right ml-1">Hapus</a></td>
-                 
                 </tr>
-               <?php endforeach;?>
                <?php endforeach;?> 
                 </tbody>
                 <tfoot>

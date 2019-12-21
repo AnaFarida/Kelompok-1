@@ -15,8 +15,7 @@ class Admin extends Controller{
 	public function tambahdatalaptop(){
 		$data['judul'] = 'Tambah Daftar Laptop';
 		$call = $this->model('Barang_model');
-		$data['merk'] = $call->getMerkLaptop();
-		$data['tipe'] = $call->getTipeLaptop();
+		$data['tipe'] = $call->getLaptop();
 		$this->view('admin/templates/header',$data);
 		$this->view('admin/barang/tambahLaptop', $data);
 		$this->view('admin/templates/footer');
@@ -26,8 +25,7 @@ class Admin extends Controller{
 	public function tambahdatahp(){
 		$data['judul'] = 'Tambah Daftar Handphone';
 		$call = $this->model('Barang_model');
-		$data['merk'] = $call->getMerkHp();
-		$data['tipe'] = $call->getTipeHp();
+		$data['tipe'] = $call->getHp();
 		$this->view('admin/templates/header',$data);
 		$this->view('admin/barang/tambahHp', $data);
 		$this->view('admin/templates/footer');

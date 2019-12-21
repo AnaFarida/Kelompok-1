@@ -72,7 +72,7 @@
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="<?= BASEURL; ?>/home/index2">HOME</a></li>
-              <li><a href="<?= BASEURL; ?>/home/index2/about">Portfolio</a></li>
+              <li><a href="<?= BASEURL; ?>/home/portfolioMitra">Portfolio</a></li>
               <li><a href="<?= BASEURL; ?>/home/about">tentang kami</a></li>
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Headers</a>
                 <ul class="dropdown-menu">

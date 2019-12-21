@@ -41,7 +41,11 @@ class Barang_model{
 	}
 
 	public function getLaptop(){
-		return $this->db->query("SELECT * FROM tb_laptop");
+		return $this->db->query("SELECT * FROM tipe_laptop_view");
+	}
+
+	public function getHp(){
+		return $this->db->query("SELECT * FROM tipe_hp_view");
 	}
 
 	// untuk menambah barang hp
