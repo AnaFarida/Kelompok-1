@@ -19,7 +19,7 @@
  <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="<?= BASEURL; ?>/home-master/assets/images/stiker1.jpeg">
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1"></div>
+            <div class="font-alt mb-40 titan-title-size-3"></div>
             <div class="font-alt mb-40 titan-title-size-3"><span class="rotate">Jasa Perbaikan Hp dan Laptop | Segera Perbaiki Sekarang | Diskon yang meriah | Mitra Terpercaya</span>
             </div><a class="btn btn-border-w btn-circle" href="<?= BASEURL; ?>/perbaikan">Perbaiki Sekarang!</a>
             <!-- </div><a class="section-scroll btn btn-border-w btn-circle" href="#about">Learn More</a> -->
@@ -35,7 +35,7 @@
             <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
                 <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-1.jpg" alt="Portfolio Item"/></div>
                 <div class="work-caption font-alt">
-                  <h3 class="work-title">Corporate Identity</h3>
+                  <h3 class="work-title">Indah Cell</h3>
                   <div class="work-descr">Illustration</div>
                 </div></a></li>
             <li class="work-item marketing photography"><a href="portfolio-single-1.html">
@@ -110,14 +110,14 @@
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-tools"></span></div>
                   <h3 class="features-title font-alt">Banyak Diskon</h3>
-                  <p>Semakin anda berlangganan memperbaiki Hp atau Laptop anda pada mitra tersebut, kami akan memberikan diskon pada anda sesuai yang tertera pada website ini.</p>
+                  <p>Semakin lama mitra bergabung dengan RepairMe, kami akan memberikan diskon atau promo pada mitra sesuai yang tertera pada website ini.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
                   <div class="features-icon"><span class="icon-gears"></span></div>
                   <h3 class="features-title font-alt">Mitra Terpercaya</h3>
-                  <p>Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepaiRme maka mitra tersebut akan dikeluarkan dan akan dikenakan sanksi.</p>
+                  <p>Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepairMe maka mitra tersebut akan dikeluarkan dan akan dikenakan sanksi.</p>
                 </div>
               </div>
               <!--<div class="col-md-3 col-sm-6 col-xs-12">
@@ -256,15 +256,15 @@
                 </div>-->
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-target"></span></div>
-                  <h3 class="alt-features-title font-alt">Login</h3>Mau diisi apa ya:)
+                  <h3 class="alt-features-title font-alt">Login</h3>
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-tools-2"></span></div>
-                  <h3 class="alt-features-title font-alt">Pengaturan</h3>Pengaturan apa yang patas diisi di website?
+                  <h3 class="alt-features-title font-alt">Transaksi</h3>Terjadinya 
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="alt-features-title font-alt">Design</h3>Design apa yang cocok?
+                  <h3 class="alt-features-title font-alt">Chat</h3>Terjadinya antar komunikasi mitra dengan pelanggan.
                 </div>
               </div>
               <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
@@ -273,15 +273,15 @@
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-camera"></span></div>
-                  <h3 class="alt-features-title font-alt">Peta Lokasi</h3>Foto apa yang siap diposting?
+                  <h3 class="alt-features-title font-alt">Peta Lokasi</h3>Lokasi mitra yang siap memperbaiki Hp atau Laptop anda sesuai dengan jarak dari lokasi anda.
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-mobile"></span></div>
-                  <h3 class="alt-features-title font-alt">Banyak Mitra</h3>Mobile Legend?
+                  <h3 class="alt-features-title font-alt">Banyak Mitra</h3>Mitra yang bergabung dengan repairMe telah terpercaya dan berkualitas.
                 </div>
                 <div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-linegraph"></span></div>
-                  <h3 class="alt-features-title font-alt">Grafik</h3>Grafik yang sudah dikerjakan oleh mitra.
+                  <h3 class="alt-features-title font-alt">Grafik</h3>Grafik pengunjung pelanggan terhadap mitra.
                 </div>
                 <!--<div class="alt-features-item">
                   <div class="alt-features-icon"><span class="icon-basket"></span></div>
