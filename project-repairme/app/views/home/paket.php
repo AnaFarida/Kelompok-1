@@ -49,7 +49,7 @@
         </section>
    </div>
 
-   <!-- Modal -->
+   <!-- Modal untuk upload foto transaksi -->
 <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

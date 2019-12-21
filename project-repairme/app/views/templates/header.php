@@ -71,20 +71,9 @@
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
-                <ul class="dropdown-menu">
-                  <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_video_background.html">Default</a></li>
-                  <li><a href="<?= BASEURL; ?>/admin/barang">Kategori</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_op_fullscreen_gradient_overlay.html">One Page</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_agency.html">Agency</a></li>
-                  <li><a href="<?= BASEURL; ?>/home/portfolioMitra">Portfolio</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_restaurant.html">Restaurant</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_finance.html">Finance</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_landing.html">Landing Page</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_photography.html">Photography</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_shop.html">Shop</a></li>
-                </ul>
-              </li>
+              <li><a href="<?= BASEURL; ?>/home/index2">HOME</a></li>
+              <li><a href="<?= BASEURL; ?>/home/index2/about">Portfolio</a></li>
+              <li><a href="<?= BASEURL; ?>/home/about">tentang kami</a></li>
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Headers</a>
                 <ul class="dropdown-menu">
                   <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Static Image Header</a>
@@ -121,14 +110,7 @@
               </li>
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pages</a>
                 <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">About</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/about1.html">About 1</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/about2.html">About 2</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/about3.html">About 3</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/about4.html">About 4</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/about5.html">About 5</a></li>
-                    </ul>
+                  <li class="dropdown"><a class="dropdown-toggle" href="<?= BASEURL; ?>/home-master/about5.html" data-toggle="dropdown">About</a>
                   </li>
                   <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
                     <ul class="dropdown-menu">
@@ -167,84 +149,6 @@
                   <li><a href="<?= BASEURL; ?>/home-master/login_register.html">Login / Register</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/faq.html">FAQ</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/404.html">Page 404</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Portfolio</a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_boxed_col_2.html">2 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_boxed_col_3.html">3 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_boxed_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed - Gutter</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_boxed_gutter_col_2.html">2 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_boxed_gutter_col_3.html">3 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_boxed_gutter_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_full_width_col_2.html">2 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_full_width_col_3.html">3 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_full_width_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width - Gutter</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_full_width_gutter_col_2.html">2 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_full_width_gutter_col_3.html">3 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_full_width_gutter_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Masonry</a>
-                    <ul class="dropdown-menu">
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_masonry_boxed_col_2.html">2 Columns</a></li>
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_masonry_boxed_col_3.html">3 Columns</a></li>
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_masonry_boxed_col_4.html">4 Columns</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_masonry_full_width_col_2.html">2 Columns</a></li>
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_masonry_full_width_col_3.html">3 Columns</a></li>
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_masonry_full_width_col_4.html">4 Columns</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Hover Style</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_hover_black.html">Black</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/portfolio_hover_gradient.html">Gradient</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Single</a>
-                    <ul class="dropdown-menu">
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Featured Image</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_single_featured_image1.html">Style 1</a></li>
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_single_featured_image2.html">Style 2</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Featured Slider</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_single_featured_slider1.html">Style 1</a></li>
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_single_featured_slider2.html">Style 2</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Featured Video</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_single_featured_video1.html">Style 1</a></li>
-                          <li><a href="<?= BASEURL; ?>/home-master/portfolio_single_featured_video2.html">Style 2</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
                 </ul>
               </li>
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>

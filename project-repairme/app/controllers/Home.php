@@ -14,6 +14,18 @@ class Home extends Controller{
 		$this->view('templates/footer');
 	}
 
+	public function about(){
+		// //membuat variable data, untuk mengisikan parameter, title(cek di views/home/index.php);
+		$data['judul'] = 'Tentang Kami';
+		// $data['user'] = $this->model('User_model')->getUser();
+		//memangil method view dengan parameter $data
+		//templates/header -> untuk lokasi filenya ada dimana
+		$this->view('templates/header', $data);
+		$this->view('home/about');
+		$this->view('templates/footer');
+	}
+
+
 	public function portfolioMitra(){
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
 		$data['judul'] = 'Portfolio Mitra';
