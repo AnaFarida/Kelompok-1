@@ -73,21 +73,21 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_video_background.html">Default</a></li>
+                  <!--<li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_video_background.html">Default</a></li>-->
                   <li><a href="<?= BASEURL; ?>/admin/barang">Kategori</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_op_fullscreen_gradient_overlay.html">One Page</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_agency.html">Agency</a></li>
-                  <li><a href="<?= BASEURL; ?>/home/portfolioMitra">Portfolio</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_restaurant.html">Restaurant</a></li>
+                  <!--<li><a href="<?= BASEURL; ?>/home-master/index_op_fullscreen_gradient_overlay.html">One Page</a></li>
+                  <li><a href="<?= BASEURL; ?>/home-master/index_agency.html">Agency</a></li>-->
+                  <li><a href="<?= BASEURL; ?>/home/portfolioMitra">Portofolio</a></li>
+                  <!--<li><a href="<?= BASEURL; ?>/home-master/index_restaurant.html">Restaurant</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_finance.html">Finance</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_landing.html">Landing Page</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/index_photography.html">Photography</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/index_shop.html">Shop</a></li>
+                  <li><a href="<?= BASEURL; ?>/home-master/index_shop.html">Shop</a></li>-->
                 </ul>
               </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Headers</a>
+              <li class="dropdown"><a href="<?= BASEURL; ?>/login">Login</a>
                 <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Static Image Header</a>
+                  <!--<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Static Image Header</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_static.html">Fulscreen</a></li>
                       <li><a href="<?= BASEURL; ?>/home-master/index_mp_classic_static.html">Classic</a></li>
@@ -116,12 +116,13 @@
                       <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_gradient_overlay.html">Fulscreen</a></li>
                       <li><a href="<?= BASEURL; ?>/home-master/index_mp_classic_gradient_overlay.html">Classic</a></li>
                     </ul>
-                  </li>
+                  </li>-->
                 </ul>
               </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pages</a>
+              <li class="dropdown"><a href="" data-toggle="modal" data-target="#exampleModal">Registrasi</a></li>
                 <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">About</a>
+                  <?php mySession::sessionLogin(); ?>
+                  <!--<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">About</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?= BASEURL; ?>/home-master/about1.html">About 1</a></li>
                       <li><a href="<?= BASEURL; ?>/home-master/about2.html">About 2</a></li>
@@ -166,12 +167,12 @@
                   </li>
                   <li><a href="<?= BASEURL; ?>/home-master/login_register.html">Login / Register</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/faq.html">FAQ</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/404.html">Page 404</a></li>
+                  <li><a href="<?= BASEURL; ?>/home-master/404.html">Page 404</a></li>-->
                 </ul>
               </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Portfolio</a>
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Kategori</a>
                 <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
+                 <!-- <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?= BASEURL; ?>/home-master/portfolio_boxed_col_2.html">2 Columns</a></li>
                       <li><a href="<?= BASEURL; ?>/home-master/portfolio_boxed_col_3.html">3 Columns</a></li>
@@ -198,7 +199,7 @@
                       <li><a href="<?= BASEURL; ?>/home-master/portfolio_full_width_gutter_col_3.html">3 Columns</a></li>
                       <li><a href="<?= BASEURL; ?>/home-master/portfolio_full_width_gutter_col_4.html">4 Columns</a></li>
                     </ul>
-                  </li>
+                  </li>--
                   <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Masonry</a>
                     <ul class="dropdown-menu">
                       <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
@@ -244,12 +245,12 @@
                         </ul>
                       </li>
                     </ul>
-                  </li>
+                  </li>-->
                 </ul>
               </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Tentang kami</a>
                 <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Standard</a>
+                  <!--<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Standard</a>
                     <ul class="dropdown-menu">
                       <li><a href="<?= BASEURL; ?>/home-master/blog_standard_left_sidebar.html">Left Sidebar</a></li>
                       <li><a href="<?= BASEURL; ?>/home-master/blog_standard_right_sidebar.html">Right Sidebar</a></li>
@@ -274,10 +275,10 @@
                       <li><a href="<?= BASEURL; ?>/home-master/blog_single_left_sidebar.html">Left Sidebar</a></li>
                       <li><a href="<?= BASEURL; ?>/home-master/blog_single_right_sidebar.html">Right Sidebar</a></li>
                     </ul>
-                  </li>
+                  </li>-->
                 </ul>
               </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Features</a>
+              <!--<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Features</a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="<?= BASEURL; ?>/home-master/alerts-and-wells.html"><i class="fa fa-bolt"></i> Alerts and Wells</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/buttons.html"><i class="fa fa-link fa-sm"></i> Buttons</a></li>
@@ -299,18 +300,15 @@
                   </li>
                   <li><a href="<?= BASEURL; ?>/home-master/shop_single_product.html">Single Product</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/shop_checkout.html">Checkout</a></li>
-                </ul>
+                </ul>-->
               </li><li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">Documentation</a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?= BASEURL; ?>/login">Login</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#contact">Contact Form</a></li>
+                  <!--<li><a href="<?= BASEURL; ?>/home-master/documentation.html#contact">Contact Form</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/documentation.html#reservation">Reservation Form</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/documentation.html#mailchimp">Mailchimp</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/documentation.html#gmap">Google Map</a></li>
                   <li><a href="<?= BASEURL; ?>/home-master/documentation.html#plugin">Plugins</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#changelog">Changelog</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#exampleModal">Registrasi</a></li>
-                  <?php mySession::sessionLogin(); ?>
+                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#changelog">Changelog</a></li>-->
                 </ul>
               </li>
             </ul>
