@@ -36,31 +36,29 @@
               <thead>
                   <tr>
                       <th style="width: 15%">
-                          Nama Pengaju
+                          Pengaju
                       </th>
-                      <th style="width: 12%">
+                      <th style="width: 15%">
                           Mitra
                       </th>
                       <th style="width: 10%">
-                          Merk
+                          Laptop
                       </th>
-                      <th style="width: 10%">
-                          Tipe Laptop
-                      </th>
-                      <th style="width: 15%;">
+                      <th style="width: 20%">
                           Kerusakan
                       </th>
-                      <th style="width: 15%;">
-                          Keterangan Lain
+                      
+                      <th style="width: 5%;">
+                          Perkiraan
                       </th>
                       <th style="width: 15%;">
-                          Keterangan Mitra
+                          Persentase Hari
                       </th>
-                      <th style="width: 15%;">
-                        Status Perbaikan
+                      <th style="width: 10%;">
+                          Biaya
                       </th>
-                      <th style="width: 15%;">
-                        Lanjut Perbaikan
+                      <th style="width: 10%;">
+                        Keterangan Mitra
                       </th>
                   </tr>
               </thead>
@@ -85,42 +83,37 @@
                       <td>
                           <ul class="list-inline">
                               <?= $data['perbaikan']['merk_laptop'][$i][0]['merk_laptop']; ?>
+                              <?= $data['perbaikan']['tipe_laptop'][$i][0]['tipe_laptop']; ?>
                           </ul>
                       </td>
                       <td>
                           <ul class="list-inline">
-                              <?= $data['perbaikan']['tipe_laptop'][$i][0]['tipe_laptop']; ?>
-                          </ul>
-                      </td>
-                      <td >
-                         <ul class="list-inline">
-                              <?= $data['perbaikan']['kerusakan_laptop'][$i][0]['kerusakan_laptop']; ?>
-                          </ul>
-                      </td>
-                      <td >
-                         <ul class="list-inline">
+                              <?= $data['perbaikan']['kerusakan_laptop'][$i][0]['kerusakan_laptop']; ?>,
                               <?= $data['perbaikan']['keterangan_lain'][$i]; ?>
                           </ul>
                       </td>
+                     
                       <td >
                          <ul class="list-inline">
-                              <?= $data['perbaikan']['perbaikan_laptop'][$i]['keterangan_mitra']; ?>
+                              <?= $data['perbaikan']['waktu'][$i][0]['waktu_hari']; ?>
                           </ul>
                       </td>
                       <td >
-                         <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Mitra Menolak Perbaikan'):?>
-                         <ul class="list-inline" style="color: red;">
-                              <?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?>
+                         <ul class="list-inline">
+                          <button class="btn btn-dark btn-sm btn-p-laptop" data-toggle="modal" data-target="#progress" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
+                        Persentase Hari
+                    </button>
+                      </ul>
+                      </td>
+                      <td >
+                         <ul class="list-inline">
+                              <?= $data['perbaikan']['perbaikan_laptop'][$i]['harga']; ?>
                           </ul>
-                          <?php elseif ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Menunggu Persetujuan'):?>
-                            <ul class="list-inline" style="color: blue;">
-                              <?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?>
+                      </td>
+                       <td >
+                         <ul class="list-inline">
+                              <?= $data['perbaikan']['perbaikan_laptop'][$i]['keterangan_mitra']; ?>
                           </ul>
-                          <?php else: ?>
-                            <ul class="list-inline" style="color: green;">
-                              <?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?>
-                          </ul>
-                        <?php endif; ?>
                       </td>
                       <td>
                         <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Mitra Menolak Perbaikan'):?>

@@ -91,7 +91,7 @@
                 <td>
                   <ul class="list-inline">
                     <button class="btn btn-dark btn-sm btn-p-laptop" data-toggle="modal" data-target="#progress" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                        Perkembangan
+                        Persentase Hari
                     </button>
                   </ul>
                 </td>
@@ -226,17 +226,33 @@
             <form action="<?= BASEURL; ?>/mitra/terimaperbaikanlaptop" method="POST">
               <input type="text" id="id_perbaikan_laptop" name="id_perbaikan_laptop" hidden>
               <input type="text" id="voucherlaptop" name="voucherlaptop" hidden>
-              <button class="btn btn-dark btn_ubh_ket_lap" style="width: 49%;">
+              <button class="btn btn-dark btn_ubh_ket_lap" type="button" style="width: 49%;">
                 Ubah Keterangan
               </button>
-              <button class="btn btn-dark btn_ket_harga" style="width: 49%;">
-                Harga
+              <button class="btn btn-dark btn_ket_harga_lap" type="button" style="width: 49%;">
+                Ubah Harga
               </button>
-              <input class="form-control" id="tmb_laptop" name="tmb_laptop" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
             </div>
-            <p class="tmb_laptop" style="color: red;"></p>
+            <div class="form-group mt-20">
+               <button class="btn btn-success krg_hrg_lap" type="button" style="width: 49%;">
+                Beri Diskon
+              </button>
+              <button class="btn btn-warning tmb_hrg_lap" type="button" style="width: 49%;">
+                Tambah Harga
+              </button>
+            </div>
+            <div class="form-group">
+               <input class="form-control" id="hrg_laptop_ds" disabled>
+            </div>
+            <div class="form-group mt-20">
+              <input class="form-control" id="hrg_laptop" name="hrg_laptop" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
+              <p class="hrg_laptop" style="color: red;"></p>
+            </div>
             <div class="form-group mt-20">
               <input class="form-control" id="ketlaptoplain" name="ketlaptoplain" type="text" placeholder="Keterangan Lain">
+            </div>
+            <div class="form-group mt-20">
+               <button class="btn btn-dark ubah_lap" type="button" style="width: 49%;">Ubah</button>
             </div>
           </div>
           </form>
@@ -258,10 +274,11 @@
           <div class="form-group mt-20">
             <form action="<?= BASEURL; ?>/mitra/terimaperbaikanhp" method="POST">
               <input type="text" id="id_perbaikan_hp" name="id_perbaikan_hp" hidden>
-
-              <input class="form-control" id="hargahp" name="hargahp" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
+             <div class="form-group mt-20">
+                <input class="form-control" id="hargahp" name="hargahp" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah">
             </div>
             <p class="hargahp" style="color: red;"></p>
+             </div>
             <div class="form-group mt-20">
               <input class="form-control" id="kethplain" name="kethplain" type="text" placeholder="Keterangan Lain">
             </div>
@@ -297,41 +314,105 @@
 
 <script>
 $(document).ready(function(){
-  $('#tmb_laptop').hide();
+  $('#hrg_laptop').hide();
+  $('#hrg_laptop_ds').hide();
   $('#ketlaptoplain').hide();
-$('.btn-p-laptop').click(function(){
-<?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-<?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 4):?>
-if ("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>" === $(this).val()) {
-var terakhir = "<?= $data['perbaikan']['waktu'][$i][0]['berakhir']; ?>";
-var now = Math.floor(parseInt(terakhir) - Math.floor(moment())) / 86400000;
-var ambilhari = "<?= $data['perbaikan']['waktu'][$i][0]['waktu_hari']; ?>";
-let jmlHari = ambilhari.split(' ', 1);
-let hariDilalui = parseInt(jmlHari) - Math.floor(now);
-var persentase = hariDilalui / parseInt(Math.floor(jmlHari)) * 100;
+  $('.ubah_lap').hide();
+  $('.tmb_hrg_lap').hide();
+  $('.krg_hrg_lap').hide();
+  var harga_awal_lp;
+  $('.btn-p-laptop').click(function(){
+  <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
+  <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 4):?>
+  if ("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>" === $(this).val()) {
+    var terakhir = "<?= $data['perbaikan']['waktu'][$i][0]['berakhir']; ?>";
+    //untuk mengambil sisa hari
+    var now = Math.floor(parseInt(terakhir) - Math.floor(moment())) / 86400000;
+    var ambilhari = "<?= $data['perbaikan']['waktu'][$i][0]['waktu_hari']; ?>";
+    let jmlHari = ambilhari.split(' ', 1);
+    let hariDilalui = parseInt(jmlHari) - Math.floor(now);
+    var persentase = Math.floor(hariDilalui) / parseInt(Math.floor(jmlHari)) * 100;
+    let get_harga_awal_lp = "<?= $data['perbaikan']['perbaikan_laptop'][$i]['harga']; ?>";
+    harga_awal_lp = get_harga_awal_lp;
+  
+    $('#hrg_laptop_ds').val('Harga Awal : ' + harga_awal_lp);
+
 // const countday;
 // alert(Math.floor(persentase));
-$('.waktuberakhir').text('waktu tinggal : '+Math.floor(now) + ' hari');
-if (persentase <= 50) {
-$('.hithari').attr('style', 'width:' + persentase + '%;');
-$('.persentase').text(Math.floor(persentase) + '%');
-}else if (persentase > 50 && persentase < 75) {
-$('.hithari').attr('style', 'width:' + persentase + '%;');
-$('.hithari').addClass('bg-warning');
-$('.persentase').text(Math.floor(persentase) + '%')
-}else{
-$('.hithari').attr('style', 'width:' + persentase + '%;');
-$('.hithari').addClass('bg-danger');
-$('.persentase').text(Math.floor(persentase) + '%')
-}
-}
+  $('.waktuberakhir').text('waktu tinggal : '+Math.floor(now) + ' hari');
+  if (persentase <= 50) {
+  $('.hithari').attr('style', 'width:' + persentase + '%;');
+  $('.persentase').text(Math.floor(persentase) + '%');
+  }else if (persentase > 50 && persentase < 75) {
+  $('.hithari').attr('style', 'width:' + persentase + '%;');
+  $('.hithari').addClass('bg-warning');
+  $('.persentase').text(Math.floor(persentase) + '%')
+  }else{
+  $('.hithari').attr('style', 'width:' + persentase + '%;');
+  $('.hithari').addClass('bg-danger');
+  $('.persentase').text(Math.floor(persentase) + '%')
+  }
+  }
 <?php endif; ?>
 <?php endfor; ?>
 });
+
+
+  $('.btn_ubh_ket_lap').click(function(){
+     $('#hrg_laptop').hide();
+    $('#ketlaptoplain').show();
+    $('.ubah_lap').show();
+  });
+
+  $('.btn_ket_harga_lap').click(function(){
+    $('#ketlaptoplain').hide();
+    $('#hrg_laptop').hide();
+    $('.ubah_lap').hide();
+    $('.tmb_hrg_lap').show();
+    $('.krg_hrg_lap').show();
+   });
+
+  $('.tmb_hrg_lap').click(function(){
+    $('.tmb_hrg_lap').hide();
+    $('.krg_hrg_lap').hide();
+    $('#ketlaptoplain').show();
+    $('#hrg_laptop').show();
+    $('.ubah_lap').show();
+    $('#hrg_laptop_ds').show();
+
+  });
+
+  $('#hrg_laptop').keyup(function(){
+    let harga = parseInt($(this).val().split('Rp').pop().split('.').join(""));
+    let hrg_awl = parseInt(harga_awal_lp.split('Rp.').pop().split('.').join(""));
+    var total = hrg_awl + harga;
+    
+    // $('#hrg_laptop_ttl').show();
+    var awl =  hrg_awl - harga;
+    var persentase = harga / hrg_awl * 100;
+
+    if (persentase > 20) {
+      $('.hrg_laptop').text('Anda menaikkan ' + persentase + '% harga, perbaikan akan di hentikan untuk menunggu persetujuan pelanggan?');
+    }else{
+      $('.hrg_laptop').text('');
+    }
+  })
+
+  $('.ubah_lap').click(function(){
+     if ($('#ketlaptoplain').val() === '') {
+      alert('oke');
+    }else {
+      alert('!oke');
+    }
+  });
+
+  $('#ketlaptop').on('hidden.bs.modal',function(){
+    location.reload();
+  });
 });
 </script>
 <script>
     $(document).ready(function(){
-        $('#tmb_laptop').autoNumeric('init');
+        $('#hrg_laptop').autoNumeric('init');
     });
 </script>
