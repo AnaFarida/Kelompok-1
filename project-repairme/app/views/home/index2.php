@@ -23,7 +23,7 @@
             <div class="font-alt mb-30 titan-title-size-1"></div>
             <div class="font-alt mb-40 titan-title-size-3"><span class="rotate">Jasa Perbaikan Hp dan Laptop | Segera Perbaiki Sekarang |Banyak Promo | Mitra Terpercaya</span>
 
-           <a class="btn btn-border-w btn-circle" href="<?= BASEURL; ?>/perbaikan">Perbaiki Sekarang!</a>
+           </div><a class="btn btn-border-w btn-circle" href="<?= BASEURL; ?>/perbaikan">Perbaiki Sekarang!</a>
             <!-- </div><a class="section-scroll btn btn-border-w btn-circle" href="#about">Learn More</a> -->
           </div>
         </div>
@@ -33,31 +33,6 @@
           <section class="module-small">
           <div class="container">
             <div class="row">
-
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Portofolio Mitra</h2>
-              </div>
-            </div>
-           
-            
-             
-            <div class="row multi-columns-row">
-              <?php foreach ($data['mitra'] as $mitra) :?>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="shop-item">
-
-                  <div class="shop-item-image"><img src="<?= BASEURL; ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt=""/>
-                    <form action="<?= BASEURL; ?>/perbaikan/barangkerusakan" method="POST">
-                    <input type="text" id="id" name="id" hidden value="<?= $mitra['id_mitra']?>">
-                    <div class="shop-item-detail"><button class="btn btn-round btn-b" type="submit"><span class="icon-basket">Pilih Mitra</span></button></div>
-                     </form>
-                  </div>
-                  <h4 class="shop-item-title font-alt"><a href="#"><?=$mitra['nama_usaha']; ?></a></h4><?=$mitra['alamat'];?>
-                </div>
-              </div>
-              <?php endforeach; ?>
-          </div>
-
             <h2 class="module-title font-alt">Portofolio Mitra</h2>
             <ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
             <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
