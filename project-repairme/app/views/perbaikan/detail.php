@@ -60,7 +60,7 @@
 			<th>Keterangan Lain</th>
 			<th>Keterangan Dari Mitra</th>
 			<th>Harga</th>
-			<th>Remove</th>
+			<th>Batal</th>
 		</tr>
 		<tr>
 			<td>
@@ -76,6 +76,7 @@
 						}
 					});
 				</script>
+	
 				<h5 class="product-title font-alt status"><?= $data['perbaikan']['status'][$i][0]['status_perbaikan']; ?></h5>
 			</td>
 			<td>
@@ -96,7 +97,22 @@
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan']['harga'][$i]; ?></h5>
 			</td>
-			<td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
+			<td class="pr-remove">
+				 <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Menunggu Persetujuan'):?>
+                        <ul >
+                          <h5><button type="button" class="btn btn-block btn-round btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
+                        </ul>
+                 <?php elseif ( $data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Mitra Siap Memperbaiki'):?>
+                         <ul>
+                          <h5><button type="button" class="btn btn-block btn-round btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
+                          </ul>
+                 <?php else: ?>
+                 		<ul>
+                          <h5><button  disabled type="button" class="btn btn-default  pespro btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
+                        </ul>
+                        <?php endif; ?>
+			</td>
+			
 		</tr>
 		<?php endif; ?>
 		<?php endfor; ?>
@@ -123,7 +139,7 @@
 			<th>Keterangan Lain</th>
 			<th>Keterangan Dari Mitra</th>
 			<th>Harga</th>
-			<th>Remove</th>
+			<th>Batal</th>
 		</tr>
 		<tr>
 			<td>
@@ -150,7 +166,31 @@
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan2']['harga'][$j]; ?></h5>
 			</td>
-			<td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
+			<td class="pr-remove">
+				 <?php if ($data['perbaikan2']['status'][$j][0]['status_perbaikan'] == 'Menunggu Persetujuan'):?>
+                        <ul >
+                          <h5><button type="button" class="btn btn-block btn-round btn-batalkan-pesanan" style="">Batalkan Perbaikan</button></h5>
+                        </ul>
+                 <?php elseif ( $data['perbaikan2']['status'][$j][0]['status_perbaikan'] == 'Mitra Siap Memperbaiki'):?>
+                         <ul>
+                          <h5><button  type="button" class="btn btn-block btn-round  btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
+                          </ul>
+                 <?php else: ?>
+                 		<ul>
+                          <h5><button disabled type="button" class="btn btn-default pespro btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
+                        </ul>
+                        <?php endif; ?>
+                        <script>
+                        $(document).ready(function(){
+		
+							$('.btn-batalkan-pesanan').click(function() {
+								// $("").remove();
+							alert('anda yakin akan membatalkan perbaikan ??');
+							});
+						});
+                        </script>
+                        
+			</td>
 		</tr>
 		<?php endif; ?>
 		<?php endfor; ?>
