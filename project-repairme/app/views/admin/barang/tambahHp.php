@@ -62,7 +62,7 @@
                 <thead>
                 <tr role="row">              
                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Tipe Hp</th>
-                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Merk Hp</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">CRUD</th></tr>
+                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Merk Hp</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Opsi</th></tr>
 
                 </thead>
                 <tbody> 
@@ -73,16 +73,20 @@
                   <tr role="row" class="odd">
                   <td><?= $tipe['tipe_hp']; ?></td>
                   <td><?= $tipe['merk_hp']; ?></td>
-                  <td><a href="<?= BASEURL; ?>/admin/deletehp/<?= $tipe['tipe_hp'];?>" class="badge badge-danger float-right ml-1">Hapus</a>
+                  <td>
+                     <a href="<?= BASEURL; ?>/admin/hapushp/<?= $tipe['tipe_hp'];?>" class="badge badge-danger float-right ml-1">Hapus</a>
+
                 <button class="btn btn-dark btn-sm btn-u-ubahhp" data-toggle="modal" data-target="#modalubahhp" value="<?= $tipe['tipe_hp']; ?>">
                         update
                     </button>
                 </td>
+                
+                <tr>
+                <?php endforeach;?>
                 </tbody>
                 <tfoot>
-                <tr>
+              
                 
-                <?php endforeach;?>
                 
                  </tr>
                 </tfoot>
@@ -206,3 +210,4 @@
    </script>
 
 
+ 

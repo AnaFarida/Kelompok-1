@@ -11,14 +11,6 @@ class Admin extends Controller{
 		}
 	}
 
-	public function grafik(){
-		$data['judul'] = 'Admin';
-		$data['grafik'] = $this->model('Admin_model')->getAllUser();
-		$this->view('admin/templates/header', $data);
-		$this->view('admin/grafik',$data);
-		$this->view('admin/templates/footer');
-	}
-
 	//controller tambahdatalaptop
 	public function tambahdatalaptop(){
 		$data['judul'] = 'Tambah Daftar Laptop';
@@ -244,7 +236,7 @@ public function edittipeLaptop(){
 			Flasher::setFlash(' berhasil', 'diubah', 'success');
 			header ('Location: '.BASEURL.'/admin/tambahdatalaptop');
 			exit();
-		}else {
+ 		}else {
  			Flasher::setFlash(' gagal', 'ditubah', 'danger');	
 			header ('Location: '.BASEURL.'/admin/tambahdatalaptop');
 			exit();
@@ -260,17 +252,6 @@ public function deletelaptop($id){
 		}else{
 			Flasher::setFlash(' gagal', 'dihapus', 'danger');
 			header('Location: '.BASEURL.'/admin/tambahdatalaptop');
-			exit;
-		} 
-	}
-public function deletehp($id){
-		if ($this->model('Barang_model')->deleteBarangHp($id) > 0) {
-			Flasher::setFlash(' berhasil', 'dihapus', 'success');
-			header('Location: '.BASEURL.'/admin/tambahdatahp');
-			exit;
-		}else{
-			Flasher::setFlash(' gagal', 'dihapus', 'danger');
-			header('Location: '.BASEURL.'/admin/tambahdatahp');
 			exit;
 		} 
 	}
@@ -291,6 +272,17 @@ public function edittipeHp(){
 	
 	 }
 
+public function hapushp($id){
+		if ($this->model('Barang_model')->delHandphone($id) > 0) {
+			Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/admin/tambahdatahp');
+			exit;
+		}else{
+			Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/admin/tambahdatahp');
+			exit;
+		} 
+	}
 
 
 public function deletepaket($id){
