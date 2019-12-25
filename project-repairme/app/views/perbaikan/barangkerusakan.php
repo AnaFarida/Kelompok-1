@@ -411,7 +411,7 @@ $(document).ready(function(){
 			<?php endforeach; ?>
 			$('#tipe_hp_ttd').val($('#tipehpbaru').val());
 		}else{
-			$('#id_tipe_hp').val($('#selector_merk_hp').val());
+			$('#id_tipe_hp').val($('#selector_tipe_hp').val());
 		}
 		
 		if ($('#selector_kerusakan_hp').val() == 'false') {

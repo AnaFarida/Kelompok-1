@@ -11,6 +11,14 @@ class Admin extends Controller{
 		}
 	}
 
+	public function grafik(){
+		$data['judul'] = 'Admin';
+		$data['grafik'] = $this->model('Admin_model')->getAllUser();
+		$this->view('admin/templates/header', $data);
+		$this->view('admin/grafik',$data);
+		$this->view('admin/templates/footer');
+	}
+
 	//controller tambahdatalaptop
 	public function tambahdatalaptop(){
 		$data['judul'] = 'Tambah Daftar Laptop';

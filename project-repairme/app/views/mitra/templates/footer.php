@@ -28,7 +28,8 @@
 <script src="<?= BASEURL; ?>/panel-master/plugins/jquery-mapael/maps/usa_states.min.js"></script>
 <!-- ChartJS -->
 <script src="<?= BASEURL; ?>/panel-master/plugins/chart.js/Chart.min.js"></script>
-
+<!-- Toastr -->
+<script src="<?= BASEURL; ?>/panel-master/plugins/toastr/toastr.min.js"></script>
 <!-- PAGE SCRIPTS -->
 <script src="<?= BASEURL; ?>/panel-master/dist/js/pages/dashboard2.js"></script>
 </body>

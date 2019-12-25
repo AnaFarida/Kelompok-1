@@ -72,148 +72,12 @@
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="<?= BASEURL; ?>/home/index2">HOME</a></li>
-              <li><a href="<?= BASEURL; ?>/home/portfolioMitra">Portfolio</a></li>
+              <li><a href="<?= BASEURL; ?>/home/index2">layanan</a></li>
+              <li><a href="<?= BASEURL; ?>/home/index/#folio">Mitra</a></li>
               <li><a href="<?= BASEURL; ?>/home/about">tentang kami</a></li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Headers</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Static Image Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_static.html">Fulscreen</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_classic_static.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Flexslider Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_flexslider.html">Fulscreen</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_classic_flexslider.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Video Background Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_video_background.html">Fulscreen</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_classic_video_background.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Text Rotator Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_text_rotator.html">Fulscreen</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_classic_text_rotator.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Gradient Overlay Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_fullscreen_gradient_overlay.html">Fulscreen</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/index_mp_classic_gradient_overlay.html">Classic</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="<?= BASEURL; ?>/home-master/about5.html" data-toggle="dropdown">About</a>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/service1.html">Service 1</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/service2.html">Service 2</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/service3.html">Service 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pricing</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/pricing1.html">Pricing 1</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/pricing2.html">Pricing 2</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Gallery</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/gallery_col_2.html">2 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/gallery_col_3.html">3 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/gallery_col_4.html">4 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/gallery_col_6.html">6 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Contact</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/contact1.html">Contact 1</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/contact2.html">Contact 2</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/contact3.html">Contact 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Restaurant menu</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/restaurant_menu1.html">Menu 2 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/restaurant_menu2.html">Menu 3 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="<?= BASEURL; ?>/home-master/login_register.html">Login / Register</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/faq.html">FAQ</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/404.html">Page 404</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Standard</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_standard_left_sidebar.html">Left Sidebar</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_standard_right_sidebar.html">Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Grid</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_grid_col_2.html">2 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_grid_col_3.html">3 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_grid_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Masonry</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_grid_masonry_col_2.html">2 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_grid_masonry_col_3.html">3 Columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_grid_masonry_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Single</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_single_left_sidebar.html">Left Sidebar</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/blog_single_right_sidebar.html">Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Features</a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="<?= BASEURL; ?>/home-master/alerts-and-wells.html"><i class="fa fa-bolt"></i> Alerts and Wells</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/buttons.html"><i class="fa fa-link fa-sm"></i> Buttons</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/tabs_and_accordions.html"><i class="fa fa-tasks"></i> Tabs &amp; Accordions</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/content_box.html"><i class="fa fa-list-alt"></i> Contents Box</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/forms.html"><i class="fa fa-check-square-o"></i> Forms</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/icons.html"><i class="fa fa-star"></i> Icons</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/progress-bars.html"><i class="fa fa-server"></i> Progress Bars</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/typography.html"><i class="fa fa-font"></i> Typography</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Shop</a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Product</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?= BASEURL; ?>/home-master/shop_product_col_3.html">3 columns</a></li>
-                      <li><a href="<?= BASEURL; ?>/home-master/shop_product_col_4.html">4 columns</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="<?= BASEURL; ?>/home-master/shop_single_product.html">Single Product</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/shop_checkout.html">Checkout</a></li>
-                </ul>
-              </li><li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">Documentation</a>
-                <ul class="dropdown-menu">
-                  <li><a href="<?= BASEURL; ?>/login">Login</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#contact">Contact Form</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#reservation">Reservation Form</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#mailchimp">Mailchimp</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#gmap">Google Map</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#plugin">Plugins</a></li>
-                  <li><a href="<?= BASEURL; ?>/home-master/documentation.html#changelog">Changelog</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#exampleModal">Registrasi</a></li>
+              <li><a class="fa fa-user" href="<?= BASEURL; ?>/login">Login</a></li>
+              <li><a class="fa fa-address-card" href="" data-toggle="modal" data-target="#exampleModal">Registrasi</a></li>
+                  <?php mySession::dashboard(); ?>
                   <?php mySession::sessionLogin(); ?>
                 </ul>
               </li>
@@ -235,9 +99,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <a href="<?= BASEURL; ?>/pelanggan/registrasi" class="btn btn-primary">Gabung Menjadi Pelanggan</a>
+        <a href="<?= BASEURL; ?>/pelanggan/registrasi" class="btn btn-round btn-b">Gabung Menjadi Pelanggan</a>
               
-               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-primary tombol-mitra">Gabung Menjadi Mitra</a>
+               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-round btn-b tombol-mitra">Gabung Menjadi Mitra</a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

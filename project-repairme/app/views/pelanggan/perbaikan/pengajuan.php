@@ -155,7 +155,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Pengajuan Perbaikan : Laptop</h3>
+          <h3 class="card-title">Pengajuan Perbaikan : Handphone</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -175,10 +175,10 @@
                           Mitra
                       </th>
                       <th style="width: 10%">
-                          Merk Laptop
+                          Merk Handphone
                       </th>
                       <th style="width: 10%">
-                          Tipe Laptop
+                          TipeHandphone
                       </th>
                       <th style="width: 15%;">
                           Kerusakan
