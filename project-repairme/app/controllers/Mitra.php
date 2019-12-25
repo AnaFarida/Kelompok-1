@@ -134,16 +134,16 @@ public function profile(){
 		}
 	}
 	public function vouchermasuk2(){
-		var_dump($_POST);
-		// if($this->model('Mitra_model')->terimaVoucher($_POST) > 0){
-		// header ('Location: '.BASEURL.'/mitra/perbaikan');
-		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
-		// 	exit();
-		// }else {
-		// header ('Location: '.BASEURL.'/mitra/voucher');
-		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
-		// 	exit();
-		// }
+		// var_dump($_POST);
+		if($this->model('Mitra_model')->terimaVoucher2($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/perbaikan');
+		Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/voucher');
+		Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
 	}
 
 	public function perbaikan(){
@@ -248,6 +248,18 @@ public function profile(){
 	 }
 	 }
 
+	 public function ubahperbaikan(){
+	 	// var_dump($_POST);
+	 	if($this->model('Mitra_model')->ubahperbaikan($_POST) > 0){
+			header ('Location: '.BASEURL.'/mitra/perbaikan');
+			Flasher::setFlash(' berhasil', 'diubah', 'success');
+				exit();
+			}else {
+			header ('Location: '.BASEURL.'/mitra/perbaikan');
+			Flasher::setFlash(' gagal', 'diubah', 'danger');	
+				exit();
+			}
+	}
 
 
 	 public function buktitrans(){

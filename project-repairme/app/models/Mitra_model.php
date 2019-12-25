@@ -271,7 +271,14 @@ class Mitra_model{
 			$m++;
 		}
 
-		$result = ['perbaikan_hp' => $perbaikan_hp, 'pelanggan' => $pelanggan, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
+		$waktu = [];
+		$n = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$waktu[$n] = $this->db->query("SELECT waktu_tanggal,waktu_hari,berakhir FROM tb_waktu_perbaikan_hp WHERE id_perbaikan_hp = ".$hp['id_perbaikan']);
+			$n++;
+		}
+
+		$result = ['perbaikan_hp' => $perbaikan_hp, 'pelanggan' => $pelanggan, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu];
 
 		return $result;
 
@@ -336,9 +343,36 @@ class Mitra_model{
 	return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 4 WHERE id_perbaikan = $id");
 	}
 
+	public function terimaVoucher2($data){
+	$id = $data['idhp'];
+	$tanggalhp = $data['tanggalhp'];
+	$harihp = $data['harihp'];
+	$berakhir = $data['berakhirhp'];
+	$this->db->data("INSERT INTO tb_waktu_perbaikan_hp VALUES (NULL,'$tanggalhp','$harihp', '$berakhir' ,$id)");
+	return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 4 WHERE id_perbaikan = $id");
+	}
+
 	//mengambil data lama perbaikan
 	public function getWaktuLaptop(){
 		return $this->db->query("SELECT * FROM `perbaikan_laptop_view`");
+	}
+
+
+	//untuk perubahan perbaikan
+
+	public function ubahperbaikan($data){
+		$id = $data['id_perbaikan_laptop'];
+		$harga = $data['hrg_laptop_final'];
+		$ketlaptoplain = $data['ketlaptoplain'];
+		$pemberhentian = $data['pemberhentian'];
+		// $arr = [$id,$harga,$ketlaptoplain];
+		// return $arr;
+		if ($pemberhentian == 'true') {
+			return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 5, tb_perbaikan_laptop.harga = '$harga', tb_perbaikan_laptop.keterangan_mitra = '$ketlaptoplain' WHERE id_perbaikan = $id");
+		}else{
+		return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.harga = '$harga', tb_perbaikan_laptop.keterangan_mitra = '$ketlaptoplain'
+			WHERE id_perbaikan = $id");
+		}
 	}
 
 }
