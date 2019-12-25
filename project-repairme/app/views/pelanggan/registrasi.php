@@ -123,20 +123,20 @@ h1 {
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Bagaimana Cara Memilih Mitra?</a></h4>
+        <h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Langkah Pertama</a></h4>
       </div>
       <div class="panel-collapse collapse in" id="support1">
         <div class="panel-body">
-          Pilih mitra yang anda inginkan dengan menekan area peta, deskripsi mitra akan muncul bersamaan dengan rating mitra.
+          Isi form regitrasi tersebut dengan benar dan pastikan data tersebut benar!
         </div>
       </div>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Support Question 2</a></h4>
+        <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Langkah Ke-dua</a></h4>
       </div>
       <div class="panel-collapse collapse" id="support2">
-        <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+        <div class="panel-body">Setelah data yang anda masukakan benar kemudian klik tombol Kirim
         </div>
       </div>
     </div>
