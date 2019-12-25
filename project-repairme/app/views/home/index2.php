@@ -29,346 +29,96 @@
         </div>
       </section>
       <div class="main">
-        <section class="module" id="about">
-          <section class="module-small">
-          <div class="container">
-            <div class="row">
-            <h2 class="module-title font-alt">Portofolio Mitra</h2>
-            <ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
-            <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-1.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Indah Cell</h3>
-                  <div class="work-descr">Illustration</div>
-                </div></a></li>
-            <li class="work-item marketing photography"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-2.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Bag MockUp</h3>
-                  <div class="work-descr">Marketing</div>
-                </div></a></li>
-            <li class="work-item illustration photography"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-3.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Disk Cover</h3>
-                  <div class="work-descr">Illustration</div>
-                </div></a></li>
-            <li class="work-item marketing photography"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-4.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Card</h3>
-                  <div class="work-descr">Photography</div>
-                </div></a></li>
-            <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-5.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Card</h3>
-                  <div class="work-descr">Webdesign</div>
-                </div></a></li>
-            <li class="work-item marketing webdesign"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-6.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Cards in paper clip</h3>
-                  <div class="work-descr">Marketing</div>
-                </div></a></li>
-          </ul>
-
-        </section>
-              <!--<div class="col-sm-8 col-sm-offset-2">
-                <h2 class="module-title font-alt">Tentang RepairMe</h2>
-                <div class="module-subtitle font-serif large-text">RepairMe adalah jasa tempat dan solusi untuk anda mencari perbaikan hp atau laptop yang mengalami kerusakan dengan berbagai mitra terpercaya, berkualitas, dan cepat dalam memperbaiki hp atau laptop anda. RepairMe menyediakan berbagai promosi pelayanan untuk memuaskan pengunjung kami. RepairMe juga merupakan solusi untuk anda yang memiliki usaha dalam bidang perbaikan hp dan laptop dengan berbagai paket pemasangan iklan dan mendapatkan pelanggan dengan mudah.</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-2 col-sm-offset-5">
-                <div class="large-text align-center"><a class="section-scroll" href="#services"><i class="fa fa-angle-down"></i></a></div>
-              </div>
-            </div>
-          </div>
-        </section>-->
+      
         <hr class="divider-w">
         <section class="module" id="services">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
                 <h2 class="module-title font-alt">Kelebihan RepairMe</h2>
-                <div class="module-subtitle font-serif">Kelebihan dari Repairme berdasarkan testimoni dan pelayanan yang kami berikan untuk mempermudah anda sebagai pelanggan dan mitra kami.</div>
               </div>
             </div>
             <div class="row multi-columns-row">
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
-                  <div class="features-icon"><span class="icon-lightbulb"></span></div>
+                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/mitra.png" alt="member" width="128px" height="128px">
+                  <h3 class="features-title font-alt">Banyak Mitra Terpercaya</h3>
+                  <p>Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepairMe maka mitra tidak bisa melakukan pemasangan iklan lagi </p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/alarm.png" alt="member" width="128px" height="128px">
                   <h3 class="features-title font-alt">Tepat Waktu</h3>
                   <p>Perbaikan Hp atau Laptop anda akan diselesaikan dengan jangka waktu yang sudah ditentukan oleh mitra yang akan memperbaiki kerusakan Hp atau Laptop anda.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
-                  <div class="features-icon"><span class="icon-bike"></span></div>
-                  <h3 class="features-title font-alt">Antar atau Jemput</h3>
-                  <p>Kami juga melayani antar atau jemput barang anda.</p>
+                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/promo.png" alt="member" width="128px" height="128px">
+                  <h3 class="features-title font-alt">Banyak Promo</h3>
+                  <p>Banyak Promo yang akan ditawarkan kepada Pelanggan maupun kepada Mitra</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
-                  <div class="features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="features-title font-alt">Banyak Diskon</h3>
-                  <p>Semakin lama mitra bergabung dengan RepairMe, kami akan memberikan diskon atau promo pada mitra sesuai yang tertera pada website ini.</p>
+                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/list.png" alt="member" width="128px" height="128px">
+                  <h3 class="features-title font-alt">Bergaransi</h3>
+                  <p>Pelanggan dapat menggunakan garansi setelah perbaikan selesai</p>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="features-item">
-                  <div class="features-icon"><span class="icon-gears"></span></div>
-                  <h3 class="features-title font-alt">Mitra Terpercaya</h3>
-                  <p>Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepairMe maka mitra tersebut akan dikeluarkan dan akan dikenakan sanksi.</p>
-                </div>
-              </div>
-              <!--<div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="features-item">
-                  <div class="features-icon"><span class="icon-tools-2"></span></div>
-                  <h3 class="features-title font-alt">Coding &amp; development</h3>
-                  <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="features-item">
-                  <div class="features-icon"><span class="icon-genius"></span></div>
-                  <h3 class="features-title font-alt">Features &amp; plugins</h3>
-                  <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="features-item">
-                  <div class="features-icon"><span class="icon-mobile"></span></div>
-                  <h3 class="features-title font-alt">Responsive design</h3>
-                  <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="features-item">
-                  <div class="features-icon"><span class="icon-lifesaver"></span></div>
-                  <h3 class="features-title font-alt">Dedicated support</h3>
-                  <p>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.</p>
-                </div>-->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--<section class="module bg-dark-60" data-background="<?= BASEURL; ?>/home-master/assets/images/section-6.jpg">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="video-box">
-                  <div class="video-box-icon"><a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><span class="icon-video"></span></a></div>
-                  <div class="video-title font-alt">Presentation RepairMe</div>
-                  <div class="video-subtitle font-alt">Tonton VIDEO TENTANG WEBSITE KAMI</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="module pb-0" id="works">
+         </section>
+         <hr />
+         <section class="module">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Karya RepairMe</h2>
-                <div class="module-subtitle font-serif"></div>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <ul class="filter font-alt" id="filters">
-                  <li><a class="current wow fadeInUp" href="#" data-filter="*">Semua</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".illustration" data-wow-delay="0.2s">Ilustrasi</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".marketing" data-wow-delay="0.4s">Pemasaran</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".photography" data-wow-delay="0.6s">Photography</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".webdesign" data-wow-delay="0.6s">Desain Web</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>-->
-          <!--<ul class="works-grid works-grid-gut works-grid-3 works-hover-w" id="works-grid">
-            <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-1.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Corporate Identity</h3>
-                  <div class="work-descr">Illustration</div>
-                </div></a></li>
-            <li class="work-item marketing photography"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-2.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Bag MockUp</h3>
-                  <div class="work-descr">Marketing</div>
-                </div></a></li>
-            <li class="work-item illustration photography"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-3.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Disk Cover</h3>
-                  <div class="work-descr">Illustration</div>
-                </div></a></li>
-            <li class="work-item marketing photography"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-4.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Card</h3>
-                  <div class="work-descr">Photography</div>
-                </div></a></li>
-            <li class="work-item illustration webdesign"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-5.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Card</h3>
-                  <div class="work-descr">Webdesign</div>
-                </div></a></li>
-            <li class="work-item marketing webdesign"><a href="portfolio-single-1.html">
-                <div class="work-image"><img src="<?= BASEURL; ?>/home-master/assets/images/work-6.jpg" alt="Portfolio Item"/></div>
-                <div class="work-caption font-alt">
-                  <h3 class="work-title">Business Cards in paper clip</h3>
-                  <div class="work-descr">Marketing</div>
-                </div></a></li>
-          </ul>
-        </section>-->
-        <section class="module-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-8 col-lg-6 col-lg-offset-2">
-                <div class="callout-text font-alt">
-                  <h3 class="callout-title">PORTOFOLIO REPAIRME</h3>
-                  <!--<p>Kami Selalu Membuka Untuk Proyek Menarik.</p>-->
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-2">
-                <div class="callout-btn-box"><a class="btn btn-w btn-round" href="portfolio_boxed_gutter_col_3.html">Lihat Portofolio</a></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="module" id="alt-features">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Fitur RepairMe</h2>
-                <div class="module-subtitle font-serif">Dalam fitur RepairMe terdapat Mitra-mitra terpercaya, berkualitas dan pekerjaanya sangat cepat berbeda dengan mitra yang tidak bergabung dengan RepairMe.</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <!--<div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-strategy"></span></div>
-                  <h3 class="alt-features-title font-alt">Branding</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
-                </div>-->
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-target"></span></div>
-                  <h3 class="alt-features-title font-alt">Login</h3>
-                </div>
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-tools-2"></span></div>
-                  <h3 class="alt-features-title font-alt">Transaksi</h3>Terjadinya 
-                </div>
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-tools"></span></div>
-                  <h3 class="alt-features-title font-alt">Chat</h3>Terjadinya antar komunikasi mitra dengan pelanggan.
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-6 hidden-xs hidden-sm">
-                <div class="alt-services-image align-center"><img src="<?= BASEURL; ?>/home-master/assets/images/logo1.JPEG" alt="Feature Image"></div>
-              </div>
-              <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-camera"></span></div>
-                  <h3 class="alt-features-title font-alt">Peta Lokasi</h3>Lokasi mitra yang siap memperbaiki Hp atau Laptop anda sesuai dengan jarak dari lokasi anda.
-                </div>
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-mobile"></span></div>
-                  <h3 class="alt-features-title font-alt">Banyak Mitra</h3>Mitra yang bergabung dengan repairMe telah terpercaya dan berkualitas.
-                </div>
-                <div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-linegraph"></span></div>
-                  <h3 class="alt-features-title font-alt">Grafik</h3>Grafik pengunjung pelanggan terhadap mitra.
-                </div>
-                <!--<div class="alt-features-item">
-                  <div class="alt-features-icon"><span class="icon-basket"></span></div>
-                  <h3 class="alt-features-title font-alt">Shop</h3>A wonderful serenity has taken possession of my entire soul like these sweet mornings.
-                </div>-->
-              </div>
-            </div>
-          </div>
-        </section>
-        <hr class="divider-w">
-        <section class="module" id="team">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">REPAIRME GROUP</h2>
-                <div class="module-subtitle font-serif">Kami akan memberikan pelayanan yang layak semestinya dan kami akan memberikan promo yang sangat meriah pada mitra-mitra yang telah bergabung dengan RepairMe.</div>
+                <h2 class="module-title font-alt">bagaimana cara menggunakannya?</h2>
               </div>
             </div>
             <div class="row">
               <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
                 <div class="team-item">
-                  <div class="team-image"><img src="<?= BASEURL; ?>/home-master/assets/images/team-1.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <h5 class="font-alt">Hi all</h5>
-                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                      <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a></div>
-                    </div>
-                  </div>
+                 <img src="<?= BASEURL; ?>/home-master/assets/images/icon/maps.png" alt="member" width="128px" height="128px">
                   <div class="team-descr font-alt">
-                    <div class="team-name">Jim Stone</div>
-                    <div class="team-role">Art Director</div>
+                    <div class="team-name">LangKah Pertama</div>
+                    <div class="team-role">Pilih Mitra dengan click salah satu lokasi maka profil mitra akan muncul</div>
                   </div>
                 </div>
               </div>
-              <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
+               <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
                 <div class="team-item">
-                  <div class="team-image"><img src="<?= BASEURL; ?>/home-master/assets/images/team-2.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <h5 class="font-alt">Good day</h5>
-                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                      <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a></div>
-                    </div>
-                  </div>
+                 <img src="<?= BASEURL; ?>/home-master/assets/images/icon/hp.png" alt="member" width="128px" height="128px">
                   <div class="team-descr font-alt">
-                    <div class="team-name">Andy River</div>
-                    <div class="team-role">Creative director</div>
+                    <div class="team-name">Langkah Ke-dua</div>
+                    <div class="team-role">pilih atau masukkan Merk dan Tipe Handphone atau Laptop anda yang rusak</div> &amp;
+                    <div class="team-role">pilih atau masukkan kerusakan Handphone atau Laptop</div>
                   </div>
                 </div>
               </div>
-              <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
+                <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
                 <div class="team-item">
-                  <div class="team-image"><img src="<?= BASEURL; ?>/home-master/assets/images/team-3.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <h5 class="font-alt">Hello</h5>
-                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                      <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a></div>
-                    </div>
-                  </div>
+                 <img src="<?= BASEURL; ?>/home-master/assets/images/icon/setuju.png" alt="member" width="128px" height="128px">
                   <div class="team-descr font-alt">
-                    <div class="team-name">Adele Snow</div>
-                    <div class="team-role">Account manager</div>
+                    <div class="team-name">Langkah Ke-tiga</div>
+                    <div class="team-role">Pelanggan menunggu persetujuan dari Mitra</div>
                   </div>
                 </div>
               </div>
-              <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
+                <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
                 <div class="team-item">
-                  <div class="team-image"><img src="<?= BASEURL; ?>/home-master/assets/images/team-4.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <h5 class="font-alt">Yes, it's me</h5>
-                      <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                      <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a></div>
-                    </div>
-                  </div>
+                 <img src="<?= BASEURL; ?>/home-master/assets/images/icon/sepeda.png" alt="member" width="128px" height="128px">
                   <div class="team-descr font-alt">
-                    <div class="team-name">Dylan Woods</div>
-                    <div class="team-role">Developer</div>
+                    <div class="team-name">Langkah Ke-lima</div>
+                    <div class="team-role">Setelah Mitra menyetujui permintaan maka, barang dikirim ke Mitra </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <!--<section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="<?= BASEURL; ?>/home-master/assets/images/testimonial_bg.jpg">
+        <hr size="5px">
+       <section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="<?= BASEURL; ?>/home-master/assets/images/testimonial_bg.jpg">
           <div class="testimonials-slider pt-140 pb-140">
             <ul class="slides">
               <li>
@@ -380,7 +130,7 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                      <blockquote class="testimonial-text font-alt">I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</blockquote>
+                      <blockquote class="testimonial-text font-alt">Pelayanan memuaskan</blockquote>
                     </div>
                   </div>
                   <div class="row">
@@ -388,7 +138,6 @@
                       <div class="testimonial-author">
                         <div class="testimonial-caption font-alt">
                           <div class="testimonial-title">Jack Woods</div>
-                          <div class="testimonial-descr">SomeCompany INC, CEO</div>
                         </div>
                       </div>
                     </div>
@@ -446,181 +195,62 @@
             </ul>
           </div>
         </section>
-        <section class="module" id="news">
+        <section class="module-small">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Blog Terbaru</h2>
-                <div class="module-subtitle font-serif">Kami akan memberikan blog terbaru kepada anda.</div>
+                <h2 class="module-title font-alt">Portofolio Mitra</h2>
               </div>
             </div>
-            <div class="row multi-columns-row post-columns">
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post mb-20">
-                  <div class="post-thumbnail"><a href="#"><img src="<?= BASEURL; ?>/home-master/assets/images/post-1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Our trip to the Alps</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Mark Stone</a>&nbsp;| 23 November | 3 Comments
-                    </div>
+           
+            
+             
+            <div class="row multi-columns-row">
+              <?php foreach ($data['mitra'] as $mitra) :?>
+              <div class="col-sm-6 col-md-3 col-lg-3">
+                <div class="shop-item">
+
+                  <div class="shop-item-image"><img src="<?= BASEURL; ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt=""/>
+                    <form action="<?= BASEURL; ?>/perbaikan/barangkerusakan" method="POST">
+                    <input type="text" id="id" name="id" hidden value="<?= $mitra['id_mitra']?>">
+                    <div class="shop-item-detail"><button class="btn btn-round btn-b" type="submit"><span class="icon-basket">Pilih Mitra</span></button></div>
+                     </form>
                   </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
+                  <h4 class="shop-item-title font-alt"><a href="#"><?=$mitra['nama_usaha']; ?></a></h4><?=$mitra['alamat'];?>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post mb-20">
-                  <div class="post-thumbnail"><a href="#"><img src="<?= BASEURL; ?>/home-master/assets/images/post-2.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Shore after the tide</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Andy River</a>&nbsp;| 11 November | 4 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <div class="post mb-20">
-                  <div class="post-thumbnail"><a href="#"><img src="<?= BASEURL; ?>/home-master/assets/images/post-3.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">We in New Zealand</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Dylan Woods</a>&nbsp;| 5 November | 15 Comments
-                    </div>
-                  </div>
-                  <div class="post-entry">
-                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="#">Read more</a></div>
-                </div>
-              </div>
-            </div>
+              <?php endforeach; ?>
           </div>
         </section>
-        <div class="module-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-6 col-lg-4 col-lg-offset-2">
-                <div class="callout-text font-alt">
-                  <h3 class="callout-title">Berlangganan Sekarang?</h3>
-                  <p>Kami Tidak Akan SPAM Email Anda.</p>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6 col-lg-4">
-                <div class="callout-btn-box">
-                  <form id="subscription-form" role="form" method="post" action="php/subscribe.php">
-                    <div class="input-group">
-                      <input class="form-control" type="email" id="semail" name="semail" placeholder="Email Anda" data-validation-required-message="Please enter your email address." required="required"/><span class="input-group-btn">
-                        <button class="btn btn-g btn-round" id="subscription-form-submit" type="submit">Kirim</button></span>-->
-                    </div>
-                  </form>
-                  <div class="text-center" id="subscription-response"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <section class="module" id="contact">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">KIRIM PESAN</h2>
-                <div class="module-subtitle font-serif"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <form id="contactForm" role="form" method="post" action="php/contact.php">
-                  <div class="form-group">
-                    <label class="sr-only" for="name">Name</label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="Nama Anda" required="required" data-validation-required-message="Please enter your name."/>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="email">Email</label>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Email Anda" required="required" data-validation-required-message="Please enter your email address."/>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="Pesan Anda" required="required" data-validation-required-message="Please enter your message."></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="text-center">
-                    <button class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit">Kirim</button>
-                  </div>
-                </form>
-                <div class="ajax-response font-alt" id="contactFormResponse"></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section>
         <div class="module-small bg-dark">
           <div class="container">
             <div class="row">
               <div class="col-sm-3">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Tentang RepairMe</h5>
-                  <p>RepairMe adalah tempat dan solusi untuk  mencari perbaikan Hp dan Laptop anda yang mengalami kerusakan dengan berbagai mitra terpercaya.</p>
+                <div class="widget" style="width:100%;text-align: center;">
+                  <h5 class="widget-title font-alt">Hubungi</h5>
+                  <p>Jl. Raya Situbondo, Blindungan, Kec. Bondowoso, Kab. Bondowoso, Jawa Timur 68211.</p>
+                  <p>Phone  : +628234XXXXX</p>
+                  <p>Email  : <a href="#">RepairMe@gmail.com</a></p>
                 </div>
               </div>
               <div class="col-sm-3">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Kelebihan RepairMe</h5>
-                  <ul class="icon-list">
-                    <li><a> Tepat Waktu </a></li>
-                    <li><a> Antar atau Jemput </a></li>
-                    <li><a> Banyak Diskon </a></li>
-                    <li><a> Mitra Terpercaya </a></li>
-                  </ul>
+                <div class="widget" style="width:100%;text-align: center;">
+                  <h5 class="widget-title font-alt"><a href="<?= BASEURL ?>/home/about">Tentang Kami</h5>
+                  <p> RepairMe merupakan tempat untuk perbaikan Hp dan Laptop anda serta dikerjakan oleh mitra terpercaya</p>
                 </div>
               </div>
-              <div class="col-sm-3">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Paket Promo</h5>
-                  <ul class="icon-list">
-                    <li><a href="#">Paket 1</a></li>
-                    <li><a href="#">Paket 2</a></li>
-                    <li><a href="#">Paket 3</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="widget">
-                  <h5 class="widget-title font-alt">Hubungi Kami</h5>
-                  <p>Jl. Raya Situbondo, Blindungan, Kec. Bondowoso, Kab. Bondowoso, Jawa Timur 68211</p>
-                  <p>Phone  : +628234XXXXX</P>
-                  <p>Email  : RepairMe@gmail.com</p>
-                </div>
-                 <!-- <ul class="widget-posts">
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="<?= BASEURL; ?>/home-master/assets/images/rp-1.jpg" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Designer Desk Essentials</a></div>
-                        <div class="widget-posts-meta">23 january</div>
-                      </div>
-                    </li>
-                    <li class="clearfix">
-                      <div class="widget-posts-image"><a href="#"><img src="<?= BASEURL; ?>/home-master/assets/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
-                      <div class="widget-posts-body">
-                        <div class="widget-posts-title"><a href="#">Realistic Business Card Mockup</a></div>
-                        <div class="widget-posts-meta">15 February</div>
-                      </div>
-                    </li>
-                  </ul>-->
-                </div>
+                
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <hr class="divider-d">
         <footer class="footer bg-dark">
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="index.html">RepairMe</a></p>
+                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="<?= BASEURL ?>/home/index">RepairMe</a></p>
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-skype"></i></a>
