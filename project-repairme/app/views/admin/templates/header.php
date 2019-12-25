@@ -148,7 +148,7 @@
     <a href="index3.html" class="brand-link">
       <img src="<?= BASEURL; ?>/panel-master/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Dashboard Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -159,7 +159,7 @@
           <img src="<?= BASEURL; ?>/panel-master/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">ADMIN</a>
         </div>
       </div>
 
@@ -187,12 +187,6 @@
             </a>
              <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Daftar Barang</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="<?= BASEURL; ?>/admin/tambahdatalaptop" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambahkan Daftar Laptop</p>
@@ -216,12 +210,6 @@
               </p>
             </a>
              <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Daftar Kerusakan</p>
-                </a>
-              </li>
               <li class="nav-item">
                 <a href="<?= BASEURL; ?>/admin/tambahkerusakanlaptop" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -285,10 +273,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="<?= BASEURL; ?>/mitra/profile" class="nav-link">
+            <a href="<?= BASEURL; ?>/mitra/" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
-                Profile Mitra
+                  Mitra
                 <span class="right badge badge-warning">Edit</span>
               </p>
             </a>

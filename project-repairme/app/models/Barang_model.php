@@ -25,12 +25,12 @@ class Barang_model{
 	}
 
 	public function getMerkLaptop(){
-		return $this->db->query("SELECT DISTINCT ml.id_merk_laptop, merk_laptop FROM tb_merk_laptop ml JOIN tb_tipe_laptop tl ON ml.id_merk_laptop = tl.id_merk_laptop");
+		return $this->db->query("SELECT* FROM tb_merk_laptop ");
 	}
 
 
 	public function getTipeLaptop(){
-		return $this->db->query("SELECT * FROM tb_tipe_laptop");
+		return $this->db->query("SELECT * FROM tb_tipe_laptop ");
 	}
 
 
@@ -56,8 +56,7 @@ class Barang_model{
 	}
 
 	public function getMerkHp(){
-		return $this->db->query("SELECT DISTINCT ml.id_merk_hp, merk_hp FROM tb_merk_hp ml JOIN tb_tipe_hp tl ON ml.id_merk_hp = tl.id_merk_hp"); //ini menampikan merk hp yang sudah dipakai
-		//return $this->db->query("SELECT * FROM tb_merk_hp");//ini menampikan semua merk
+		return $this->db->query("SELECT * FROM tb_merk_hp "); 
 	}
 
 	public function getTipeHp(){
@@ -96,12 +95,10 @@ class Barang_model{
 
 	public function deleteKerusakanlaptop($id){
 		
-		 $delkerlaptop = $this->db->data("DELETE FROM tb_kerusakan_hp WHERE id_kerusakan_hp  = ". $id);
+		 $delkerlaptop = $this->db->data("DELETE FROM tb_kerusakan_laptop WHERE id_kerusakan_laptop  = ". $id);
 
 		return $delkerlaptop;
 	}
-
-
 	public function getAllPaket(){
 		return $this->db->query("SELECT * FROM tb_paket");
 	}
@@ -111,6 +108,13 @@ class Barang_model{
 		$harga = $data['harga'] ;
 		return $this->db->data("INSERT INTO tb_paket VALUES ( NULL,'$nama_paket', '$harga')");
 	}
+	public function updatepaket($data){
+	$id=$data['id_ubh'];
+	$nama_paket = $data['nama_paket_ubh'];
+	$harga= $data['harga_ubh'];
+	return $this->db->data("UPDATE tb_paket SET tb_paket.nama_paket = '$nama_paket' , tb_paket.harga = '$harga'
+		WHERE id_paket = $id");
+	}
 
 	public function deletePaket($id){
 		
@@ -119,13 +123,57 @@ class Barang_model{
 		return $delpak;
 	}
 
+	public function updateKerusakanHp($data){
+	$id = $data['id_kerusakan_ubh'];
+	$kerusakan = $data['kerusakanhp_ubh'];
+	return $this->db->data("UPDATE tb_kerusakan_hp SET tb_kerusakan_hp.kerusakan_hp = '$kerusakan'
+		WHERE id_kerusakan_hp = $id ");
+	}
 
-	// untuk pengajuan perbaikan laptop
-	
-	// public function tambahkerusakanLaptop($data){
-	// 	$kerusakan = $data['kerusakan'];
-	// 	return $this->db->data("INSERT INTO tb_kerusakan_laptop VALUES ( NULL,'$kerusakan')");
-	// }
+	public function updateKerusakanLaptop($data){
+	$id = $data['id_kerusakanlap_ubh'];
+	$kerusakan = $data['kerusakanlap_ubh'];
+	return $this->db->data("UPDATE tb_kerusakan_laptop SET tb_kerusakan_laptop.kerusakan_laptop = '$kerusakan'
+		WHERE id_kerusakan_laptop = $id ");
+	}
 
+	public function deleteBaranglaptop($id){
+		$tipe = $id;
+		$result = $this->db->query("SELECT * FROM tb_tipe_laptop WHERE tipe_laptop = '$tipe'");
 
+		foreach ($result as $key) {
+			return  $this->db->data("DELETE FROM tb_tipe_laptop  WHERE id_tipe_laptop  = ". $key['id_tipe_laptop']);
+		}	
+	}
+
+	public function updatetipeLaptop($data){
+	$tipelp = $data['tipe_lp_lm'];
+	$tipe_laptop= $data['tipelaptop_ubh'];
+	$result = $this->db->query("SELECT * FROM tb_tipe_laptop WHERE tipe_laptop = '$tipelp'");
+
+	foreach ($result as $key) {
+		return $this->db->data("UPDATE tb_tipe_laptop SET tb_tipe_laptop.tipe_laptop = '$tipe_laptop'
+		WHERE id_tipe_laptop =".$key['id_tipe_laptop']);
+	}
+	}
+
+	public function deleteBarangHp($id){
+		$tipe = $id;
+		$result = $this->db->query("SELECT * FROM tb_tipe_hp WHERE tipe_hp = '$tipe'");
+
+		foreach ($result as $key) {
+			return  $this->db->data("DELETE FROM tb_tipe_hp  WHERE id_tipe_hp  = ". $key['id_tipe_hp']);
+		}	
+	}
+
+	public function updatetipeHp($data){
+	$tipehp = $data['tipe_hp_lm'];
+	$tipe_hp= $data['tipehp_ubh'];
+	$result = $this->db->query("SELECT * FROM tb_tipe_hp WHERE tipe_hp = '$tipehp'");
+
+	foreach ($result as $key) {
+		return $this->db->data("UPDATE tb_tipe_hp SET tb_tipe_hp.tipe_hp = '$tipe_hp'
+		WHERE id_tipe_hp =".$key['id_tipe_hp']);
+	}
+	}
 }

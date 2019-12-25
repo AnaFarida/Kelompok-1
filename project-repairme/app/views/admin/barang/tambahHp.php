@@ -62,7 +62,8 @@
                 <thead>
                 <tr role="row">              
                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Tipe Hp</th>
-                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Merk Hp</th></tr>
+                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Merk Hp</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">CRUD</th></tr>
+
                 </thead>
                 <tbody> 
 
@@ -72,7 +73,11 @@
                   <tr role="row" class="odd">
                   <td><?= $tipe['tipe_hp']; ?></td>
                   <td><?= $tipe['merk_hp']; ?></td>
-                  
+                  <td><a href="<?= BASEURL; ?>/admin/deletehp/<?= $tipe['tipe_hp'];?>" class="badge badge-danger float-right ml-1">Hapus</a>
+                <button class="btn btn-dark btn-sm btn-u-ubahhp" data-toggle="modal" data-target="#modalubahhp" value="<?= $tipe['tipe_hp']; ?>">
+                        update
+                    </button>
+                </td>
                 </tbody>
                 <tfoot>
                 <tr>
@@ -152,3 +157,52 @@
       </div>
     </div>
   </div>
+
+
+
+  <!-- /.content-wrapper -->
+  <div class="modal fade" id="modalubahhp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Tipe Laptop</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                                            
+  <!-- isi dari class modal -->
+                                            
+     <form action="<?= BASEURL; ?>/admin/edittipeHp" method="POST">
+       <input type="text" class="form-control"  id="tipe_hp_lm" name="tipe_hp_lm" hidden>
+     
+       <input type="text"  id="tipehp_ubh" name="tipehp_ubh" class="form-control mt-20">
+       
+       <div class="modal-footer">
+        <button type="submit" name="submit" id="submit" class="btn btn-secondary">update</button>
+
+      </div>
+    </form>
+   
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <script> 
+    $(document).ready(function(){
+      
+      $('.btn-u-ubahhp').click(function(){
+        $('#tipehp_ubh').val($(this).val());  
+        $('#tipe_hp_lm').val($(this).val());   
+      });
+
+  
+});
+   </script>
+
+

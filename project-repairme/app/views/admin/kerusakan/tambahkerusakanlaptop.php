@@ -77,7 +77,9 @@
                     <td><?= $kerusakan['id_kerusakan_laptop']; ?></td>
                     <td><?= $kerusakan['kerusakan_laptop']; ?></td> 
                     <td><a href="<?= BASEURL; ?>/admin/deleteKerusakanlaptop/<?= $kerusakan['id_kerusakan_laptop']; ?>" class="badge badge-danger float-right ml-1">Hapus</a>
-                     <a href="" class="badge badge-primary float-right ml-1" data-toggle="modal" data-target="#exampleModal2">Ubah</a></td>                  
+                     <button class="btn btn-dark btn-sm btn-u-kerusakanlap" data-toggle="modal" data-target="#modalubahlap" value="<?= $kerusakan['id_kerusakan_laptop']; ?>">
+                        update
+                    </button></td>                  
                 </tr>
                  <?php endforeach; ?>
                   </tbody>
@@ -90,7 +92,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
- <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal fade" id="modalubahlap" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -103,19 +105,14 @@
                                             
   <!-- isi dari class modal -->
                                             
-     <form action="<?= BASEURL; ?>/admin/editKerusakanHp" method="POST">
-      <div>
-      <div class="notif" style="width: 50%; height: 10%; top: 0; left: 50%; position: absolute;">
-                  <?php Flasher::flash(); ?>
-                </div>  
-      <?php foreach ($data['kerusakan'] as $kerusakan) :?>                                           
-      <div class="col-sm-4">
-       <input type="text"  class="form-control"  id="Kerusakan" name="Kerusakan" style="width: 30%;" value="<?= $kerusakan['kerusakan']; ?>" >
-      </div>
-      <?php endforeach; ?>
-      </div> 
+     <form action="<?= BASEURL; ?>/admin/editKerusakanlaptop" method="POST">
+       <input type="text" class="form-control"  id="id_kerusakanlap_ubh" name="id_kerusakanlap_ubh" hidden>
+     
+       <input type="text"  id="kerusakanlap_ubh" name="kerusakanlap_ubh" class="form-control mt-20">
+
        <div class="modal-footer">
-        <button type="submit" class="class="btn btn-primary btn-md>Kirim</button>
+        <button type="submit" name="submit" id="submit" class="btn btn-secondary">update</button>
+
       </div>
     </form>
    
@@ -124,4 +121,22 @@
   </div>
 </div>
 
-                  
+
+<script> 
+    $(document).ready(function(){
+      
+      $('.btn-u-kerusakanlap').click(function(){
+        <?php foreach ($data['kerusakan'] as $ker):?>
+        // console.log($(this).val())
+          // alert($(this).val())
+        
+        if ("<?= $ker['id_kerusakan_laptop'] ?>" === $(this).val()) {
+          $('#id_kerusakanlap_ubh').val("<?= $ker['id_kerusakan_laptop']; ?>");
+          $('#kerusakanlap_ubh').val("<?= $ker['kerusakan_laptop']; ?>");
+        }
+        <?php endforeach; ?>        
+      });
+
+  
+});
+   </script>

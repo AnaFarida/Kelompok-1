@@ -140,16 +140,7 @@ class Admin_model{
 		");
 	}
 
-	public function updateKerusakanHp($data){
-	$id = $data['id_kerusakan_hp'];
-	$kerusakan = $data ['kerusakan'];
-	$update=$this->db->data("UPDATE tb_kerusakan_hp SET tb_kerusakan_hp.kerusakan = '$kerusakan'
-		WHERE id_kerusakan_hp = $id
-		");
-
-	return $update;
-	}
-
+	
 
 
 }

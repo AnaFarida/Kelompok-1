@@ -9,7 +9,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Admsin</a></li>
+              <li class="breadcrumb-item"><a href="#">admin</a></li>
               <li class="breadcrumb-item"><a href="#">Barang</a></li>
               <li class="breadcrumb-item active">Tambah Daftar Laptop Baru</li>
             </ol>
@@ -76,7 +76,11 @@
                 <tr role="row" class="odd">
                 <td><?= $tipe['tipe_laptop']; ?></td>
                 <td><?= $tipe['merk_laptop']; ?></td>
-                <td><a href="<?= BASEURL; ?>/admin/deletelaptop/<?= $tipe['id_tipe_laptop']; ?>" class="badge badge-danger float-right ml-1">Hapus</a></td>
+                <td><a href="<?= BASEURL; ?>/admin/deletelaptop/<?= $tipe['tipe_laptop'];?>" class="badge badge-danger float-right ml-1">Hapus</a>
+                <button class="btn btn-dark btn-sm btn-u-ubahlap" data-toggle="modal" data-target="#modalubahlaptop" value="<?= $tipe['tipe_laptop']; ?>">
+                        update
+                    </button>
+                </td>
                 </tr>
                <?php endforeach;?> 
                 </tbody>
@@ -135,3 +139,48 @@
 </div>
 
 
+
+  <!-- /.content-wrapper -->
+  <div class="modal fade" id="modalubahlaptop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Tipe Laptop</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                                            
+  <!-- isi dari class modal -->
+                                            
+     <form action="<?= BASEURL; ?>/admin/edittipeLaptop" method="POST">
+       <input type="text" class="form-control"  id="tipe_lp_lm" name="tipe_lp_lm" hidden>
+     
+       <input type="text"  id="tipelaptop_ubh" name="tipelaptop_ubh" class="form-control mt-20">
+       
+       <div class="modal-footer">
+        <button type="submit" name="submit" id="submit" class="btn btn-secondary">update</button>
+
+      </div>
+    </form>
+   
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <script> 
+    $(document).ready(function(){
+      
+      $('.btn-u-ubahlap').click(function(){
+        $('#tipelaptop_ubh').val($(this).val());  
+        $('#tipe_lp_lm').val($(this).val());   
+      });
+
+  
+});
+   </script>
