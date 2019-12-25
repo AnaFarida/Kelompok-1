@@ -33,6 +33,21 @@ class mySession{
 		}
 	}
 
+	public static function dashboard(){
+		if (isset($_SESSION['login'])) {
+			if ($_SESSION['login']['pesan'] == 'true') {
+				if ($_SESSION['login']['jenis'] == 'mitra') {
+					echo '<li><a href="'.BASEURL.'/mitra/index">DASHBOARD MITRA</a></li>';
+
+				}else if($_SESSION['login']['jenis'] == 'admin'){
+					echo '<li><a href="'.BASEURL.'/admin/index">DASHBOARD ADMIN</a></li>';
+				}else if($_SESSION['login']['jenis'] == 'pelanggan'){
+					echo '<li><a href="'.BASEURL.'/pelanggan/index">DASHBOARD PELANGGAN</a></li>';
+				}
+			}
+		}
+	}
+
 	public static function perbaikanSession($pesan, $data, $barang){
 		$_SESSION['perbaikan'] = ['pesan' => $pesan, 'mitra' => $data, 'barang' => $barang];
 	}

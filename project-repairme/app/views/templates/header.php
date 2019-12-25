@@ -77,6 +77,7 @@
               <li><a href="<?= BASEURL; ?>/home/about">tentang kami</a></li>
               <li><a class="fa fa-user" href="<?= BASEURL; ?>/login">Login</a></li>
               <li><a class="fa fa-address-card" href="" data-toggle="modal" data-target="#exampleModal">Registrasi</a></li>
+                  <?php mySession::dashboard(); ?>
                   <?php mySession::sessionLogin(); ?>
                 </ul>
               </li>
