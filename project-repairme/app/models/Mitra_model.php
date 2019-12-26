@@ -376,4 +376,17 @@ class Mitra_model{
 	}
 
 	
+	public function getVerifikasi(){
+		$foto_transaksi = $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = ".$id_mitra);
+		$status_verifikasi = [];
+		$i = 0;
+		foreach ($foto_transaksi as $bukti) {
+			$status_verifikasi[$i] = $this->db->query("SELECT id_status_verifikasi,status_verifikasi FROM tb_status_verifikasi WHERE id_status_verifikasi = ".$bukti['id_status_verifikasi']);
+			$i++;
+		}
+		$result = ['foto_transaksi' => $foto_transaksi,  'status' => $status_perbaikan];
+
+		return $result;
+	}
+
 }

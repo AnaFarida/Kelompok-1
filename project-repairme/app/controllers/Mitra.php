@@ -170,6 +170,15 @@ public function profile(){
 		$this->view('mitra/templates/footer');
 	}
 
+
+	public function verifikasimitra(){
+		$data['judul'] = 'Pengajuan Verifikasi';
+		$data['mitra'] = $this->model('Mitra_model')->getVerifikasi($data);
+		$this->view('mitra/templates/header',$data);
+		$this->view('mitra/permintaanverifikasi', $data);
+		$this->view('mitra/templates/footer');
+	}
+
 	public function insertDeskripsi(){
 		//var_dump($_POST);
 		if($this->model('Mitra_model')->inputDeskripsi($_POST) > 0){

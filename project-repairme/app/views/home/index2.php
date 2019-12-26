@@ -41,28 +41,28 @@
             <div class="row multi-columns-row">
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
-                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/mitra.png" alt="member" width="128px" height="128px">
+                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/users.png" alt="member" width="128px" height="128px">
                   <h3 class="features-title font-alt">Banyak Mitra Terpercaya</h3>
                   <p>Mitra yang bergabung dengan kami sudah terpercaya, jika ada mitra yang tidak memenuhi peraturan yang sudah ditentukan oleh pihak RepairMe maka mitra tidak bisa melakukan pemasangan iklan lagi </p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
-                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/alarm.png" alt="member" width="128px" height="128px">
+                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/waktu.png" alt="member" width="128px" height="128px">
                   <h3 class="features-title font-alt">Tepat Waktu</h3>
                   <p>Perbaikan Hp atau Laptop anda akan diselesaikan dengan jangka waktu yang sudah ditentukan oleh mitra yang akan memperbaiki kerusakan Hp atau Laptop anda.</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
-                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/promo.png" alt="member" width="128px" height="128px">
+                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/promo1.png" alt="member" width="128px" height="128px">
                   <h3 class="features-title font-alt">Banyak Promo</h3>
                   <p>Banyak Promo yang akan ditawarkan kepada Pelanggan maupun kepada Mitra</p>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="features-item">
-                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/list.png" alt="member" width="128px" height="128px">
+                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/list1.png" alt="member" width="128px" height="128px">
                   <h3 class="features-title font-alt">Bergaransi</h3>
                   <p>Pelanggan dapat menggunakan garansi setelah perbaikan selesai</p>
                 </div>
