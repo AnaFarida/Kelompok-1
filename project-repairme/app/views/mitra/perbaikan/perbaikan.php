@@ -48,15 +48,16 @@
                   Lama
                 </th>
                 <th style="width: 5%;">
-                  detail
+                  Detail
                 </th>
                 <th style="width: 15%">
                   Keterangan
                 </th>
                 <th style="width: 15%">
-                <button type="button" class="btn btn-default toastsDefaultDefault">
+                  Harga
+                <!-- <button type="button" class="btn btn-default toastsDefaultDefault">
                   Launch Default Toast
-                </button>
+                </button> -->
                 </th>
                 <th style="width: 40%">
                   Keterangan
@@ -263,6 +264,7 @@
           <div class="form-group mt-20">
             <form action="<?= BASEURL; ?>/mitra/ubahperbaikan" method="POST" id="formlaptop">
               <input type="text" id="id_perbaikan_laptop" name="id_perbaikan_laptop" hidden>
+              <input type="text" id="id_pel_laptop" name="id_pel_laptop" hidden>
               <input class="form-control" id="hrg_laptop_1" type="text" data-a-sign="Rp. " data-a-dec="," data-a-sep="." hidden>
               <button class="btn btn-dark btn_ubh_ket_lap" type="button" style="width: 49%;">
                 Ubah Keterangan
@@ -440,7 +442,8 @@ $(document).ready(function(){
     var persentase = Math.floor(hariDilalui) / parseInt(Math.floor(jmlHari)) * 100;
     let get_harga_awal_lp = "<?= $data['perbaikan']['perbaikan_laptop'][$i]['harga']; ?>";
     harga_awal_lp = get_harga_awal_lp;
-  
+    $('#id_pel_laptop').val("<?= $data['perbaikan']['pelanggan'][$i][0]['id_pelanggan']; ?>");
+
     $('#hrg_laptop_ds').val('Harga Awal : ' + harga_awal_lp);
     $('#id_perbaikan_laptop').val("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>");
 // const countday;
@@ -613,7 +616,9 @@ $(document).ready(function(){
       $(document).Toasts('create', {
         title: 'Toast Title',
         body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
-        class: 'bg-white'
+        class: 'bg-white',
+        subtitle: 'Subtitle',
+        icon: 'fas fa-envelope fa-lg'
       })
     });
       $('.btn-p-hp').click(function(){

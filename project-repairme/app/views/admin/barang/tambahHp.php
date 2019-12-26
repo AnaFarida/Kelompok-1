@@ -74,7 +74,7 @@
                   <td><?= $tipe['tipe_hp']; ?></td>
                   <td><?= $tipe['merk_hp']; ?></td>
                   <td>
-                     <a href="<?= BASEURL; ?>/admin/hapushp/<?= $tipe['tipe_hp'];?>" class="badge badge-danger float-right ml-1">Hapus</a>
+                     <a href="<?= BASEURL; ?>/admin/hapushp/<?= $tipe['id_tipe_hp'];?>" class="badge badge-danger float-right ml-1">Hapus</a>
 
                 <button class="btn btn-dark btn-sm btn-u-ubahhp" data-toggle="modal" data-target="#modalubahhp" value="<?= $tipe['tipe_hp']; ?>">
                         update
