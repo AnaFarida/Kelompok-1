@@ -11,6 +11,7 @@ class Admin extends Controller{
 		}
 	}
 
+
 	public function permintaanverifikasi(){
 		$data['judul'] = 'Pengajuan Verifikasi';
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
@@ -20,11 +21,13 @@ class Admin extends Controller{
 	}
 
 
+
 	//controller tambahdatalaptop
 	public function tambahdatalaptop(){
 		$data['judul'] = 'Tambah Daftar Laptop';
 		$call = $this->model('Barang_model');
 		$data['tipe'] = $call->getLaptop();
+		$data['merk'] = $call->getMerkLaptop();
 		$this->view('admin/templates/header',$data);
 		$this->view('admin/barang/tambahLaptop', $data);
 		$this->view('admin/templates/footer');
@@ -35,6 +38,7 @@ class Admin extends Controller{
 		$data['judul'] = 'Tambah Daftar Handphone';
 		$call = $this->model('Barang_model');
 		$data['tipe'] = $call->getHp();
+		$data['merk'] = $call->getMerkHp();
 		$this->view('admin/templates/header',$data);
 		$this->view('admin/barang/tambahHp', $data);
 		$this->view('admin/templates/footer');
@@ -183,41 +187,21 @@ public function tambahpaketlagi(){
 
 }
 
-	
-	public function pengajuanperbaikan(){	
-		$data['judul'] = 'Pengajuan Perbaikan';
-		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
-		$call = $this->model('Perbaikan_model');
-		$data['perbaikan'] = $call->getPerbaikan();
-		$this->view('pelanggan/templates/header',$data);
-		$this->view('pelanggan/perbaikan/pengajuan', $data);
-		$this->view('pelanggan/templates/footer');
-		}
-	}
-public function delete($id){
-		if ($this->model('Barang_model')->deletePaket($id) > 0) {
-			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
-			header('Location: '.BASEURL.'/admin/');
-			exit;
-		}else{
-			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
-			header('Location: '.BASEURL.'/admin/');
-			exit;
-		}
-	}
+// 
  public function editKerusakanHp(){
 		//var_dump($_POST);
-		if($this->model('Admin_model')->updateKerusakanHp($_POST) > 0){
-		header ('Location: '.BASEURL.'/admin/tambahkerusakanhp');
-		Flasher::setFlash(' berhasil', 'diubah', 'success');
+		if($this->model('Barang_model')->updateKerusakanHp($_POST) > 0){
+			Flasher::setFlash(' berhasil', 'diubah', 'success');
+			header ('Location: '.BASEURL.'/admin/tambahkerusakanhp');
 			exit();
 		}else {
-		header ('Location: '.BASEURL.'/admin/tambahkerusakanhp');
-		Flasher::setFlash(' gagal', 'diubah', 'danger');	
+			Flasher::setFlash(' gagal', 'ditubah', 'danger');	
+			header ('Location: '.BASEURL.'/admin/tambahkerusakanhp');
 			exit();
 		}
 	
 	 }
+
 public function deleteKerusakanhp($id){
 		if ($this->model('Barang_model')->deleteKerusakanhp($id) > 0) {
 			Flasher::setFlash(' berhasil', 'dihapus', 'success');
@@ -230,6 +214,19 @@ public function deleteKerusakanhp($id){
 		}
 	}
 
+public function editKerusakanlaptop(){
+		//var_dump($_POST);
+		if($this->model('Barang_model')->updateKerusakanLaptop($_POST) > 0){
+			Flasher::setFlash(' berhasil', 'diubah', 'success');
+			header ('Location: '.BASEURL.'/admin/tambahkerusakanlaptop');
+			exit();
+		}else {
+			Flasher::setFlash(' gagal', 'ditubah', 'danger');	
+			header ('Location: '.BASEURL.'/admin/tambahkerusakanlaptop');
+			exit();
+		}
+	
+	 }
 public function deleteKerusakanlaptop($id){
 		if ($this->model('Barang_model')->deleteKerusakanlaptop($id) > 0) {
 			Flasher::setFlash(' berhasil', 'dihapus', 'success');
@@ -241,29 +238,63 @@ public function deleteKerusakanlaptop($id){
 			exit;
 		}
 	}
-public function deletehp($id){
-		if ($this->model('Barang_model')->deleteBarangHp($id) > 0) {
-			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
-			header('Location: '.BASEURL.'/admin/tambahdatahp');
-			exit;
-		}else{
-			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
-			header('Location: '.BASEURL.'/admin/tambahdatahp');
-			exit;
+
+public function edittipeLaptop(){
+		//var_dump($_POST);
+		// $result = $this->model('Barang_model')->updatetipeLaptop($_POST);
+		// var_dump($result);
+		if($this->model('Barang_model')->updatetipeLaptop($_POST) > 0){
+			Flasher::setFlash(' berhasil', 'diubah', 'success');
+			header ('Location: '.BASEURL.'/admin/tambahdatalaptop');
+			exit();
+ 		}else {
+ 			Flasher::setFlash(' gagal', 'ditubah', 'danger');	
+			header ('Location: '.BASEURL.'/admin/tambahdatalaptop');
+			exit();
 		}
-	}
+	
+	 }
 
 public function deletelaptop($id){
 		if ($this->model('Barang_model')->deleteBaranglaptop($id) > 0) {
-			//Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			Flasher::setFlash(' berhasil', 'dihapus', 'success');
 			header('Location: '.BASEURL.'/admin/tambahdatalaptop');
 			exit;
 		}else{
-			//Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			Flasher::setFlash(' gagal', 'dihapus', 'danger');
 			header('Location: '.BASEURL.'/admin/tambahdatalaptop');
 			exit;
-		}
+		} 
 	}
+
+public function edittipeHp(){
+		//var_dump($_POST);
+		// $result = $this->model('Barang_model')->updatetipeLaptop($_POST);
+		// var_dump($result);
+		if($this->model('Barang_model')->updatetipeHp($_POST) > 0){
+			Flasher::setFlash(' berhasil', 'diubah', 'success');
+			header ('Location: '.BASEURL.'/admin/tambahdatahp');
+			exit();
+		}else  {
+			Flasher::setFlash(' gagal', 'ditubah', 'danger');	
+			header ('Location: '.BASEURL.'/admin/tambahdatahp');
+			exit();
+		}
+	
+	 }
+
+public function hapushp($id){
+		if ($this->model('Barang_model')->delHandphone($id) > 0) {
+			Flasher::setFlash(' berhasil', 'dihapus', 'success');
+			header('Location: '.BASEURL.'/admin/tambahdatahp');
+			exit;
+		}else{
+			Flasher::setFlash(' gagal', 'dihapus', 'danger');
+			header('Location: '.BASEURL.'/admin/tambahdatahp');
+			exit;
+		} 
+	}
+
 
 public function deletepaket($id){
 		if ($this->model('Barang_model')->deletePaket($id) > 0) {
@@ -276,5 +307,19 @@ public function deletepaket($id){
 			exit;
 		}
 	}
+ public function editPaket(){
+		// var_dump($_POST);
+			if($this->model('Barang_model')->updatepaket($_POST) > 0){
+			Flasher::setFlash(' berhasil', 'dibahkan', 'success');
+			header ('Location: '.BASEURL.'/admin/paket');
+			exit();
+		}else {
+			Flasher::setFlash(' gagal', 'ditaan', 'danger');	
+			header ('Location: '.BASEURL.'/admin/paket');
+			exit();
+		}
+	
+	 }
+
 
 }

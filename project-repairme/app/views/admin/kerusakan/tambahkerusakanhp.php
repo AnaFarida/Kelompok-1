@@ -68,7 +68,7 @@
                 </div>
               <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="example1_length"></div></div><div class="col-sm-12 col-md-6"><div id="example1_filter" class="dataTables_filter"></div></div></div><div class="row"><div class="col-sm-12"><table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                                 <thead>
-               <tr role="row"><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 10px;">No</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 194px;">Kerusakan</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 219px;">CRUD</th></tr>
+               <tr role="row"><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 10px;">No</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 194px;">Kerusakan</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 219px;">Opsi</th></tr>
                 </thead>
                  
                <tbody>
@@ -78,7 +78,9 @@
                     <td><?= $kerusakan['kerusakan_hp']; ?></td> 
                     <td>
                     <a href="<?= BASEURL; ?>/admin/deleteKerusakanhp/<?= $kerusakan['id_kerusakan_hp']; ?>" class="badge badge-danger float-right ml-1">Hapus</a>
-                    <a href="" class="badge badge-primary float-right ml-1" data-toggle="modal" data-target="#exampleModal2">Ubah</a>
+                    <button class="btn btn-dark btn-sm btn-u-kerusakanhp" data-toggle="modal" data-target="#modalubahhp" value="<?= $kerusakan['id_kerusakan_hp']; ?>">
+                        update
+                    </button>
                   </td>                  
                 </tr>
                  <?php endforeach; ?>
@@ -101,7 +103,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal fade" id="modalubahhp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -115,18 +117,13 @@
   <!-- isi dari class modal -->
                                             
      <form action="<?= BASEURL; ?>/admin/editKerusakanHp" method="POST">
-      <div>
-      <div class="notif" style="width: 50%; height: 10%; top: 0; left: 50%; position: absolute;">
-                  <?php Flasher::flash(); ?>
-                </div>  
-      <?php foreach ($data['kerusakan'] as $kerusakan) :?>                                           
-      <div class="col-sm-4">
-       <input type="text"  class="form-control"  id="Kerusakan" name="Kerusakan" style="width: 30%;" value="<?= $kerusakan['kerusakan']; ?>" >
-      </div>
-      <?php endforeach; ?>
-      </div> 
+       <input type="text" class="form-control"  id="id_kerusakan_ubh" name="id_kerusakan_ubh" hidden>
+     
+       <input type="text"  id="kerusakanhp_ubh" name="kerusakanhp_ubh" class="form-control mt-20">
+
        <div class="modal-footer">
-        <button type="submit" class="class="btn btn-primary btn-md>Kirim</button>
+        <button type="submit" name="submit" id="submit" class="btn btn-secondary">update</button>
+
       </div>
     </form>
    
@@ -135,5 +132,23 @@
   </div>
 </div>
 
+ <script> 
+    $(document).ready(function(){
+      
+      $('.btn-u-kerusakanhp').click(function(){
+        <?php foreach ($data['kerusakan'] as $ker):?>
+        // console.log($(this).val())
+          // alert($(this).val())
+        
+        if ("<?= $ker['id_kerusakan_hp']; ?>" === $(this).val()) {
+          $('#id_kerusakan_ubh').val("<?= $ker['id_kerusakan_hp']; ?>");
+          $('#kerusakanhp_ubh').val("<?= $ker['kerusakan_hp']; ?>");
+        }
+        <?php endforeach; ?>        
+      });
+
+  
+});
+   </script>
 
                   
