@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- jQuery -->
     <script src="<?= BASEURL; ?>/panel-master/plugins/jquery/jquery.min.js"></script>
+        <!-- Toastr -->
+  <link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/plugins/toastr/toastr.min.css">
   </head>
   <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm">
     <div class="wrapper">

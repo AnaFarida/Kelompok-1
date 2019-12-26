@@ -68,7 +68,7 @@ class Perbaikan_model{
 		$status_perbaikan = [];
 		$i = 0;
 		foreach ($perbaikan_laptop as $laptop) {
-			$status_perbaikan[$i] = $this->db->query("SELECT status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$laptop['id_status_perbaikan']);
+			$status_perbaikan[$i] = $this->db->query("SELECT status_perbaikan, id_status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$laptop['id_status_perbaikan']);
 			$i++;
 		}
 		$mitra = [];
@@ -132,8 +132,16 @@ class Perbaikan_model{
 			$n++;
 		}
 		
-		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'mitra' => $mitra, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu];
+		$notif = [];
+		$o = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			$notif[$o] = $this->db->query("SELECT * FROM tb_notif_mitra WHERE id_perbaikan = ".$laptop['id_perbaikan']);
+			$o++;
+		}
 
+		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'mitra' => $mitra, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu, 'notif' => $notif];
+
+		
 		return $result;
 	}
 
