@@ -9,8 +9,9 @@ class Home extends Controller{
 		// $data['user'] = $this->model('User_model')->getUser();
 		//memangil method view dengan parameter $data
 		//templates/header -> untuk lokasi filenya ada dimana
+		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
 		$this->view('templates/header', $data);
-		$this->view('home/index2');
+		$this->view('home/index2',$data);
 		$this->view('templates/footer');
 	}
 

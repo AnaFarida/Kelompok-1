@@ -91,8 +91,8 @@
                  <img src="<?= BASEURL; ?>/home-master/assets/images/icon/hp.png" alt="member" width="128px" height="128px">
                   <div class="team-descr font-alt">
                     <div class="team-name">Langkah Ke-dua</div>
-                    <div class="team-role">pilih atau masukkan Merk dan Tipe Handphone atau Laptop anda yang rusak</div> &amp;
-                    <div class="team-role">pilih atau masukkan kerusakan Handphone atau Laptop</div>
+                    <div class="team-role">pilih Merk dan Tipe Handphone atau Laptop anda yang rusak</div> &amp;
+                    <div class="team-role">pilih kerusakan Handphone atau Laptop</div>
                   </div>
                 </div>
               </div>
@@ -210,7 +210,7 @@
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="shop-item">
 
-                  <div class="shop-item-image"><img src="<?= BASEURL; ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt=""/>
+                  <div class="shop-item-image">  <img src="<?= BASEURL; ?>/img/mitra/<?= $mitra['foto_usaha']; ?>" alt="member" width="128px" height="128px">
                     <form action="<?= BASEURL; ?>/perbaikan/barangkerusakan" method="POST">
                     <input type="text" id="id" name="id" hidden value="<?= $mitra['id_mitra']?>">
                     <div class="shop-item-detail"><button class="btn btn-round btn-b" type="submit"><span class="icon-basket">Pilih Mitra</span></button></div>
@@ -226,7 +226,7 @@
         <div class="module-small bg-dark">
           <div class="container">
             <div class="row">
-              <div class="col-sm-3">
+              <div class="col-sm-3" style="width:50%;text-align: center;">
                 <div class="widget" style="width:100%;text-align: center;">
                   <h5 class="widget-title font-alt">Hubungi</h5>
                   <p>Jl. Raya Situbondo, Blindungan, Kec. Bondowoso, Kab. Bondowoso, Jawa Timur 68211.</p>
@@ -234,7 +234,7 @@
                   <p>Email  : <a href="#">RepairMe@gmail.com</a></p>
                 </div>
               </div>
-              <div class="col-sm-3">
+              <div class="col-sm-3" style="width:50%;text-align: center;">
                 <div class="widget" style="width:100%;text-align: center;">
                   <h5 class="widget-title font-alt"><a href="<?= BASEURL ?>/home/about">Tentang Kami</h5>
                   <p> RepairMe merupakan tempat untuk perbaikan Hp dan Laptop anda serta dikerjakan oleh mitra terpercaya</p>
@@ -250,7 +250,8 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="<?= BASEURL ?>/home/index">RepairMe</a></p>
+                <p class="copyright font-alt">RepairMe &copy; 2019 <a href="<?= BASEURL ?>/home/index">RepairMe</a> Situs Untuk Mencari Tempat Perbaikan Terbaik.</p>
+                                  <b>Versi</b> 1.0.0
               </div>
               <div class="col-sm-6">
                 <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-skype"></i></a>
