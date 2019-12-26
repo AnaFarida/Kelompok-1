@@ -11,6 +11,17 @@ class Admin extends Controller{
 		}
 	}
 
+
+	public function permintaanverifikasi(){
+		$data['judul'] = 'Pengajuan Verifikasi';
+		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		$this->view('admin/templates/header',$data);
+		$this->view('admin/permintaanverifikasi', $data);
+		$this->view('admin/templates/footer');
+	}
+
+
+
 	//controller tambahdatalaptop
 	public function tambahdatalaptop(){
 		$data['judul'] = 'Tambah Daftar Laptop';
