@@ -22,7 +22,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Pengajuan Perbaikan : Laptop</h3>
+          <h3 class="card-title">Perbaikan Laptop</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -63,15 +63,11 @@
                   </tr>
               </thead>
             <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-              <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] === '4'):?>
+              <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == '4' || $data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == '5'):?>
               <tbody>
                   <tr>
                       <td>
                           <a>
-                              <?php 
-                              $waktu = "<script>console.log(Math.floor(moment()));</script>";
-                              echo $waktu;
-                               ?>
                               <?= $_SESSION['login']['data']['nama']; ?>
                           </a>                   
                       </td>
@@ -101,7 +97,7 @@
                       <td >
                          <ul class="list-inline">
                           <button class="btn btn-dark btn-sm btn-p-laptop" data-toggle="modal" data-target="#progress" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                        Persentase Hari
+                        Persentase
                     </button>
                       </ul>
                       </td>
@@ -116,21 +112,25 @@
                           </ul>
                       </td>
                       <td>
-                        <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Mitra Menolak Perbaikan'):?>
+                        <?php if($data['perbaikan']['notif'][$i] != NULL): ?>
+                          <?php if($data['perbaikan']['notif'][$i][0]['dibaca'] == 'n'): ?>
+                            <script>
+                                $(document).ready(function(){
+                                  $(document).Toasts('create', {
+                                  title: 'Dari <?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?>',
+                                  body: 'Pesan Untuk Anda :<strong> <?= $_SESSION['login']['data']['nama']; ?></strong><br> Anda mendapatkan pesan terbaru, terkait perbaikan yang anda lakukan.',
+                                  class: 'bg-white',
+                                  subtitle: 'Notifikasi',
+                                  icon: 'fas fa-envelope fa-lg'
+                                })
+                                });
+                            </script>
                         <ul class="list-inline">
-                          <button disabled class="btn btn-danger btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop"  value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                              Terima 
-                          </button>
+                          <a class="btn btn-app" href="">
+                            <i class="fas fa-envelope"></i>Pesan
+                          </a>
                         </ul>
-                        <?php elseif ( $data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Menunggu Persetujuan'):?>
-                          <button disabled class="btn btn-info btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop"  value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                              Terima 
-                          </button>
-                        <?php else: ?>
-                          <button class="btn btn-success btn-sm t-terimalaptop" data-toggle="modal" data-target="#terimaLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                              Terima 
-                          </button>
-                        </ul>
+                      <?php endif; ?>
                         <?php endif; ?>
                       </td>
                   </tr>
@@ -141,6 +141,5 @@
         </div>
         <!-- /.card-body -->
       </div>
-      <!-- /.card -->
-      <br><br>
-    <!-- untuk hp -->
+    
+    
