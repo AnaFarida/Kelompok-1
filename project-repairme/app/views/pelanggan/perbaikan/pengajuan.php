@@ -65,7 +65,7 @@
                   </tr>
               </thead>
             <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-              <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] != 'Sedang Diperbaiki'):?>
+              <?php if ($data['perbaikan']['status'][$i][0]['id_status_perbaikan'] == 1 || $data['perbaikan']['status'][$i][0]['id_status_perbaikan'] == 2 || $data['perbaikan']['status'][$i][0]['id_status_perbaikan'] == 3):?>
               <tbody>
                   <tr>
                       <td>

@@ -146,6 +146,7 @@
                   <tr>
                       <td>
                           <a>
+                            <ul class="list-inline">
                               <?= $data['perbaikan2']['pelanggan'][$i][0]['nama']; ?>
                           </a>                   
                       </td>

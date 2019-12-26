@@ -76,7 +76,7 @@
                 <tr role="row" class="odd">
                 <td><?= $tipe['tipe_laptop']; ?></td>
                 <td><?= $tipe['merk_laptop']; ?></td>
-                <td><a href="<?= BASEURL; ?>/admin/deletelaptop/<?= $tipe['tipe_laptop'];?>" class="badge badge-danger float-right ml-1">Hapus</a>
+                <td><a href="<?= BASEURL; ?>/admin/deletelaptop/<?= $tipe['id_tipe_laptop'];?>" class="badge badge-danger float-right ml-1">Hapus</a>
                 <button class="btn btn-dark btn-sm btn-u-ubahlap" data-toggle="modal" data-target="#modalubahlaptop" value="<?= $tipe['tipe_laptop']; ?>">
                         update
                     </button>

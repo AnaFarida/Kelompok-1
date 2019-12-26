@@ -153,4 +153,34 @@ public function editProfile(){
 		}
 	
 	 }
+
+	 public function diskondibaca(){
+		// var_dump($_POST);
+		if($this->model('pelanggan_model')->diskondibaca($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	 }
+
+	  public function lanjutperbaikan(){
+		// var_dump($_POST);
+		if($this->model('pelanggan_model')->lanjutperbaikan($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	 }
+
+
 }

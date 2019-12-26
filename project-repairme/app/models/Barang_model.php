@@ -138,21 +138,12 @@ class Barang_model{
 	}
 
 	public function deleteBaranglaptop($id){
-		$tipe = $id;
-		$result = $this->db->query("SELECT * FROM tb_tipe_laptop WHERE tipe_laptop = '$tipe'");
-
-		foreach ($result as $key) {
-			return  $this->db->data("DELETE FROM tb_tipe_laptop  WHERE id_tipe_laptop  = ". $key['id_tipe_laptop']);
-		}	
+		return  $this->db->data("DELETE FROM tb_tipe_laptop  WHERE id_tipe_laptop  = ".$id);
+			
 	}
 	public function delHandphone($id){
-		$tipe = $id;
-		$results = $this->db->query("SELECT * FROM tb_tipe_hp WHERE tipe_hp = '$tipe'");
-
-		foreach ($results as $key) {
-			$hapus=  $this->db->data("DELETE FROM tb_tipe_hp  WHERE id_tipe_hp  = ". $key['id_tipe_hp']);
-			return $hapus;
-		}	
+		return $this->db->data("DELETE FROM tb_tipe_hp  WHERE id_tipe_hp  = ". $id);
+			
 	}
 
 	public function updatetipeLaptop($data){
@@ -174,7 +165,7 @@ class Barang_model{
 
 	foreach ($result as $key) {
 		return $this->db->data("UPDATE tb_tipe_hp SET tb_tipe_hp.tipe_hp = '$tipe_hp'
-		WHERE id_tipe_hp =".$key['id_tipe_hp']);
+		WHERE id_tipe_hp = ".$key['id_tipe_hp']);
 	}
 	}
 }

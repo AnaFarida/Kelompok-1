@@ -1,9 +1,9 @@
    <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
+    <strong>RepairMe &copy; 2019 <a href="http://adminlte.io">Repairme</a>.</strong>
+    Situs Untuk Mencari Tempat Perbaikan Terbaik.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.2-pre
+      <b>Versi</b> 1.0.0
     </div>
   </footer>
 </div>
@@ -28,7 +28,8 @@
 <script src="<?= BASEURL; ?>/panel-master/plugins/jquery-mapael/maps/usa_states.min.js"></script>
 <!-- ChartJS -->
 <script src="<?= BASEURL; ?>/panel-master/plugins/chart.js/Chart.min.js"></script>
-
+<!-- Toastr -->
+<script src="<?= BASEURL; ?>/panel-master/plugins/toastr/toastr.min.js"></script>
 <!-- PAGE SCRIPTS -->
 <script src="<?= BASEURL; ?>/panel-master/dist/js/pages/dashboard2.js"></script>
 </body>

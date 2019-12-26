@@ -147,7 +147,7 @@ class Mitra_model{
 		$pelanggan = [];
 		$j = 0;
 		foreach ($perbaikan_laptop as $laptop) {
-			$pelanggan[$j] = $this->db->query("SELECT nama FROM tb_pelanggan WHERE id_pelanggan = ".$laptop['id_pelanggan']);
+			$pelanggan[$j] = $this->db->query("SELECT nama, id_pelanggan FROM tb_pelanggan WHERE id_pelanggan = ".$laptop['id_pelanggan']);
 			$j++;
 		}
 
@@ -362,17 +362,34 @@ class Mitra_model{
 
 	public function ubahperbaikan($data){
 		$id = $data['id_perbaikan_laptop'];
+		$id_pel = $data['id_pel_laptop'];
 		$harga = $data['hrg_laptop_final'];
 		$ketlaptoplain = $data['ketlaptoplain'];
 		$pemberhentian = $data['pemberhentian'];
 		// $arr = [$id,$harga,$ketlaptoplain];
 		// return $arr;
 		if ($pemberhentian == 'true') {
+			$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'tambah_harga', '$ketlaptoplain', $id, 'n')");
 			return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 5, tb_perbaikan_laptop.harga = '$harga', tb_perbaikan_laptop.keterangan_mitra = '$ketlaptoplain' WHERE id_perbaikan = $id");
 		}else{
-		return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.harga = '$harga', tb_perbaikan_laptop.keterangan_mitra = '$ketlaptoplain'
+		$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'diskon', '$ketlaptoplain', $id, 'n')");
+		return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.harga = '$harga'
 			WHERE id_perbaikan = $id");
 		}
 	}
 
+
+	
+	public function getVerifikasi(){
+		$foto_transaksi = $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = ".$id_mitra);
+		$status_verifikasi = [];
+		$i = 0;
+		foreach ($foto_transaksi as $bukti) {
+			$status_verifikasi[$i] = $this->db->query("SELECT id_status_verifikasi,status_verifikasi FROM tb_status_verifikasi WHERE id_status_verifikasi = ".$bukti['id_status_verifikasi']);
+			$i++;
+		}
+		$result = ['foto_transaksi' => $foto_transaksi,  'status' => $status_perbaikan];
+
+		return $result;
+	}
 }

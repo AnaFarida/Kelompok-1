@@ -63,7 +63,7 @@
                                             
   <!-- isi dari class modal -->
                                     
-     <form action="<?=BASEURL;?>/home/transaksi" method="POST" id="formmodtrans" data-parsley-validate=""> 
+     <form action="<?=BASEURL;?>/home/transaksi" method="POST" id="formmodtrans" enctype="multipart/form-data"> 
       <div>
       <div class="notif" style="width: 50%; height: 10%; top: 0; left: 50%; position: absolute;">
                   <?php Flasher::flash(); ?>
@@ -75,6 +75,10 @@
       <p class="foto_transaksi" style="color: red;"></p>
       </div>
       </div> 
+      <div class="form-group">
+         <p>foto Tempat Usaha</p>
+                      
+                 </div>
        <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-d btn-round">Kirim</button>
@@ -99,4 +103,15 @@ $('#foto_transaksi').on('change',function(){
                   }
 
                   });
+$('.selanjutnya5').on('click',function(){ 
+          if ($('#foto_transaksi').val() === '') {
+            $('.foto_transaksi').text('Upload Foto transaksi anda');
+          }
+          else {
+            $('.upload').hide();
+            $('.userpass').show();
+            $('.judul').text('Akun Login');
+          }
+        });
+
 </script>
