@@ -90,7 +90,22 @@ class pelanggan_model{
 		return $this->db->data("INSERT INTO tb_rating VALUES (NULL,'$id_pelanggan','$id_mitra','$rating','$testimoni')");
 	}
 
+	public function diskondibaca($id){
+		$data = $id['idper_dislap'];
+		return $this->db->data("UPDATE tb_notif_mitra SET tb_notif_mitra.dibaca = 'y'
+		WHERE id_perbaikan =".$data);
 	}
+
+	public function lanjutperbaikan($id){
+		$data = $id['idper_tambahlap'];
+		$this->db->data("DELETE FROM tb_notif_mitra WHERE id_perbaikan ='$data'");
+		$this->db->data("INSERT INTO tb_notif_pelanggan VALUES (NULL,'lanjut_perbaikan','Pelanggan Menyetujui Penambahan Harga',$data,'n')");
+		$this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 4
+		WHERE id_perbaikan =".$data);
+	}
+
+
+}
 	
 
 

@@ -126,9 +126,16 @@
                                 });
                             </script>
                         <ul class="list-inline">
-                          <a class="btn btn-app" href="">
+                        <?php if ($data['perbaikan']['notif'][$i][0]['notifikasi'] == 'diskon'):?>
+                          <a class="btn btn-app dislap" data-toggle="modal" data-target="#diskonlap" id="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan'];?>">
                             <i class="fas fa-envelope"></i>Pesan
                           </a>
+                        <?php endif; ?>
+                        <?php if ($data['perbaikan']['notif'][$i][0]['notifikasi'] == 'tambah_harga'):?>
+                          <a class="btn btn-app tmblap" data-toggle="modal" data-target="#tambahlap" id="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan'];?>">
+                            <i class="fas fa-envelope"></i>Pesan
+                          </a>
+                        <?php endif; ?>
                         </ul>
                       <?php endif; ?>
                         <?php endif; ?>
@@ -141,5 +148,108 @@
         </div>
         <!-- /.card-body -->
       </div>
+        <!-- Modal -->
+
+  <div class="modal fade" id="diskonlap" tabindex="-1" role="dialog" aria-labelledby="diskonlapLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="diskonlapLabel">Pemberitahuan</h5>
     
+        </div>
+        <div class="modal-body">
+          Kepada : <?= $_SESSION['login']['data']['nama']; ?>
+          <br><br>
+          <strong>Anda Mendapatkan Diskon!!</strong>
+          <p>Selamat untuk pelanggan yang bernama <?= $_SESSION['login']['data']['nama']; ?>, anda telah mendapatkan
+            diskon dari mitra <strong class="namamitra_dislap"></strong></p>
+          <p>Harga perbaikan Setelah di Diskon adalah : <strong class="harga_dislap"></strong></p>
+          <p>Mitra <strong class="namamitra_dislap"></strong> memberi keterangan :  <strong class="pesan_dislap"></strong></p>
+          <p>Dan TerimaKasih telah Memilih Mitra <strong class="namamitra_dislap"></strong></p>
+
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-block btn-warning btn-sm arsip_dislap" data-dismiss="modal" aria-label="Close">Arsipkan</button><br>
+        
+        <button class="btn btn-block btn-danger btn-sm">Hapus</button>
+      </div>
+      <form action="<?= BASEURL; ?>/pelanggan/diskondibaca" method="POST" id="formdiskon">
+        <input type="text" name="idper_dislap" id="idper_dislap" hidden>
+      </form>
+    </div>
+  </div>
+</div>
+  
+  <div class="modal fade" id="tambahlap" tabindex="-1" role="dialog" aria-labelledby="tambahlapLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tambahlapLabel">Pemberitahuan</h5>
     
+        </div>
+        <div class="modal-body">
+          Kepada : <?= $_SESSION['login']['data']['nama']; ?>
+          <br><br>
+          <strong>Mitra Mengajukan Penambahan Harga</strong>
+          <p>Perbaikan anda sementara terhenti karena mitra mengajukan penambahan harga, perbaikan membutuhkan biaya :</p>
+          <p>Harga perbaikan : <strong class="harga_tambahlap"></strong></p>
+          <p>Mitra <strong class="namamitra_tambahlap"></strong>, memberi keterangan :  <strong class="pesan_tambahlap"></strong></p>
+          <p style="color:red">Mitra menunggu respon cepat dari anda, jika anda menerima, silahkan tekan tombol setuju, dan jika tidak, perbaikan akan di hentikan dan silahkan ambil barang di Mitra tempat perbaikan.</p>
+          <p>Dan TerimaKasih telah Memilih Mitra <strong class="namamitra_tambahlap"></strong></p>
+
+      </div>
+      <div class="modal-footer">
+       
+        <button type="button" class="btn btn-block btn-success btn-sm lanjutlap" data-dismiss="modal" aria-label="Close">Ya, Setuju</button><br>
+        <button class="btn btn-block btn-danger btn-sm">Tidak, Batalkan</button>
+      </div>
+      <form action="<?= BASEURL; ?>/pelanggan/lanjutperbaikan" method="POST" id="lanjutperbaikan">
+        <input type="text" name="idper_tambahlap" id="idper_tambahlap" hidden>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    $(document).ready(function(){
+      
+      $('.dislap').click(function(){
+        <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
+              if ("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>" === $(this).attr('id')) {
+                <?php if ($data['perbaikan']['notif'][$i] != NULL):?>
+                $('.namamitra_dislap').text("<?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?>");
+                $('.harga_dislap').text("<?= $data['perbaikan']['perbaikan_laptop'][$i]['harga']; ?>");
+                $('.pesan_dislap').text("<?= $data['perbaikan']['notif'][$i][0]['keterangan']; ?>");
+                $('#idper_dislap').val("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>");
+              <?php endif; ?>
+              }
+            
+        <?php endfor; ?>
+      });
+
+      $('.arsip_dislap').click(function(){
+          $('#formdiskon').submit();
+      });
+
+       $('.tmblap').click(function(){
+        <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
+              if ("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>" === $(this).attr('id')) {
+                <?php if ($data['perbaikan']['notif'][$i] != NULL):?>
+                $('.namamitra_tambahlap').text("<?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?>");
+                $('.harga_tambahlap').text("<?= $data['perbaikan']['perbaikan_laptop'][$i]['harga']; ?>");
+                $('.pesan_tambahlap').text("<?= $data['perbaikan']['notif'][$i][0]['keterangan']; ?>");
+                $('#idper_tambahlap').val("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>");
+              <?php endif; ?>
+              }
+        <?php endfor; ?>
+      });
+    
+      $('.lanjutlap').click(function(){
+        $('#lanjutperbaikan').submit();
+      });
+    });
+  </script>
+
+
+
