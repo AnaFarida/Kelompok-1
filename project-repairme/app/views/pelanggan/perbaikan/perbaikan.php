@@ -202,7 +202,7 @@
       <div class="modal-footer">
        
         <button type="button" class="btn btn-block btn-success btn-sm lanjutlap" data-dismiss="modal" aria-label="Close">Ya, Setuju</button><br>
-        <button class="btn btn-block btn-danger btn-sm">Tidak, Batalkan</button>
+        <button class="btn btn-block btn-danger btn-sm batalkanperbaikanlap">Tidak, Batalkan</button>
       </div>
       <form action="<?= BASEURL; ?>/pelanggan/lanjutperbaikan" method="POST" id="lanjutperbaikan">
         <input type="text" name="idper_tambahlap" id="idper_tambahlap" hidden>

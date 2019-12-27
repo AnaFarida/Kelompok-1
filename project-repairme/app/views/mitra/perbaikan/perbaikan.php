@@ -1,4 +1,8 @@
+<!-- daterange picker -->
+<link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/plugins/daterangepicker/daterangepicker.css">
 <script src="<?= BASEURL; ?>/panel-master/plugins/moment/moment.min.js"></script>
+<script src="<?= BASEURL; ?>/panel-master/plugins/daterangepicker/daterangepicker.js"></script>
+
 <script src="<?= BASEURL; ?>/js/autoNumeric.js"></script>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -131,6 +135,39 @@
                       Menunggu Persetujuan Penambahan Harga
                     </p>
                   <?php endif; ?>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-inline">
+                    <td>
+                        <?php if($data['perbaikan']['notif'][$i] != NULL): ?>
+                          <?php if($data['perbaikan']['notif'][$i][0]['dibaca'] == 'n'): ?>
+                            <script>
+                                $(document).ready(function(){
+                                  $(document).Toasts('create', {
+                                  title: 'Dari <?= $data['perbaikan']["pelanggan"][$i][0]["nama"]; ?>',
+                                  body: 'Pesan Untuk Anda :<strong> <?= $_SESSION['login']['data']['nama']; ?></strong><br> Anda mendapatkan pesan terbaru, terkait perbaikan yang anda lakukan.',
+                                  class: 'bg-white',
+                                  subtitle: 'Notifikasi',
+                                  icon: 'fas fa-envelope fa-lg'
+                                })
+                                });
+                            </script>
+                        <ul class="list-inline">
+                        <?php if ($data['perbaikan']['notif'][$i][0]['notifikasi'] == 'lanjut_perbaikan'):?>
+                          <a class="btn btn-app dislap" data-toggle="modal" data-target="#lanjutlap" id="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan'];?>">
+                            <i class="fas fa-envelope"></i>Pesan
+                          </a>
+                        <?php endif; ?>
+                        <?php if ($data['perbaikan']['notif'][$i][0]['notifikasi'] == 'batalkan_perbaikan'):?>
+                          <a class="btn btn-app tmblap" data-toggle="modal" data-target="#tambahlap" id="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan'];?>">
+                            <i class="fas fa-envelope"></i>Pesan
+                          </a>
+                        <?php endif; ?>
+                        </ul>
+                      <?php endif; ?>
+                        <?php endif; ?>
+                      </td>
                   </ul>
                 </td>
               </tr>
@@ -416,6 +453,65 @@
   </form>
 </div>
 
+<!-- untuk perubahan dll -->
+<!-- Modal -->
+<div class="modal fade" id="lanjutlap" tabindex="-1" role="dialog" aria-labelledby="lanjutlapLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="lanjutlapLabel">Pemberitahuan</h5>
+        
+      </div>
+      <div class="modal-body">
+        Kepada : <?= $_SESSION['login']['data']['nama']; ?>
+        <br><br>
+        <strong>Pelanggan Menerima Perbaikan Harga</strong>
+        <p>Silahkan lanjutkan perbaikan ini, dan untuk anda boleh mengatur ulang tanggal selesai perbaikan!</p>
+
+
+        <!-- Date and time range -->
+        <div class="form-group">
+          <label>Perkiraan Mitra :</label>
+          <div class="input-group">
+            <button type="button" class="btn btn-default float-right" id="daterange">
+            <i class="far fa-calendar-alt"></i>Perkiraan Lama Perbaikan
+            </button>
+          </div>
+        </div>
+        <div class="waktulaptop">
+          <table border="1" cellpadding="10">
+            <tr>
+              <td style="width: 15%"><strong>Waktu</strong></td>
+              <td><span id="reportrange"></span></td>
+            </tr>
+            <tr>
+              <td><strong style="width: 15%">Lama</strong></td>
+              <td><span id="reportrangeday"></span></td>
+            </tr>
+            <!-- /.form group -->
+          </table>
+          
+          <!-- untuk form lama perbaikan laptop -->
+          <form action="<?= BASEURL; ?>/mitra/ubahwaktulaptop" method="POST" id="ubahwaktulaptop">
+            <input type="text" name="id_perlapp" id="id_perlapp" hidden>
+            <input type="text" id="tanggallaptop" name="tanggallaptop" hidden>
+            <input type="text" id="harilaptop" name="harilaptop" hidden>
+            <input type="text" id="berakhirlaptop" name="berakhirlaptop" hidden>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-block btn-warning btn-sm ubahwaktulap" data-dismiss="modal" aria-label="Close">Atur Ulang Tanggal</button><br>
+        
+        <button class="btn btn-block btn-danger btn-sm" data-dismiss="modal" aria-label="Close">Tidak Perlu</button>
+      </div>
+      <form action="<?= BASEURL; ?>/pelanggan/diskondibaca" method="POST" id="formdiskon">
+        <input type="text" name="idper_dislap" id="idper_dislap" hidden>
+      </form>
+    </div>
+  </div>
+</div>
 
 <script>
 $(document).ready(function(){
@@ -428,6 +524,7 @@ $(document).ready(function(){
   $('.tmb_hrg_lap').hide();
   $('.diskon_lap').hide();
   $('#p_diskon_lap').hide();
+  $('.waktulaptop').hide();
   var harga_awal_lp;
   $('.btn-p-laptop').click(function(){
   <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
@@ -446,6 +543,7 @@ $(document).ready(function(){
 
     $('#hrg_laptop_ds').val('Harga Awal : ' + harga_awal_lp);
     $('#id_perbaikan_laptop').val("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>");
+    
 // const countday;
 // alert(Math.floor(persentase));
   $('.waktuberakhir').text('waktu tinggal : '+Math.floor(now) + ' hari');
@@ -601,9 +699,40 @@ $(document).ready(function(){
     location.reload();
   });
 
+    //Date range button
+    $('#daterange').daterangepicker(
+      {
+        minDate : 0,
+        ranges   : {
+          'Hari ini'       : [moment(), moment()],
+          '3 Hari '   : [moment(), moment().add(3, 'days')],
+          '1 Minggu' : [moment(), moment().add(7, 'days')],
+          '2 Minggu': [moment(), moment().add(12, 'days')],
+          '30 Hari'  : [moment(), moment().add(30,'days')]
+        },
+        minDate : moment()
+      },
+      function (start, end) {
+        $('#reportrange').text(start.format('D-MMMM-YYYY') + ' sampai ' + end.format('D-MMMM-YYYY'));
+        var range = Math.floor(Math.floor((end - start)) / 86400000);
+        $('#reportrangeday').text(range + ' hari');
+        $('#tanggallaptop').val($('#reportrange').text());
+        $('#harilaptop').val($('#reportrangeday').text());
+        $('#berakhirlaptop').val(Math.floor(end));
+        $('.waktulaptop').show();
+      }
+    );
 
+    $('.ubahwaktulap').click(function(){
+      // alert($('#id_perlapp').val());
+      $('#ubahwaktulaptop').submit();
+    });
 
+    $('.dislap').click(function(){
+      $('#id_perlapp').val($('.dislap').attr('id'));
+    });
 });
+
 </script>
 
 

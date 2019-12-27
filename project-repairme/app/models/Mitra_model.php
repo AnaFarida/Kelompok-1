@@ -202,7 +202,14 @@ class Mitra_model{
 			$n++;
 		}
 
-		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'pelanggan' => $pelanggan, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu];
+		$notif = [];
+		$o = 0;
+		foreach ($perbaikan_laptop as $laptop) {
+			$notif[$o] = $this->db->query("SELECT * FROM tb_notif_pelanggan WHERE id_perbaikan = ".$laptop['id_perbaikan']);
+			$o++;
+		}
+
+		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'pelanggan' => $pelanggan, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu, 'notif' => $notif];
 
 		return $result;
 	}
@@ -378,8 +385,18 @@ class Mitra_model{
 		}
 	}
 
+	public function ubahwaktuperbaikanlaptop($data){
+		$id = $data['id_perlapp'];
+		$waktu_tanggal = $data['tanggallaptop'];
+		$waktu_hari = $data['harilaptop'];
+		$berakhir = $data['berakhirlaptop'];
+		
+		$this->db->data("DELETE FROM `tb_notif_pelanggan` WHERE id_perbaikan = ". $id);
 
-	
+		return $this->db->data("UPDATE tb_waktu_perbaikan_laptop SET tb_waktu_perbaikan_laptop.waktu_tanggal = '$waktu_tanggal', tb_waktu_perbaikan_laptop.waktu_hari = '$waktu_hari', tb_waktu_perbaikan_laptop.berakhir = '$berakhir' WHERE id_perbaikan_laptop = $id");
+	}
+
+
 	public function getVerifikasi(){
 		$foto_transaksi = $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = ".$id_mitra);
 		$status_verifikasi = [];

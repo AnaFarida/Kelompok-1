@@ -290,6 +290,18 @@ public function profile(){
 	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
 		exit();
 	}
-}
+	}
+
+	public function ubahwaktulaptop(){
+	if($this->model('Mitra_model')->ubahwaktuperbaikanlaptop($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+		exit();
+	}
+	}
 	
 }
