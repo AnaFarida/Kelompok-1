@@ -52,7 +52,7 @@
                     <td><?= $mitra['nama']; ?></td>
                     <td><?= $mitra['nama_usaha']; ?></td>
                     <td><?= $mitra['email']; ?></td>
-                   <td><?= $mitra['no_telpon']; ?></td> 
+                   <td><?= $mitra['no_tlp']; ?></td> 
                     <td><?= $mitra['alamat']; ?></td>
                     <td><a href="<?= BASEURL; ?>/mitra/delete/<?= $mitra['id_mitra']; ?>" class="badge badge-danger float-right ml-1">Hapus</a></td>
                 </tr>

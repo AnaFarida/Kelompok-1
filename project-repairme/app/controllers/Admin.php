@@ -14,6 +14,7 @@ class Admin extends Controller{
 
 	public function permintaanverifikasi(){
 		$data['judul'] = 'Pengajuan Verifikasi';
+		$data['paket'] = $this->model('Barang_model')->getAllPaket();
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
 		$this->view('admin/templates/header',$data);
 		$this->view('admin/permintaanverifikasi', $data);
@@ -70,7 +71,7 @@ class Admin extends Controller{
 	public function dataMitra(){
 		$data['judul'] = 'Data Mitra';
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
-		$this->view('admin/templates/header');
+		$this->view('admin/templates/header', $data);
 		$this->view('admin/dataMitra', $data);
 		$this->view('admin/templates/footer');
 	}
@@ -78,7 +79,7 @@ class Admin extends Controller{
 	public function dataPelanggan(){
 		$data['judul'] = 'Data Pelanggan';
 		$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
-		$this->view('admin/templates/header');
+		$this->view('admin/templates/header',$data);
 		$this->view('admin/dataPelanggan', $data);
 		$this->view('admin/templates/footer');
 	}

@@ -1,3 +1,4 @@
+<script src="<?= BASEURL; ?>/js/autoNumeric.js"></script>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
@@ -129,7 +130,7 @@
      
        <input type="text"  id="nama_paket_ubh" name="nama_paket_ubh" class="form-control mt-20">
       <br>
-       <input type="text" id="harga_ubh" name="harga_ubh" class="form-control">
+       <input type="text" id="harga_ubh" name="harga_ubh" class="form-control"  data-a-sign="Rp. " data-a-dec="," data-a-sep="." placeholder="Harga Rupiah " required>
 
       
        <div class="modal-footer">
@@ -150,8 +151,10 @@
 
  <script> 
     $(document).ready(function(){
+      $('#harga').autoNumeric('init');
       <?php foreach ($data['paket'] as $paket) :?>
       $('.btn-u-paket').click(function(){
+         $('#harga_ubh').autoNumeric('init');
         // console.log($(this).val())
         if ("<?= $paket['id_paket']; ?>" === $(this).val()) {
           $('#id_ubh').val("<?= $paket['id_paket']; ?>");
@@ -160,7 +163,8 @@
         }
       });
  
- // alert("<?= $paket['id_paket']; ?>");
   <?php endforeach; ?>
+
+
 });
    </script>
