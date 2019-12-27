@@ -68,6 +68,7 @@ class Admin extends Controller{
 
 	//data Mitra
 	public function dataMitra(){
+		$data['judul'] = 'Data Mitra';
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
 		$this->view('admin/templates/header');
 		$this->view('admin/dataMitra', $data);
@@ -75,6 +76,7 @@ class Admin extends Controller{
 	}
 	//data Pelanggan
 	public function dataPelanggan(){
+		$data['judul'] = 'Data Pelanggan';
 		$data['pelanggan'] = $this->model('pelanggan_model')->getAllpelanggan();
 		$this->view('admin/templates/header');
 		$this->view('admin/dataPelanggan', $data);
