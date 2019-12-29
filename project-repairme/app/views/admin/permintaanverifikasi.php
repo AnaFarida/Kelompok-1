@@ -205,7 +205,6 @@
 
     $('.t-tolakmitra').click(function(){
        $('#id_mitra').val($(this).val());
-       alert('oke')
     });
  });
 

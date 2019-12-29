@@ -46,7 +46,6 @@
 							<tr>
 								<td>Nama Usaha</td>
 								<td><?= strtoupper($mitra['nama_usaha']); ?></td>
-								<td class="idmitra" hidden><?= $mitra['id_mitra']; ?></td>
 							</tr>
 							<tr>
 								<td>Jenis Perbaikan</td>
@@ -383,7 +382,7 @@ $(document).ready(function(){
 	//form laptop
 	$('.next3').click(function(){
 		$('#id_mitra').val($('.idmitra').text());
-		
+		alert($('.idmitra').text());
 		if ($('#selector_merk_laptop').val() == 'false') {
 			$('#id_tipe_laptop').val(0);
 			$('#merk_laptop_ttd').val($('#merklaptopbaru').val());

@@ -10,7 +10,8 @@
 				<div class="panel-collapse collapse in" id="support1">
 					<div class="panel-body">
 						Setelah mengisi form perbaikan, Pelanggan menunggu konfirmasi dari Mitra .
-						Setelah dikonfirmasi pelanggan akan menerima kisaran harga dan bisa meneruskan proses perbaikan. 
+						Setelah dikonfirmasi pelanggan akan menerima kisaran harga dan bisa meneruskan proses perbaikan.
+						<?php var_dump($data['perbaikan']['mitra']); ?> 
 					</div>
 				</div>
 			</div>
@@ -128,7 +129,7 @@
 		</tr>
 		<tr>
 			<td>
-				<h5 class="product-title font-alt"><?= $data['perbaikan2']['mitra'][$j][0]['nama_usaha']; ?></h5>
+				<h5 class="product-title font-alt"><?= $data['perbaikan2']['mitra'][$i][0]['nama_usaha']; ?></h5>
 			</td>
 			<td>
 				<h5 class="product-title font-alt"><?= $data['perbaikan2']['status'][$j][0]['status_perbaikan']; ?></h5>

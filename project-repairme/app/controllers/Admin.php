@@ -3,6 +3,9 @@ class Admin extends Controller{
 	public function index(){
 		$data['judul'] = 'Admin';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'admin') {
+		$call = $this->model('Admin_model');
+		$data['pelanggan'] = $call->jumlahpelanggan();
+		$data['mitra'] = $call->jumlahmitra();
 		$this->view('admin/templates/header', $data);
 		$this->view('admin/index',$data);
 		$this->view('admin/templates/footer');
@@ -29,6 +32,15 @@ class Admin extends Controller{
 		$call = $this->model('Barang_model');
 		$data['tipe'] = $call->getLaptop();
 		$data['merk'] = $call->getMerkLaptop();
+		$this->view('admin/templates/header',$data);
+		$this->view('admin/barang/tambahLaptop', $data);
+		$this->view('admin/templates/footer');
+	}
+
+	public function perbaikan(){
+		$data['judul'] = 'Data Perbaikan';
+		$call = $this->model('Admin_model');
+		$data['perbaikan'] = $call->getPerbaikan();
 		$this->view('admin/templates/header',$data);
 		$this->view('admin/barang/tambahLaptop', $data);
 		$this->view('admin/templates/footer');

@@ -25,50 +25,62 @@
             <label for="testimoni"> </label>
             <textarea class="form-control" id="testimoni" name="testimoni" placeholder=" Isi Testimoni"></textarea>
           </div>
+          <p class="ratingmitra"></p>
           <div class="form-group" id="rating">
             <label for="rating"> </label>
           </div>
+          <input type="text" id ="ratingMtr" name ="ratingMtr" hidden>
           <button class="btn btn-d btn-round btn-block" type="submit">Beri Rating
             <span class="review-text" style="display:none"><span id="rating" name="rating" ></span> </span>
           </button>
         </form>
       </div>
     </div>
-
-  <script>
-    $(document).ready(function(){
-      $('#pilihMitra').on('change',function(){
-        $('#id_mitra').val($(this).val());
-      });
-    });
-  </script>
-
-
-
-    <script src="<?= BASEURL; ?>/rating-master/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="<?= BASEURL; ?>/rating-master/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?= BASEURL; ?>/rating-master/dist/jquery.emojiRatings.min.js"></script>
-    <script>
-      $("#rating").emojiRating({
-        fontSize: 32,
+  <script>
+  
+        var countrating = 0;
+
+        $("#rating").emojiRating({
+        fontSize: 20,
         onUpdate: function(count) {
           $(".review-text").show();
+          countrating  = count;
           $("#rating").html(count + " Bintang");
           $('#ratingmitra').val(count);
         }
       });
-      $("#demo").submit( function(e) {
-        e.preventDefault();
-
-        var 
-          nama = $(this).find('#nama').val() + ' ' + $(this).find('#mitra').val(),
-          testimoni = $(this).find('#testimoni').val(),
-          rating = $(this).find('.rating').val(),
-          alert = 'Nama: ' + nama + '\ntestimoni: ' + testimoni + '\nrating: ' + rating;
-
-        window.alert(alert);
+        var jmluser;
+        var jmlrating;
+      $('#pilihMitra').on('change',function(){
+         $('#id_mitra').val($(this).val());
+         var rating = 0;
+         var jml = 0;
+         <?php foreach($data['rating'] as $rating): ?>
+          if ("<?= $rating['id_mitra']; ?>" == $(this).val()) {
+           var allrating = "<?= $rating['rating']; ?>";
+            if (rating == 0) {
+               rating = parseInt(allrating);
+                jml++;
+             }else{
+               rating = parseInt(allrating) + parseInt(rating);
+                jml++;
+             }
+          }
+         <?php endforeach; ?>
+        jmlrating= rating;
+        jmluser = jml;         
       });
-    </script>
-<div class="tutorial mt-70" style="position: absolute; right: 130%; width: 100%; top: 0%;" >
+      $('#rating').click(function(){
+        var jmlfinal = (countrating + jmlrating)/(jmluser+1);
+        $('#ratingMtr').val(jmlfinal);
+        alert(jmlfinal);
+      })
+
+  </script>
+
+<div class="tutorial mt-10" style="position: absolute; right: 130%; width: 100%; top: 0%;" >
   <h4 class="font-alt mb-0">Tutorial</h4>
   <hr class="divider-w mt-10 mb-20">
   <div class="panel-group" id="accordion">

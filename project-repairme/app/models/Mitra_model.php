@@ -319,7 +319,7 @@ class Mitra_model{
 	}
 
 	public function tolakpengajuanhp($data){
-	$id = $data['id_perbaikan_hpx'];
+ 	$id = $data['id_perbaikan_hpx'];
 	$keterangan_lain = $data['ketpenolakanhp'];
 	$harga = '1';
 	return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 3, tb_perbaikan_hp.harga = '$harga', tb_perbaikan_hp.keterangan_mitra = '$keterangan_lain'
@@ -472,5 +472,27 @@ class Mitra_model{
 		$id = $data['idselesaiperbaikanhp'];
 		return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 7 WHERE id_perbaikan = $id");	
 	}
+	public function cekveri(){
+		return $this->db->query("SELECT * FROM verifikasi_mitra");
 
+	}
+
+	public function laptopdijemput($data){
+		$id = $data['id_laptopdijemput'];
+		return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 8 WHERE id_perbaikan = $id");	
+	}
+
+	public function hpdijemput($data){
+		$id = $data['id_hpdijemput'];
+		return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 8 WHERE id_perbaikan = $id");	
+	}
+
+	public function hapusriwayatlaptop($data){
+		$id = $data['id_hapusriwayatlaptop'];
+		return $this->db->data("DELETE FROM tb_perbaikan_laptop WHERE id_perbaikan =".$id);
+	}
+	public function hapusriwayathp($data){
+	$id = $data['id_hapusriwayathp'];
+	return $this->db->data("DELETE FROM tb_perbaikan_hp WHERE id_perbaikan =".$id);
+	}
 }

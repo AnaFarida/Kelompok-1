@@ -3,7 +3,8 @@
 class Perbaikan extends Controller{
 	public function index(){
 		$data['judul'] = 'Perbaikan';
-		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		$call = $this->model('Mitra_model');
+		$data['mitra'] = $call->getAllMitra();
 		$this->view('templates/header',$data);
 		$this->view('perbaikan/index', $data);
 		$this->view('templates/footer');
@@ -43,6 +44,7 @@ class Perbaikan extends Controller{
 	}
 
 	public function pengajuanperbaikanlaptop(){
+		// var_dump($_POST);
 		if($this->model('Perbaikan_model')->tambahPerbaikanLaptop($_POST) > 0){
 			// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 			header ('Location: '.BASEURL.'/perbaikan/detail');
