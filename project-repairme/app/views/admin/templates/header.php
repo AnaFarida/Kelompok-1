@@ -156,7 +156,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= BASEURL; ?>/" class="nav-link">
+            <a href="<?= BASEURL; ?>/admin/permintaanverifikasi" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                   Konfirmasi Mitra

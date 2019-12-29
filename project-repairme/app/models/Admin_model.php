@@ -173,12 +173,19 @@ class Admin_model{
             }else{
             return false;
         }
-
-        
-        
+    }
 }
+        public function Verif_mitra($data){    
+    	$id_mitra = $data['id_mitra'];
+    	$lama= $data['lama'];
+    	$harga = $data['harga'];
+    	$tanggal_hari = $data['tanggal_hari'];
+    	return $this->db->data("INSERT INTO verifikasi_mitra VALUES (NULL,'$id_mitra','$lama', '$harga' ,'$tanggal_hari')");
+    }
+        
 
-}
+
+
 	
 
 

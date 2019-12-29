@@ -209,7 +209,21 @@ class Perbaikan_model{
 			$m++;
 		}
 
-		$result = ['perbaikan_hp' => $perbaikan_hp, 'mitra' => $mitra, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
+		$waktu = [];
+		$n = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$waktu[$n] = $this->db->query("SELECT waktu_tanggal,waktu_hari,berakhir FROM tb_waktu_perbaikan_hp WHERE id_perbaikan_hp = ".$hp['id_perbaikan']);
+			$n++;
+		}
+		
+		$notif = [];
+		$o = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$notif[$o] = $this->db->query("SELECT * FROM tb_notif_mitra WHERE id_perbaikan = ".$hp['id_perbaikan']);
+			$o++;
+		}
+
+		$result = ['perbaikan_hp' => $perbaikan_hp, 'mitra' => $mitra, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu, 'notif' => $notif];
 
 		return $result;
 	}

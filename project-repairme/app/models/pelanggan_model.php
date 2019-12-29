@@ -96,6 +96,12 @@ class pelanggan_model{
 		WHERE id_perbaikan =".$data);
 	}
 
+	public function diskondibaca2($id){
+		$data = $id['idper_dishp'];
+		return $this->db->data("UPDATE tb_notif_mitra SET tb_notif_mitra.dibaca = 'y'
+		WHERE id_perbaikan =".$data);
+	}
+
 	public function lanjutperbaikan($id){
 		$data = $id['idper_tambahlap'];
 		$this->db->data("DELETE FROM tb_notif_mitra WHERE id_perbaikan ='$data'");
@@ -104,6 +110,38 @@ class pelanggan_model{
 		WHERE id_perbaikan =".$data);
 	}
 
+	public function batalkanperbaikanlaptop($id){
+		$data = $id['idper_batallap'];
+		$this->db->data("DELETE FROM tb_notif_mitra WHERE id_perbaikan ='$data'");
+		$this->db->data("INSERT INTO tb_notif_pelanggan VALUES (NULL,'batalkan_perbaikan','Pelanggan Membatalkan Perbaikan',$data,'n')");
+		$this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 6
+		WHERE id_perbaikan =".$data);
+	}
+
+	public function hapusnotifdiskonlaptop($data){
+		$id = $data['idper_dislap2'];
+		return $this->db->data("DELETE FROM tb_notif_mitra WHERE id_perbaikan ='$id'");
+	}
+
+	public function hapusnotifdiskonlaptop2($data){
+		$id = $data['idper_dishp2'];
+		return $this->db->data("DELETE FROM tb_notif_mitra WHERE id_perbaikan ='$id'");
+	}
+
+	public function lanjutperbaikan2($id){
+	$data = $id['idper_tambahhp'];
+	$this->db->data("DELETE FROM tb_notif_mitra WHERE id_perbaikan ='$data'");
+	$this->db->data("INSERT INTO tb_notif_pelanggan VALUES (NULL,'lanjut_perbaikan2','Pelanggan Menyetujui Penambahan Harga',$data,'n')");
+	$this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 4 WHERE id_perbaikan = ".$data);
+	}
+
+	public function batalkanperbaikanhp($id){
+		$data = $id['idper_batalhp'];
+		$this->db->data("DELETE FROM tb_notif_mitra WHERE id_perbaikan ='$data'");
+		$this->db->data("INSERT INTO tb_notif_pelanggan VALUES (NULL,'batalkan_perbaikan2','Pelanggan Membatalkan Perbaikan',$data,'n')");
+		$this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 6
+		WHERE id_perbaikan =".$data);
+	}
 
 }
 	

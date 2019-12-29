@@ -97,6 +97,12 @@
                     </a>
                   </li>
                   <li class="nav-item">
+                    <a href="<?= BASEURL; ?>/pelanggan/batalperbaikan" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Perbaikan Dibatalkan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
                     <a href="pages/layout/fixed-sidebar.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Barang Selesai Di Perbaiki</p>

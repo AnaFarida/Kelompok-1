@@ -80,11 +80,25 @@ public function perbaikan(){
 	$call = $this->model('Perbaikan_model');
 	$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
 	$data['perbaikan'] = $call->getPerbaikan();
-	// $data['perbaikan2'] = $call->getPerbaikan2();
+	$data['perbaikan2'] = $call->getPerbaikan2();
 	// $data['voucher'] = $call->getVoucher();
 	// $data['voucher2'] = $call->getVoucher2();
 	$this->view('pelanggan/templates/header',$data);
 	$this->view('pelanggan/perbaikan/perbaikan', $data);
+	$this->view('pelanggan/templates/footer');
+	}
+}
+public function batalperbaikan(){	
+	$data['judul'] = 'Batal Perbaikan';
+	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+	$call = $this->model('Perbaikan_model');
+	$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
+	$data['perbaikan'] = $call->getPerbaikan();
+	$data['perbaikan2'] = $call->getPerbaikan2();
+	// $data['voucher'] = $call->getVoucher();
+	// $data['voucher2'] = $call->getVoucher2();
+	$this->view('pelanggan/templates/header',$data);
+	$this->view('pelanggan/perbaikan/batalperbaikan', $data);
 	$this->view('pelanggan/templates/footer');
 	}
 }
@@ -168,9 +182,92 @@ public function editProfile(){
 		}
 	 }
 
+	  public function hapusnotifdiskonlaptop(){
+		// var_dump($_POST);
+		if($this->model('pelanggan_model')->hapusnotifdiskonlaptop($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	 }
+
 	  public function lanjutperbaikan(){
 		// var_dump($_POST);
 		if($this->model('pelanggan_model')->lanjutperbaikan($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	 }
+
+	 public function batalkanperbaikanlaptop(){
+	 	// var_dump($_POST);
+		if($this->model('pelanggan_model')->batalkanperbaikanlaptop($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	 }
+
+	 public function diskondibaca2(){
+		// var_dump($_POST);
+		if($this->model('pelanggan_model')->diskondibaca2($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	 }
+
+	   public function hapusnotifdiskonlaptop2(){
+		// var_dump($_POST);
+		if($this->model('pelanggan_model')->hapusnotifdiskonlaptop2($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	 }
+
+	 public function lanjutperbaikan2(){
+	 	if($this->model('pelanggan_model')->lanjutperbaikan2($_POST) > 0){
+			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
+		// Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+			exit();
+		}
+	 }
+
+	 public function batalkanperbaikanhp(){
+	 	var_dump($_POST);
+		if($this->model('pelanggan_model')->batalkanperbaikanhp($_POST) > 0){
 			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
 		header ('Location: '.BASEURL.'/pelanggan/perbaikan');
 		// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');

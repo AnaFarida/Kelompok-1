@@ -12,7 +12,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/dist/css/adminlte.min.css">
     <!-- Toastr -->
-  <link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/plugins/toastr/toastr.min.css">
+  <link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/plugins/toastr/toastr.min.css">perb
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- jQuery -->
@@ -111,7 +111,13 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                    <a href="<?= BASEURL; ?>/mitra/batalperbaikan" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Perbaikan Dibatalkan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= BASEURL; ?>/mitra/selesaiperbaikan" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Barang Selesai Di Perbaiki</p>
                     </a>
