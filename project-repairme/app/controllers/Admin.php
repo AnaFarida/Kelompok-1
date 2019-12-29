@@ -95,7 +95,18 @@ class Admin extends Controller{
 		$this->view('admin/chart');
 		$this->view('admin/templates/footer');
 	}
-
+	public function Verifikasimitra(){
+		//var_dump($_POST);
+		if($this->model('Admin_model')->Verif_mitra($_POST) > 0){
+		header ('Location: '.BASEURL.'/admin/permintaanverifikasi');
+		Flasher::setFlash(' berhasil', 'terverifikasi', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/admin/permintaanverifikasi');
+		Flasher::setFlash(' gagal', 'diverifikasi', 'danger');	
+			exit();
+		}
+	}
 	public function tambahMerkLaptop(){
 		if($this->model('Barang_model')->tambahMerkLaptop($_POST) > 0){
 			Flasher::setFlash(' berhasil', 'ditambahkan', 'success');

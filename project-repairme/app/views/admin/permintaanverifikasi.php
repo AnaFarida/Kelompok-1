@@ -105,7 +105,7 @@
                               Terima 
                           </button>  
                       </td>
-                          <td> <button class="btn btn-danger btn-sm t-tolaklaptop" data-toggle="modal" data-target="#tolakLaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
+                          <td> <button class="btn btn-danger btn-sm t-tolakmitra" data-toggle="modal" data-target="#tolakMitra" value="<?= $mitra['id_mitra'] ?>">
                               Tolak
                           </button>
                         </td>
@@ -131,9 +131,8 @@
       <div class="modal-body">
                                             
   <!-- isi dari class modal -->                             
-     <form action="<?= BASEURL; ?>/admin/" method="POST">
-
-       <input type="text" class="form-control"  id="id_verifikasi" name="id_verifikasi" hidden>
+   
+       
         <label for="harga">Paket</label>
         <select class="form-control select2" style="width: 86%;">
                     <option selected="selected" disabled>paket</option>
@@ -160,16 +159,15 @@
                   </tr>
                
                 </table>
-      
+       <form action="<?= BASEURL; ?>/admin/verifikasimitra" method="POST">
+                <input type="text" id="id_mitra" name="id_mitra" hidden>
+                <input type="text" id="lama" name="lama" hidden>
+                <input type="text" id="harga" name="harga" hidden>
+                <input type="text" id="tanggal_hari" name="tanggal_hari" hidden>
+                <button type="submit" class="btn btn-dark btn-block mt-4">Verifikasi</button>
+                </form>
 
-     
-      
-       
-       <div class="modal-footer">
-        <button type="submit" name="submit" id="submit" class="btn btn-secondary">update</button>
-
-      </div>
-    </form>
+  
    
     </div>
     </div>
@@ -195,16 +193,24 @@
             $('#hargapakett').text("<?= $paket['harga']; ?>");
           }
         <?php endforeach; ?>
-       //  $('#tanggallaptop').val($('#reportrange').text());
-       //  $('#harilaptop').val($('#reportrangeday').text());
-       //  $('#berakhirlaptop').val(Math.floor(end));
-       //  $('.waktulaptop').show();
-       //  $('#lama').show();
+        $('#lama').val($('#reportrangeday').text());
+        $('#harga').val($('#hargapakett').text());
+        $('#tanggal_hari').val($('#reportrange').text());
+        // alert($('#lama').val());
+    });
+    $('.t-terrimapermintaan').click(function(){
+      $('#id_mitra').val($(this).val());
 
     });
 
-  });
+    $('.t-tolakmitra').click(function(){
+       $('#id_mitra').val($(this).val());
+       alert('oke')
+    });
+ });
 
 
 
 </script>
+
+ 
