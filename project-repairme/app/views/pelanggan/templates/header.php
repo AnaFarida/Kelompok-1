@@ -43,8 +43,6 @@
       <aside class="main-sidebar sidebar-dark-light elevation-2">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-          <img src="<?= BASEURL; ?>/panel-master/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
           <span class="brand-text font-weight-light">Pelanggan RepairMe</span>
         </a>
         <!-- Sidebar -->
@@ -66,14 +64,6 @@
               <!-- Add icons to the links using the .nav-icon class
               with font-awesome or any other icon font library -->
               <li class="nav-item">
-                <a href="<?= BASEURL; ?>/pelanggan" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>
-                    Beranda <span class="right badge badge-success">Data Cepat</span>
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-shopping-cart"></i>
                   <p>

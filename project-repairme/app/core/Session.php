@@ -42,7 +42,7 @@ class mySession{
 				}else if($_SESSION['login']['jenis'] == 'admin'){
 					echo '<li><a href="'.BASEURL.'/admin/index">DASHBOARD ADMIN</a></li>';
 				}else if($_SESSION['login']['jenis'] == 'pelanggan'){
-					echo '<li><a href="'.BASEURL.'/pelanggan/index">DASHBOARD PELANGGAN</a></li>';
+					echo '<li><a href="'.BASEURL.'/pelanggan/pengajuanperbaikan">DASHBOARD PELANGGAN</a></li>';
 				}
 			}
 		}

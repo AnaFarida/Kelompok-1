@@ -49,8 +49,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="<?= BASEURL; ?>/panel-master/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+      <img class="profile-user-img img-fluid img-circle" src="<?= BASEURL; ?>/panel-master/dist/img/user1.png" alt="User profile picture" width="100px" height="100px">
       <span class="brand-text font-weight-light">Dashboard Admin</span>
     </a>
 
