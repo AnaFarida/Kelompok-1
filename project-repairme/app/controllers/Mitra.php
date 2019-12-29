@@ -104,6 +104,21 @@ public function profile(){
 	}
 	}
 
+	public function selesaiperbaikan(){
+		$data['judul'] = 'Selesai Perbaikan';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+			$call = $this->model('Mitra_model');
+		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
+		 $data['mitra'] =$call->getMitraNow();
+		$this->view('mitra/templates/header',$data);
+		$this->view('mitra/perbaikan/selesaiperbaikan', $data);
+		$this->view('mitra/templates/footer');
+	}else{
+		header('Location:'.BASEURL.'/login/');
+	}
+	}
+
 	public function voucher(){
 		$data['judul'] = 'Perbaikan';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
@@ -420,6 +435,28 @@ public function profile(){
 	}
 	}
 
+	public function selesaiperbaikanlaptop(){
+	if($this->model('Mitra_model')->selesaiperbaikanlaptop($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' berhasil', 'diubah', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' gagal', 'diubah', 'danger');	
+		exit();
+	}	
+	}
 
+	public function selesaiperbaikanhp(){
+	if($this->model('Mitra_model')->selesaiperbaikanhp($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' berhasil', 'diubah', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' gagal', 'diubah', 'danger');	
+		exit();
+	}	
+	}
 
 }

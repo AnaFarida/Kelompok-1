@@ -281,6 +281,27 @@
         <!-- /.card-body -->
       </div>
 
+    <div class="modal fade" id="progress" tabindex="-1" role="dialog" aria-labelledby="progressLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="content" style="width: 30%; position: absolute; background-color: white; right: 30%; height: 100px;">
+          <div class="pers"   style="width: 90%; margin-top: 10px; margin-left: 10px;">
+            <p>Persentasi Waktu Berakhir :</p>
+            <div class="progress progress-sm">
+              
+              <div class="progress-bar hithari bg-success"></div>
+            </div>
+            <span class="badge bg-info persentase"></span>
+            <span class="badge bg-info waktuberakhir"></span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
 
 
         <!-- Modal -->
@@ -519,4 +540,76 @@
   </script>
 
 
+<script>
+  $(document).ready(function(){
+    $('.btn-p-laptop').click(function(){
+    <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
+    <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 4):?>
+    if ("<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>" === $(this).val()) {
+      var terakhir = "<?= $data['perbaikan']['waktu'][$i][0]['berakhir']; ?>";
+      //untuk mengambil sisa hari
+      var now = Math.floor(parseInt(terakhir) - Math.floor(moment())) / 86400000;
+      var ambilhari = "<?= $data['perbaikan']['waktu'][$i][0]['waktu_hari']; ?>";
+      let jmlHari = ambilhari.split(' ', 1);
+      let hariDilalui = parseInt(jmlHari) - Math.floor(now);
+      var persentase = Math.floor(hariDilalui) / parseInt(Math.floor(jmlHari)) * 100;
+      let get_harga_awal_lp = "<?= $data['perbaikan']['perbaikan_laptop'][$i]['harga']; ?>";
+      harga_awal_lp = get_harga_awal_lp;
+  // const countday;
+  // alert(Math.floor(persentase));
+    $('.waktuberakhir').text('waktu tinggal : '+Math.floor(now) + ' hari');
+    if (persentase <= 50) {
+    $('.hithari').attr('style', 'width:' + persentase + '%;');
+    $('.persentase').text(Math.floor(persentase) + '%');
+    }else if (persentase > 50 && persentase < 75) {
+    $('.hithari').attr('style', 'width:' + persentase + '%;');
+    $('.hithari').addClass('bg-warning');
+    $('.persentase').text(Math.floor(persentase) + '%')
+    }else{
+    $('.hithari').attr('style', 'width:' + persentase + '%;');
+    $('.hithari').addClass('bg-danger');
+    $('.persentase').text(Math.floor(persentase) + '%')
+    }
+    }
+  <?php endif; ?>
+  <?php endfor; ?>
+  });
 
+  $('.btn-p-hp').click(function(){
+    <?php for ($i=0; $i < count($data['perbaikan2']['perbaikan_hp']); $i++):?>
+    <?php if ($data['perbaikan2']['perbaikan_hp'][$i]['id_status_perbaikan'] == 4):?>
+    if ("<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>" === $(this).val()) {
+      var terakhir = "<?= $data['perbaikan2']['waktu'][$i][0]['berakhir']; ?>";
+      //untuk mengambil sisa hari
+      var now = Math.floor(parseInt(terakhir) - Math.floor(moment())) / 86400000;
+      var ambilhari = "<?= $data['perbaikan2']['waktu'][$i][0]['waktu_hari']; ?>";
+      let jmlHari = ambilhari.split(' ', 1);
+      let hariDilalui = parseInt(jmlHari) - Math.floor(now);
+      var persentase = Math.floor(hariDilalui) / parseInt(Math.floor(jmlHari)) * 100;
+      let get_harga_awal_lp = "<?= $data['perbaikan2']['perbaikan_hp'][$i]['harga']; ?>";
+      harga_awal_lp = get_harga_awal_lp;
+  // const countday;
+  // alert(Math.floor(persentase));
+    $('.waktuberakhir').text('waktu tinggal : '+Math.floor(now) + ' hari');
+    if (persentase <= 50) {
+    $('.hithari').attr('style', 'width:' + persentase + '%;');
+    $('.persentase').text(Math.floor(persentase) + '%');
+    }else if (persentase > 50 && persentase < 75) {
+    $('.hithari').attr('style', 'width:' + persentase + '%;');
+    $('.hithari').addClass('bg-warning');
+    $('.persentase').text(Math.floor(persentase) + '%')
+    }else{
+    $('.hithari').attr('style', 'width:' + persentase + '%;');
+    $('.hithari').addClass('bg-danger');
+    $('.persentase').text(Math.floor(persentase) + '%')
+    }
+    }
+  <?php endif; ?>
+  <?php endfor; ?>
+  });
+
+
+
+
+  });
+</script>

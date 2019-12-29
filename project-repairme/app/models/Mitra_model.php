@@ -462,4 +462,15 @@ class Mitra_model{
 
 		return $this->db->data("UPDATE tb_waktu_perbaikan_hp SET tb_waktu_perbaikan_hp.waktu_tanggal = '$waktu_tanggal', tb_waktu_perbaikan_hp.waktu_hari = '$waktu_hari', tb_waktu_perbaikan_hp.berakhir = '$berakhir' WHERE id_perbaikan_hp = $id");
 	}
+
+	public function selesaiperbaikanlaptop($data){
+		$id = $data['idselesaiperbaikanlaptop'];
+		return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 7 WHERE id_perbaikan = $id");	
+	}
+
+	public function selesaiperbaikanhp($data){
+		$id = $data['idselesaiperbaikanhp'];
+		return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 7 WHERE id_perbaikan = $id");	
+	}
+
 }

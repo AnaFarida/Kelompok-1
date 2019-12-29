@@ -38,17 +38,17 @@
         <div class="card-body p-0">
           <table class="table table-striped projects">
             <thead>
-              <tr>
-                <th style="width: 13%;">
+                <tr>
+                <th style="width: 13%">
                   Pelanggan
                 </th>
-                <th style="width: 13%;">
+                <th style="width: 13%">
                   Laptop
                 </th>
                 <th style="width: 13%;">
                   Kerusakan
                 </th>
-                <th style="width: 9%;">
+                <th style="width: 8%;">
                   Lama
                 </th>
                 <th style="width: 5%;">
@@ -60,8 +60,11 @@
                 <th style="width: 20%">
                   Harga Awal
                 </th>
-                <th style="width: 20%">
-                  Keterangan
+                <th style="width: 40%">
+                  Ubah Data
+                </th>
+                <th style="width: 30%;">
+                  
                 </th>
               </tr>
             </thead>
@@ -124,7 +127,7 @@
                   <ul class="list-inline">
                     <?php if($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 4): ?>
                     <button class="btn btn-dark btn-sm btn-p-laptop" data-toggle="modal" data-target="#ketlaptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                      Ubah Keterangan
+                      Keterangan
                     </button>
                    <?php endif; ?>
                     <?php if($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 5): ?>
@@ -132,6 +135,15 @@
                       Menunggu Persetujuan Penambahan Harga
                     </p>
                   <?php endif; ?>
+                  </ul>
+                </td>
+                  <td>
+                  <ul class="list-inline">
+                    <?php if($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 4): ?>
+                    <button class="btn btn-success btn-sm selesai-laptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
+                      Selesai
+                    </button>
+                   <?php endif; ?>
                   </ul>
                 </td>
                 <td>
@@ -213,8 +225,11 @@
                 <th style="width: 20%">
                   Harga Awal
                 </th>
-                <th style="width: 20%">
-                  Keterangan
+                <th style="width: 40%">
+                  Ubah Data
+                </th>
+                <th style="width: 30%;">
+                  
                 </th>
               </tr>
             </thead>
@@ -279,16 +294,24 @@
                   <ul class="list-inline">
                     <?php if($data['perbaikan2']['perbaikan_hp'][$i]['id_status_perbaikan'] == 4): ?>
                     <button class="btn btn-dark btn-sm btn-p-hp" data-toggle="modal" data-target="#kethp" value="<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>">
-                      Ubah Keterangan
+                      Keterangan
                     </button>
                    <?php endif; ?>
                     <?php if($data['perbaikan2']['perbaikan_hp'][$i]['id_status_perbaikan'] == 5): ?>
                     <p style="color: red">
                       Menunggu Persetujuan Penambahan Harga
-
                     </p>
                   <?php endif; ?>
                   </ul>
+                </td>
+                   <td>
+                  <ul class="list-inline">
+                    <?php if($data['perbaikan2']['perbaikan_hp'][$i]['id_status_perbaikan'] == 4): ?>
+                    <button class="btn btn-success btn-sm selesai-hp" value="<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>">
+                      Selesai
+                    </button>
+                   <?php endif; ?>
+                   </ul>
                 </td>
                 <td>
                   <ul class="list-inline">
@@ -633,6 +656,14 @@
   </div>
 </div>
 
+<div>
+  <form action="<?= BASEURL; ?>/mitra/selesaiperbaikanlaptop" method="POST" id="selesaiperbaikanlaptop">
+    <input type="text" name="idselesaiperbaikanlaptop" id="idselesaiperbaikanlaptop" hidden>
+  </form>
+  <form action="<?= BASEURL; ?>/mitra/selesaiperbaikanhp" method="POST" id="selesaiperbaikanhp">
+    <input type="text" name="idselesaiperbaikanhp" id="idselesaiperbaikanhp" hidden>
+  </form>
+</div>
 
 <script>
 $(document).ready(function(){
@@ -850,6 +881,35 @@ $(document).ready(function(){
     $('#idper_lanlap').val($('.dislap').attr('id'));
     $('#formhapuslanjutperbaikan').submit();
    });
+
+   var selesai = false;
+
+   $('.selesai-laptop').click(function(){
+    konfirmasi();
+    if (selesai == true) {
+      $('#idselesaiperbaikanlaptop').val($(this).val());
+      $('#selesaiperbaikanlaptop').submit();
+    }else{
+      alert('Silahkan Selesaikan Perbaikan');
+    }
+   });
+   $('.selesai-hp').click(function(){
+     konfirmasi();
+    if (selesai == true) {
+      $('#idselesaiperbaikanhp').val($(this).val());
+      $('#selesaiperbaikanhp').submit();
+    }else{
+      alert('Silahkan Selesaikan Perbaikan');
+    }
+   });
+
+   function konfirmasi(){
+    if (confirm('Apakah Perbaikan Telah Selesai?')) {
+      selesai = true;
+    }else{
+      selesai = false;
+    }
+   }
 });
 
 </script>
@@ -1071,6 +1131,7 @@ $(document).ready(function(){
     $('#formhapuslanjutperbaikan2').submit();
    });
 
+  
 
 });
 </script>

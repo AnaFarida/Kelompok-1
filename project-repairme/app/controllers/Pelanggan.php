@@ -88,6 +88,20 @@ public function perbaikan(){
 	$this->view('pelanggan/templates/footer');
 	}
 }
+public function batalperbaikan(){	
+	$data['judul'] = 'Batal Perbaikan';
+	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+	$call = $this->model('Perbaikan_model');
+	$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
+	$data['perbaikan'] = $call->getPerbaikan();
+	$data['perbaikan2'] = $call->getPerbaikan2();
+	// $data['voucher'] = $call->getVoucher();
+	// $data['voucher2'] = $call->getVoucher2();
+	$this->view('pelanggan/templates/header',$data);
+	$this->view('pelanggan/perbaikan/batalperbaikan', $data);
+	$this->view('pelanggan/templates/footer');
+	}
+}
 
 public function profile(){
 		// var_dump($_SESSION['login']['data']['nama_usaha']);
@@ -252,7 +266,7 @@ public function editProfile(){
 	 }
 
 	 public function batalkanperbaikanhp(){
-	 	// var_dump($_POST);
+	 	var_dump($_POST);
 		if($this->model('pelanggan_model')->batalkanperbaikanhp($_POST) > 0){
 			$_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan';
 		header ('Location: '.BASEURL.'/pelanggan/perbaikan');

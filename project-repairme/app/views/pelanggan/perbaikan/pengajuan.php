@@ -198,6 +198,7 @@
                   </tr>
               </thead>
             <?php for ($i=0; $i < count($data['perbaikan2']['perbaikan_hp']); $i++):?>
+              <?php if ($data['perbaikan2']['status'][$i][0]['id_status_perbaikan'] == 1 || $data['perbaikan2']['status'][$i][0]['id_status_perbaikan'] == 2 || $data['perbaikan2']['status'][$i][0]['id_status_perbaikan'] == 3):?>
               <tbody>
                   <tr>
                       <td>
@@ -270,7 +271,7 @@
                       </td>
                   </tr>
               </tbody>
-              
+              <?php endif; ?>
             <?php endfor; ?>
           </table>
         </div>

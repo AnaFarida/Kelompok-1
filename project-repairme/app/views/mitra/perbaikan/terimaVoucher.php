@@ -285,9 +285,15 @@
             }
              laptop = false;
           <?php endfor; ?>
+
         }
       <?php endforeach; ?>
-      <?php foreach ($data['voucher2'] as $voucher):?>
+         // alert(hp);
+       
+    });
+
+    $('.terimaVoucher').click(function(){
+          <?php foreach ($data['voucher2'] as $voucher):?>
         if("<?= $voucher['voucher_hp']; ?>" === $('#cariVoucher').val()){
           <?php for ($i=0; $i < count($data['perbaikan2']['perbaikan_hp']); $i++):?>
             if ("<?= $voucher['id_perbaikan_hp']; ?>" === "<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>") {
@@ -311,11 +317,11 @@
               $('.pelangganhp').show();
             }
           hp = false;
+          <?php endfor; ?>
         }
-        <?php endfor; ?>
+        
          <?php endforeach; ?>
-         // alert(hp);
-         if (laptop === true && hp === true) {
+           if (laptop === true && hp === true) {
           alert("Voucher Tidak Di Temukan")
          }
     });
