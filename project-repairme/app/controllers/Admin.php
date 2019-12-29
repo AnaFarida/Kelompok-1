@@ -3,6 +3,9 @@ class Admin extends Controller{
 	public function index(){
 		$data['judul'] = 'Admin';
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'admin') {
+		$call = $this->model('Admin_model');
+		$data['pelanggan'] = $call->jumlahpelanggan();
+		$data['mitra'] = $call->jumlahmitra();
 		$this->view('admin/templates/header', $data);
 		$this->view('admin/index',$data);
 		$this->view('admin/templates/footer');

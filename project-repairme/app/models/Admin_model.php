@@ -182,8 +182,14 @@ class Admin_model{
     	$tanggal_hari = $data['tanggal_hari'];
     	return $this->db->data("INSERT INTO verifikasi_mitra VALUES (NULL,'$id_mitra','$lama', '$harga' ,'$tanggal_hari')");
     }
-        
+     
 
+     public function jumlahpelanggan(){
+     	return $this->db->query("SELECT COUNT(id_pelanggan) FROM tb_pelanggan");
+     }   
+     public function jumlahmitra(){
+     	return $this->db->query("SELECT COUNT(id_mitra) FROM tb_mitra");
+     }   
 
 
 	

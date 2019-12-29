@@ -113,6 +113,12 @@
                       <p>Barang Selesai Di Perbaiki</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="<?= BASEURL; ?>/mitra/riwayatperbaikan" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Riwayat Perbaikan</p>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item has-treeview">
