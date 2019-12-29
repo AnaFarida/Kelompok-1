@@ -103,16 +103,6 @@ var greyIcon = new L.Icon({
         </div>
       </div>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Support Question 2</a></h4>
-      </div>
-      <div class="panel-collapse collapse" id="support2">
-        <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 <div class="row mt-70 miniProfile" style="position: absolute; right: 10px; width: 30%; height: 500px; overflow: auto;">
   <div class="col-sm-12">
