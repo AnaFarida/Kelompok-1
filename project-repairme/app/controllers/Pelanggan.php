@@ -73,6 +73,19 @@ public function pengajuanperbaikan(){
 	}
 }
 
+public function selesaiperbaikan(){	
+	$data['judul'] = 'Selesai Perbaikan';
+	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+	$call = $this->model('Perbaikan_model');
+	$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
+	$data['perbaikan'] = $call->getPerbaikan();
+	$data['perbaikan2'] = $call->getPerbaikan2();
+	$this->view('pelanggan/templates/header',$data);
+	$this->view('pelanggan/perbaikan/selesaiperbaikan', $data);
+	$this->view('pelanggan/templates/footer');
+	}
+}
+
 
 public function perbaikan(){	
 	$data['judul'] = 'Perbaikan';
@@ -99,6 +112,21 @@ public function batalperbaikan(){
 	// $data['voucher2'] = $call->getVoucher2();
 	$this->view('pelanggan/templates/header',$data);
 	$this->view('pelanggan/perbaikan/batalperbaikan', $data);
+	$this->view('pelanggan/templates/footer');
+	}
+}
+
+public function riwayatperbaikan(){	
+	$data['judul'] = 'Riwayat Perbaikan';
+	if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
+	$call = $this->model('Perbaikan_model');
+	$data['pelanggan'] = $this->model('pelanggan_model')->getPelNow();
+	$data['perbaikan'] = $call->getPerbaikan();
+	$data['perbaikan2'] = $call->getPerbaikan2();
+	// $data['voucher'] = $call->getVoucher();
+	// $data['voucher2'] = $call->getVoucher2();
+	$this->view('pelanggan/templates/header',$data);
+	$this->view('pelanggan/perbaikan/riwayatperbaikan', $data);
 	$this->view('pelanggan/templates/footer');
 	}
 }

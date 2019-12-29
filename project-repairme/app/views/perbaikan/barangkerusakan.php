@@ -38,29 +38,37 @@
 				<div class="tab-pane" id="data-sheet">
 					<table class="table table-striped ds-table table-responsive">
 						<tbody>
+							<?php foreach ($data['id'] as $mitra):?>
 							<tr>
-								<th>Title</th>
-								<th>Info</th>
+								<th>Mitra</th>	
+								<th>Informasi</th>
 							</tr>
 							<tr>
-								<td>Compositions</td>
-								<td>Jeans</td>
+								<td>Nama Usaha</td>
+								<td><?= strtoupper($mitra['nama_usaha']); ?></td>
+								<td class="idmitra" hidden><?= $mitra['id_mitra']; ?></td>
 							</tr>
 							<tr>
-								<td>Size</td>
-								<td>44, 46, 48</td>
+								<td>Jenis Perbaikan</td>
+								<td><?= strtoupper($mitra['jenis']); ?></td>
 							</tr>
 							<tr>
-								<td>Color</td>
-								<td>Black</td>
+								<td>No Telfon</td>
+								<td><?= $mitra['no_tlp']; ?></td>
 							</tr>
 							<tr>
-								<td>Brand</td>
-								<td>Somebrand</td>
+								<td>Email</td>
+								<td><?= $mitra['email']; ?></td>
 							</tr>
+							<tr>
+								<td>Alamat Usaha</td>
+								<td><?= $mitra['alamat']; ?></td>
+							</tr>
+							<?php endforeach; ?>
 						</tbody>
 					</table>
 				</div>
+				
 				<div class="tab-pane" id="reviews">
 					<div class="comments reviews">
 						<div class="comment clearfix">
@@ -156,20 +164,29 @@
 	<div class="panel-group" id="accordion">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Bagaimana Jika Merk Tidak Ada DI daftar?</a></h4>
+				<h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Bagaimana Jika Merk Tidak Ada DI Daftar?</a></h4>
 			</div>
 			<div class="panel-collapse collapse in" id="support1">
 				<div class="panel-body">
-					Pilih mitra yang anda inginkan dengan menekan area peta, deskripsi mitra akan muncul bersamaan dengan rating mitra.
+					Pilih merk hp yang akan ada perbaiki, jika merk hp yang akan anda perbaiki tidak ada maka pilih "Tidak Ada di Daftar" dan masukkan merk hp anda .
 				</div>
 			</div>
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Support Question 2</a></h4>
+				<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">agaimana Jika Tipe Tidak Ada DI Daftar?</a></h4>
 			</div>
 			<div class="panel-collapse collapse" id="support2">
-				<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+				<div class="panel-body">Pilih tipe hp yang akan anda perbaiki, jika tipe hp yang akan anda perbaiki tidak ada maka pilih "Tidak Ada di Daftar" dan masukkan tipe hp anda .
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support3">agaimana Jika Kerusakan Tidak Ada DI Daftar?</a></h4>
+			</div>
+			<div class="panel-collapse collapse" id="support3">
+				<div class="panel-body">Pilih Kerusakan hp yang akan anda perbaiki, jika Kerusakan hp yang akan anda perbaiki tidak ada maka pilih "Tidak Ada di Daftar" dan masukkan Kerusakan hp anda .
 				</div>
 			</div>
 		</div>

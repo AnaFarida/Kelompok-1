@@ -51,18 +51,15 @@
                 <th style="width: 15%">
                   Harga
                 </th>
-                <th style="width: 15%;">
-                  
-                </th>
               </tr>
             </thead>
             <tbody>
               <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-              <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == '7'):?>
+              <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == '8'):?>
               <tr>
                 <td>
                   <a>
-                    <?= $data['perbaikan']['pelanggan'][$i][0]['nama']; ?>
+                    <?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?>
                   </a>
                 </td>
                 <td>
@@ -80,13 +77,6 @@
                 <td >
                   <ul class="list-inline">
                     <?= $data['perbaikan']['harga'][$i]; ?>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="list-inline">
-                    <button class="btn btn-success btn-sm selesai-laptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                      Telah Dijemput
-                    </button>
                   </ul>
                 </td>
               </tr>
@@ -136,11 +126,11 @@
             </thead>
             <tbody>
               <?php for ($i=0; $i < count($data['perbaikan2']['perbaikan_hp']); $i++):?>
-              <?php if ($data['perbaikan2']['perbaikan_hp'][$i]['id_status_perbaikan'] == '7'):?>
+              <?php if ($data['perbaikan2']['perbaikan_hp'][$i]['id_status_perbaikan'] == '8'):?>
               <tr>
                 <td>
                   <a>
-                    <?= $data['perbaikan2']['pelanggan'][$i][0]['nama']; ?>
+                    <?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?>
                   </a>
                 </td>
                 <td>
@@ -160,13 +150,6 @@
                     <?= $data['perbaikan2']['harga'][$i]; ?>
                   </ul>
                 </td>
-                 <td>
-                  <ul class="list-inline">
-                    <button class="btn btn-success btn-sm selesai-hp" value="<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>">
-                      Telah Dijemput
-                    </button>
-                  </ul>
-                </td>
               </tr>
             </tbody>
             <?php endif; ?>
@@ -177,11 +160,11 @@
       </div>
       <!-- /.card -->
       <div>
-        <form action="<?= BASEURL; ?>/mitra/laptopdijemput" method="POST" id="laptopdijemput">
-          <input type="text" name="id_laptopdijemput" id="id_laptopdijemput" hidden>
+        <form action="<?= BASEURL; ?>/mitra/hapusriwayatlaptop" method="POST" id="hapusriwayatlaptop">
+          <input type="text" name="id_hapusriwayatlaptop" id="id_hapusriwayatlaptop" hidden>
         </form>
-        <form action="<?= BASEURL; ?>/mitra/hpdijemput" method="POST" id="hpdijemput">
-          <input type="text" name="id_hpdijemput" id="id_hpdijemput" hidden>
+        <form action="<?= BASEURL; ?>/mitra/hapusriwayathp" method="POST" id="hapusriwayathp">
+          <input type="text" name="id_hapusriwayathp" id="id_hapusriwayathp" hidden>
         </form>
       </div>
 
@@ -189,30 +172,30 @@
       <script>
         $(document).ready(function(){
           var selesai = false;
-          $('.selesai-laptop').click(function(){
+          $('.hapus-laptop').click(function(){
             konfirmasi();
             if (selesai == true) {
-              $('#id_laptopdijemput').val($(this).val());
-              $('#laptopdijemput').submit();
+              $('#id_hapusriwayatlaptop').val($(this).val());
+              $('#hapusriwayatlaptop').submit();
             }else{
               alert('Silahkan Tunggu barang sampai dijemput');
             }
 
           });
 
-          $('.selesai-hp').click(function(){
+          $('.hapus-hp').click(function(){
            // alert($(this).val());
             konfirmasi();
             if (selesai == true) {
-              $('#id_hpdijemput').val($(this).val());
-              $('#hpdijemput').submit();
+              $('#id_hapusriwayathp').val($(this).val());
+              $('#hapusriwayathp').submit();
             }else{
               alert('Silahkan Tunggu barang sampai dijemput');
             }            
           });
 
           function konfirmasi(){
-            if (confirm('Apakah Barang Benar-Benar Telah Dijemput?')) {
+            if (confirm('Apakah Anda Ingin Menghapus Perbaikan Ini??')) {
               selesai = true;
             }else{
               selesai = false;

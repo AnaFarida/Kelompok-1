@@ -10,12 +10,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Perbaikan Selesai</h1>
+          <h1>Perbaikan Selesai (Siap Jemput)</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Perbaikan</a></li>
-            <li class="breadcrumb-item active">Pengajuan Perbaikan</li>
+            <li class="breadcrumb-item active">Selesai Perbaikan </li>
           </ol>
         </div>
       </div>
@@ -51,9 +51,6 @@
                 <th style="width: 15%">
                   Harga
                 </th>
-                <th style="width: 15%;">
-                  
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -62,7 +59,7 @@
               <tr>
                 <td>
                   <a>
-                    <?= $data['perbaikan']['pelanggan'][$i][0]['nama']; ?>
+                    <?= $data['perbaikan']['mitra'][$i][0]['nama_usaha']; ?>
                   </a>
                 </td>
                 <td>
@@ -82,15 +79,7 @@
                     <?= $data['perbaikan']['harga'][$i]; ?>
                   </ul>
                 </td>
-                <td>
-                  <ul class="list-inline">
-                    <button class="btn btn-success btn-sm selesai-laptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                      Telah Dijemput
-                    </button>
-                  </ul>
-                </td>
               </tr>
-                  
             </tbody>
             <?php endif; ?>
             <?php endfor; ?>
@@ -129,9 +118,6 @@
                 <th style="width: 15%">
                   Harga
                 </th>
-                <th style="width: 15%;">
-                  
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -140,7 +126,7 @@
               <tr>
                 <td>
                   <a>
-                    <?= $data['perbaikan2']['pelanggan'][$i][0]['nama']; ?>
+                    <?= $data['perbaikan2']['mitra'][$i][0]['nama_usaha']; ?>
                   </a>
                 </td>
                 <td>
@@ -160,13 +146,6 @@
                     <?= $data['perbaikan2']['harga'][$i]; ?>
                   </ul>
                 </td>
-                 <td>
-                  <ul class="list-inline">
-                    <button class="btn btn-success btn-sm selesai-hp" value="<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>">
-                      Telah Dijemput
-                    </button>
-                  </ul>
-                </td>
               </tr>
             </tbody>
             <?php endif; ?>
@@ -176,47 +155,3 @@
         <!-- /.card-body -->
       </div>
       <!-- /.card -->
-      <div>
-        <form action="<?= BASEURL; ?>/mitra/laptopdijemput" method="POST" id="laptopdijemput">
-          <input type="text" name="id_laptopdijemput" id="id_laptopdijemput" hidden>
-        </form>
-        <form action="<?= BASEURL; ?>/mitra/hpdijemput" method="POST" id="hpdijemput">
-          <input type="text" name="id_hpdijemput" id="id_hpdijemput" hidden>
-        </form>
-      </div>
-
-
-      <script>
-        $(document).ready(function(){
-          var selesai = false;
-          $('.selesai-laptop').click(function(){
-            konfirmasi();
-            if (selesai == true) {
-              $('#id_laptopdijemput').val($(this).val());
-              $('#laptopdijemput').submit();
-            }else{
-              alert('Silahkan Tunggu barang sampai dijemput');
-            }
-
-          });
-
-          $('.selesai-hp').click(function(){
-           // alert($(this).val());
-            konfirmasi();
-            if (selesai == true) {
-              $('#id_hpdijemput').val($(this).val());
-              $('#hpdijemput').submit();
-            }else{
-              alert('Silahkan Tunggu barang sampai dijemput');
-            }            
-          });
-
-          function konfirmasi(){
-            if (confirm('Apakah Barang Benar-Benar Telah Dijemput?')) {
-              selesai = true;
-            }else{
-              selesai = false;
-            }
-          }
-        })
-      </script>

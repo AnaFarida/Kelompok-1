@@ -477,4 +477,22 @@ class Mitra_model{
 
 	}
 
+	public function laptopdijemput($data){
+		$id = $data['id_laptopdijemput'];
+		return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 8 WHERE id_perbaikan = $id");	
+	}
+
+	public function hpdijemput($data){
+		$id = $data['id_hpdijemput'];
+		return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 8 WHERE id_perbaikan = $id");	
+	}
+
+	public function hapusriwayatlaptop($data){
+		$id = $data['id_hapusriwayatlaptop'];
+		return $this->db->data("DELETE FROM tb_perbaikan_laptop WHERE id_perbaikan =".$id);
+	}
+	public function hapusriwayathp($data){
+	$id = $data['id_hapusriwayathp'];
+	return $this->db->data("DELETE FROM tb_perbaikan_hp WHERE id_perbaikan =".$id);
+	}
 }

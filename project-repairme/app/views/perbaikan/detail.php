@@ -5,11 +5,12 @@
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Bagaimana Jika Merk Tidak Ada DI daftar?</a></h4>
+					<h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Pengajuan Perbaikan ke Mitra</a></h4>
 				</div>
 				<div class="panel-collapse collapse in" id="support1">
 					<div class="panel-body">
-						Pilih mitra yang anda inginkan dengan menekan area peta, deskripsi mitra akan muncul bersamaan dengan rating mitra.
+						Setelah mengisi form perbaikan, Pelanggan menunggu konfirmasi dari Mitra .
+						Setelah dikonfirmasi pelanggan akan menerima kisaran harga dan bisa meneruskan proses perbaikan. 
 					</div>
 				</div>
 			</div>
@@ -60,7 +61,6 @@
 			<th>Keterangan Lain</th>
 			<th>Keterangan Dari Mitra</th>
 			<th>Harga</th>
-			<th>Batal</th>
 		</tr>
 		<tr>
 			<td>
@@ -97,21 +97,6 @@
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan']['harga'][$i]; ?></h5>
 			</td>
-			<td class="pr-remove">
-				 <?php if ($data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Menunggu Persetujuan'):?>
-                        <ul >
-                          <h5><button type="button" class="btn btn-block btn-round btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
-                        </ul>
-                 <?php elseif ( $data['perbaikan']['status'][$i][0]['status_perbaikan'] == 'Mitra Siap Memperbaiki'):?>
-                         <ul>
-                          <h5><button type="button" class="btn btn-block btn-round btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
-                          </ul>
-                 <?php else: ?>
-                 		<ul>
-                          <h5><button  disabled type="button" class="btn btn-default  pespro btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
-                        </ul>
-                        <?php endif; ?>
-			</td>
 			
 		</tr>
 		<?php endif; ?>
@@ -139,7 +124,7 @@
 			<th>Keterangan Lain</th>
 			<th>Keterangan Dari Mitra</th>
 			<th>Harga</th>
-			<th>Batal</th>
+			
 		</tr>
 		<tr>
 			<td>
@@ -166,31 +151,7 @@
 			<td class="hidden-xs">
 				<h5 class="product-title font-alt"><?= $data['perbaikan2']['harga'][$j]; ?></h5>
 			</td>
-			<td class="pr-remove">
-				 <?php if ($data['perbaikan2']['status'][$j][0]['status_perbaikan'] == 'Menunggu Persetujuan'):?>
-                        <ul >
-                          <h5><button type="button" class="btn btn-block btn-round btn-batalkan-pesanan" style="">Batalkan Perbaikan</button></h5>
-                        </ul>
-                 <?php elseif ( $data['perbaikan2']['status'][$j][0]['status_perbaikan'] == 'Mitra Siap Memperbaiki'):?>
-                         <ul>
-                          <h5><button  type="button" class="btn btn-block btn-round  btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
-                          </ul>
-                 <?php else: ?>
-                 		<ul>
-                          <h5><button disabled type="button" class="btn btn-default pespro btn-batalkan-pesanan " style="">Batalkan Perbaikan</button></h5>
-                        </ul>
-                        <?php endif; ?>
-                        <script>
-                        $(document).ready(function(){
-		
-							$('.btn-batalkan-pesanan').click(function() {
-								// $("").remove();
-							alert('anda yakin akan membatalkan perbaikan ??');
-							});
-						});
-                        </script>
-                        
-			</td>
+			
 		</tr>
 		<?php endif; ?>
 		<?php endfor; ?>
@@ -199,50 +160,13 @@
 
 </div>
 <div class="row">
-<div class="col-sm-3">
-<div class="form-group">
-	<input class="form-control" type="text" id="" name="" placeholder="kode voucher"/>
-</div>
-</div>
-<div class="col-sm-3">
-<div class="form-group">
-	<button class="btn btn-round btn-g" type="submit">Kirim</button>
-</div>
-</div>
-<div class="col-sm-3 col-sm-offset-3">
+<div class="col-sm-3" >
 <div class="form-group">
 	<a class="btn btn-block btn-round btn-d pull-right" href="<?= BASEURL; ?>/pelanggan/perbaikan">Lihat detail</a>
 </div>
 </div>
 </div>
 
-</div>
-</div>
-<hr class="divider-w">
-
-
-<div class="row mt-70">
-<div class="col-sm-5 col-sm-offset-7">
-<div class="shop-Cart-totalbox">
-	<h4 class="font-alt">Cart Totals</h4>
-	<table class="table table-striped table-border checkout-table">
-		<tbody>
-			<tr>
-				<th>Cart Subtotal :</th>
-				<td>£40.00</td>
-			</tr>
-			<tr>
-				<th>Shipping Total :</th>
-				<td>£2.00</td>
-			</tr>
-			<tr class="shop-Cart-totalprice">
-				<th>Total :</th>
-				<td>£42.00</td>
-			</tr>
-		</tbody>
-	</table>
-	<button class="btn btn-lg btn-block btn-round btn-d" type="submit">Proceed to Checkout</button>
-</div>
 </div>
 </div>
 </div>
