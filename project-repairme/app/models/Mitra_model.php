@@ -46,6 +46,7 @@ class Mitra_model{
 		$lng = $data['lng'];
 		$jenis = $data['jenis'];
 		$deskripsi = $data['deskripsi'];
+		$rating = $data['rating'];
 		//validasi username dan password
 
 		$username = strtolower(stripslashes($data['username']));
@@ -73,7 +74,7 @@ class Mitra_model{
 		$err = $ros + 1;
 
 		$this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')");
-		return $this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi')");
+		return $this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi','-')");
 	
 		
 	}

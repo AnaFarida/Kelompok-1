@@ -152,24 +152,7 @@
                       <p>Ubah Profile</p>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Ubah Password</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/fixed-footer.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Garansi</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Promosi</p>
-                    </a>
-                  </li>
+                 
                 </ul>
               </li>
               </li>

@@ -37,14 +37,14 @@ class Admin extends Controller{
 		$this->view('admin/templates/footer');
 	}
 
-	public function perbaikan(){
-		$data['judul'] = 'Data Perbaikan';
-		$call = $this->model('Admin_model');
-		$data['perbaikan'] = $call->getPerbaikan();
-		$this->view('admin/templates/header',$data);
-		$this->view('admin/barang/tambahLaptop', $data);
-		$this->view('admin/templates/footer');
-	}
+	// public function perbaikan(){
+	// 	$data['judul'] = 'Data Perbaikan';
+	// 	$call = $this->model('Admin_model');
+	// 	$data['perbaikan'] = $call->getPerbaikan();
+	// 	$this->view('admin/templates/header',$data);
+	// 	$this->view('admin/barang/tambahLaptop', $data);
+	// 	$this->view('admin/templates/footer');
+	// }
 
 	//controller tambahdatahp
 	public function tambahdatahp(){
@@ -236,6 +236,18 @@ public function deleteKerusakanhp($id){
 		}else{
 			Flasher::setFlash(' gagal', 'dihapus', 'danger');
 			header('Location: '.BASEURL.'/admin/tambahkerusakanhp');
+			exit;
+		}
+	}
+
+public function deleteMtr($id){
+		if ($this->model('Mitra_model')->deleteMitra($id) > 0) {
+			Flasher::setFlash(' berhasil', 'Menolak', 'success');
+			header('Location: '.BASEURL.'/admin/permintaanverifikasi');
+			exit;
+		}else{
+			Flasher::setFlash(' gagal', 'Menolak', 'danger');
+			header('Location: '.BASEURL.'/admin/permintaanverifikasi');
 			exit;
 		}
 	}

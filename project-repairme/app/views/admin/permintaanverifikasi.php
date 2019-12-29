@@ -105,9 +105,11 @@
                               Terima 
                           </button>  
                       </td>
-                          <td> <button class="btn btn-danger btn-sm t-tolakmitra" data-toggle="modal" data-target="#tolakMitra" value="<?= $mitra['id_mitra'] ?>">
+                          <td>
+                            <a href="<?= BASEURL; ?>/admin/deleteMtr/<?= $mitra['id_mitra'] ?>" class="badge badge-danger float-right ml-1"> <button class="btn btn-danger btn-sm ">
                               Tolak
-                          </button>
+                          </button></a>
+                          
                         </td>
                       
                   </tr>
