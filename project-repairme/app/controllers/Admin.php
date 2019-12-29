@@ -37,6 +37,15 @@ class Admin extends Controller{
 		$this->view('admin/templates/footer');
 	}
 
+	public function perbaikan(){
+		$data['judul'] = 'Data Perbaikan';
+		$call = $this->model('Admin_model');
+		$data['perbaikan'] = $call->getPerbaikan();
+		$this->view('admin/templates/header',$data);
+		$this->view('admin/barang/tambahLaptop', $data);
+		$this->view('admin/templates/footer');
+	}
+
 	//controller tambahdatahp
 	public function tambahdatahp(){
 		$data['judul'] = 'Tambah Daftar Handphone';

@@ -43,6 +43,7 @@ class Perbaikan extends Controller{
 	}
 
 	public function pengajuanperbaikanlaptop(){
+		// var_dump($_POST);
 		if($this->model('Perbaikan_model')->tambahPerbaikanLaptop($_POST) > 0){
 			// Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
 			header ('Location: '.BASEURL.'/perbaikan/detail');

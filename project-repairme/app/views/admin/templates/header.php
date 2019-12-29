@@ -17,6 +17,8 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- jQuery -->
 <script src="<?= BASEURL; ?>/panel-master/plugins/jquery/jquery.min.js"></script>
+
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm">
 <div class="wrapper">
@@ -127,12 +129,20 @@
               </li>
             </ul>
           </li>
-          
+          <li class="nav-item">
+            <a href="<?= BASEURL; ?>/admin/perbaikan" class="nav-link">
+              <i class="nav-icon fas fa-poll-h"></i>
+              <p>
+                Data Perbaikan
+                <span class="right badge badge-warning">Edit</span>
+              </p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="<?= BASEURL; ?>/admin/dataMitra" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
-                  Mitra
+               Data Mitra
                 <span class="right badge badge-warning">Edit</span>
               </p>
             </a>

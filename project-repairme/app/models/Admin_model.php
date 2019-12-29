@@ -192,6 +192,10 @@ class Admin_model{
      }   
 
 
+	public function getPerbaikan(){
+		return $perbaikan_laptop = $this->db->query("SELECT * FROM tb_perbaikan_laptop");
+		
+	}
 	
 
 
