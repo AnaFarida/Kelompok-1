@@ -69,7 +69,7 @@
                   <p>
                     Barang
                     <i class="fas fa-angle-left right"></i>
-                    <span class="badge badge-info right">3</span>
+                    <span class="badge badge-info right">5</span>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
