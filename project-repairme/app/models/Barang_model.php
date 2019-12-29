@@ -41,11 +41,11 @@ class Barang_model{
 	}
 
 	public function getLaptop(){
-		return $this->db->query("SELECT * FROM tipe_laptop_view");
+		return $this->db->query("SELECT id_tipe_laptop, tipe_laptop, merk_laptop FROM tb_tipe_laptop JOIN tb_merk_laptop ON tb_tipe_laptop.id_merk_laptop = tb_merk_laptop.id_merk_laptop");
 	}
 
 	public function getHp(){
-		return $this->db->query("SELECT * FROM tipe_hp_view");
+		return $this->db->query("SELECT id_tipe_hp, tipe_hp, merk_hp FROM tb_tipe_hp JOIN tb_merk_hp ON tb_tipe_hp.id_merk_hp = tb_merk_hp.id_merk_hp");
 	}
 
 	// untuk menambah barang hp

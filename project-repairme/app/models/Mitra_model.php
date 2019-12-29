@@ -74,7 +74,7 @@ class Mitra_model{
 
 		$this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')");
 		return $this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi')");
-		 //&& $this->db->data("INSERT INTO `tb_rating`(`id_rating`, `id_pelanggan`, `id_mitra`, `rating`, `testimoni`) VALUES (NULL, 32, $err, 3, 'GOOD')")
+	
 		
 	}
 		
@@ -102,17 +102,6 @@ class Mitra_model{
 		 }
 		  
 	}
-
-	// public function getDeskripsi(){
-	// 	return $this->db->query("SELECT * FROM tb_deskripsi");
-	// }
-
-	// public function inputDeskripsi($data){
-	// $id = $data['id_mitra'];
-	// $deskripsi = $data['deskripsi'];
-	// $input=$this->db->data("INSERT INTO tb_mitra VALUES ($id,'$deskripsi')");
-	// return $input;
-	// }
 
 	public function updateDeskripsi($data){
 	$id = $data['id_mitra'];
@@ -285,7 +274,14 @@ class Mitra_model{
 			$n++;
 		}
 
-		$result = ['perbaikan_hp' => $perbaikan_hp, 'pelanggan' => $pelanggan, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu];
+		$notif = [];
+		$o = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$notif[$o] = $this->db->query("SELECT * FROM tb_notif_pelanggan WHERE id_perbaikan = ".$hp['id_perbaikan']);
+			$o++;
+		}
+
+		$result = ['perbaikan_hp' => $perbaikan_hp, 'pelanggan' => $pelanggan, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu, 'notif' => $notif];
 
 		return $result;
 
@@ -408,5 +404,62 @@ class Mitra_model{
 		$result = ['foto_transaksi' => $foto_transaksi,  'status' => $status_perbaikan];
 
 		return $result;
+	}
+
+	public function arsipbatalperbaikanlaptop($data){
+		$id = $data['id_arsiplaptop'];
+		return $this->db->data("UPDATE tb_notif_pelanggan SET tb_notif_pelanggan.dibaca = 'y' WHERE id_perbaikan = ". $id);
+	}
+	public function arsipbatalperbaikanhp($data){
+		$id = $data['id_arsiphp'];
+		return $this->db->data("UPDATE tb_notif_pelanggan SET tb_notif_pelanggan.dibaca = 'y' WHERE id_perbaikan = ". $id);
+	}
+	public function hapusbatalperbaikanlaptop($data){
+		$id = $data['id_batallaptop'];
+		$this->db->data("DELETE FROM `tb_notif_pelanggan` WHERE id_perbaikan = ". $id);
+		return $this->db->data("DELETE FROM `tb_perbaikan_laptop` WHERE id_perbaikan = ". $id);
+	}
+	public function hapusbatalperbaikanhp($data){
+		$id = $data['id_batalhp'];
+		$this->db->data("DELETE FROM `tb_notif_pelanggan` WHERE id_perbaikan = ". $id);
+		return $this->db->data("DELETE FROM `tb_perbaikan_hp` WHERE id_perbaikan = ". $id);
+	}
+
+	public function ubahperbaikan2($data){
+	$id = $data['id_perbaikan_hp'];
+	$harga = $data['hrg_hp_final'];
+	$kethplain = $data['kethplain'];
+	$pemberhentian = $data['pemberhentian2'];
+	// $arr = [$id,$harga,$kethplain,$pemberhentian];
+	// return $arr;
+	if ($pemberhentian == 'true') {
+		$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'tambah_harga2', '$kethplain', $id, 'n')");
+		return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 5, tb_perbaikan_hp.harga = '$harga', tb_perbaikan_hp.keterangan_mitra = '$kethplain' WHERE id_perbaikan = $id");
+	}else{
+	$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'diskon2', '$kethplain', $id, 'n')");
+	return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.harga = '$harga'
+		WHERE id_perbaikan = $id");
+	}
+	}
+
+	public function hapusnotiflanjutperbaikan($data){
+		$id = $data['idper_lanlap'];
+		return $this->db->data("DELETE FROM tb_notif_pelanggan WHERE id_perbaikan = ". $id);	
+	}
+
+	public function hapusnotiflanjutperbaikan2($data){
+		$id = $data['idper_lanhp'];
+		return $this->db->data("DELETE FROM tb_notif_pelanggan WHERE id_perbaikan = ". $id);	
+	}
+
+	public function ubahwaktuperbaikanhp($data){
+		$id = $data['id_perhpp'];
+		$waktu_tanggal = $data['tanggalhp'];
+		$waktu_hari = $data['harihp'];
+		$berakhir = $data['berakhirhp'];
+		
+		$this->db->data("DELETE FROM `tb_notif_pelanggan` WHERE id_perbaikan = ". $id);
+
+		return $this->db->data("UPDATE tb_waktu_perbaikan_hp SET tb_waktu_perbaikan_hp.waktu_tanggal = '$waktu_tanggal', tb_waktu_perbaikan_hp.waktu_hari = '$waktu_hari', tb_waktu_perbaikan_hp.berakhir = '$berakhir' WHERE id_perbaikan_hp = $id");
 	}
 }

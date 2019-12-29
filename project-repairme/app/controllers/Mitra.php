@@ -162,6 +162,22 @@ public function profile(){
 	}
 	}
 
+	public function batalperbaikan(){
+		$data['judul'] = 'Batal Perbaikan';
+		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'mitra'){
+		$call = $this->model('Mitra_model');
+		$data['mitra'] =$call->getMitraNow();
+		$data['voucher2'] = $call->getVoucher2();
+		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
+		$this->view('mitra/templates/header',$data);
+		$this->view('mitra/perbaikan/batalperbaikan', $data);
+		$this->view('mitra/templates/footer');
+	}else{
+		header('Location:'.BASEURL.'/login/');
+	}
+	}
+
 	public function permintaanverifikasi(){
 		$data['judul'] = 'Pengajuan Verifikasi';
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra($data);
@@ -295,13 +311,115 @@ public function profile(){
 	public function ubahwaktulaptop(){
 	if($this->model('Mitra_model')->ubahwaktuperbaikanlaptop($_POST) > 0){
 	header ('Location: '.BASEURL.'/mitra/perbaikan');
-	Flasher::setFlash(' berhasil', 'ditambahkan', 'success');
+	Flasher::setFlash(' berhasil', 'diubah', 'success');
 		exit();
 	}else {
 	header ('Location: '.BASEURL.'/mitra/perbaikan');
-	Flasher::setFlash(' gagal', 'ditambahkan', 'danger');	
+	Flasher::setFlash(' gagal', 'diubah', 'danger');	
+		exit();
+	}
+	}
+
+	public function arsipbatalperbaikanlaptop(){
+	if($this->model('Mitra_model')->arsipbatalperbaikanlaptop($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/batalperbaikan');
+	Flasher::setFlash(' berhasil', 'diarsipkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/batalperbaikan');	
 		exit();
 	}
 	}
 	
+	public function arsipbatalperbaikanhp(){
+	// var_dump($_POST);
+	if($this->model('Mitra_model')->arsipbatalperbaikanhp($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/batalperbaikan');
+	Flasher::setFlash(' berhasil', 'diarsipkan', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/batalperbaikan');	
+		exit();
+	}
+	}
+
+
+	public function hapusbatalperbaikanlaptop(){
+	if($this->model('Mitra_model')->hapusbatalperbaikanlaptop($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/batalperbaikan');
+	Flasher::setFlash(' berhasil', 'dihapus', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/batalperbaikan');	
+		exit();
+	}
+	}
+
+	public function hapusbatalperbaikanhp(){
+	// var_dump($_POST);
+	if($this->model('Mitra_model')->hapusbatalperbaikanhp($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/batalperbaikan');
+	Flasher::setFlash(' berhasil', 'dihapus', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/batalperbaikan');	
+		exit();
+	}
+	}
+	//untuk hp
+
+
+	public function ubahperbaikan2(){
+ 	// var_dump($_POST);
+ 	if($this->model('Mitra_model')->ubahperbaikan2($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/perbaikan');
+		Flasher::setFlash(' berhasil', 'diubah', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/perbaikan');
+		Flasher::setFlash(' gagal', 'diubah', 'danger');	
+			exit();
+		}
+	}
+
+	public function hapusnotiflanjutperbaikan(){
+		if($this->model('Mitra_model')->hapusnotiflanjutperbaikan($_POST) > 0){
+		header ('Location: '.BASEURL.'/mitra/perbaikan');
+		Flasher::setFlash(' berhasil', 'diubah', 'success');
+			exit();
+		}else {
+		header ('Location: '.BASEURL.'/mitra/perbaikan');
+		Flasher::setFlash(' gagal', 'diubah', 'danger');	
+			exit();
+		}
+	}
+
+	public function ubahwaktuhp(){
+	// var_dump($_POST);	
+	if($this->model('Mitra_model')->ubahwaktuperbaikanhp($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' berhasil', 'diubah', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' gagal', 'diubah', 'danger');	
+		exit();
+	}
+	}
+
+	public function hapusnotiflanjutperbaikan2(){
+	// var_dump($_POST);
+	if($this->model('Mitra_model')->hapusnotiflanjutperbaikan2($_POST) > 0){
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' berhasil', 'diubah', 'success');
+		exit();
+	}else {
+	header ('Location: '.BASEURL.'/mitra/perbaikan');
+	Flasher::setFlash(' gagal', 'diubah', 'danger');	
+		exit();
+	}
+	}
+
+
+
 }
