@@ -75,12 +75,13 @@ var greyIcon = new L.Icon({
     <script>
     $(marker).click(function(){
     $('#id').attr('value', '<?= $mitra['id_mitra']; ?>');
+    
     $('.miniProfile').show();
     $('.pilihMitra').show();
     $('.tutorial').hide();
     $('.namaMitra').text('<?= $mitra['nama_usaha']; ?>');
     $('.descMitra').text('<?= $mitra['deskripsi']; ?>');
-
+    $('.rating').text('<?= $mitra['rating']; ?>');   
     $('.fotoMitra').attr('src','<?= BASEURL; ?>/img/mitra/<?=$mitra['foto_usaha'] ?>');
     map.setView([<?= $mitra['lat']; ?>, <?= $mitra['lng']; ?>], 17);
     });
@@ -98,6 +99,7 @@ var greyIcon = new L.Icon({
       <div class="panel-collapse collapse in" id="support1">
         <div class="panel-body">
           Pilih mitra yang anda inginkan dengan menekan area peta, deskripsi mitra akan muncul bersamaan dengan rating mitra.
+          <?php// var_dump($data['rating']); ?>
         </div>
       </div>
     </div>
@@ -120,14 +122,17 @@ var greyIcon = new L.Icon({
       <li class="active"><a href="#description" data-toggle="tab"><span class="icon-tools-2"></span>Deskripsi Mitra</a></li>
       
       <li><a href="#reviews" data-toggle="tab"><span class="icon-tools-2"></span>Reviews (2)</a></li>
-      
+      <input type="text" id="idmitra" name="idmitra" hidden>
     </ul>
 
     <div class="tab-content">
       <div class="tab-pane active" id="description">
         <img class="fotoMitra" src="" alt="" width="678px" height="452px">
         <p class="font-alt mb-0 descMitra"></p>
-       <i class="fa fa-star star"></i>
+        <div><p class="font-alt mb-0 " style="display: inline-block;">Rating :<p class="font-alt mb-0 rating" style="display: inline-block;"></p></p></div>
+       
+       <!-- <i class="fa fa-star star"></i> -->
+
         
       </div>
       <div class="tab-pane" id="data-sheet">

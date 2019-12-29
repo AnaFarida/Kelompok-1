@@ -53,14 +53,28 @@
                   <li class="list-group-item">
                     <b>No Telfon</b> <a class="float-right"><?= $mitra ['no_tlp'] ?></a>
                   </li>
+                <input type="text" id="id_mitra1" hidden>
                 </ul>
                 <?php endforeach; ?>
-                <a href="<?= BASEURL; ?>/home/paket" class="btn btn-danger btn-block"><b>Belum Terverifikasi</b></a>
+                <?php foreach ($data['cekveri'] as $cekveri):?>
+                <?php if ($cekveri['id_mitra'] == $_SESSION['login']['data']['id_mitra']):?>
+                <a href="<?= BASEURL; ?>/home/paket" class="btn btn-success"><b>Terverifikasi</b></a>
+                
+                <?php else: ?>
+                  <a href="<?= BASEURL; ?>/home/paket" class="btn btn-danger btn-blmverifikasi"><b>Belum Terverifikasi</b></a>
+              <?php endif; ?>
+              <?php endforeach; ?>
               </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
+<!-- <script>
+  $(document).ready(function(){
+    $('.btn-verifikasi').hide();
 
+
+  });
+</script> -->
             <!-- About Me Box -->
             <div class="card card-dark">
               <div class="card-header">
@@ -140,3 +154,4 @@
   <!-- /.content-wrapper -->
 
     <!-- end of content -->
+  

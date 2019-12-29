@@ -174,6 +174,7 @@ public function editProfile(){
 		
 		$data['judul'] = 'BeriRating';
 		$data['mitra'] = $this->model('Mitra_model')->getAllMitra();
+		$data['rating'] = $this->model('pelanggan_model')->getRating();
 		if ($_SESSION['login']['pesan'] == true && $_SESSION['login']['jenis'] == 'pelanggan'){
 		$this->view('templates/header',$data);
 		$this->view('pelanggan/rating/ratingmitra', $data);

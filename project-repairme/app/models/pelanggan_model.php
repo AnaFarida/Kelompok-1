@@ -79,15 +79,18 @@ class pelanggan_model{
 	public function getPelNow(){
 		return $this->db->query("SELECT * FROM tb_pelanggan WHERE id_pelanggan = " . $_SESSION['login']['data']['id_pelanggan']);
 	}
-	public function getRating($id){
+	public function getRating(){
 		return $this->db->query("SELECT * FROM tb_rating");
 	}
 	public function inputrating($data){
 		$id_pelanggan = $data['id_pelanggan'];
 		$id_mitra = $data['id_mitra'];
-		$rating = $data ['ratingmitra'];
-		$testimoni =$data ['testimoni'];
+		$rating = $data['ratingmitra'];
+		$testimoni =$data['testimoni'];
+		$ratingmtrr = $data['ratingMtr'];
+		$this->db->data("UPDATE tb_mitra SET tb_mitra.rating ='$ratingmtrr' where id_mitra = ".$id_mitra);
 		return $this->db->data("INSERT INTO tb_rating VALUES (NULL,'$id_pelanggan','$id_mitra','$rating','$testimoni')");
+	
 	}
 
 	public function diskondibaca($id){
