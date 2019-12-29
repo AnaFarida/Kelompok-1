@@ -117,85 +117,8 @@
             </div>
           </div>
         </section>
-        <hr size="5px">
-       <section class="module bg-dark-60 pt-0 pb-0 parallax-bg testimonial" data-background="<?= BASEURL; ?>/home-master/assets/images/testimonial_bg.jpg">
-          <div class="testimonials-slider pt-140 pb-140">
-            <ul class="slides">
-              <li>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="module-icon"><span class="icon-quote"></span></div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <blockquote class="testimonial-text font-alt">Pelayanan memuaskan</blockquote>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                      <div class="testimonial-author">
-                        <div class="testimonial-caption font-alt">
-                          <div class="testimonial-title">Jack Woods</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="module-icon"><span class="icon-quote"></span></div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <blockquote class="testimonial-text font-alt">I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</blockquote>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                      <div class="testimonial-author">
-                        <div class="testimonial-caption font-alt">
-                          <div class="testimonial-title">Jim Stone</div>
-                          <div class="testimonial-descr">SomeCompany INC, CEO</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="module-icon"><span class="icon-quote"></span></div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                      <blockquote class="testimonial-text font-alt">I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.</blockquote>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
-                      <div class="testimonial-author">
-                        <div class="testimonial-caption font-alt">
-                          <div class="testimonial-title">Adele Snow</div>
-                          <div class="testimonial-descr">SomeCompany INC, CEO</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="module-small">
+        <hr>
+        <section class="module-small" id="mitra">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
@@ -226,7 +149,7 @@
         <div class="module-small bg-dark">
           <div class="container">
             <div class="row">
-              <div class="col-sm-3" style="width:50%;text-align: center;">
+              <div class="col-sm-3" style="width:30%;text-align: center;">
                 <div class="widget" style="width:100%;text-align: center;">
                   <h5 class="widget-title font-alt">Hubungi</h5>
                   <p>Jl. Raya Situbondo, Blindungan, Kec. Bondowoso, Kab. Bondowoso, Jawa Timur 68211.</p>
@@ -234,7 +157,12 @@
                   <p>Email  : <a href="#">RepairMe@gmail.com</a></p>
                 </div>
               </div>
-              <div class="col-sm-3" style="width:50%;text-align: center;">
+              <div class="col-sm-3" style="width:30%;text-align: center;">
+                <div class="widget" style="width:100%;text-align: center;">
+                  <h5 class="widget-title font-alt"><a href="<?= BASEURL ?>/home/about">Perbaiki Sekarang</h5>
+                </div>
+              </div>
+               <div class="col-sm-3" style="width:30%;text-align: center;">
                 <div class="widget" style="width:100%;text-align: center;">
                   <h5 class="widget-title font-alt"><a href="<?= BASEURL ?>/home/about">Tentang Kami</h5>
                   <p> RepairMe merupakan tempat untuk perbaikan Hp dan Laptop anda serta dikerjakan oleh mitra terpercaya</p>

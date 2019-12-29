@@ -33,8 +33,17 @@
           </li>
           <li class="nav-item d-none d-sm-inline-block">
             <a href="<?= BASEURL; ?>/home/index" class="nav-link">Home</a>
+          </li>
+
         </ul>
-        </ul>
+
+         <ul class="navbar-nav ml-auto">
+          <li>
+            <i class="fa fa-sign-out-alt">  </i>
+          <a><?php mySession::sessionLogin(); ?></a>
+          </li>
+          </ul>
+     </ul>
       </nav>
       <!-- /.navbar -->
       <!-- Main Sidebar Container -->
