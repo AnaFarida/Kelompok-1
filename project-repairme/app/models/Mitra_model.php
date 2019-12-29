@@ -16,7 +16,7 @@ class Mitra_model{
 		return $this->db->query("SELECT tb_mitra.*, AVG(rating) as rating_data FROM `tb_mitra`, tb_rating WHERE tb_mitra.id_mitra = tb_rating.id_mitra GROUP BY id_mitra");
 	}
 	public function getMitraNow(){
-		return $this->db->query("SELECT tb_mitra.*, AVG(rating) as rating_data FROM `tb_mitra`, tb_rating WHERE tb_mitra.id_mitra = tb_rating.id_mitra AND tb_mitra.id_mitra = " . $_SESSION['login']['data']['id_mitra']);
+		return $this->db->query("SELECT tb_mitra.* FROM `tb_mitra` WHERE tb_mitra.id_mitra = " . $_SESSION['login']['data']['id_mitra']);
 	}
 	public function getDetail($id){
 		return $this->db->query("SELECT * FROM tb_mitra WHERE id_mitra = $id ");
@@ -494,5 +494,10 @@ class Mitra_model{
 	public function hapusriwayathp($data){
 	$id = $data['id_hapusriwayathp'];
 	return $this->db->data("DELETE FROM tb_perbaikan_hp WHERE id_perbaikan =".$id);
+	}
+
+	public function getPerbaikangraf(){
+		$perhp = $this->db->query("SELECT *, COUNT(id_pelanggan) AS data FROM `tb_perbaikan_laptop` WHERE id_mitra = ".$_SESSION['login']['data']['id_mitra']);
+		return perhp;
 	}
 }
