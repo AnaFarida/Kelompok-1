@@ -22,12 +22,12 @@ class mySession{
 		if (isset($_SESSION['login'])) {
 			if ($_SESSION['login']['pesan'] == 'true') {
 				if ($_SESSION['login']['jenis'] == 'mitra') {
-					echo '<li><a href="'.BASEURL.'/login/logout">LOGOUT MITRA</a></li>';
+					echo '<li><a href="'.BASEURL.'/login/logout">Logout Mitra</a></li>';
 
 				}else if($_SESSION['login']['jenis'] == 'admin'){
-					echo '<li><a href="'.BASEURL.'/login/logout">LOGOUT ADMIN</a></li>';
+					echo '<li><a href="'.BASEURL.'/login/logout">Logout Admin</a></li>';
 				}else if($_SESSION['login']['jenis'] == 'pelanggan'){
-					echo '<li><a href="'.BASEURL.'/login/logout">LOGOUT PELANGGAN</a></li>';
+					echo '<li><a href="'.BASEURL.'/login/logout">Logout Pelanggan</a></li>';
 				}
 			}
 		}

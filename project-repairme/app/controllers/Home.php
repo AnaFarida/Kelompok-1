@@ -43,13 +43,16 @@ class Home extends Controller{
 		$this->view('templates/footer');
 	}
 
-	// public function transaksi(){
-	// 	$data['mitra'] = $this->model('Mitra_model')->inputTransaksi();
-	// 	$data['judul'] = 'Paket Biaya Iklan';
-	// 	$this->view('templates/header', $data);
-	// 	$this->view('home/paket',$data);
-	// 	$this->view('templates/footer');
-	// }
+
+	public function testimoni(){
+		$data['paket'] = $this->model('Pelanggan_model')->inputrating($data);
+		$data['judul'] = 'testimoni';
+		$this->view('templates/header', $data);
+		$this->view('home/index/#testimonial',$data);
+		$this->view('templates/footer');
+	}
+
+	
 	public function transaksi(){
 		//var_dump($_POST);
 		if($this->model('Mitra_model')->inputTransaksi($_POST) > 0){

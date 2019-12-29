@@ -72,11 +72,11 @@
           <div class="collapse navbar-collapse" id="custom-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="<?= BASEURL; ?>/home/index2">HOME</a></li>
-              <li><a href="<?= BASEURL; ?>/home/index2">layanan</a></li>
-              <li><a href="<?= BASEURL; ?>/home/index/#folio">Mitra</a></li>
+              <li><a href="<?= BASEURL; ?>/home/index/#mitra">Mitra</a></li>
               <li><a href="<?= BASEURL; ?>/home/about">tentang kami</a></li>
-              <li><a class="fa fa-user" href="<?= BASEURL; ?>/login">Login</a></li>
               <li><a class="fa fa-address-card" href="" data-toggle="modal" data-target="#exampleModal">Registrasi</a></li>
+              <li><a class="fa fa-user" href="<?= BASEURL; ?>/login">Login</a></li>
+            
                   <?php mySession::dashboard(); ?>
                   <?php mySession::sessionLogin(); ?>
                 </ul>
@@ -104,7 +104,7 @@
                <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-round btn-b tombol-mitra">Gabung Menjadi Mitra</a>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-round btn-b" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
