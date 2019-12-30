@@ -10,16 +10,25 @@
 				</div>
 				<div class="panel-collapse collapse in" id="support1">
 					<div class="panel-body">
-						Pilih mitra yang anda inginkan dengan menekan area peta, deskripsi mitra akan muncul bersamaan dengan rating mitra.
+						Siap membayar biaya pemasangan iklan, sesuai dengan paket yang sudah ada.
 					</div>
 				</div>
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Support Question 2</a></h4>
+					<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
 				</div>
 				<div class="panel-collapse collapse" id="support2">
-					<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+					<div class="panel-body">Siap memberikan garansi atan diskon kepada pelanggan
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
+				</div>
+				<div class="panel-collapse collapse" id="support2">
+					<div class="panel-body">Siap mengikuti peraturan yang ada di Repairme
 					</div>
 				</div>
 			</div>
@@ -44,16 +53,16 @@
 				</div>
 				<div class="panel-collapse collapse in" id="support12">
 					<div class="panel-body">
-						Pilih mitra yang anda inginkan dengan menekan area peta, deskripsi mitra akan muncul bersamaan dengan rating mitra.
+						Isi form registrasi dengan benar, pastikan data yang anda masukkakan valid dan dapat dpertangggung jawabkan..
 					</div>
 				</div>
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#support22">Support Question 2</a></h4>
+					<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#support22">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
 				</div>
 				<div class="panel-collapse collapse" id="support22">
-					<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+					<div class="panel-body">Jika sudah melakukan registrasi, Mitra harus verifikasi dengan membayar biaya iklan.
 						<p></p>
 					</div>
 				</div>

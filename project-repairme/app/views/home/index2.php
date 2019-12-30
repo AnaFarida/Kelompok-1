@@ -16,7 +16,7 @@
 
   });
 </script>
- <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="<?= BASEURL; ?>/home-master/assets/images/bismillah.jpg">
+ <section class="home-section home-parallax home-fade home-full-height bg-dark-30" id="home" data-background="<?= BASEURL; ?>/home-master/assets/images/fix.jpeg">
         <div class="titan-caption">
           <div class="caption-content">
 

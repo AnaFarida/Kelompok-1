@@ -47,6 +47,7 @@ class Admin extends Controller{
 		$this->view('admin/templates/footer');
 	}
 
+
 	//controller tambahdatahp
 	public function tambahdatahp(){
 		$data['judul'] = 'Tambah Daftar Handphone';
@@ -237,6 +238,18 @@ public function deleteKerusakanhp($id){
 		}else{
 			Flasher::setFlash(' gagal', 'dihapus', 'danger');
 			header('Location: '.BASEURL.'/admin/tambahkerusakanhp');
+			exit;
+		}
+	}
+
+public function deleteMtr($id){
+		if ($this->model('Mitra_model')->deleteMitra($id) > 0) {
+			Flasher::setFlash(' berhasil', 'Menolak', 'success');
+			header('Location: '.BASEURL.'/admin/permintaanverifikasi');
+			exit;
+		}else{
+			Flasher::setFlash(' gagal', 'Menolak', 'danger');
+			header('Location: '.BASEURL.'/admin/permintaanverifikasi');
 			exit;
 		}
 	}

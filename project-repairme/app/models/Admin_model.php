@@ -274,6 +274,4 @@ class Admin_model{
      	return $this->db->query("SELECT COUNT(id_mitra) FROM tb_mitra");
      }   
 
-
-
 }
