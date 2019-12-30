@@ -371,13 +371,17 @@ class Mitra_model{
 		$pemberhentian = $data['pemberhentian'];
 		// $arr = [$id,$harga,$ketlaptoplain];
 		// return $arr;
-		if ($pemberhentian == 'true') {
+		if ($harga != '') {
+			if ($pemberhentian == 'true') {
 			$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'tambah_harga', '$ketlaptoplain', $id, 'n')");
-			return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 5, tb_perbaikan_laptop.harga = '$harga', tb_perbaikan_laptop.keterangan_mitra = '$ketlaptoplain' WHERE id_perbaikan = $id");
+			return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.id_status_perbaikan = 5, tb_perbaikan_laptop.harga = '$harga' WHERE id_perbaikan = $id");
+			}else{
+			$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'diskon', '$ketlaptoplain', $id, 'n')");
+			return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.harga = '$harga'
+				WHERE id_perbaikan = $id");
+			}
 		}else{
-		$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'diskon', '$ketlaptoplain', $id, 'n')");
-		return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.harga = '$harga'
-			WHERE id_perbaikan = $id");
+			return $this->db->data("UPDATE tb_perbaikan_laptop SET tb_perbaikan_laptop.keterangan_mitra = '$ketlaptoplain' WHERE id_perbaikan = $id");
 		}
 	}
 
@@ -432,13 +436,18 @@ class Mitra_model{
 	$pemberhentian = $data['pemberhentian2'];
 	// $arr = [$id,$harga,$kethplain,$pemberhentian];
 	// return $arr;
-	if ($pemberhentian == 'true') {
+	if ($harga != '') {
+		if ($pemberhentian == 'true') {
 		$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'tambah_harga2', '$kethplain', $id, 'n')");
 		return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.id_status_perbaikan = 5, tb_perbaikan_hp.harga = '$harga', tb_perbaikan_hp.keterangan_mitra = '$kethplain' WHERE id_perbaikan = $id");
 	}else{
 	$this->db->data("INSERT INTO tb_notif_mitra VALUES (NULL, 'diskon2', '$kethplain', $id, 'n')");
 	return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.harga = '$harga'
 		WHERE id_perbaikan = $id");
+	}
+	}else{
+	return $this->db->data("UPDATE tb_perbaikan_hp SET tb_perbaikan_hp.keterangan_mitra = '$kethplain'
+		WHERE id_perbaikan = $id");	
 	}
 	}
 

@@ -826,7 +826,7 @@ $(document).ready(function(){
           $('#pemberhentian').val('true');
           $('#hrg_laptop_final').val($('#hrg_laptop_1').val());
           $('#formlaptop').submit();  
-      }else{
+      }else if($('#hrg_laptop_1').val() == ''){
         $('#pemberhentian').val('false');
         $('#hrg_laptop_final').val($('#hrg_laptop_2').val());
         $('#formlaptop').submit();

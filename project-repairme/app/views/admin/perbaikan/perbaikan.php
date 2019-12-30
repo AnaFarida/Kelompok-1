@@ -2,10 +2,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
 <script src="<?= BASEURL; ?>/js/tableHTMLExport.js"></script>
-<!-- daterange picker -->
-<link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/plugins/daterangepicker/daterangepicker.css">
-<script src="<?= BASEURL; ?>/panel-master/plugins/moment/moment.min.js"></script>
-<script src="<?= BASEURL; ?>/panel-master/plugins/daterangepicker/daterangepicker.js"></script>
 <script src="<?= BASEURL; ?>/js/autoNumeric.js"></script>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -13,7 +9,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Perbaikan Selesai</h1>
+          <h1>Perbaikan</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -43,28 +39,30 @@
         </div>
         <div class="card-body p-0">
           <table class="table table-striped projects" id="tblaptop">
+            
             <thead>
               <tr>
-                <th style="width: 13%">
-                  Pelanggan
-                </th>
-                <th style="width: 13%">
-                  Laptop
-                </th>
-                <th style="width: 13%;">
-                  Kerusakan
+                <th style="width: 20%">
+                  Nama Pelanggan
                 </th>
                 <th style="width: 15%">
-                  Harga
+                  Merk Laptop
+                </th>
+                <th style="width: 15%">
+                  Tipe Laptop
                 </th>
                 <th style="width: 15%;">
-                  
+                  Kerusakan
                 </th>
+                <th style="width: 15%;">
+                  Keterangan Lain
+                </th>
+                
               </tr>
             </thead>
             <tbody>
               <?php for ($i=0; $i < count($data['perbaikan']['perbaikan_laptop']); $i++):?>
-              <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == '8'):?>
+              <?php if ($data['perbaikan']['perbaikan_laptop'][$i]['id_status_perbaikan'] == 8):?>
               <tr>
                 <td>
                   <a>
@@ -74,29 +72,25 @@
                 <td>
                   <ul class="list-inline">
                     <?= $data['perbaikan']['merk_laptop'][$i][0]['merk_laptop']; ?>
-                    <?= $data['perbaikan']['tipe_laptop'][$i][0]['tipe_laptop']; ?>
                   </ul>
                 </td>
                 <td>
                   <ul class="list-inline">
-                    <?= $data['perbaikan']['kerusakan_laptop'][$i][0]['kerusakan_laptop']; ?>,
-                    <?= $data['perbaikan']['keterangan_lain'][$i]; ?>
+                    <?= $data['perbaikan']['tipe_laptop'][$i][0]['tipe_laptop']; ?>
                   </ul>
                 </td>
                 <td >
                   <ul class="list-inline">
-                    <?= $data['perbaikan']['harga'][$i]; ?>
+                    <?= $data['perbaikan']['kerusakan_laptop'][$i][0]['kerusakan_laptop']; ?>
                   </ul>
                 </td>
-                <td>
+                <td >
                   <ul class="list-inline">
-                    <button class="btn btn-danger btn-sm hapus-laptop" value="<?= $data['perbaikan']['perbaikan_laptop'][$i]['id_perbaikan']; ?>">
-                    Hapus Perbaikan
-                    </button>
+                    <?= $data['perbaikan']['keterangan_lain'][$i]; ?>
                   </ul>
                 </td>
+                
               </tr>
-              
             </tbody>
             <?php endif; ?>
             <?php endfor; ?>
@@ -105,8 +99,8 @@
         <!-- /.card-body -->
       </div>
       <!-- /.card -->
-      <!-- untuk perbaikan hp -->
-      <!-- Default box -->
+      <br><br>
+      <!-- untuk hp -->
       <div class="card">
         <div class="card-header">
           <h3 class="card-title">Handphone</h3>
@@ -122,28 +116,30 @@
         </div>
         <div class="card-body p-0">
           <table class="table table-striped projects" id="tbhp">
+            
             <thead>
               <tr>
-                <th style="width: 13%">
-                  Pelanggan
-                </th>
-                <th style="width: 13%">
-                  Handphone
-                </th>
-                <th style="width: 13%;">
-                  Kerusakan
+                <th style="width: 20%">
+                  Nama Pelanggan
                 </th>
                 <th style="width: 15%">
-                  Harga
+                  Merk hp
+                </th>
+                <th style="width: 15%">
+                  Tipe hp
                 </th>
                 <th style="width: 15%;">
-                  
+                  Kerusakan
                 </th>
+                <th style="width: 15%;">
+                  Keterangan Lain
+                </th>
+              
               </tr>
             </thead>
             <tbody>
               <?php for ($i=0; $i < count($data['perbaikan2']['perbaikan_hp']); $i++):?>
-              <?php if ($data['perbaikan2']['perbaikan_hp'][$i]['id_status_perbaikan'] == 8):?>
+              <?php if ($data['perbaikan2']['status'][$i][0]['id_status_perbaikan'] == 8):?>
               <tr>
                 <td>
                   <a>
@@ -153,27 +149,24 @@
                 <td>
                   <ul class="list-inline">
                     <?= $data['perbaikan2']['merk_hp'][$i][0]['merk_hp']; ?>
-                    <?= $data['perbaikan2']['tipe_hp'][$i][0]['tipe_hp']; ?>
                   </ul>
                 </td>
                 <td>
                   <ul class="list-inline">
-                    <?= $data['perbaikan2']['kerusakan_hp'][$i][0]['kerusakan_hp']; ?>,
-                    <?= $data['perbaikan2']['keterangan_lain'][$i]; ?>
+                    <?= $data['perbaikan2']['tipe_hp'][$i][0]['tipe_hp']; ?>
                   </ul>
                 </td>
                 <td >
                   <ul class="list-inline">
-                    <?= $data['perbaikan2']['harga'][$i]; ?>
+                    <?= $data['perbaikan2']['kerusakan_hp'][$i][0]['kerusakan_hp']; ?>
                   </ul>
                 </td>
-                <td>
+                <td >
                   <ul class="list-inline">
-                    <button class="btn btn-danger btn-sm hapus-hp" value="<?= $data['perbaikan2']['perbaikan_hp'][$i]['id_perbaikan']; ?>">
-                    Hapus Perbaikan
-                    </button>
+                    <?= $data['perbaikan2']['keterangan_lain'][$i]; ?>
                   </ul>
                 </td>
+                
               </tr>
             </tbody>
             <?php endif; ?>
@@ -182,56 +175,15 @@
         </div>
         <!-- /.card-body -->
       </div>
-      <!-- /.card -->
-      <div>
-        <form action="<?= BASEURL; ?>/mitra/hapusriwayatlaptop" method="POST" id="hapusriwayatlaptop">
-          <input type="text" name="id_hapusriwayatlaptop" id="id_hapusriwayatlaptop" hidden>
-        </form>
-        <form action="<?= BASEURL; ?>/mitra/hapusriwayathp" method="POST" id="hapusriwayathp">
-          <input type="text" name="id_hapusriwayathp" id="id_hapusriwayathp" hidden>
-        </form>
-      </div>
-      <script>
-      $(document).ready(function(){
-      var selesai = false;
-      $('.hapus-laptop').click(function(){
-      konfirmasi();
-      if (selesai == true) {
-      $('#id_hapusriwayatlaptop').val($(this).val());
-      $('#hapusriwayatlaptop').submit();
-      }else{
-      alert('Silahkan Tunggu barang sampai dijemput');
-      }
-      });
-      $('.hapus-hp').click(function(){
-      // alert($(this).val());
-      konfirmasi();
-      if (selesai == true) {
-      $('#id_hapusriwayathp').val($(this).val());
-      $('#hapusriwayathp').submit();
-      }else{
-      alert('Silahkan Tunggu barang sampai dijemput');
-      }
-      });
-      function konfirmasi(){
-      if (confirm('Apakah Anda Ingin Menghapus Perbaikan Ini??')) {
-      selesai = true;
-      }else{
-      selesai = false;
-      }
-      }
-      })
-      </script>
-
-
-
-    <script>  
-    $(document).ready(function(){
-     $('#unduhdata').click(function(){
-     $("#tblaptop").tableHTMLExport({type:'csv',filename:'dataperbaikanlaptop.csv'});
-     });
-     $('#unduhdata2').click(function(){
-     $("#tbhp").tableHTMLExport({type:'csv',filename:'dataperbaikanhp.csv'});
-     });  
-    });
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper-->
+  <script>
+  $('#unduhdata').click(function(){
+  $("#tblaptop").tableHTMLExport({type:'csv',filename:'dataperbaikanlaptop.csv'});
+  });
+  $('#unduhdata2').click(function(){
+  $("#tbhp").tableHTMLExport({type:'csv',filename:'dataperbaikanhp.csv'});
+  });
   </script>

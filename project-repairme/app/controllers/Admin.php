@@ -41,8 +41,9 @@ class Admin extends Controller{
 		$data['judul'] = 'Data Perbaikan';
 		$call = $this->model('Admin_model');
 		$data['perbaikan'] = $call->getPerbaikan();
+		$data['perbaikan2'] = $call->getPerbaikan2();
 		$this->view('admin/templates/header',$data);
-		$this->view('admin/barang/tambahLaptop', $data);
+		$this->view('admin/perbaikan/perbaikan', $data);
 		$this->view('admin/templates/footer');
 	}
 

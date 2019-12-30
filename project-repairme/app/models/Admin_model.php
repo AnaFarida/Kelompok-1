@@ -38,7 +38,7 @@ class Admin_model{
 
 
 	public function getPerbaikan(){
-		$perbaikan_laptop = $this->db->query("SELECT * FROM tb_perbaikan_laptop WHERE id_mitra = ".$id_mitra);
+		$perbaikan_laptop = $this->db->query("SELECT * FROM tb_perbaikan_laptop");
 		$status_perbaikan = [];
 		$i = 0;
 		foreach ($perbaikan_laptop as $laptop) {
@@ -99,6 +99,89 @@ class Admin_model{
 		$result = ['perbaikan_laptop' => $perbaikan_laptop, 'pelanggan' => $pelanggan, 'tipe_laptop' => $tipe_laptop, 'status' => $status_perbaikan, 'merk_laptop' => $merk_laptop, 'kerusakan_laptop' => $kerusakan_laptop, 'keterangan_lain' => $ket_lain, 'harga' => $harga];
 
 		return $result;
+	}
+
+	public function getPerbaikan2(){
+		$perbaikan_hp = $this->db->query("SELECT * FROM tb_perbaikan_hp");
+		$status_perbaikan = [];
+		$i = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$status_perbaikan[$i] = $this->db->query("SELECT id_status_perbaikan,status_perbaikan FROM tb_status_perbaikan WHERE id_status_perbaikan = ".$hp['id_status_perbaikan']);
+			$i++;
+		}
+		$pelanggan = [];
+		$j = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$pelanggan[$j] = $this->db->query("SELECT nama FROM tb_pelanggan WHERE id_pelanggan = ".$hp['id_pelanggan']);
+			$j++;
+		}
+
+		$tipe_hp = [];
+		$merk_hp = [];
+		$k = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['id_tipe_hp'] != 0) {
+			$tipe_hp[$k] = $this->db->query("SELECT tipe_hp,id_merk_hp FROM tb_tipe_hp WHERE id_tipe_hp = ".$hp['id_tipe_hp']);
+			
+			
+			$merk_hp[$k] = $this->db->query("SELECT merk_hp FROM tb_merk_hp WHERE id_merk_hp = ".$tipe_hp[$k][0]['id_merk_hp']);
+
+
+			}else{
+				$tipe_hp[$k] = $this->db->query("SELECT tipe_hp FROM tb_ttd_hp WHERE id_ttd_hp = ".$hp['id_ttd_hp']);
+				$merk_hp[$k] = $this->db->query("SELECT merk_hp FROM tb_ttd_hp WHERE id_ttd_hp = ".$hp['id_ttd_hp']);
+			}
+			$k++;
+			
+		}
+
+		$kerusakan_hp = [];
+		$ket_lain = [];
+		$l = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['id_kerusakan_hp'] != 0) {
+				$kerusakan_hp[$l] = $this->db->query("SELECT kerusakan_hp FROM tb_kerusakan_hp WHERE id_kerusakan_hp = ".$hp['id_kerusakan_hp']);
+				if ($hp['kerusakan_lain'] == '') {
+					$ket_lain[$l] = '-';	
+				}else{
+				$ket_lain[$l] = $hp['kerusakan_lain']; 
+				}
+			}else{
+				$kerusakan_hp[$l][0]['kerusakan_hp'] = $hp['kerusakan_lain'];
+				$ket_lain[$l] = '-';
+			}
+			$l++;
+		}
+
+		$harga = [];
+		$m = 0;
+		foreach ($perbaikan_hp as $hp) {
+			if ($hp['harga'] == '0') {
+				$harga[$m] = 'Menunggu Kisaran Harga';
+			}else{
+				$harga[$m] = $hp['harga'];
+			}
+			$m++;
+		}
+
+		$waktu = [];
+		$n = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$waktu[$n] = $this->db->query("SELECT waktu_tanggal,waktu_hari,berakhir FROM tb_waktu_perbaikan_hp WHERE id_perbaikan_hp = ".$hp['id_perbaikan']);
+			$n++;
+		}
+
+		$notif = [];
+		$o = 0;
+		foreach ($perbaikan_hp as $hp) {
+			$notif[$o] = $this->db->query("SELECT * FROM tb_notif_pelanggan WHERE id_perbaikan = ".$hp['id_perbaikan']);
+			$o++;
+		}
+
+		$result = ['perbaikan_hp' => $perbaikan_hp, 'pelanggan' => $pelanggan, 'tipe_hp' => $tipe_hp, 'status' => $status_perbaikan, 'merk_hp' => $merk_hp, 'kerusakan_hp' => $kerusakan_hp, 'keterangan_lain' => $ket_lain, 'harga' => $harga, 'waktu' => $waktu, 'notif' => $notif];
+
+		return $result;
+
 	}
 
 	public function terimapengajuanlaptop($data){
@@ -190,14 +273,6 @@ class Admin_model{
      public function jumlahmitra(){
      	return $this->db->query("SELECT COUNT(id_mitra) FROM tb_mitra");
      }   
-
-
-	public function getPerbaikan(){
-		return $perbaikan_laptop = $this->db->query("SELECT * FROM tb_perbaikan_laptop");
-		
-	}
-	
-
 
 
 

@@ -1,3 +1,7 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
+<script src="<?= BASEURL; ?>/js/tableHTMLExport.js"></script>
 <!-- daterange picker -->
 <link rel="stylesheet" href="<?= BASEURL; ?>/panel-master/plugins/daterangepicker/daterangepicker.css">
 <script src="<?= BASEURL; ?>/panel-master/plugins/moment/moment.min.js"></script>
@@ -25,9 +29,12 @@
     <section class="content">
       <?php Flasher::flash(); ?>
       <!-- Default box -->
-      <div class="card card-dark">
+      <div class="card">
         <div class="card-header">
           <h3 class="card-title">Laptop</h3>
+          <br>
+          <i class="fas fa-file-download" style="display: inline-block;"></i>
+          <a href="#" id="unduhdata">Unduh Data</a>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
             <i class="fas fa-minus"></i></button>
@@ -36,7 +43,7 @@
           </div>
         </div>
         <div class="card-body p-0">
-          <table class="table table-striped projects">
+          <table class="table table-striped projects" id="tblaptop">
             <thead>
               <tr>
                 <th style="width: 13%">
@@ -93,9 +100,12 @@
     <!-- untuk perbaikan hp -->
 
           <!-- Default box -->
-      <div class="card card-dark">
+      <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Laptop</h3>
+          <h3 class="card-title">Handphone</h3>
+          <br>
+          <i class="fas fa-file-download" style="display: inline-block;"></i>
+          <a href="#" id="unduhdata2">Unduh Data</a>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
             <i class="fas fa-minus"></i></button>
@@ -104,7 +114,7 @@
           </div>
         </div>
         <div class="card-body p-0">
-          <table class="table table-striped projects">
+          <table class="table table-striped projects" id="tbhp">
             <thead>
               <tr>
                 <th style="width: 13%">
@@ -119,9 +129,7 @@
                 <th style="width: 15%">
                   Harga
                 </th>
-                <th style="width: 15%;">
-                  
-                </th>
+ 
               </tr>
             </thead>
             <tbody>
@@ -169,37 +177,13 @@
       </div>
 
 
-      <script>
-        $(document).ready(function(){
-          var selesai = false;
-          $('.hapus-laptop').click(function(){
-            konfirmasi();
-            if (selesai == true) {
-              $('#id_hapusriwayatlaptop').val($(this).val());
-              $('#hapusriwayatlaptop').submit();
-            }else{
-              alert('Silahkan Tunggu barang sampai dijemput');
-            }
-
-          });
-
-          $('.hapus-hp').click(function(){
-           // alert($(this).val());
-            konfirmasi();
-            if (selesai == true) {
-              $('#id_hapusriwayathp').val($(this).val());
-              $('#hapusriwayathp').submit();
-            }else{
-              alert('Silahkan Tunggu barang sampai dijemput');
-            }            
-          });
-
-          function konfirmasi(){
-            if (confirm('Apakah Anda Ingin Menghapus Perbaikan Ini??')) {
-              selesai = true;
-            }else{
-              selesai = false;
-            }
-          }
-        })
-      </script>
+          <script>  
+    $(document).ready(function(){
+     $('#unduhdata').click(function(){
+     $("#tblaptop").tableHTMLExport({type:'csv',filename:'dataperbaikanlaptop.csv'});
+     });
+     $('#unduhdata2').click(function(){
+     $("#tbhp").tableHTMLExport({type:'csv',filename:'dataperbaikanhp.csv'});
+     });  
+    });
+  </script>

@@ -382,7 +382,6 @@ $(document).ready(function(){
 	//form laptop
 	$('.next3').click(function(){
 		$('#id_mitra').val($('.idmitra').text());
-		alert($('.idmitra').text());
 		if ($('#selector_merk_laptop').val() == 'false') {
 			$('#id_tipe_laptop').val(0);
 			$('#merk_laptop_ttd').val($('#merklaptopbaru').val());
