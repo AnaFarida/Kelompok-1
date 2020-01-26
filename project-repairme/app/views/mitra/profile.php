@@ -56,14 +56,10 @@
                 <input type="text" id="id_mitra1" hidden>
                 </ul>
                 <?php endforeach; ?>
-                <?php foreach ($data['cekveri'] as $cekveri):?>
-                <?php if ($cekveri['id_mitra'] == $_SESSION['login']['data']['id_mitra']):?>
-                <a href="<?= BASEURL; ?>/home/paket" class="btn btn-success"><b>Terverifikasi</b></a>
-                
-                <?php else: ?>
-                  <a href="<?= BASEURL; ?>/home/paket" class="btn btn-danger btn-blmverifikasi"><b>Belum Terverifikasi</b></a>
-              <?php endif; ?>
-              <?php endforeach; ?>
+               
+                  <a href="<?= BASEURL; ?>/home/paket" class="btn btn-info btn-blmverifikasi"><b>Verifikasi</b></a>
+           
+
               </div>
               <!-- /.card-body -->
             </div>
