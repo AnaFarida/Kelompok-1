@@ -181,7 +181,7 @@
 				</div>
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">agaimana Jika Tipe Tidak Ada DI Daftar?</a></h4>
+						<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2"> Bagaimana Jika Tipe Tidak Ada DI Daftar?</a></h4>
 					</div>
 					<div class="panel-collapse collapse" id="support2">
 						<div class="panel-body">Pilih tipe hp yang akan anda perbaiki, jika tipe hp yang akan anda perbaiki tidak ada maka pilih "Tidak Ada di Daftar" dan masukkan tipe hp anda .
@@ -190,7 +190,7 @@
 				</div>
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support3">agaimana Jika Kerusakan Tidak Ada DI Daftar?</a></h4>
+						<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support3"> Bagaimana Jika Kerusakan Tidak Ada DI Daftar?</a></h4>
 					</div>
 					<div class="panel-collapse collapse" id="support3">
 						<div class="panel-body">Pilih Kerusakan hp yang akan anda perbaiki, jika Kerusakan hp yang akan anda perbaiki tidak ada maka pilih "Tidak Ada di Daftar" dan masukkan Kerusakan hp anda .
