@@ -1,24 +1,8 @@
 <?php Flasher::flash(); ?>
-
-<div class="col-sm-5 col-sm-offset-1 mb-sm-40 mt-70" >
-    <h4 class="font-alt">Login</h4>
-    <hr class="divider-w mb-10">
-    <form class="form"  action="<?= BASEURL; ?>/login/checklogin" method="POST">
-        <div class="form-group">
-            <input class="form-control" id="username" type="text" name="username" placeholder="Username"/>
-        </div>
-        <div class="form-group">
-            <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
-
-        </div>
-        <div class="form-group">
-            <button class="btn btn-round btn-b" type="submit">Login</button>
-        </div>
-        <div class="form-group"><a href="">Forgot Password?</a></div>
-    </form>
-</div>
-
-<div class="tutorial mt-70" style="position: absolute; right: 3%; width: 30%;">
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-6">
+<div class="tutorial mt-80" style="margin: 0 3%;">
     <h4 class="font-alt mb-0">Tutorial Login</h4>
     <hr class="divider-w mt-10 mb-20">
     <div class="panel-group" id="accordion">
@@ -43,6 +27,28 @@
       </div>
     </div>
   </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="loginpage  mt-80" style="margin: 0 3%;">
+    <h4 class="font-alt">Login</h4>
+    <hr class="divider-w mb-10">
+    <form class="form mt-30"  action="<?= BASEURL; ?>/login/checklogin" method="POST">
+        <div class="form-group">
+            <input class="form-control" id="username" type="text" name="username" placeholder="Username"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
+
+        </div>
+        <div class="form-group mt-30">
+            <button class="btn btn-round btn-b" type="submit">Login</button>
+        </div>
+        <div class="form-group"><a href="">Forgot Password?</a></div>
+    </form>
+</div>
+</div>
+ </div>
+</div>
 
 <script>
     $(document).ready(function(){

@@ -1,78 +1,73 @@
-<div class="container">
-	<!-- tutorial pertama -->
-	<div class="tutorial mt-70" style="position: absolute; left: 3%; width: 40%;">
-		<h4 class="font-alt mb-0">Ketentuan Untuk Menjadi Mitra</h4>
-		<hr class="divider-w mt-10 mb-20">
-		<div class="panel-group" id="accordion">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
-				</div>
-				<div class="panel-collapse collapse in" id="support1">
-					<div class="panel-body">
-						Siap membayar biaya pemasangan iklan, sesuai dengan paket yang sudah ada.
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
-				</div>
-				<div class="panel-collapse collapse" id="support2">
-					<div class="panel-body">Siap memberikan garansi atan diskon kepada pelanggan
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support2">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
-				</div>
-				<div class="panel-collapse collapse" id="support2">
-					<div class="panel-body">Siap mengikuti peraturan yang ada di Repairme
+<div class="container-fluid">
+	<div class="row mt-20">
+		<div class="col-sm-7">
+			<!-- tutorial pertama -->
+			<div class="tutorial mt-80" style="margin: 0 5%;">
+				<h4 class="font-alt mb-0">Ketentuan Untuk Menjadi Mitra</h4>
+				<hr class="divider-w mt-10 mb-20">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion" href="#support1">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
+						</div>
+						<div class="panel-collapse collapse in" id="support1">
+							<div class="panel-body">
+								Siap membayar biaya pemasangan iklan, sesuai dengan paket yang sudah ada.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<!-- tombol setuju -->
-	<div class="mt-70 syarat" style="position: absolute; right: 5%; width: 45%;">
-		<h4 class="font-alt mb-0">Setuju Dengan semua ketentuan dan peraturan RepairME?</h4>
-		<hr class="divider-w mt-10 mb-20">
-		<a href="<?= BASEURL; ?>" class="btn btn-block btn-round btn-d mt-10 batal" type="button" style="width: 48%; float: right; margin-left: 1px;">SAYA TIDAK SETUJU</a>
-		<button class="btn btn-block btn-round btn-d mt-10 setuju" type="button" style="width: 48%; float: right; margin-right: 1px;">SAYA SETUJU</button>
-	</div>
-	
-	<div class="tutorial2 mt-70" style="position: absolute; left: 3%; width: 40%;">
-		<h4 class="font-alt mb-0">Ketentuan Pengisian Registrasi</h4>
-		<hr class="divider-w mt-10 mb-20">
-		<div class="panel-group" id="accordion2">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion2" href="#support12">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
-				</div>
-				<div class="panel-collapse collapse in" id="support12">
-					<div class="panel-body">
-						Isi form registrasi dengan benar, pastikan data yang anda masukkakan valid dan dapat dpertangggung jawabkan..
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#support22">Apa Saja Yang Dibutuhkan Untuk Menjadi Mitra RepairME?</a></h4>
-				</div>
-				<div class="panel-collapse collapse" id="support22">
-					<div class="panel-body">Jika sudah melakukan registrasi, Mitra harus verifikasi dengan membayar biaya iklan.
-						<p></p>
-					</div>
-				</div>
+		<!-- tutup dari col-atas -->
+		<div class="col-sm-5">
+			<!-- tombol setuju -->
+			<div class="mt-80 syarat" style="margin:0 4%;">
+				<h4 class="font-alt mb-0">Setuju Dengan semua ketentuan?</h4>
+				<hr class="divider-w mt-10 mb-20">
+				<button class="btn btn-block btn-round btn-d mt-10 setuju" type="button">SAYA SETUJU</button>
+				<a href="<?= BASEURL; ?>" class="btn btn-block btn-round btn-d mt-10 batal" type="button">SAYA TIDAK SETUJU</a>
 			</div>
 		</div>
 	</div>
+</div>
 
+<!-- bagian kedua -->
+
+<div class="container-fluid">
+<div class="row">
+	<div class="col-sm-6">
+		<div class="tutorial2 mt-80" style="margin:0 5%;">
+			<h4 class="font-alt mb-0">Ketentuan Pengisian Registrasi</h4>
+			<hr class="divider-w mt-10 mb-20">
+			<div class="panel-group" id="accordion2">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title font-alt"><a data-toggle="collapse" data-parent="#accordion2" href="#support12">Bagaimana cara mengisi data diri yang baik?</a></h4>
+					</div>
+					<div class="panel-collapse collapse in" id="support12">
+						<div class="panel-body">
+							Isi form registrasi dengan benar, pastikan data yang anda masukkakan valid dan dapat dpertangggung jawabkan..
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title font-alt"><a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#support22">Bagaimana cara menentukan lokasi mitra?</a></h4>
+					</div>
+					<div class="panel-collapse collapse" id="support22">
+						<div class="panel-body">Jika sudah melakukan registrasi, Mitra harus verifikasi dengan membayar biaya iklan.
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- data diri -->
 
-	<div class="col-sm-5 formLocate mt-70" style="position: absolute; right: 7%;">
+	<div class="col-sm-6">	
+		<div class="formLocate mt-80" style="margin: 0 4%; min-height: 400px;">
 		<h4 class="font-alt judul">Data Diri</h4>
 		<hr class="divider-w mb-20">
 		<form class="form" id="regisMitra" action="<?=BASEURL;?>/mitra/insertMitra" method="POST" enctype="multipart/form-data">
@@ -93,26 +88,26 @@
 			</div>
 			
 			<!-- jenis usaha -->
-
-			<div class="jenisUsaha et-icons">
-				<span class="box1" style="width: 32%;">
-					<span class="icon-laptop" aria-hidden="true" style="width: 100%;">
-					<button class="btn btn-block btn-round btn-d btnlaptop" type="button">LAPTOP</button></span>
-				</span>
-				<span class="box1" style="width: 32%;">
-					<span class="icon-phone" aria-hidden="true" style="width: 100%;">
-						<button class="btn btn-block btn-round btn-d btnhp" type="button">HANDPHONE</button>
-					</span>
-				</span>
-				<span class="box1" style="width: 32%;">
-					<span class="icon-tools-2" aria-hidden="true" style="width: 100%;">
-						<button class="btn btn-block btn-round btn-d btnserbabisa" type="button">SERBA BISA</button>
-					</span>
-				</span>
-					<input id="jenis" name="jenis" type="text" hidden>
-					<input id="deskripsi" name="deskripsi" type="text" value="-" hidden>
-				<br><br><br><br><br>
-				<button class="btn btn-g btn-round btn-block back1" type="button" style="width: 95%;">Kembali</button>
+			
+			<div class="jenisUsaha">
+						<div class="row text-center">
+						<div class="col-sm-4">
+						<i class="fa fa-laptop fa-10x" style="font-size: 42px;"></i>
+						<button class="btn btn-block btn-round btn-d btnlaptop mt-10" type="button">LAPTOP</button>
+						</div>
+						<div class="col-sm-4">
+						<i class="fa fa-tablet fa-10x" style="font-size: 42px;"></i>
+							<button class="btn btn-block btn-round btn-d btnhp mt-10" type="button">HANDPHONE</button>
+						</div>
+						<div class="col-sm-4">
+						<i class="fa fa-gears fa-10x" style="font-size: 42px;"></i>
+						<button class="btn btn-block btn-round btn-d btnserbabisa mt-10" type="button">SERBA BISA</button>
+						</div>
+						</div>
+					 <input id="jenis" name="jenis" type="text" hidden>
+						<input id="deskripsi" name="deskripsi" type="text" value="-" hidden>
+					<button class="btn btn-g btn-round btn-block back1 mt-20" type="button">Kembali</button>
+				
 			</div>
 			
 				
@@ -206,23 +201,28 @@
 			<div class="finish et-icons">
 				<span class="box1" style="width: 50%;">
 					<span class="icon-happy" aria-hidden="true" style="width: 100%;">
-					<button class="btn btn-block btn-round btn-d submit" type="submit">YA SAYA SIAP!</button>
+					<button class="btn btn-block btn-round btn-d submit text-center" type="submit">YA SAYA SIAP!</button>
 				</span>
 				</span>
 				<span class="box1" style="width: 50%;">
 					<span class="icon-sad" aria-hidden="true" style="width: 100%;">
-						<button class="btn btn-block btn-round btn-d batal" type="button">TIDAK, BATALKAN SAJA!</button>
+						<button class="btn btn-block btn-round btn-d batal text-center" type="button">TIDAK, BATALKAN!</button>
 					</span>
 				</span>
 				<br><br><br><br><br>
-				<button class="btn btn-g btn-round btn-block back6" type="button" style="width: 95%;">Kembali Ke Form Sebelumnya</button>
+				<button class="btn btn-g btn-round btn-block back6" type="button">Kembali Ke Form Sebelumnya</button>
 			</div>
+		</form>
 		</div>
-	</form>
+	</div>
 </div>
 </div>
 <script>
 	$(document).ready(function(){
+				// $('.syarat').hide();
+				// $('.tutorial').hide();			
+				// $('.dataDiri').hide();
+
 				$('.formLocate').hide();
 				$('.tutorial2').hide();
 				$('.jenisUsaha').hide();

@@ -22,7 +22,12 @@
       </div><!-- /.container-fluid -->
       <?php Flasher::flash(); ?>
     </section>
-    <div class="card card-dark" style="width: 35%; margin-left: 20px">
+
+    <div class="container-fluid">
+      <!-- container fluid -->
+    <div class="row">
+      <div class="col-sm-4 ml-1">
+    <div class="card card-dark">
       <div class="card-header">
         <h3 class="card-title">Masukkan Voucher</h3>
       </div>
@@ -36,9 +41,11 @@
       </div>
       <!-- /.card-body -->
     </div>
-    
+    </div>
+        
     <!-- untuk laptop -->
-    <div class="card card-dark dataLaptop" style="width: 40%; position: absolute; right: 5%; top: 10%;">
+    <div class="col-sm-6 offset-sm-1">
+    <div class="card card-dark dataLaptop">
       <div class="card-header">
         <h3 class="card-title">Informasi Laptop</h3>
       </div>
@@ -73,9 +80,12 @@
         </table>
         <button class="btn btn-dark btn-block mt-4" data-toggle="modal" data-target="#terimaLaptop" type="button">Perbaiki Laptop</button>
       </div>
+      </div>
       <!-- /.card-body -->
     </div>
-    <div class="card card-dark pelangganLaptop" style="width: 35%;  margin-left: 20px">
+    
+    <div class="col-sm-4">
+    <div class="card card-dark pelangganLaptop">
       <div class="card-header">
         <h3 class="card-title">Informasi Pelanggan</h3>
       </div>
@@ -90,8 +100,11 @@
         </table>
       </div>
       <!-- /.card-body -->
+      </div>
+      </div>
     </div>
-    
+
+
     <!-- untuk hp -->
     <div class="card card-dark datahp" style="width: 40%; position: absolute; right: 5%; top: 10%;">
       <div class="card-header">
@@ -146,7 +159,7 @@
       </div>
       <!-- /.card-body -->
     </div>
-
+</div>
 <!-- untuk penerimaan -->
 
 <!-- Modal -->

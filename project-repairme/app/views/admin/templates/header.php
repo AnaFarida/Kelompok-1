@@ -117,13 +117,13 @@
               <li class="nav-item">
                 <a href="<?= BASEURL; ?>/admin/tambahkerusakanlaptop" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambahkan Kerusakan Laptop</p>
+                  <p>Tambah Kerusakan Laptop</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= BASEURL; ?>/admin/tambahkerusakanhp" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tambahkan Kerusakan Hp</p>
+                  <p>Tambah Kerusakan Hp</p>
                 </a>
               </li>
             </ul>

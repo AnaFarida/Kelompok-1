@@ -78,21 +78,21 @@
         <div class="module-small bg-dark">
           <div class="container">
             <div class="row">
-              <div class="col-sm-3" style="width:30%;text-align: center;">
-                <div class="widget" style="width:100%;text-align: center;">
+              <div class="col-sm-4" >
+                <div class="widget" ">
                   <h5 class="widget-title font-alt">Hubungi</h5>
                   <p>Jl. Raya Situbondo, Blindungan, Kec. Bondowoso, Kab. Bondowoso, Jawa Timur 68211.</p>
-                  <p>Phone  : +628234XXXXX</p>
-                  <p>Email  : <a href="#">RepairMe@gmail.com</a></p>
+                  <p>Phone  : +6283847999690</p>
+                  <p>Email  : <a href="#">repairme@gmail.com</a></p>
                 </div>
               </div>
-              <div class="col-sm-3" style="width:30%;text-align: center;">
-                <div class="widget" style="width:100%;text-align: center;">
+              <div class="col-sm-4" >
+                <div class="widget" ">
                   <h5 class="widget-title font-alt"><a href="<?= BASEURL ?>/home/about">Perbaiki Sekarang</h5>
                 </div>
               </div>
-               <div class="col-sm-3" style="width:30%;text-align: center;">
-                <div class="widget" style="width:100%;text-align: center;">
+               <div class="col-sm-4" >
+                <div class="widget" s>
                   <h5 class="widget-title font-alt"><a href="<?= BASEURL ?>/home/about">Tentang Kami</h5>
                   <p> RepairMe merupakan tempat untuk perbaikan Hp dan Laptop anda serta dikerjakan oleh mitra terpercaya</p>
                 </div>

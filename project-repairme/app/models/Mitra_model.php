@@ -34,19 +34,17 @@ class Mitra_model{
 		
 		//deklarasikan conn karena variabelnya dibutuhkan
 
-		$conn = mysqli_connect( 'localhost', 'root', '', 'repairme');
+		$conn = mysqli_connect( 'localhost', 'root', '', 'repair_me');
 		
 		$nama = $data['nama'];
 		$nama_usaha = $data['nama_usaha'];
 		$email = $data['email'];
 		$no_telpon= $data['no_telpon'];
 		$alamat = $data['alamat'];
-		$no_telpon= $data['no_telpon'];
 		$lat = $data['lat'];
 		$lng = $data['lng'];
 		$jenis = $data['jenis'];
 		$deskripsi = $data['deskripsi'];
-		$rating = $data['rating'];
 		//validasi username dan password
 
 		$username = strtolower(stripslashes($data['username']));
@@ -71,10 +69,10 @@ class Mitra_model{
 		
 
 		$readyUser = $rows + 1;
-		$err = $ros + 1;
+		$err = $rows + 1;
 
 		$this->db->data("INSERT INTO tb_user VALUES ($readyUser,'$username','$password')");
-		return $this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi','-')");
+		return $this->db->data("INSERT INTO tb_mitra VALUES ( NULL,'$id_jenis',$readyUser,'$jenis','$nama','$nama_usaha','$email','$alamat', '$lat', '$lng','$no_telpon','$foto_ktp','$foto_usaha','','$deskripsi', 0)");
 	
 		
 	}

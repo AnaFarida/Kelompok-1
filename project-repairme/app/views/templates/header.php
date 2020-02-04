@@ -93,15 +93,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Registrasi</h5>
+       
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+        <h5>Anda akan bergabung sebagai?</h5>
       </div>
       <div class="modal-body">
-        <a href="<?= BASEURL; ?>/pelanggan/registrasi" class="btn btn-round btn-b">Gabung Menjadi Pelanggan</a>
+        
+        <a href="<?= BASEURL; ?>/pelanggan/registrasi" class="btn btn-round btn-b" style="width: 280px;">Gabung Menjadi Pelanggan</a>
               
-               <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-round btn-b tombol-mitra">Gabung Menjadi Mitra</a>
+        <a href="<?= BASEURL; ?>/mitra/registrasi" class="btn btn-round btn-b tombol-mitra" style="width: 280px;">Gabung Menjadi Mitra</a>
       </div>
     </div>
   </div>

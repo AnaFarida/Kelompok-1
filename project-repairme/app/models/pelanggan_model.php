@@ -25,11 +25,11 @@ class pelanggan_model{
 		$no_tlp= $data['no_tlp'];
 		$alamat = $data['alamat'];
 		$username = $data['username'];
-		$conn = mysqli_connect( 'localhost', 'root', '', 'repairme');
+		$conn = mysqli_connect( 'localhost', 'root', '', 'repair_me');
 		$username = strtolower(stripslashes($data['username']));
-		$password = mysqli_real_escape_string($conn, $data['password']);
+		$password1 = mysqli_real_escape_string($conn, $data['password2']);
 
-		$password = password_hash($password, PASSWORD_DEFAULT);
+		$password = password_hash($password1, PASSWORD_DEFAULT);
 		$cekUsername = $this->db->query("SELECT * FROM tb_user");
 		$preIdUser = $this->db->query("SELECT * FROM tb_user ORDER BY id_user DESC LIMIT 1");
 
